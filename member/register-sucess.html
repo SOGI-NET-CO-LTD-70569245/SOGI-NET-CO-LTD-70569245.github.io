@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Language" content="zh-TW">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <meta name="keywords" content=""/>
+        <meta name="description" content="">
+        <meta property="og:image" itemprop="image" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="http://www.sogi.com.tw/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="SOGI 手機王" />
+        <title>SOGI 手機王</title>
+
+        <!-- Global -->
+        <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet">
+        <link href="/assets/stylesheets/font-awesome.css" rel="stylesheet">
+        <link href="/assets/stylesheets/common.css" rel="stylesheet">
+
+        <!-- Single -->
+        <link href="/assets/stylesheets/page/member.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+	<body class="member">
+
+        <!-- module: common-header -->
+        <div id="common-header"></div>
+        <!-- ./module: common-header -->
+
+        <!-- module: nav-main -->
+        <div id="nav-main"></div>
+        <!-- ./module: nav-main -->
+
+        <div id="main" class="push">
+            <div class="container">
+                <!-- module: ad-header -->
+                <div id="ad-header"></div>
+                <!-- ./module: ad-header -->
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">註冊成功</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>您的帳號 ooxx@mail.com 已啟用，登入後您可以：</p>
+                            <ul class="pl-4">
+                                <li>立即發表您的評論，與機友們互相切磋</li>
+                                <li>使用專屬的一對一私訊功能</li>
+                                <li>提供您電信資費購機的專業諮詢與到府服務</li>
+                            </ul>
+                            <p class="text-center">
+                                <a href="/member/login.html" class="btn btn-primary">立即登入</a>
+                                <a href="/index.html" class="btn btn-primary">回首頁</a>
+                            </p>
+                            <p class="text-danger text-center">*20 秒後跳轉至登入頁面</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- module: common-footer -->
+        <div id="common-footer"></div>
+        <!-- module: ./common-footer -->
+
+        <!-- Global -->
+		<script src="/assets/javascripts/vendor/jquery.min.js"></script>
+        <script src="/assets/javascripts/vendor/bootstrap.tether.min.js"></script>
+        <script src="/assets/javascripts/vendor/bootstrap.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.pushy.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.slick.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.scrollUp.min.js"></script>
+        <script src="/assets/javascripts/common.js"></script>
+
+        <!-- Single -->
+        <script>
+        jQuery(function ($) {
+            $('.row-1').hide();
+            $('.row-2').hide();
+            $(document).on('change', 'input:radio[id^="radio-01"]', function (event) {
+                $('.row-1').fadeIn();
+                $('.row-2').fadeOut();
+            });
+            $(document).on('change', 'input:radio[id^="radio-02"]', function (event) {
+                $('.row-1').fadeOut();
+                $('.row-2').fadeIn();
+            });
+        });
+        </script>
+
+        <!-- module include -->
+        <script src="/assets/javascripts/function/include.js"></script>
+
+    </body>
+</html>
