@@ -31,7 +31,7 @@ tmp/*
 app/*
 db/*
 *.swp
-
+_*
 /_notes/*
 _test/*
 .sass-cache/*
@@ -42,5 +42,5 @@ Capfile
 CHANGELOG
 Gemfile
 Guardfile
-
+.gitignore
 config/authorization*.json
