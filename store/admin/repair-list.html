@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Language" content="zh-TW">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <meta name="keywords" content=""/>
+        <meta name="description" content="">
+        <meta property="og:image" itemprop="image" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="http://www.sogi.com.tw/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="SOGI 手機王" />
+        <title>SOGI 手機王</title>
+
+        <!-- Global -->
+        <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet">
+        <link href="/assets/stylesheets/font-awesome.css" rel="stylesheet">
+        <link href="/assets/stylesheets/common.css" rel="stylesheet">
+
+        <!-- Single -->
+        <link href="/assets/stylesheets/page/store-admin.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+	<body class="store">
+
+        <nav class="pushy pushy-right bg-white">
+            <!-- module: nav-mobile-store-header -->
+            <div id="nav-mobile-store-header"></div>
+            <!-- module: ./nav-mobile-store-header -->
+        </nav>
+
+        <div class="site-overlay"></div>
+
+        <!-- module: store-admin-header -->
+        <div id="store-admin-header"></div>
+        <!-- module: ./store-admin-header -->
+
+        <div id="main" class="push">
+            <div class="container">
+                <div class="nav-responsive">
+                    <ul class="nav nav-pills nav-styled">
+                        <li class="nav-item"><a class="nav-link" href="product-list.html">新機</a></li>
+                        <li class="nav-item"><a class="nav-link" href="second-list.html">二手</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="repair-list.html">維修</a></li>
+                        <li class="nav-item"><a class="nav-link" href="chart-list.html">資費</a></li>
+                        <li class="nav-item"><a class="nav-link" href="promo-product.html">宣傳</a></li>
+                        <li class="nav-item"><a class="nav-link" href="store-account.html">商店</a></li>
+                        <li class="nav-item"><a class="nav-link" href="public-list.html">公告</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group mt-2" role="group">
+                    <a class="btn btn-secondary active" href="repair-list.html">維修商品列表</a>
+                    <a class="btn btn-secondary" href="repair-add-price.html">新增維修報價</a>
+                </div>
+
+                <div class="row my-2 mb-10">
+                    <div class="col-12">
+                        <div class="section-title my-2">
+                            維修商品列表 (最新30筆)
+                            <div class="float-right">
+                                <a class="btn btn-secondary btn-sm" href="" data-toggle="modal" data-target=".modal-refresh"><i class="fa fa-refresh"></i> 更新報價日期</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-faded mb-2 p-2">搜尋商品</div>
+                        <form class="row">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>品牌</label>
+                                        <select class="form-control">
+                                            <option>請選擇品牌</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>型號</label>
+                                        <select class="form-control">
+                                            <option>請選擇型號</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>零件</label>
+                                        <select class="form-control">
+                                            <option>請選擇零件</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>報價</label>
+                                        <select class="form-control">
+                                            <option>請選擇類型</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 7天內商品鎖價更新
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 只顯示關閉資料
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> 只顯示現場快修資料
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm ml-2"><i class="fa fa-search"></i> 搜尋</button>
+                                </div>
+                            </form>
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-bordered table-striped">
+                                        <thead class="thead-inverse">
+                                            <tr>
+                                                <th class="text-center">品牌</th>
+                                                <th class="text-center">型號</th>
+                                                <th class="text-center" nowrap>零件</th>
+                                                <th class="text-center">報價類型</th>
+                                                <th class="text-center">報價</th>
+                                                <th class="text-center" nowrap>保固期</th>
+                                                <th class="text-center" nowrap>現場快修</th>
+                                                <th class="text-center" nowrap>維修時間</th>
+                                                <th width="10%">&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="v-middle text-center">
+                                                    Apple
+                                                </td>
+                                                <td class="v-middle text-center">
+                                                    iPhone 5
+                                                </td>
+                                                <td class="v-middle text-center">
+                                                    液晶螢幕
+                                                </td>
+                                                <td class="v-middle text-center">
+                                                    原廠價
+                                                </td>
+                                                <td class="text-center v-middle">
+                                                    <a href="#" class="editable-price" data-pk="1" data-placeholder="請填寫金額" data-min="10000" data-max="29000">12,300</a>
+                                                    <small class="form-text text-muted">價格不得高於$29,000<br>價格不得低於$10,000</small>
+                                                </td>
+                                                <td class="text-center v-middle">
+                                                    <a href="#" class="editable-select-warranty" data-pk="1" data-placeholder="維修時間">無保固</a>
+                                                </td>
+                                                <td class="text-center v-middle">
+                                                    <a href="#" class="editable-chk-fast" data-pk="1" data-placeholder="現場快修">沒有</a>
+                                                </td>
+                                                <td class="v-middle text-center">
+                                                    <a href="#" class="editable-select-time" data-pk="1" data-placeholder="維修時間">30分鐘</a>
+                                                </td>
+                                                <td class="text-center v-middle">
+                                                    <a class="btn btn-secondary btn-sm" href="">關閉</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="v-middle text-center">
+                                                    Apple
+                                                </td>
+                                                <td class="v-middle text-center">
+                                                    iPhone 5
+                                                </td>
+                                                <td class="v-middle text-center">
+                                                    液晶螢幕
+                                                </td>
+                                                <td class="v-middle text-center">
+                                                    原廠價
+                                                </td>
+                                                <td class="text-center v-middle">
+                                                    <a href="#" class="editable-price" data-pk="1" data-placeholder="請填寫金額" data-min="10000" data-max="29000">12,300</a>
+                                                    <small class="form-text text-muted">價格不得高於$29,000<br>價格不得低於$10,000</small>
+                                                </td>
+                                                <td class="text-center v-middle">
+                                                    <a href="#" class="editable-select-warranty" data-pk="1" data-placeholder="維修時間">無保固</a>
+                                                </td>
+                                                <td class="text-center v-middle">
+                                                    <a href="#" class="editable-chk-fast" data-pk="1" data-placeholder="現場快修">沒有</a>
+                                                </td>
+                                                <td class="v-middle text-center">
+                                                    <a href="#" class="editable-select-time" data-pk="1" data-placeholder="維修時間">30分鐘</a>
+                                                </td>
+                                                <td class="text-center v-middle">
+                                                    <a class="btn btn-secondary btn-sm" href="">關閉</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- module: store-admin-footer -->
+        <div id="store-admin-footer"></div>
+        <!-- module: ./store-admin-footer -->
+
+        <!-- module: modal-refresh -->
+        <div id="modal-refresh"></div>
+        <!-- module: ./modal-refresh -->
+
+        <!-- Global -->
+		<script src="/assets/javascripts/vendor/jquery.min.js"></script>
+        <script src="/assets/javascripts/vendor/bootstrap.tether.min.js"></script>
+        <script src="/assets/javascripts/vendor/bootstrap.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.pushy.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.slick.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.scrollUp.min.js"></script>
+        <script src="/assets/javascripts/common.js"></script>
+
+        <!-- Single -->
+        <script src="/assets/javascripts/vendor/bootstrap.editable.min.js"></script>
+        <script src="/assets/javascripts/function/editable.js"></script>
+
+        <!-- module include -->
+        <script src="/assets/javascripts/function/include.js"></script>
+
+    </body>
+</html>
