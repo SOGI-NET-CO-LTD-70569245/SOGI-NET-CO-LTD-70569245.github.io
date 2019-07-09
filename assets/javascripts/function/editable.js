@@ -46,4 +46,12 @@ $(function(){
             {value: 2, text: '45分鐘'}
         ],
     });
+    $('.editable-select-low').editable({
+        prepend: "套用機制",
+        type: 'select',
+        source: [
+            {value: 1, text: '是'},
+            {value: 2, text: '否'}
+        ],
+    });
 });
