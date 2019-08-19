@@ -519,6 +519,12 @@ input[type=number] {
   text-align: center;
   font-size: 13px; }
 
+.social-holder {
+  width: 100%; }
+.social-holder > div {
+  display: inline-block;
+  vertical-align: middle; }
+
 @media (min-width: 1200px) {
   .headlines .headlines-main {
     width: 855px; }
