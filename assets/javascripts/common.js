@@ -87,32 +87,61 @@ $(function() {
 });
 
 $(document).ready(function(){
-    $('.slider-single').slick({
-        arrows: true,
-        dots: false,
-    });
 
-    $('.slider-pk').slick({
-        dots: false,
-        infinite: false,
-        speed: 300,
+    $('.slider-rwd-3').slick({
         slidesToShow: 3,
+        autoplay: false,
         slidesToScroll: 3,
         responsive: [
             {
-                breakpoint: 9999,
+                breakpoint: 1024,
                 settings: "unslick"
             },
             {
                 breakpoint: 800,
                 settings: {
-                    arrows: false,
-                    dots: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 425,
+                settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
                 }
             }
         ]
+    });
+
+    $('.slider-rwd-2').slick({
+        slidesToShow: 2,
+        autoplay: false,
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }
+        ]
+    });
+
+    $('.slider-single').slick({
+        arrows: true,
+        dots: false,
     });
 
     $('.slider-fluid').slick({
@@ -142,7 +171,7 @@ $(document).ready(function(){
         {
           breakpoint: 425,
           settings: {
-              arrows: false,
+              arrows: true,
               dots: true,
               slidesToShow: 2,
               slidesToScroll: 2
@@ -158,7 +187,7 @@ $(document).ready(function(){
 $(function(){
     $('.btn-anchor').click(function(){
 		$('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top-100}, 750);
+        scrollTop: $( $.attr(this, 'href') ).offset().top-50}, 750);
 		return false;
 	});
 });
