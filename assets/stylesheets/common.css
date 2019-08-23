@@ -184,7 +184,8 @@ input[type=number] {
 #scrollUp:before {
   display: block;
   content: "\f077";
-  font-family: FontAwesome;
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 900;
   color: #464a4c;
   line-height: 30px; }
 #scrollUp:hover {
@@ -1427,8 +1428,9 @@ a.box:hover {
 .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
   opacity: 0.25; }
 .slick-prev:before, .slick-next:before {
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Free";
   font-size: 20px;
+  font-weight: 900;
   line-height: 1;
   color: #000;
   opacity: 0.75;
