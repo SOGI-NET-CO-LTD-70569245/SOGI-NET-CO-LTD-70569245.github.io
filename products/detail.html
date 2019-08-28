@@ -104,47 +104,14 @@
                                     </div>
                                 </div>
 
-                                <div class="text-center px-6 section-color row">
-                                    <div class="col-6 col-sm-3 p-1">
-                                        <a href="#" class="btn btn-block btn-sm btn-secondary">
-                                            全部
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-sm-3 p-1">
-                                        <a href="#" class="btn btn-block btn-sm btn-secondary">
-                                            紅色
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-sm-3 p-1">
-                                        <a href="#" class="btn btn-block btn-sm btn-secondary">
-                                            白色
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-sm-3 p-1">
-                                        <a href="#" class="btn btn-block btn-sm btn-secondary">
-                                            粉紅色
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-sm-3 p-1">
-                                        <a href="#" class="btn btn-block btn-sm btn-secondary">
-                                            全部
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-sm-3 p-1">
-                                        <a href="#" class="btn btn-block btn-sm btn-secondary">
-                                            紅色
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-sm-3 p-1">
-                                        <a href="#" class="btn btn-block btn-sm btn-secondary">
-                                            白色
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-sm-3 p-1">
-                                        <a href="#" class="btn btn-block btn-sm btn-secondary">
-                                            粉紅色
-                                        </a>
-                                    </div>
+                                <div class="text-center px-6 section-color">
+                                    <a href="#" class="btn btn-sm btn-secondary my-1">全部</a>
+                                    <a href="#" class="btn btn-sm btn-secondary my-1">紅色</a>
+                                    <a href="#" class="btn btn-sm btn-secondary my-1">綠色</a>
+                                    <a href="#" class="btn btn-sm btn-secondary my-1">粉紅色</a>
+                                    <a href="#" class="btn btn-sm btn-secondary my-1">黑色</a>
+                                    <a href="#" class="btn btn-sm btn-secondary my-1">白色</a>
+                                    <a href="#" class="btn btn-sm btn-secondary my-1">炫彩色</a>
                                 </div>
                             </div>
                             <div class="col-lg-8">
@@ -195,7 +162,7 @@
                                                     <div class="btn btn-sm btn-outline-primary">立即查詢</div>
                                                 </a>
                                             </div>
-                                            <div class="col-6 col-sm-3 my-1">
+                                            <div class="col-6 col-sm-3 my-1 px-1">
                                                 <a class="bg-faded d-block p-2 text-center text-sm-left" href="#">
                                                     <small class="text-gray-light">
                                                         換螢幕
@@ -204,7 +171,7 @@
                                                     <div class="btn btn-sm btn-outline-primary">立即查詢</div>
                                                 </a>
                                             </div>
-                                            <div class="col-6 col-sm-3 my-1">
+                                            <div class="col-6 col-sm-3 my-1 px-1">
                                                 <a class="bg-faded d-block p-2 text-center text-sm-left" href="#">
                                                     <small class="text-gray-light">
                                                         換電池
@@ -1070,8 +1037,8 @@
                 lessLink: '<div class=""><a class="btn btn-outline-primary" href="#">收合 <i class="fa fa-caret-up"></i></a></div>',
                 embedCSS: false
             });
-            $('.section-color .col-6 .btn').on('click', function() {
-                $('.section-color .col-6 .btn.active').not(this).removeClass('active');
+            $('.section-color .btn').on('click', function() {
+                $('.section-color .btn.active').not(this).removeClass('active');
                 $(this).toggleClass('active');
             });
 
