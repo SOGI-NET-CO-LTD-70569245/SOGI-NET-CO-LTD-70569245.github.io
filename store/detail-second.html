@@ -85,9 +85,8 @@
 
                             </div>
                         </div>
-                        <div class="bar-title mb-2">商品使用狀況</div>
-                        <div class="">
-                            <p class="js-readmore">
+                        <div class="bar-title my-2">商品使用狀況</div>
+                        <div class="js-readmore my-2">
                                 購買的手機為內建電池，需搭配行動電源或手機包膜<br>
                                 有預訂手機卻又取消時，需付物流費200元<br>
                                 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br>
@@ -100,11 +99,10 @@
                                 有預訂手機卻又取消時，需付物流費200元<br>
                                 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br>
                                 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br>
-                                另有各式3C商品專業包膜、貼鑽、及客製化彩繪包膜服務, 美麗奇機．十大好處．非包不可"									                            </p>
                         </div>
 
-                        <div class="bar-title mb-2">商品規格</div>
-                        <div class="js-readmore">
+                        <div class="bar-title my-2">商品規格</div>
+                        <div class="js-readmore my-2">
                                     <table class="table table-bordered">
                                         <tr class="table-active">
                                             <th colspan="2">基本資訊</th>
@@ -165,9 +163,8 @@
                                     </table>
                         </div>
 
-                        <div class="bar-title mb-2">注意事項</div>
-                        <div class="clearfix">
-                            <p class="js-readmore">
+                        <div class="bar-title my-2">注意事項</div>
+                        <div class="js-readmore my-2">
                                 購買的手機為內建電池，需搭配行動電源或手機包膜<br>
                                 有預訂手機卻又取消時，需付物流費200元<br>
                                 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br>
@@ -180,7 +177,6 @@
                                 有預訂手機卻又取消時，需付物流費200元<br>
                                 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br>
                                 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br>
-                                另有各式3C商品專業包膜、貼鑽、及客製化彩繪包膜服務, 美麗奇機．十大好處．非包不可"									                            </p>
                         </div>
 
                     </div>
@@ -217,11 +213,11 @@
         <script src="/assets/javascripts/vendor/jquery.readmore.min.js"></script>
         <script src="/assets/javascripts/function/lightbox.js"></script>
         <script>
-            $('.js-readmore').readmore({
+            new Readmore('.js-readmore', {
                 speed: 500,
                 collapsedHeight: 150,
-                moreLink: '<p class="text-right mt-2"><a class="btn btn-secondary" href="#">展開 <i class="fa fa-caret-down"></i></a></p>',
-                lessLink: '<p class="text-right mt-2"><a class="btn btn-secondary" href="#">收合 <i class="fa fa-caret-up"></i></a></p>',
+                moreLink: '<div class=""><a class="btn btn-outline-primary" href="#">展開 <i class="fa fa-caret-down"></i></a></div>',
+                lessLink: '<div class=""><a class="btn btn-outline-primary" href="#">收合 <i class="fa fa-caret-up"></i></a></div>',
                 embedCSS: false
             });
         </script>

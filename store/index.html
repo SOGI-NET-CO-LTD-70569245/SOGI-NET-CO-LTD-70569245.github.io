@@ -56,7 +56,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-8">
-                            <p class="js-readmore">
+                            <div class="js-readmore">
                                 購買的手機為內建電池，需搭配行動電源或手機包膜<br>
                                 有預訂手機卻又取消時，需付物流費200元<br>
                                 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br>
@@ -69,7 +69,7 @@
                                 有預訂手機卻又取消時，需付物流費200元<br>
                                 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br>
                                 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br>
-                                另有各式3C商品專業包膜、貼鑽、及客製化彩繪包膜服務, 美麗奇機．十大好處．非包不可"									                            </p>
+                            </div>
                         </div>
                     <div class="col-md-3 col-12 text-center">
                         <div class="fb-page" data-href="https://www.facebook.com/isogi" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-height="200"><blockquote cite="https://www.facebook.com/isogi" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/isogi">SOGI 手機王</a></blockquote></div>
@@ -131,22 +131,13 @@
         <script src="/assets/javascripts/vendor/jquery.readmore.min.js"></script>
         <script src="/assets/javascripts/function/star-rating.js"></script>
         <script>
-            $('.js-readmore').readmore({
+            new Readmore('.js-readmore', {
                 speed: 500,
                 collapsedHeight: 150,
-                moreLink: '<p class="text-right mt-2"><a class="btn btn-info" href="#">展開 <i class="fa fa-caret-down"></i></a></p>',
-                lessLink: '<p class="text-right mt-2"><a class="btn btn-info" href="#">收合 <i class="fa fa-caret-up"></i></a></p>',
+                moreLink: '<div class=""><a class="btn btn-outline-primary" href="#">展開 <i class="fa fa-caret-down"></i></a></div>',
+                lessLink: '<div class=""><a class="btn btn-outline-primary" href="#">收合 <i class="fa fa-caret-up"></i></a></div>',
                 embedCSS: false
             });
-//            $('.js-loadmore').readmore({
-//                speed: 500,
-//                collapsedHeight: 258,
-//                heightMargin:  0,
-//                moreLink: '<a href="#" class="list-group-item">更多 <i class="fa fa-caret-down"></i></a>',
-//                lessLink: '<a href="#" class="list-group-item">收合 <i class="fa fa-caret-up"></i></a>',
-//                blockCSS: 'margin:0;',
-//                embedCSS: true
-//            });
         </script>
 
         <!-- module include -->

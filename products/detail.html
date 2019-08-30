@@ -85,6 +85,7 @@
                                     <span class="badge badge-outline">高效能</span>
                                     <span class="badge badge-outline">iOS</span>
                                 </div>
+<!--
                                 <div class="row slider-single slider my-2">
                                     <div class="col-12 text-center p-0">
                                         <a href="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/LG_lg_stylus_3_0320081720195_640x480.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="照片1">
@@ -103,15 +104,16 @@
                                         </a>
                                     </div>
                                 </div>
+-->
+                                <div class="text-center my-2">
+                                    <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/LG_lg_stylus_3_0320081720195_360x270.jpg" class="img-fluid mx-auto" alt="">
+                                </div>
 
                                 <div class="text-center section-color">
-                                    <a href="#" class="btn btn-secondary my-1">全部</a>
-                                    <a href="#" class="btn btn-secondary my-1">紅色</a>
-                                    <a href="#" class="btn btn-secondary my-1">綠色</a>
-                                    <a href="#" class="btn btn-secondary my-1">粉紅色</a>
-                                    <a href="#" class="btn btn-secondary my-1">黑色</a>
-                                    <a href="#" class="btn btn-secondary my-1">白色</a>
-                                    <a href="#" class="btn btn-secondary my-1">炫彩色</a>
+                                    <a href="javascript:void();" class="btn btn-secondary btn-color-all my-1">全部</a>
+                                    <a href="javascript:void();" class="btn btn-secondary btn-color-black my-1">黑色</a>
+                                    <a href="javascript:void();" class="btn btn-secondary btn-color-green my-1">綠色</a>
+                                    <a href="javascript:void();" class="btn btn-secondary btn-color-rainbow my-1">炫彩色</a>
                                 </div>
                             </div>
                             <div class="col-lg-8">
@@ -954,8 +956,9 @@
         <script src="/assets/javascripts/common.js"></script>
 
         <!-- Single -->
-        <script src="/assets/javascripts/vendor/bootstrap.ekko-lightbox.min.js"></script>
+<!--        <script src="/assets/javascripts/vendor/bootstrap.ekko-lightbox.min.js"></script>-->
         <script src="/assets/javascripts/vendor/bootstrap.star-rating.min.js"></script>
+        <script src="/assets/javascripts/vendor/fresco.js"></script>
         <script src="/assets/javascripts/vendor/jquery.readmore.min.js"></script>
         <script src="/assets/javascripts/vendor/highcharts.js"></script>
         <script src="/assets/javascripts/vendor/highcharts-more.js"></script>
@@ -1030,7 +1033,7 @@
                 });
             });
 
-            $('.js-readmore').readmore({
+            new Readmore('.js-readmore', {
                 speed: 500,
                 collapsedHeight: 240,
                 moreLink: '<div class=""><a class="btn btn-outline-primary" href="#">展開 <i class="fa fa-caret-down"></i></a></div>',
@@ -1040,6 +1043,46 @@
             $('.section-color .btn').on('click', function() {
                 $('.section-color .btn.active').not(this).removeClass('active');
                 $(this).toggleClass('active');
+            });
+
+            $('.btn-color-all').on('click', function(event) {
+                event.preventDefault();
+                Fresco.show([
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220085920906_640x480.jpg',
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020211_640x480.jpg',
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020714_640x480.jpg',
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020005_640x480.jpg',
+                            ], {
+                    thumbnails: 'true',
+                    onClick: 'close'
+                });
+            });
+            $('.btn-color-black').on('click', function(event) {
+                event.preventDefault();
+                Fresco.show([
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020211_640x480.jpg',
+                            ], {
+                    thumbnails: 'true',
+                    onClick: 'close'
+                });
+            });
+            $('.btn-color-green').on('click', function(event) {
+                event.preventDefault();
+                Fresco.show([
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020714_640x480.jpg',
+                            ], {
+                    thumbnails: 'true',
+                    onClick: 'close'
+                });
+            });
+            $('.btn-color-rainbow').on('click', function(event) {
+                event.preventDefault();
+                Fresco.show([
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020005_640x480.jpg',
+                            ], {
+                    thumbnails: 'true',
+                    onClick: 'close'
+                });
             });
 
         </script>
