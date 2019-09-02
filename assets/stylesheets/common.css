@@ -1514,13 +1514,13 @@ a.box:hover {
 
 /* z-index */
 .fr-overlay {
-  z-index: 99998; }
+  z-index: 999998; }
 
 .fr-window {
-  z-index: 99999; }
+  z-index: 999999; }
 
 .fr-spinner {
-  z-index: 100000; }
+  z-index: 1000000; }
 
 /* overlay */
 .fr-overlay {
@@ -2266,12 +2266,6 @@ a.box:hover {
 /* hide thumbnails on smaller screens
    the js always hides them on touch based devices
 */
-@media all and (max-width: 500px) and (orientation: portrait), all and (orientation: landscape) and (max-height: 500px) {
-  .fr-thumbnails-horizontal .fr-thumbnails {
-    display: none !important; } }
-@media all and (max-width: 700px) and (orientation: portrait), all and (orientation: landscape) and (max-height: 414px) {
-  .fr-thumbnails-vertical .fr-thumbnails {
-    display: none !important; } }
 /* force fullClick: true
    and force overflow: false */
 @media all and (max-width: 500px) and (orientation: portrait), all and (orientation: landscape) and (max-height: 414px) {
