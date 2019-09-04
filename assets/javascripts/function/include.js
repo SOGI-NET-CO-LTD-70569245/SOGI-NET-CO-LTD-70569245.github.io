@@ -39,4 +39,5 @@ $("#modal-track").load("/module/modal-track.html");
 
 // AD
 $("#ad-header").load("/module/ad-header.html");
+$("#ad-sponsor").load("/module/ad-sponsor.html");
 $(".ad-double-300-250").load("/module/ad-double-300-250.html");
