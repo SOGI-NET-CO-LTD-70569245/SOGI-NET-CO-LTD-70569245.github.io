@@ -145,7 +145,7 @@ $(document).ready(function(){
     });
 
     $('.slider-fluid').slick({
-      dots: false,
+      dots: true,
       infinite: false,
       speed: 300,
       slidesToShow: 6,
