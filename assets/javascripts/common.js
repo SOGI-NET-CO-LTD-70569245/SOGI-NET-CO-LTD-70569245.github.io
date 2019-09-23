@@ -150,7 +150,7 @@ $(document).ready(function(){
       speed: 300,
       slidesToShow: 6,
       slidesToScroll: 6,
-        arrows: false,
+//        arrows: false,
       responsive: [
         {
           breakpoint: 1024,
