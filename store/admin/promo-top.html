@@ -109,7 +109,16 @@
                                                 <option>請選擇區域</option>
                                             </select>
                                         </td>
-                                        <td class="v-middle">2018/12/1~2018/12/31</td>
+                                        <td class="v-middle">
+<!--                                            2018/12/1~2018/12/31-->
+                                            <input type="text" class="form-control" name="dates" placeholder="請選擇日期範圍" />
+<!--
+                                            <div class="input-daterange input-group">
+                                                <input type="text" class="form-control" name="start" placeholder="開始日期" />
+                                                <input type="text" class="form-control" name="end" placeholder="結束日期" />
+                                            </div>
+-->
+                                        </td>
                                         <td class="text-center v-middle">
                                             <a class="btn btn-secondary btn-sm" href="">編輯</a>
                                         </td>
@@ -202,6 +211,7 @@
         <!-- Global -->
         <script src="https://kit.fontawesome.com/2db6bfa046.js" crossorigin="anonymous"></script>
 		<script src="/assets/javascripts/vendor/jquery.min.js"></script>
+<!--        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
         <script src="/assets/javascripts/vendor/bootstrap.tether.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap.min.js"></script>
         <script src="/assets/javascripts/vendor/jquery.pushy.min.js"></script>
@@ -210,12 +220,18 @@
         <script src="/assets/javascripts/common.js"></script>
 
         <!-- Single -->
+        <script src="/assets/javascripts/vendor/moment.min.js"></script>
+        <script src="/assets/javascripts/locales/moment-zh-tw.js"></script>
+        <script src="/assets/javascripts/vendor/daterangepicker.js"></script>
+<!--
         <script src="/assets/javascripts/vendor/bootstrap-datepicker.min.js"></script>
         <script src="/assets/javascripts/locales/bootstrap-datepicker.zh-TW.min.js" charset="UTF-8"></script>
+-->
         <script>
-            $.fn.datepicker.defaults.language = 'zh-TW';
-            $('.input-daterange').datepicker({});
-            $('.datepicker').datepicker();
+//            $.fn.datepicker.defaults.language = 'zh-TW';
+//            $('.input-daterange').datepicker({});
+//            $('.datepicker').datepicker();
+            $('input[name="dates"]').daterangepicker();
         </script>
 
         <!-- module include -->
