@@ -201,3 +201,62 @@ $(function(){
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+
+// 191026
+
+$(function() {
+    "use strict";
+
+    $('.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+    }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+    });
+
+});
+
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('#header').outerHeight();
+var scrollUp = $('#scrollUp').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('#header').removeClass('scroll-up').addClass('scroll-down');
+        $('#scrollUp').removeClass('scroll-up').addClass('scroll-down');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('#header').removeClass('scroll-down').addClass('scroll-up');
+            $('#scrollUp').removeClass('scroll-down').addClass('scroll-up');
+        }
+    }
+    lastScrollTop = st;
+}
+
+$('#mobile-menu-button').on('click', function(event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+    $('.mobile-menu').slideToggle("fast");
+    $("body").toggleClass('scroll-hidden');
+    $(".mobile-menu-main").toggleClass('d-none');
+});

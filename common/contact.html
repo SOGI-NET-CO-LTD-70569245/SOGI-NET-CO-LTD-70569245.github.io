@@ -16,7 +16,7 @@
         <title>SOGI 手機王</title>
 
         <!-- Global -->
-        <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet">
+        <link href="/assets/stylesheets/bootstrap-431.css" rel="stylesheet">
         <link href="/assets/stylesheets/common.css" rel="stylesheet">
 
         <!-- Single -->
@@ -127,8 +127,8 @@
                             </div>
                             <div class="form-group row">
                                 <div class="offset-sm-2 col-sm-10">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> 確認送出</button>
-                                    <button type="submit" class="btn btn-secondary"><i class="fa fa-times"></i> 取消</button>
+                                    <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> 確認送出</button>
+                                    <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-times"></i> 取消</button>
                                 </div>
                             </div>
                         </form>
@@ -144,6 +144,7 @@
 
         <!-- Global -->
         <div id="fb-root"></div>
+        <script src="https://kit.fontawesome.com/2db6bfa046.js" crossorigin="anonymous"></script>
 		<script src="/assets/javascripts/vendor/jquery.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap.tether.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap.min.js"></script>
@@ -160,7 +161,7 @@
             $('.input-limit').keyup(function() {
                 var input_text_length = $('.input-limit').val().length;
                 var input_text_remaining = input_text_max - input_text_length;
-                $('.input-count').html(input_text_remaining).addClass('text-imp');
+                $('.input-count').html(input_text_remaining).addClass('text-danger');
             });
         </script>
 

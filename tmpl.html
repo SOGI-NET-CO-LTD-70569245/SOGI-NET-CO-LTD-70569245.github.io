@@ -16,7 +16,7 @@
         <title>SOGI 手機王</title>
 
         <!-- Global -->
-        <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet">
+        <link href="/assets/stylesheets/bootstrap-431.css" rel="stylesheet">
         <link href="/assets/stylesheets/common.css" rel="stylesheet">
 
         <!-- Single -->
@@ -26,243 +26,503 @@
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
     </head>
 
 	<body>
 
-        <nav class="pushy pushy-right bg-white">
+<!--
+        <nav class="pushy pushy-right bg-white h-100">
+            <div class="container bg-warning">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/assets/images/ui/logo.png" class="logo" alt="手機王">
+                    </a>
+                    <ul class="nav navbar-toggler border-0 p-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark menu-btn" href="javascript:void();">
+                                <i class="fas fa-times text-dark"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             <div class="list-group">
-                <a class="list-group-item list-group-item-action" href="/index.html">
-                    <span><i class="fa fa-home"></i> 首頁</span>
+                <a class="list-group-item list-group-item-action list-group-collapse" data-toggle="collapse" href="#collapse-member">
+                    <i class="fas fa-fw fa-user-circle"></i> 張三豐
                 </a>
-                <a class="list-group-item list-group-item-action text-imp" href="">
-                    <span><i class="fa fa-shopping-bag"></i> 買手機</span>
+                <div id="collapse-member" class="collapse" role="tabpanel">
+                    <div class="container py-2 text-center">
+                        <div class="row">
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">我的帳戶</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">個人主頁</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">我的訊息</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">我的草稿</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">商店管理</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">討論串管理</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">新聞留言管理</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">FB留言管理</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="btn btn-sm btn-block btn-outline-secondary" href="#">登出</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="list-group-item list-group-item-action list-group-collapse" data-toggle="collapse" href="#collapse-product">
+                    <i class="fas fa-fw fa-mobile-alt"></i> 找品牌
                 </a>
-                <a class="list-group-item list-group-item-action text-imp" href="">
-                    <span><i class="icon-limited"></i> 限時促銷</span>
+                <div id="collapse-product" class="collapse" role="tabpanel">
+                    <div class="container py-2 text-center">
+                        <div class="row">
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">SAMSUNG</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">Sony</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">OPPO</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">SAMSUNG</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">Sony</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">OPPO</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">SAMSUNG</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">Sony</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">OPPO</a>
+                            </div>
+                        </div>
+                        <a class="btn btn-outline-secondary px-10" href="#">更多...</a>
+                    </div>
+                </div>
+                <a class="list-group-item list-group-item-action list-group-collapse" data-toggle="collapse" href="#collapse-article">
+                    <i class="far fa-fw fa-newspaper"></i> 新聞
                 </a>
-                <a class="list-group-item list-group-item-action text-imp" href="/repair/index.html">
-                    <span><i class="fa fa-wrench"></i> 維修查價</span>
-                </a>
-                <a class="list-group-item list-group-item-action" href="/articles/index.html">
-                    <span><i class="fa fa-newspaper-o"></i> 新聞</span>
-                </a>
-                <a class="list-group-item list-group-item-action" href="/forum/index.html">
-                    <span><i class="fa fa-comments"></i> 討論</span>
+                <div id="collapse-article" class="collapse" role="tabpanel">
+                    <div class="container py-2 text-center">
+                        <div class="row">
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">評測文章</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">採訪報導</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">特別企劃</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">展覽直擊</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">產業專欄</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">影音內容</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">新機快訊</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="list-group-item list-group-item-action" href="">
+                    <i class="fas fa-fw fa-phone-square-alt"></i> 電信方案
                 </a>
                 <a class="list-group-item list-group-item-action" href="">
-                    <span><i class="fa fa-plus-square"></i> 車拚</span>
+                    <i class="fas fa-fw fa-comments"></i> 討論
+                </a>
+                <a class="list-group-item list-group-item-action text-danger" href="">
+                    <i class="icon-limited"></i> 限時促銷
                 </a>
                 <a class="list-group-item list-group-item-action" href="">
-                    <span><i class="fa fa-pencil-square-o"></i> 簡訊</span>
+                    <i class="fas fa-fw fa-comment-alt"></i> 發簡訊
                 </a>
-                <a class="list-group-item list-group-item-action list-group-collapse" data-toggle="collapse" href="#collapse-country">
-                    <span><i class="flag-icon flag-icon-tw"></i> 國家</span>
-                </a>
-                <div id="collapse-country" class="collapse" role="tabpanel">
-                    <a href="#" class="list-group-item list-group-item-action bg-faded">
-                        <span><i class="flag-icon flag-icon-us"></i> 台灣</span>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-faded">
-                        <span><i class="flag-icon flag-icon-us"></i> 台灣</span>
-                    </a>
+            </div>
+            <div class="container fixed-bottom py-2 text-center bg-white border-top">
+                <div class="row align-items-center">
+                    <div class="col-4">
+                        <a class="" href="#">
+                            <img class="img-fluid" src="assets/images/ui/logo-small.png" alt="手機王">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="" href="#">
+                            <img class="img-fluid" src="https://dy4awz8yneyrh.cloudfront.net/manual_file/logos/LOGO_RESIEZE-02.png" alt="手機王購物">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="" href="#">
+                            <img class="img-fluid" src="https://www.ugooz.cc/assets/sk2/img/ui/logo.png" alt="友故事">
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
+-->
 
         <div class="site-overlay"></div>
-        <header id="header" class="push">
+
+        <header id="header" class="push sticky-top">
             <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col">
-                        <a class="d-block p-0" href="/index.html">
-                            <img src="/assets/images/ui/logo.png" class="logo hidden-xs-down" alt="手機王">
-                            <img src="/assets/images/ui/logo-small.png" class="logo hidden-sm-up" alt="手機王">
-                        </a>
-                    </div>
-                    <div class="col-auto">
-                        <ul class="nav hidden-md-down">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/index.html">
-                                    <i class="fa fa-home"></i> 首頁
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-imp" href="#">
-                                    <i class="fa fa-shopping-bag"></i> 買手機
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-imp" href="/">
-                                    <i class="icon-limited"></i> 促銷
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-imp" href="/repair/index.html">
-                                    <i class="fa fa-wrench"></i> 維修
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/articles/index.html">
-                                    <i class="fa fa-newspaper-o"></i> 新聞
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/forum/index.html">
-                                    <i class="fa fa-comments"></i> 討論
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0);" data-toggle="modal" data-target=".modal-pk">
-                                    <i class="fa fa-plus-square"></i> 車拚 <i class="fa fa-caret-down font-small"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa fa-pencil-square-o"></i> 簡訊
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-user"></i> 會員
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#">個人主頁</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">帳戶設定</a>
-                                    <a class="dropdown-item" href="#">站內訊息</a>
-                                    <a class="dropdown-item" href="#">產品追蹤</a>
-                                    <a class="dropdown-item" href="#">發文草稿</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">商店首頁</a>
-                                    <a class="dropdown-item" href="#">商店管理</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">FB留言管理</a>
-                                    <a class="dropdown-item" href="#">討論串管理</a>
-                                    <a class="dropdown-item" href="#">新聞留言管理</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">登出</a>
-                                </div>
-                                <span class="badge badge-pill">99</span>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0);" data-toggle="modal" data-target=".modal-search">
-                                    <i class="fa fa-search"></i> 搜尋 <i class="fa fa-caret-down font-small"></i>
-                                </a>
-                            </li>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/assets/images/ui/logo.png" class="logo" alt="手機王">
+                    </a>
+                    <ul class="nav navbar-toggler border-0 p-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark px-1 py-2" href="javascript:void();" data-toggle="modal" data-target=".modal-search">
+                                <i class="fas fa-fw fa-search"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
 <!--
-                            <li class="nav-item">
-                                <a class="nav-link test" href="javascript:void(0);" tabindex="0" data-toggle="popover" data-popover-content="#popover-search" data-placement="bottom">
-                                    <i class="fa fa-search"></i> 搜尋 <i class="fa fa-caret-down font-small"></i>
-                                </a>
-                            </li>
+                            <a class="nav-link text-dark menu-btn" href="javascript:void();">
+                                <i class="fas fa-bars text-dark"></i>
+                            </a>
 -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="flag-icon flag-icon-tw"></i> 國家
+                            <a id="mobile-menu-button" class="nav-link px-1 py-2 hamburger-menu" href="#menu">
+                                <span></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown position-static">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                    找品牌
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-us"></i> 台灣</a>
-                                    <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-ad"></i> 台灣</a>
-                                    <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-ad"></i> 台灣</a>
-                                    <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-ad"></i> 台灣</a>
-                                    <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-ad"></i> 台灣</a>
+                                <div class="dropdown-menu dropdown-menu-w100">
+                                    <ul class="nav justify-content-center">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">SAMSUNG</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">ASUS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">OPPO</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">HUAWEI</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Apple</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Sony</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">小米</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">HTC</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">NOKIA</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">LG</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">SHARP</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Koobee</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Google</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">更多...</a>
+                                        </li>
+                                    </ul>
                                 </div>
+                            </li>
+                            <li class="nav-item dropdown position-static">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                    新聞
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-w100">
+                                    <ul class="nav justify-content-center">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">評測文章</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">採訪報導</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">特別企劃</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">展覽直擊</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">產業專欄</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">影音內容</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">新機快訊</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">討論</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">車拚</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">電信方案</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">維修估價</a>
                             </li>
                         </ul>
-                        <div class="btn-group hidden-lg-up">
-                            <a class="btn btn-link px-2 text-imp" href="">
-                                <i class="fa fa-shopping-bag"></i>
-                            </a>
-                            <a class="btn btn-link px-2 text-imp" href="">
-                                <i class="icon-limited"></i>
-                            </a>
-                            <a class="btn btn-link px-2 dropdown-toggle" id="drop-member" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-user"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="drop-member">
-                                <a class="dropdown-item" href="#">個人主頁</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">帳戶設定</a>
-                                <a class="dropdown-item" href="#">站內訊息</a>
-                                <a class="dropdown-item" href="#">產品追蹤</a>
-                                <a class="dropdown-item" href="#">發文草稿</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">商店首頁</a>
-                                <a class="dropdown-item" href="#">商店管理</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">FB留言管理</a>
-                                <a class="dropdown-item" href="#">討論串管理</a>
-                                <a class="dropdown-item" href="#">新聞留言管理</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">登出</a>
+                        <div>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark px-1" href="javascript:void();" data-toggle="modal" data-target=".modal-search">
+                                        <i class="fas fa-fw fa-search"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link text-dark px-1" href="#" data-toggle="dropdown">
+                                        <i class="fas fa-fw fa-user-circle"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">個人主頁</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">帳戶設定</a>
+                                        <a class="dropdown-item" href="#">站內訊息</a>
+                                        <a class="dropdown-item" href="#">產品追蹤</a>
+                                        <a class="dropdown-item" href="#">發文草稿</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">商店首頁</a>
+                                        <a class="dropdown-item" href="#">商店管理</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">FB留言管理</a>
+                                        <a class="dropdown-item" href="#">討論串管理</a>
+                                        <a class="dropdown-item" href="#">新聞留言管理</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">登出</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark px-1" href="javascript:void();">
+                                        <i class="fas fa-fw fa-comment-alt"></i>
+                                    </a>
+                                    <span class="badge badge-danger badge-pill">99</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="d-lg-none bg-light mobile-menu-main">
+                <ul class="nav nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">找品牌</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">新聞</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">車拚</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">維修估價</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu">
+            <div class="accordion" id="accordionMobile">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="btn btn-link btn-block" data-toggle="collapse" data-target="#collapseMember" aria-expanded="true" href="javascript:void();">
+                            <i class="fas fa-fw fa-user-circle"></i> 張三豐
+                        </a>
+                    </div>
+                    <div id="collapseMember" class="collapse show" data-parent="#accordionMobile">
+                        <div class="card-body p-0">
+                            <div class="container py-2 text-center">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">我的帳戶</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">個人主頁</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">我的訊息</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">我的草稿</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">商店管理</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">討論串管理</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">新聞留言管理</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">FB留言管理</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="btn btn-sm btn-block btn-outline-secondary" href="#">登出</a>
+                                    </div>
+                                </div>
                             </div>
-                            <a class="btn btn-link px-2" href="javascript:void(0);" data-toggle="modal" data-target=".modal-search">
-                                <i class="fa fa-search"></i> <i class="fa fa-caret-down font-small"></i>
-                            </a>
-                            <button class="btn btn-link px-2 menu-btn">
-                                <i class="fa fa-bars"></i>
-                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="btn btn-link btn-block" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" href="javascript:void();">
+                            <i class="fas fa-fw fa-mobile-alt"></i> 找品牌
+                        </a>
+                    </div>
+                    <div id="collapseProduct" class="collapse" data-parent="#accordionMobile">
+                        <div class="card-body p-0">
+                            <div class="container py-2 text-center">
+                        <div class="row">
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">SAMSUNG</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">Sony</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">OPPO</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">SAMSUNG</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">Sony</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">OPPO</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">SAMSUNG</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">Sony</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="nav-link text-dark" href="#">OPPO</a>
+                            </div>
+                        </div>
+                        <a class="btn btn-outline-secondary px-10" href="#">更多...</a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="btn btn-link btn-block" data-toggle="collapse" data-target="#collapseArticle" aria-expanded="true" href="javascript:void();">
+                            <i class="far fa-fw fa-newspaper"></i> 新聞
+                        </a>
+                    </div>
+                    <div id="collapseArticle" class="collapse" data-parent="#accordionMobile">
+                        <div class="card-body p-0">
+                            <div class="container py-2 text-center">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">評測文章</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">採訪報導</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">特別企劃</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">展覽直擊</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">產業專欄</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">影音內容</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link text-dark" href="#">新機快訊</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-
-        <div id="main-nav" class="bg-faded sticky-top push">
-            <div class="container">
-                <div class="nav-responsive">
-                    <ul class="nav nav-pills nav-fill">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">Apple</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">HTC</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">Samsung</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">ASUS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">LG</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">Acer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">Sony</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">Apple</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">HTC</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">Samsung</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">ASUS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">LG</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">Acer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">Sony</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/products/index.html">更多品牌</a>
-                        </li>
-                    </ul>
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" href="">
+                    <i class="fas fa-fw fa-phone-square-alt"></i> 電信方案
+                </a>
+                <a class="list-group-item list-group-item-action" href="">
+                    <i class="fas fa-fw fa-comments"></i> 討論
+                </a>
+                <a class="list-group-item list-group-item-action text-danger" href="">
+                    <i class="icon-limited"></i> 限時促銷
+                </a>
+                <a class="list-group-item list-group-item-action" href="">
+                    <i class="fas fa-fw fa-comment-alt"></i> 發簡訊
+                </a>
+            </div>
+            <div class="container fixed-bottom py-2 text-center bg-white border-top">
+                <div class="row align-items-center">
+                    <div class="col-4">
+                        <a class="" href="#">
+                            <img class="img-fluid" src="assets/images/ui/logo-small.png" alt="手機王">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="" href="#">
+                            <img class="img-fluid" src="https://dy4awz8yneyrh.cloudfront.net/manual_file/logos/LOGO_RESIEZE-02.png" alt="手機王購物">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="" href="#">
+                            <img class="img-fluid" src="https://www.ugooz.cc/assets/sk2/img/ui/logo.png" alt="友故事">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
 
         <div id="main" class="push">
             <div class="container">
@@ -270,7 +530,7 @@
                 <!-- module: ad-header -->
                 <div id="ad-header"></div>
                 <!-- ./module: ad-header -->
-                <div style="height:500px;">
+                <div style="height:1000px;">
 
                     <!-- slider-fluid -->
                     <div class="row slider-fluid slider mt-2">
@@ -278,13 +538,13 @@
                         <div class="box my-2">
                             <figure class="mb-0 py-2">
                                 <span class="pos-a-lt mt-1 ml-1 badge badge-warning">NEW</span>
-                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-plus"></i></a>
+                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-plus"></i></a>
                                 <a href="">
                                     <img class="img-fluid mx-auto" src="http://cf-attach.i-sogi.com/tw/product/img/SAMSUNG_Gear_S_0828065828659_160x120.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="clearfix">
-                                <a class="d-block px-2 py-1 bg-faded" href="#">
+                                <a class="d-block px-2 py-1 bg-light" href="#">
                                     <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                         SAMSUNG Gear S SAMSUNG Gear S
                                     </div>
@@ -306,13 +566,13 @@
                         <div class="box my-2">
                             <figure class="mb-0 py-2">
                                 <span class="pos-a-lt mt-1 ml-1 badge badge-warning">NEW</span>
-                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-plus"></i></a>
+                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-plus"></i></a>
                                 <a href="">
                                     <img class="img-fluid mx-auto" src="http://cf-attach.i-sogi.com/tw/product/img/SAMSUNG_Gear_S_0828065828659_160x120.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="clearfix">
-                                <a class="d-block px-2 py-1 bg-faded" href="#">
+                                <a class="d-block px-2 py-1 bg-light" href="#">
                                     <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                         SAMSUNG Gear S SAMSUNG Gear S
                                     </div>
@@ -334,13 +594,13 @@
                         <div class="box my-2">
                             <figure class="mb-0 py-2">
                                 <span class="pos-a-lt mt-1 ml-1 badge badge-warning">NEW</span>
-                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-plus"></i></a>
+                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-plus"></i></a>
                                 <a href="">
                                     <img class="img-fluid mx-auto" src="http://cf-attach.i-sogi.com/tw/product/img/SAMSUNG_Gear_S_0828065828659_160x120.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="clearfix">
-                                <a class="d-block px-2 py-1 bg-faded" href="#">
+                                <a class="d-block px-2 py-1 bg-light" href="#">
                                     <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                         SAMSUNG Gear S SAMSUNG Gear S
                                     </div>
@@ -362,13 +622,13 @@
                         <div class="box my-2">
                             <figure class="mb-0 py-2">
                                 <span class="pos-a-lt mt-1 ml-1 badge badge-warning">NEW</span>
-                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-plus"></i></a>
+                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-plus"></i></a>
                                 <a href="">
                                     <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="clearfix">
-                                <a class="d-block px-2 py-1 bg-faded" href="#">
+                                <a class="d-block px-2 py-1 bg-light" href="#">
                                     <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                         SAMSUNG Gear S SAMSUNG Gear S
                                     </div>
@@ -390,13 +650,13 @@
                         <div class="box my-2">
                             <figure class="mb-0 py-2">
                                 <span class="pos-a-lt mt-1 ml-1 badge badge-warning">NEW</span>
-                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-plus"></i></a>
+                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-plus"></i></a>
                                 <a href="">
                                     <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="clearfix">
-                                <a class="d-block px-2 py-1 bg-faded" href="#">
+                                <a class="d-block px-2 py-1 bg-light" href="#">
                                     <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                         SAMSUNG Gear S SAMSUNG Gear S
                                     </div>
@@ -418,13 +678,13 @@
                         <div class="box my-2">
                             <figure class="mb-0 py-2">
                                 <span class="pos-a-lt mt-1 ml-1 badge badge-warning">NEW</span>
-                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-plus"></i></a>
+                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-plus"></i></a>
                                 <a href="">
                                     <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="clearfix">
-                                <a class="d-block px-2 py-1 bg-faded" href="#">
+                                <a class="d-block px-2 py-1 bg-light" href="#">
                                     <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                         SAMSUNG Gear S SAMSUNG Gear S
                                     </div>
@@ -446,13 +706,13 @@
                         <div class="box my-2">
                             <figure class="mb-0 py-2">
                                 <span class="pos-a-lt mt-1 ml-1 badge badge-warning">NEW</span>
-                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-plus"></i></a>
+                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-plus"></i></a>
                                 <a href="">
                                     <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/G-PLUS_g_plus_f1_0314040314958_160x120.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="clearfix">
-                                <a class="d-block px-2 py-1 bg-faded" href="#">
+                                <a class="d-block px-2 py-1 bg-light" href="#">
                                     <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                         HUAWEI MediaPad T2 8 Pro
                                     </div>
@@ -474,13 +734,13 @@
                         <div class="box my-2">
                             <figure class="mb-0 py-2">
                                 <span class="pos-a-lt mt-1 ml-1 badge badge-warning">NEW</span>
-                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-plus"></i></a>
+                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-plus"></i></a>
                                 <a href="">
                                     <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/G-PLUS_g_plus_f1_0314040314958_160x120.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="clearfix">
-                                <a class="d-block px-2 py-1 bg-faded" href="#">
+                                <a class="d-block px-2 py-1 bg-light" href="#">
                                     <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                         HUAWEI MediaPad T2 8 Pro
                                     </div>
@@ -502,13 +762,13 @@
                         <div class="box my-2">
                             <figure class="mb-0 py-2">
                                 <span class="pos-a-lt mt-1 ml-1 badge badge-warning">NEW</span>
-                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-plus"></i></a>
+                                <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-plus"></i></a>
                                 <a href="">
                                     <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/G-PLUS_g_plus_f1_0314040314958_160x120.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="clearfix">
-                                <a class="d-block px-2 py-1 bg-faded" href="#">
+                                <a class="d-block px-2 py-1 bg-light" href="#">
                                     <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                         HUAWEI MediaPad T2 8 Pro
                                     </div>
@@ -535,8 +795,8 @@
 
         </div>
 
-        <div id="footer" class="bg-black push">
-            <div class="container py-5 text-white">
+        <div id="footer" class="bg-dark push">
+            <div class="container py-5">
                 <div class="row">
                     <div class="col-6 col-sm-3 col-md mb-2">
                         <ul class="nav flex-column">
@@ -712,13 +972,6 @@
                             <i class="fab fa-youtube-square"></i>
                         </a>
                     </div>
-<!--
-                    <div class="col-auto px-1">
-                        <a href="" title="手機王G+">
-                            <i class="fa fa-google-plus-square"></i>
-                        </a>
-                    </div>
--->
                     <div class="col-auto px-1">
                         <a href="" title="手機王購物" data-trigger="hover" data-popover="true" data-html=true data-content="<div class='text-center'><img src='http://chiangmaiexpertdriver.com/images/qr-code-line2.jpg' width='100'><br>LINE ID: @flp0362y</div>">
                             <i class="fab fa-line"></i>
@@ -736,10 +989,10 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid bg-white">
+            <div class="container-fluid bg-black">
                 <div class="container py-3 text-center">
                     <small class="d-inline-block">
-                        Copyright &copy; 1999-2017 首機網路股份有限公司 All rights reserved.
+                        Copyright &copy; 1999-2019 首機網路股份有限公司 All rights reserved.
                     </small>
                     <small class="d-inline-block">
                         本網站已依台灣網站內容分級規定處理
@@ -749,7 +1002,7 @@
         </div>
 
         <!-- popover -->
-        <div id="popover-compare" class="popover hidden">
+        <div id="popover-compare" class="popover d-none">
             <div class="popover-title">比較清單</div>
             <div class="popover-content">
                 <div class="tabs">
@@ -770,13 +1023,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a href="">
                                                 <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear S SAMSUNG Gear S
                                                 </div>
@@ -797,13 +1050,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a href="">
                                                 <img class="img-fluid mx-auto" src="http://cf-attach.i-sogi.com/tw/product/img/SAMSUNG_Gear_S_0828065828659_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear S SAMSUNG Gear S
                                                 </div>
@@ -824,13 +1077,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a href="">
                                                 <img class="img-fluid mx-auto" src="http://cf-attach.i-sogi.com/tw/product/img/SAMSUNG_Gear_S_0828065828659_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear S SAMSUNG Gear S
                                                 </div>
@@ -851,13 +1104,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a href="">
                                                 <img class="img-fluid mx-auto" src="http://cf-attach.i-sogi.com/tw/product/img/SAMSUNG_Gear_S_0828065828659_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear S SAMSUNG Gear S
                                                 </div>
@@ -877,7 +1130,7 @@
                                 </div>
                             </div>
                             <div class="pt-2 text-center">
-                                <a href="#" class="btn btn-secondary">馬上比較</a>
+                                <a href="#" class="btn btn-outline-secondary">馬上比較</a>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane tab-compare-02">
@@ -885,13 +1138,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a href="">
                                                 <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear
                                                 </div>
@@ -912,13 +1165,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a href="">
                                                 <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear S SAMSUNG Gear S
                                                 </div>
@@ -939,13 +1192,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a href="">
                                                 <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear S SAMSUNG Gear S
                                                 </div>
@@ -966,13 +1219,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a href="">
                                                 <img class="img-fluid mx-auto" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear S SAMSUNG Gear S
                                                 </div>
@@ -992,7 +1245,7 @@
                                 </div>
                             </div>
                             <div class="pt-2 text-center">
-                                <a href="#" class="btn btn-secondary">馬上比較</a>
+                                <a href="#" class="btn btn-outline-secondary">馬上比較</a>
                             </div>
                         </div>
                     </div>
@@ -1000,72 +1253,6 @@
             </div>
         </div>
 
-<!--
-        <div id="popover-search" class="popover hidden">
-            <div class="popover-title">搜尋</div>
-            <div class="popover-content">
-                <form>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="請輸入關鍵字" name="srch-term" id="srch-term">
-                        <div class="input-group-btn">
-                            <button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
-                        </div>
-                    </div>
-                </form>
-                <p class="text-center mt-2">
-                    <small class="text-ad">
-                        <a href="">一二三四五六七八九十一二三四五六七八</a>
-                    </small>
-                </p>
-                <div class="tabs my-2">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" href=".tab-find-mobile" role="tab" data-toggle="tab">找手機</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=".tab-find-pad" role="tab" data-toggle="tab">找平板</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=".tab-find-wear" role="tab" data-toggle="tab">找穿戴</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane tab-find-mobile active">
-                            <div class="list-group my-2">
-                                <a href="#" class="list-group-item list-group-item-action">Android 4.4↑手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">Windows Phone手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">Android 4.4↑手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">Windows Phone手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">Android 4.4↑手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">Windows Phone手機</a>
-                            </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane tab-find-pad">
-                            <div class="list-group my-2">
-                                <a href="#" class="list-group-item list-group-item-action">四核心↑手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">四核心↑手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">四核心↑手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">四核心↑手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">四核心↑手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">四核心↑手機</a>
-                            </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane tab-find-wear">
-                            <div class="list-group my-2">
-                                <a href="#" class="list-group-item list-group-item-action">自拍手機(400萬畫素↑前鏡頭)</a>
-                                <a href="#" class="list-group-item list-group-item-action">大電量手機(3000mAh↑)</a>
-                                <a href="#" class="list-group-item list-group-item-action">Android 4.4↑手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">Windows Phone手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">Android 4.4↑手機</a>
-                                <a href="#" class="list-group-item list-group-item-action">Windows Phone手機</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-block btn-primary">進階搜尋</button>
-            </div>
-        </div>
--->
         <!-- modal -->
         <div class="modal fade modal-pk" tabindex="-1" role="dialog" aria-labelledby="modal-pk">
             <div class="modal-dialog modal-sm" role="document">
@@ -1093,13 +1280,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a class="d-block text-center" href="">
                                                 <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear
                                                 </div>
@@ -1120,13 +1307,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a class="d-block text-center" href="">
                                                 <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear S SAMSUNG Gear S
                                                 </div>
@@ -1147,13 +1334,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a class="d-block text-center" href="">
                                                 <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear S SAMSUNG Gear S
                                                 </div>
@@ -1174,13 +1361,13 @@
                                 <div class="col-6">
                                     <div class="box my-2">
                                         <figure class="mb-0 py-2">
-                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-secondary"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="pos-a-rt mt-1 mr-1 btn btn-sm btn-outline-secondary"><i class="fa fa-times"></i></a>
                                             <a class="d-block text-center" href="">
                                                 <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_mediapad_t2_8_pro_0314115014519_160x120.jpg" alt="">
                                             </a>
                                         </figure>
                                         <div class="clearfix">
-                                            <a class="d-block px-2 py-1 bg-faded" href="#">
+                                            <a class="d-block px-2 py-1 bg-light" href="#">
                                                 <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="SAMSUNG Gear S">
                                                     SAMSUNG Gear S SAMSUNG Gear S
                                                 </div>
@@ -1200,19 +1387,19 @@
                                 </div>
                             </div>
                             <div class="pt-2 text-center">
-                                <a href="#" class="btn btn-secondary">馬上比較</a>
+                                <a href="#" class="btn btn-outline-secondary">馬上比較</a>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab-compare-02">
                             平板電腦
                             <div class="pt-2 text-center">
-                                <a href="#" class="btn btn-secondary">馬上比較</a>
+                                <a href="#" class="btn btn-outline-secondary">馬上比較</a>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab-compare-03">
                             穿戴裝置
                             <div class="pt-2 text-center">
-                                <a href="#" class="btn btn-secondary">馬上比較</a>
+                                <a href="#" class="btn btn-outline-secondary">馬上比較</a>
                             </div>
                         </div>
                     </div>
@@ -1233,8 +1420,8 @@
                         <form>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="請輸入關鍵字" name="srch-term" id="srch-term">
-                        <div class="input-group-btn">
-                            <button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                 </form>
@@ -1297,12 +1484,10 @@
         <!-- Global -->
         <script src="https://kit.fontawesome.com/2db6bfa046.js" crossorigin="anonymous"></script>
 		<script src="/assets/javascripts/vendor/jquery.min.js"></script>
-        <script src="/assets/javascripts/vendor/bootstrap.tether.min.js"></script>
-        <script src="/assets/javascripts/vendor/bootstrap.min.js"></script>
-        <script src="/assets/javascripts/vendor/jquery.pushy.min.js"></script>
+        <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
+<!--        <script src="/assets/javascripts/vendor/jquery.pushy.min.js"></script>-->
         <script src="/assets/javascripts/vendor/jquery.slick.min.js"></script>
         <script src="/assets/javascripts/vendor/jquery.scrollUp.min.js"></script>
         <script src="/assets/javascripts/common.js"></script>
-
     </body>
 </html>
