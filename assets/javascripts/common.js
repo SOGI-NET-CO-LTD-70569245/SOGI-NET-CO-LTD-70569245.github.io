@@ -2,9 +2,9 @@ $(function() {
     "use strict";
 
     //jquery.scrollUp
-    $.scrollUp({
-        scrollImg: true,
-    });
+//    $.scrollUp({
+//        scrollImg: true,
+//    });
 
     // bootstrap.tooltip
     $('body').tooltip( {selector: '[data-toggle=tooltip]'} );
@@ -210,12 +210,12 @@ $(function() {
     $('.dropdown').hover(function() {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
     }, function() {
-//        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
     });
 
-    $('body').click( function() {
-        $('.dropdown-menu').hide();
-    });
+//    $('body').click( function() {
+//        $('.dropdown-menu').hide();
+//    });
 });
 
 var didScroll;
@@ -256,9 +256,9 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
-$('#mobile-menu-button').on('click', function(event) {
+$('.btn-mobile-menu').on('click', function(event) {
     event.preventDefault();
-    $(this).toggleClass('active');
+    $('.btn-mobile-menu').toggleClass('active');
     $('.mobile-menu').slideToggle("fast");
     $("body").toggleClass('scroll-hidden');
     $(".mobile-menu-main").toggleClass('d-none');

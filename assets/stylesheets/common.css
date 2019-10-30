@@ -142,16 +142,6 @@ input[type=number] {
   flex-flow: nowrap;
   white-space: nowrap; }
 
-#main-nav {
-  z-index: 10;
-  border-bottom: 1px solid #ddd; }
-#main-nav .nav li a {
-  color: #337ab7;
-  border-radius: 0; }
-#main-nav .nav li a:hover, #main-nav .nav li a:focus {
-  background: #337ab7;
-  color: #fff; }
-
 .nav-styled .nav-link {
   background-color: #fc0;
   color: #a76e00;
