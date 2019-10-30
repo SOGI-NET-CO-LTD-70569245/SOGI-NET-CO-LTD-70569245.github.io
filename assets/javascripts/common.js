@@ -1,10 +1,10 @@
 $(function() {
     "use strict";
 
-    //jquery.scrollUp
-//    $.scrollUp({
-//        scrollImg: true,
-//    });
+//    jquery.scrollUp
+    $.scrollUp({
+        scrollImg: true,
+    });
 
     // bootstrap.tooltip
     $('body').tooltip( {selector: '[data-toggle=tooltip]'} );
@@ -210,7 +210,7 @@ $(function() {
     $('.dropdown').hover(function() {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
     }, function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+        $(this).find('.dropdown-menu').stop(true, true).delay(10000).fadeOut(200);
     });
 
 //    $('body').click( function() {
