@@ -6,6 +6,12 @@ $(function() {
         scrollImg: true,
     });
 
+    $('.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+    }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+    });
+
     // bootstrap.tooltip
     $('body').tooltip( {selector: '[data-toggle=tooltip]'} );
 
@@ -185,14 +191,6 @@ $(document).ready(function(){
     });
 });
 
-$(function(){
-    $('.btn-anchor').click(function(){
-		$('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top-50}, 750);
-		return false;
-	});
-});
-
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -203,20 +201,6 @@ $(function(){
 
 
 // 191026
-
-$(function() {
-    "use strict";
-
-    $('.dropdown').hover(function() {
-        $(this).find('.dropdown-menu').stop(true, true).fadeIn(200);
-    }, function() {
-        $(this).find('.dropdown-menu').stop(true, true).fadeOut(200);
-    });
-
-//    $('body').click( function() {
-//        $('.dropdown-menu').hide();
-//    });
-});
 
 var didScroll;
 var lastScrollTop = 0;
