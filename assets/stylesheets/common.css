@@ -339,6 +339,18 @@ input[type=number] {
     -moz-transform: rotate(0deg); }
   to {
     -moz-transform: rotate(360deg); } }
+#header.header-admin {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #337ab7;
+  color: #fff; }
+#header.header-admin .nav-link, #header.header-admin .btn-link {
+  color: #fff; }
+#header.header-admin .nav-link:hover {
+  background: #22527b; }
+#header.header-admin a:hover, #header.header-admin a:focus {
+  text-decoration: none; }
+
 #header {
   z-index: 1001;
   background: #fc0;
@@ -979,7 +991,7 @@ a.box:hover {
 .pushy {
   font-size: 15px;
   position: fixed;
-  width: 100%;
+  width: 200px;
   height: 100%;
   top: 0;
   z-index: 9999;
@@ -999,25 +1011,25 @@ a.box:hover {
 
 /* Menu Movement */
 .pushy-left {
-  -webkit-transform: translate3d(-100%, 0, 0);
-  -ms-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0); }
+  -webkit-transform: translate3d(-200px, 0, 0);
+  -ms-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0); }
 
 .pushy-open-left #container, .pushy-open-left .push {
-  -webkit-transform: translate3d(100%, 0, 0);
-  -ms-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0); }
+  -webkit-transform: translate3d(200px, 0, 0);
+  -ms-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0); }
 
 .pushy-right {
-  -webkit-transform: translate3d(100%, 0, 0);
-  -ms-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0); }
+  -webkit-transform: translate3d(200px, 0, 0);
+  -ms-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0); }
 
 .pushy-open-right #container, .pushy-open-right .push {
-  -moz-transform: translate3d(-100%, 0, 0);
-  -ms-transform: translate3d(-100%, 0, 0);
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0); }
+  -moz-transform: translate3d(-200px, 0, 0);
+  -ms-transform: translate3d(-200px, 0, 0);
+  -webkit-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0); }
 
 .pushy-open-left .pushy, .pushy-open-right .pushy {
   -moz-transform: translate3d(0, 0, 0);
@@ -1117,6 +1129,12 @@ a.box:hover {
 .pushy .nav-link {
   padding-left: 0;
   padding-right: 0; }
+.pushy .list-group-item {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-left: none;
+  border-right: none; }
 
 /* Slider */
 .slick-slider {
