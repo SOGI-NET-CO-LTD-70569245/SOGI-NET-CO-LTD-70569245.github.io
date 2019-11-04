@@ -1,10 +1,17 @@
 $(function() {
     "use strict";
 
+    $('.btn-top').click(function(){
+		$('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 750);
+		return false;
+	});
+
 //    jquery.scrollUp
-    $.scrollUp({
-        scrollImg: true,
-    });
+//    $.scrollUp({
+//        scrollImg: true,
+//    });
 
     $('.dropdown').hover(function() {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
@@ -206,7 +213,6 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('#header').outerHeight();
-var scrollUp = $('#scrollUp').outerHeight();
 
 $(window).scroll(function(event){
     didScroll = true;
@@ -229,12 +235,10 @@ function hasScrolled() {
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('#header').removeClass('scroll-up').addClass('scroll-down');
-        $('#scrollUp').removeClass('scroll-up').addClass('scroll-down');
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $('#header').removeClass('scroll-down').addClass('scroll-up');
-            $('#scrollUp').removeClass('scroll-down').addClass('scroll-up');
         }
     }
     lastScrollTop = st;
@@ -247,3 +251,13 @@ $('.btn-mobile-menu').on('click', function(event) {
     $("body").toggleClass('scroll-hidden');
     $(".mobile-menu-main").toggleClass('d-none');
 });
+
+window.addEventListener("scroll", bottomBtn);
+
+function bottomBtn() {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        document.getElementById("menu-bottom").style.bottom = "7.5rem";
+    } else {
+        document.getElementById("menu-bottom").style.bottom = "-100%";
+    }
+}

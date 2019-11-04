@@ -204,36 +204,23 @@ input[type=number] {
 .mobile-menu .list-group .list-group-item:first-child {
   border-top: 0; }
 
-#scrollUp {
-  bottom: -6.5rem;
+#menu-bottom {
+  position: fixed;
   right: 1rem;
+  bottom: -100%;
+  z-index: 10; }
+#menu-bottom .btn {
+  margin: .25rem 0;
+  padding: 0;
   width: 36px;
   height: 36px;
-  -moz-border-radius: 6px 6px 0 0;
-  -webkit-border-radius: 6px;
-  border-radius: 6px 6px 0 0;
-  background-color: #f8f9fa;
-  border: solid 1px #dee2e6;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  text-align: center; }
-#scrollUp:before {
-  display: block;
-  content: "\f077";
-  font-family: FontAwesome;
-  font-weight: 900;
-  color: #adb5bd;
+  text-align: center;
   line-height: 36px; }
-#scrollUp:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7; }
-#scrollUp:hover, #scrollUp:focus {
+#menu-bottom .btn:hover, #menu-bottom .btn:focus {
   text-decoration: none; }
-#scrollUp.scroll-up {
-  bottom: 5rem; }
-#scrollUp.scroll-down {
-  bottom: -5rem; }
 
 .btn-service {
   position: fixed;
@@ -982,159 +969,6 @@ a.box:hover {
   border-color: #30a327; }
 .btn-line:not(:disabled):not(.disabled):active:focus, .btn-line:not(:disabled):not(.disabled).active:focus, .show > .btn-line.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(64, 182, 55, 0.5); }
-
-/*! Pushy - v1.1.0 - 2017-1-30
-* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
-* https://github.com/christophery/pushy/
-* by Christopher Yee */
-/* Menu Appearance */
-.pushy {
-  font-size: 15px;
-  position: fixed;
-  width: 200px;
-  height: 100%;
-  top: 0;
-  z-index: 9999;
-  background: #fff;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  /* enables momentum scrolling in iOS overflow elements */ }
-.pushy ul:first-child {
-  margin-top: 10px; }
-.pushy.pushy-left {
-  left: 0; }
-.pushy.pushy-right {
-  right: 0; }
-
-.pushy-content {
-  visibility: hidden; }
-
-/* Menu Movement */
-.pushy-left {
-  -webkit-transform: translate3d(-200px, 0, 0);
-  -ms-transform: translate3d(-200px, 0, 0);
-  transform: translate3d(-200px, 0, 0); }
-
-.pushy-open-left #container, .pushy-open-left .push {
-  -webkit-transform: translate3d(200px, 0, 0);
-  -ms-transform: translate3d(200px, 0, 0);
-  transform: translate3d(200px, 0, 0); }
-
-.pushy-right {
-  -webkit-transform: translate3d(200px, 0, 0);
-  -ms-transform: translate3d(200px, 0, 0);
-  transform: translate3d(200px, 0, 0); }
-
-.pushy-open-right #container, .pushy-open-right .push {
-  -moz-transform: translate3d(-200px, 0, 0);
-  -ms-transform: translate3d(-200px, 0, 0);
-  -webkit-transform: translate3d(-200px, 0, 0);
-  transform: translate3d(-200px, 0, 0); }
-
-.pushy-open-left .pushy, .pushy-open-right .pushy {
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-.pushy-open-left .pushy-content, .pushy-open-right .pushy-content {
-  visibility: visible; }
-
-/* Menu Transitions */
-#container, .pushy, .push {
-  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
-
-.pushy-content {
-  transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
-
-/* Site Overlay */
-.site-overlay {
-  display: none; }
-
-.pushy-open-left .site-overlay, .pushy-open-right .site-overlay {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 9998;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-animation: fade 500ms;
-  animation: fade 500ms; }
-
-@keyframes fade {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@-webkit-keyframes fade {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-/* Submenu Appearance */
-.pushy-submenu {
-  /* Submenu Buttons */
-  /* Submenu Icon */ }
-.pushy-submenu ul {
-  padding-left: 15px;
-  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out; }
-.pushy-submenu ul .pushy-link {
-  transition: opacity 0.2s ease-in-out; }
-.pushy-submenu button {
-  width: 100%;
-  color: #b3b3b1;
-  padding: 15px 30px;
-  text-align: left;
-  background: transparent;
-  border: 0; }
-.pushy-submenu button:hover {
-  color: #FFF; }
-.pushy-submenu > a, .pushy-submenu > button {
-  position: relative; }
-.pushy-submenu > a::after, .pushy-submenu > button::after {
-  content: '';
-  display: block;
-  height: 11px;
-  width: 8px;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  background: url("../img/arrow.svg") no-repeat;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  transition: transform 0.2s; }
-
-/* Submenu Movement */
-.pushy-submenu-closed ul {
-  max-height: 0;
-  overflow: hidden;
-  visibility: hidden; }
-.pushy-submenu-closed .pushy-link {
-  opacity: 0; }
-
-.pushy-submenu-open {
-  /* Submenu Icon */ }
-.pushy-submenu-open ul {
-  max-height: 1000px;
-  visibility: visible; }
-.pushy-submenu-open .pushy-link {
-  opacity: 1; }
-.pushy-submenu-open a::after, .pushy-submenu-open button::after {
-  -webkit-transform: translateY(-50%) rotate(90deg);
-  -ms-transform: translateY(-50%) rotate(90deg);
-  transform: translateY(-50%) rotate(90deg); }
-
-.pushy .nav-link {
-  padding-left: 0;
-  padding-right: 0; }
-.pushy .list-group-item {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  border-left: none;
-  border-right: none; }
 
 /* Slider */
 .slick-slider {
