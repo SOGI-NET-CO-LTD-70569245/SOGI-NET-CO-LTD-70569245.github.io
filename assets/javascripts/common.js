@@ -7,6 +7,12 @@ $(function() {
     }, 750);
 		return false;
 	});
+    $('.btn-anchor').click(function(){
+		$('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top -100
+    }, 750);
+		return false;
+	});
 
 //    jquery.scrollUp
 //    $.scrollUp({
@@ -252,12 +258,11 @@ $('.btn-mobile-menu').on('click', function(event) {
     $(".mobile-menu-main").toggleClass('d-none');
 });
 
-window.addEventListener("scroll", bottomBtn);
-
-function bottomBtn() {
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-        document.getElementById("menu-bottom").style.bottom = "7.5rem";
-    } else {
-        document.getElementById("menu-bottom").style.bottom = "-100%";
-    }
-}
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 800) {
+    $('#menu-bottom').fadeIn();
+  } else {
+    $('#menu-bottom').fadeOut();
+  }
+});

@@ -143,11 +143,13 @@ input[type=number] {
   white-space: nowrap; }
 
 .nav-styled .nav-link {
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #fc0;
   color: #a76e00;
   border-radius: 0; }
 .nav-styled .nav-link:hover, .nav-styled .nav-link:focus {
-  background-color: #f70;
+  background-color: #337ab7;
   color: #fff; }
 
 .mobile-menu {
@@ -204,21 +206,27 @@ input[type=number] {
 .mobile-menu .list-group .list-group-item:first-child {
   border-top: 0; }
 
+.breadcrumb .breadcrumb-item a {
+  color: #337ab7; }
+.breadcrumb .breadcrumb-item a:hover, .breadcrumb .breadcrumb-item a:focus {
+  text-decoration: underline; }
+
 #menu-bottom {
   position: fixed;
   right: 1rem;
-  bottom: -100%;
-  z-index: 10; }
+  bottom: 7.5rem;
+  z-index: 10;
+  display: none; }
 #menu-bottom .btn {
   margin: .25rem 0;
   padding: 0;
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   text-align: center;
-  line-height: 36px; }
+  line-height: 42px; }
 #menu-bottom .btn:hover, #menu-bottom .btn:focus {
   text-decoration: none; }
 
