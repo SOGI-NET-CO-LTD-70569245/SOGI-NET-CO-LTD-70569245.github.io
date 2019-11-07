@@ -2557,6 +2557,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   background-color: #e9ecef; }
 .custom-file-input:lang(en) ~ .custom-file-label::after {
   content: "Browse"; }
+.custom-file-input:lang(zh-tw) ~ .custom-file-label::after {
+  content: "瀏覽"; }
 .custom-file-input ~ .custom-file-label[data-browse]::after {
   content: attr(data-browse); }
 
@@ -2715,15 +2717,15 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   cursor: default; }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6; }
+  border-bottom: 2px solid #ffd500; }
 .nav-tabs .nav-item {
-  margin-bottom: -1px; }
+  margin-bottom: -2px; }
 .nav-tabs .nav-link {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem; }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #dee2e6; }
+  border-color: #e9ecef #e9ecef #ffd500; }
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
   background-color: transparent;
@@ -2731,9 +2733,9 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
   color: #495057;
   background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff; }
+  border-color: #ffd500 #ffd500 #fff; }
 .nav-tabs .dropdown-menu {
-  margin-top: -1px;
+  margin-top: -2px;
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
 

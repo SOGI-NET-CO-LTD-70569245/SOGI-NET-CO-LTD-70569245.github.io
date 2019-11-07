@@ -31,6 +31,7 @@ $(function() {
     // bootstrap.popover - click
 
 
+
     $('[data-toggle=popover]').popover({
         html : true,
         offset: '0 100px',
