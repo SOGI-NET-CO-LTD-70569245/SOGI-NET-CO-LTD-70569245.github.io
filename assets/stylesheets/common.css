@@ -87,6 +87,8 @@ small.text-row-2 {
 
 .font-small {
   font-size: .85rem; }
+.font-small.text-row-2 {
+  height: 2.5rem; }
 
 .text-underline {
   text-decoration: underline; }
@@ -663,6 +665,25 @@ input[type=number] {
 
 .map {
   height: 250px; }
+
+.readmore .collapse:not(.show) {
+  height: 6rem !important;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
+.readmore .collapsing {
+  min-height: 6rem !important; }
+.readmore a:before {
+  font-family: FontAwesome; }
+.readmore a.collapsed:before {
+  content: '\f0d7'; }
+.readmore a.collapsed:after {
+  content: '展開'; }
+.readmore a:not(.collapsed):before {
+  content: '\f0d8'; }
+.readmore a:not(.collapsed):after {
+  content: '收合'; }
 
 @media (min-width: 1200px) {
   .headlines .headlines-main {
