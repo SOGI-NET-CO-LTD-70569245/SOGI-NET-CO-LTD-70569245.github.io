@@ -754,6 +754,9 @@ a.box:hover {
   display: inline-block !important;
   background: red; }
 
+.box-price .badge {
+  font-size: .85rem; }
+
 .bd-1 {
   border: 1px solid #adb5bd; }
 
