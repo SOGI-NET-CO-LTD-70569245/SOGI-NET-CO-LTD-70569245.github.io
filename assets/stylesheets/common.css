@@ -158,7 +158,7 @@ input[type=number] {
   overflow: auto;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 1029;
   display: none;
   padding-top: 55px;
   padding-bottom: 65px;
@@ -579,7 +579,7 @@ input[type=number] {
 
 .search-popover {
   padding: 10px !important;
-  max-width: 250px;
+  max-width: 11rem;
   font-size: .9em; }
 
 .features {
