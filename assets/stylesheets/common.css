@@ -1182,29 +1182,11 @@ a.box:hover {
 
 .expandable .expand-bar {
   position: absolute;
+  left: 0;
+  bottom: 0;
   display: block;
-  left: 0px;
-  bottom: 0px;
-  background-color: white;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid #adb5bd;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  -moz-border-radius: 0.25rem / 0;
-  -webkit-border-radius: 0.25rem 0;
-  border-radius: 0.25rem / 0;
-  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -moz-border-radius: 0.25rem;
-  -webkit-border-radius: 0.25rem;
-  border-radius: 0.25rem; }
-.expandable .expand-bar:hover, .expandable .expand-bar:focus {
-  border-color: #337ab7; }
-
+  background-color: #fff;
+  width: 100%; }
 .expandable .expand-bar::before {
   position: absolute;
   width: 100%;
@@ -1213,44 +1195,17 @@ a.box:hover {
   left: 0px;
   display: block;
   content: "";
-  background: rgba(237, 237, 237, 0);
-  background: -moz-linear-gradient(top, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, white 70%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237, 237, 237, 0)), color-stop(41%, rgba(255, 255, 255, 0.8)), color-stop(70%, white));
-  background: -webkit-linear-gradient(top, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, white 70%);
-  background: -o-linear-gradient(top, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, white 70%);
-  background: -ms-linear-gradient(top, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, white 70%);
-  background: linear-gradient(to bottom, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, #ffffff 70%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 ); }
-
-.expandable .expand-bar i {
-  transition: all 250ms ease-in-out;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  display: block;
-  top: 50%;
-  right: 10px;
-  margin-top: -10px;
-  transform: rotate(-90deg); }
-
-.expandable.expanded .expand-bar i {
-  transform: rotate(90deg); }
-
-.expandable .expand-bar i::before, .expandable .expand-bar i::after {
-  position: absolute;
-  width: 10px;
-  height: 1px;
-  background: #1d1d1d;
-  content: "";
-  left: 5px; }
-
-.expandable .expand-bar i::before {
-  transform: rotate(45deg);
-  top: 13px; }
-
-.expandable .expand-bar i::after {
-  transform: rotate(-45deg);
-  top: 6px; }
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjQxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjgiLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(237, 237, 237, 0)), color-stop(41%, rgba(255, 255, 255, 0.8)), color-stop(70%, #ffffff));
+  background: -moz-linear-gradient(top, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, #ffffff 70%);
+  background: -webkit-linear-gradient(top, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, #ffffff 70%);
+  background: linear-gradient(to bottom, rgba(237, 237, 237, 0) 0%, rgba(255, 255, 255, 0.8) 41%, #ffffff 70%); }
+.expandable .expand-bar .btn:after {
+  margin-left: 5px;
+  font-family: FontAwesome;
+  content: '\f0d7'; }
+.expandable.expanded .expand-bar .btn:after {
+  content: '\f0d8'; }
 
 .daterangepicker {
   position: absolute;

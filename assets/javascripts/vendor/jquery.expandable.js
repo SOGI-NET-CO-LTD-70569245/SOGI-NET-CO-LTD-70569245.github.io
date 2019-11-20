@@ -22,9 +22,9 @@
 			}
 		}
 
-		var $expand_bar = $('<a class="expand-bar"><span class="more">' + params.more
+		var $expand_bar = $('<div class="expand-bar"><a class="btn btn-outline-primary" href="javascript:void();"><span class="more">' + params.more
 			+ '</span><span class="less" style="display: none">' + params.less
-			+ '</span><i></i></a>');
+			+ '</span></a></div>');
 
 		$expand_bar.on('click', function(){
 			var $root = $(this).closest('.expandable');
