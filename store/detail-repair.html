@@ -240,15 +240,12 @@
         <script src="/assets/javascripts/common.js"></script>
 
         <!-- Single -->
-        <script src="/assets/javascripts/vendor/jquery.readmore.min.js"></script>
-        <script src="/assets/javascripts/function/lightbox.js"></script>
-        <script>
-            new Readmore('.js-readmore', {
-                speed: 500,
-                collapsedHeight: 150,
-                moreLink: '<div class=""><a class="btn btn-outline-primary" href="#">展開 <i class="fas fa-caret-down"></i></a></div>',
-                lessLink: '<div class=""><a class="btn btn-outline-primary" href="#">收合 <i class="fas fa-caret-up"></i></a></div>',
-                embedCSS: false
+        <script src="/assets/javascripts/vendor/jquery.expandable.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                $('.js-readmore').expandable({
+                    height: 150
+                });
             });
         </script>
 

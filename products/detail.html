@@ -946,7 +946,7 @@
         <!-- Single -->
         <script src="/assets/javascripts/vendor/bootstrap.star-rating.min.js"></script>
         <script src="/assets/javascripts/vendor/fresco.js"></script>
-        <script src="/assets/javascripts/vendor/jquery.readmore.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.expandable.js"></script>
         <script src="/assets/javascripts/vendor/highcharts.js"></script>
         <script src="/assets/javascripts/vendor/highcharts-more.js"></script>
         <script src="/assets/javascripts/vendor/exporting.js"></script>
@@ -1019,12 +1019,10 @@
                 });
             });
 
-            new Readmore('.js-readmore', {
-                speed: 500,
-                collapsedHeight: 240,
-                moreLink: '<div class=""><a class="btn btn-outline-primary" href="#">展開 <i class="fa fa-caret-down"></i></a></div>',
-                lessLink: '<div class=""><a class="btn btn-outline-primary" href="#">收合 <i class="fa fa-caret-up"></i></a></div>',
-                embedCSS: false
+            jQuery(document).ready(function() {
+                $('.js-readmore').expandable({
+                    height: 150
+                });
             });
             $('.section-color .btn').on('click', function() {
                 $('.section-color .btn.active').not(this).removeClass('active');
