@@ -1204,6 +1204,8 @@ a.box:hover {
   margin-left: 5px;
   font-family: FontAwesome;
   content: '\f0d7'; }
+.expandable.expanded .expand-bar::before {
+  display: none; }
 .expandable.expanded .expand-bar .btn:after {
   content: '\f0d8'; }
 
