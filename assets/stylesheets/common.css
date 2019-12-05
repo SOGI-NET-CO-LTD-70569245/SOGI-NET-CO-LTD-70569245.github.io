@@ -892,6 +892,10 @@ a.box:hover {
 .blockquote {
   border-left: 4px solid #dee2e6; }
 
+.js-lazy, .img-responsive {
+  max-width: 100%;
+  height: auto; }
+
 /*
  * Social Buttons for Bootstrap
  *
