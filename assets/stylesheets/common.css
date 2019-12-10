@@ -98,9 +98,9 @@ small.text-row-2 {
   object-fit: contain; }
 
 .img-prod-thumb {
-  max-width: 120px;
-  width: 120px;
-  height: 90px;
+  max-width: 100px;
+  width: 100px;
+  height: 75px;
   object-fit: cover; }
 
 .table-responsive {
@@ -896,117 +896,53 @@ a.box:hover {
   max-width: 100%;
   height: auto; }
 
-/*
- * Social Buttons for Bootstrap
- *
- * Copyright 2013-2015 Panayiotis Lipiridis
- * Licensed under the MIT License
- *
- * https://github.com/lipis/bootstrap-social
- */
+.btn-line {
+  color: #fff;
+  background-color: #00b833;
+  border-color: #00b833;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
+.btn-line:hover {
+  color: #fff;
+  background-color: #009228;
+  border-color: #008525; }
+.btn-line:focus, .btn-line.focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 195, 82, 0.5); }
+.btn-line.disabled, .btn-line:disabled {
+  color: #fff;
+  background-color: #00b833;
+  border-color: #00b833; }
+.btn-line:not(:disabled):not(.disabled):active, .btn-line:not(:disabled):not(.disabled).active, .show > .btn-line.dropdown-toggle {
+  color: #fff;
+  background-color: #008525;
+  border-color: #007821; }
+.btn-line:not(:disabled):not(.disabled):active:focus, .btn-line:not(:disabled):not(.disabled).active:focus, .show > .btn-line.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 195, 82, 0.5); }
+
 .btn-facebook {
-  background-color: #3b5998 !important;
-  color: #fff !important;
-  color: #212529;
-  background-color: #fff;
+  color: #fff;
+  background-color: #3b5998;
   border-color: #3b5998;
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
 .btn-facebook:hover {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #30497c;
   border-color: #2d4373; }
 .btn-facebook:focus, .btn-facebook.focus {
-  box-shadow: 0 0 0 0.2rem rgba(55, 81, 135, 0.5); }
+  box-shadow: 0 0 0 0.2rem rgba(88, 114, 167, 0.5); }
 .btn-facebook.disabled, .btn-facebook:disabled {
-  color: #212529;
-  background-color: #fff;
+  color: #fff;
+  background-color: #3b5998;
   border-color: #3b5998; }
 .btn-facebook:not(:disabled):not(.disabled):active, .btn-facebook:not(:disabled):not(.disabled).active, .show > .btn-facebook.dropdown-toggle {
-  color: #212529;
-  background-color: #e6e6e6;
+  color: #fff;
+  background-color: #2d4373;
   border-color: #293e6a; }
 .btn-facebook:not(:disabled):not(.disabled):active:focus, .btn-facebook:not(:disabled):not(.disabled).active:focus, .show > .btn-facebook.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(55, 81, 135, 0.5); }
-
-.btn-google {
-  background-color: #dd4b39 !important;
-  color: #fff !important;
-  color: #212529;
-  background-color: #fff;
-  border-color: #dd4b39;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-.btn-google:hover {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-color: #c23321; }
-.btn-google:focus, .btn-google.focus {
-  box-shadow: 0 0 0 0.2rem rgba(193, 69, 55, 0.5); }
-.btn-google.disabled, .btn-google:disabled {
-  color: #212529;
-  background-color: #fff;
-  border-color: #dd4b39; }
-.btn-google:not(:disabled):not(.disabled):active, .btn-google:not(:disabled):not(.disabled).active, .show > .btn-google.dropdown-toggle {
-  color: #212529;
-  background-color: #e6e6e6;
-  border-color: #b7301f; }
-.btn-google:not(:disabled):not(.disabled):active:focus, .btn-google:not(:disabled):not(.disabled).active:focus, .show > .btn-google.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(193, 69, 55, 0.5); }
-
-.btn-instagram {
-  background-color: #3f729b !important;
-  color: #fff !important;
-  color: #212529;
-  background-color: #fff;
-  border-color: #3f729b;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-.btn-instagram:hover {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-color: #305777; }
-.btn-instagram:focus, .btn-instagram.focus {
-  box-shadow: 0 0 0 0.2rem rgba(59, 102, 138, 0.5); }
-.btn-instagram.disabled, .btn-instagram:disabled {
-  color: #212529;
-  background-color: #fff;
-  border-color: #3f729b; }
-.btn-instagram:not(:disabled):not(.disabled):active, .btn-instagram:not(:disabled):not(.disabled).active, .show > .btn-instagram.dropdown-toggle {
-  color: #212529;
-  background-color: #e6e6e6;
-  border-color: #2d516e; }
-.btn-instagram:not(:disabled):not(.disabled):active:focus, .btn-instagram:not(:disabled):not(.disabled).active:focus, .show > .btn-instagram.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(59, 102, 138, 0.5); }
-
-.btn-line {
-  background-color: #45d039 !important;
-  color: #fff !important;
-  color: #212529;
-  background-color: #fff;
-  border-color: #45d039;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-.btn-line:hover {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-color: #34ad29; }
-.btn-line:focus, .btn-line.focus {
-  box-shadow: 0 0 0 0.2rem rgba(64, 182, 55, 0.5); }
-.btn-line.disabled, .btn-line:disabled {
-  color: #212529;
-  background-color: #fff;
-  border-color: #45d039; }
-.btn-line:not(:disabled):not(.disabled):active, .btn-line:not(:disabled):not(.disabled).active, .show > .btn-line.dropdown-toggle {
-  color: #212529;
-  background-color: #e6e6e6;
-  border-color: #30a327; }
-.btn-line:not(:disabled):not(.disabled):active:focus, .btn-line:not(:disabled):not(.disabled).active:focus, .show > .btn-line.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(64, 182, 55, 0.5); }
+  box-shadow: 0 0 0 0.2rem rgba(88, 114, 167, 0.5); }
 
 /* Slider */
 .slick-slider {
