@@ -100,7 +100,7 @@ small.text-row-2 {
 .img-prod-thumb {
   max-width: 100px;
   width: 100px;
-  height: 75px;
+  height: 75px !important;
   object-fit: cover; }
 
 .table-responsive {
