@@ -316,26 +316,50 @@ input[type=number] {
   background-image: url(../images/ui/icon-best.png); }
 
 .fa-refresh-animate {
-  -animation: spin .7s infinite linear;
-  -ms-animation: spin .7s infinite linear;
-  -webkit-animation: spinw .7s infinite linear;
-  -moz-animation: spinm .7s infinite linear; }
+  -moz-animation: spin 0.7s infinite linear;
+  -webkit-animation: spin 0.7s infinite linear;
+  animation: spin 0.7s infinite linear; }
 
 @keyframes spin {
   from {
+    -moz-transform: scale(1) rotate(0deg);
+    -ms-transform: scale(1) rotate(0deg);
+    -webkit-transform: scale(1) rotate(0deg);
     transform: scale(1) rotate(0deg); }
   to {
+    -moz-transform: scale(1) rotate(360deg);
+    -ms-transform: scale(1) rotate(360deg);
+    -webkit-transform: scale(1) rotate(360deg);
     transform: scale(1) rotate(360deg); } }
-@-webkit-keyframes spinw {
-  from {
-    -webkit-transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg); } }
-@-moz-keyframes spinm {
-  from {
-    -moz-transform: rotate(0deg); }
-  to {
-    -moz-transform: rotate(360deg); } }
+[class^="icon-net"], [class*="icon-net"] {
+  width: 32px;
+  height: 32px; }
+
+a .icon-net-2g {
+  background-image: url(../images/ui/icon-net-2G-normal.png); }
+a .icon-net-3g {
+  background-image: url(../images/ui/icon-net-3G-normal.png); }
+a .icon-net-4g {
+  background-image: url(../images/ui/icon-net-4G-normal.png); }
+a .icon-net-5g {
+  background-image: url(../images/ui/icon-net-5G-normal.png); }
+a:hover .icon-net-2g, a:focus .icon-net-2g {
+  background-image: url(../images/ui/icon-net-2G-active.png); }
+a:hover .icon-net-3g, a:focus .icon-net-3g {
+  background-image: url(../images/ui/icon-net-3G-active.png); }
+a:hover .icon-net-4g, a:focus .icon-net-4g {
+  background-image: url(../images/ui/icon-net-4G-active.png); }
+a:hover .icon-net-5g, a:focus .icon-net-5g {
+  background-image: url(../images/ui/icon-net-5G-active.png); }
+a.disabled .icon-net-2g {
+  background-image: url(../images/ui/icon-net-2G-disabled.png); }
+a.disabled .icon-net-3g {
+  background-image: url(../images/ui/icon-net-3G-disabled.png); }
+a.disabled .icon-net-4g {
+  background-image: url(../images/ui/icon-net-4G-disabled.png); }
+a.disabled .icon-net-5g {
+  background-image: url(../images/ui/icon-net-5G-disabled.png); }
+
 #header {
   z-index: 1030;
   background: #fc0;
