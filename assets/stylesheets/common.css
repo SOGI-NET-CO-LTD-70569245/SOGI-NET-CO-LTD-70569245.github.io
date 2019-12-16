@@ -331,6 +331,11 @@ input[type=number] {
     -ms-transform: scale(1) rotate(360deg);
     -webkit-transform: scale(1) rotate(360deg);
     transform: scale(1) rotate(360deg); } }
+.icon-wireless {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/ui/icon-wireless.png); }
+
 [class^="icon-net"], [class*="icon-net"] {
   width: 32px;
   height: 32px; }
@@ -343,13 +348,13 @@ a .icon-net-4g {
   background-image: url(../images/ui/icon-net-4G-normal.png); }
 a .icon-net-5g {
   background-image: url(../images/ui/icon-net-5G-normal.png); }
-a:hover .icon-net-2g, a:focus .icon-net-2g {
+a:hover .icon-net-2g, a:active .icon-net-2g, a:focus .icon-net-2g, a.active .icon-net-2g {
   background-image: url(../images/ui/icon-net-2G-active.png); }
-a:hover .icon-net-3g, a:focus .icon-net-3g {
+a:hover .icon-net-3g, a:active .icon-net-3g, a:focus .icon-net-3g, a.active .icon-net-3g {
   background-image: url(../images/ui/icon-net-3G-active.png); }
-a:hover .icon-net-4g, a:focus .icon-net-4g {
+a:hover .icon-net-4g, a:active .icon-net-4g, a:focus .icon-net-4g, a.active .icon-net-4g {
   background-image: url(../images/ui/icon-net-4G-active.png); }
-a:hover .icon-net-5g, a:focus .icon-net-5g {
+a:hover .icon-net-5g, a:active .icon-net-5g, a:focus .icon-net-5g, a.active .icon-net-5g {
   background-image: url(../images/ui/icon-net-5G-active.png); }
 a.disabled .icon-net-2g {
   background-image: url(../images/ui/icon-net-2G-disabled.png); }
