@@ -2756,7 +2756,7 @@ a.box:hover {
 
 .editable {
   margin: 0;
-  padding: 0 !important;
+  padding: 0;
   font-size: 18px;
   line-height: 1.8;
   word-wrap: break-word;
