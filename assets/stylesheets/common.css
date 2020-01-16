@@ -743,8 +743,7 @@ a.box:hover {
   box-shadow: 0 0 1px #999;
   border-color: #ffd500; }
 .box .list-group {
-  margin: 0;
-  font-size: .8em; }
+  margin: 0; }
 .box .list-group .list-group-item {
   padding: 5px 10px;
   border-left: none;
