@@ -212,7 +212,7 @@
   transform: translate(-50%, -50%); }
 
 .editable h2 {
-  border-left: 3px solid #ffd500;
+  border-left: 3px solid #F8CD46;
   margin: 2rem 0 !important;
   padding-left: 5px;
   font-size: 2rem !important; }
@@ -225,7 +225,7 @@
   border-radius: 50%;
   object-fit: cover; }
 
-.news .dropdown-category {
+.news #dropdown-category {
   z-index: 10; }
 .news .headlines {
   position: relative; }
@@ -234,7 +234,7 @@
   left: 0;
   top: 0;
   z-index: -1;
-  background-color: #ffd500;
+  background-color: #F8CD46;
   width: 100%;
   height: 250px; }
 .news .headlines .headlines-title {
@@ -296,7 +296,7 @@
   min-width: 100px;
   cursor: pointer; }
 #question label:hover {
-  background: #ffd500; }
+  background: #F8CD46; }
 #question input[type=radio]:checked + label {
   background: #CB8306;
   color: #FAFAFA; }

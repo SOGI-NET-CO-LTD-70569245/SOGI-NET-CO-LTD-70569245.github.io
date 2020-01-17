@@ -741,7 +741,7 @@ a.box:hover {
   border: 1px solid #ccc; }
 .box:hover {
   box-shadow: 0 0 1px #999;
-  border-color: #ffd500; }
+  border-color: #F8CD46; }
 .box .list-group {
   margin: 0; }
 .box .list-group .list-group-item {
@@ -797,7 +797,7 @@ a.box:hover {
   border-color: #e9ecef; }
 
 .bd-warning {
-  border-color: #ffd500; }
+  border-color: #F8CD46; }
 
 .table-warning td {
   border-top-color: #ffc299; }
