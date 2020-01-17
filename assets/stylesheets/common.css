@@ -252,7 +252,7 @@ input[type=number] {
   background-color: #fc0;
   border-color: #cca300; }
 .btn-shop:focus, .btn-shop.focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 212, 38, 0.5); }
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(255, 212, 38, 0.5); }
 .btn-shop.disabled, .btn-shop:disabled {
   color: #fff;
   background-color: #000;
@@ -262,7 +262,7 @@ input[type=number] {
   background-color: black;
   border-color: #bf9900; }
 .btn-shop:not(:disabled):not(.disabled):active:focus, .btn-shop:not(:disabled):not(.disabled).active:focus, .show > .btn-shop.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 212, 38, 0.5); }
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(255, 212, 38, 0.5); }
 
 .btn-img {
   -moz-transition: all 0.2s ease;
@@ -936,7 +936,7 @@ a.box:hover {
   background-color: #009228;
   border-color: #008525; }
 .btn-line:focus, .btn-line.focus {
-  box-shadow: 0 0 0 0.2rem rgba(38, 195, 82, 0.5); }
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(38, 195, 82, 0.5); }
 .btn-line.disabled, .btn-line:disabled {
   color: #fff;
   background-color: #00b833;
@@ -946,7 +946,7 @@ a.box:hover {
   background-color: #008525;
   border-color: #007821; }
 .btn-line:not(:disabled):not(.disabled):active:focus, .btn-line:not(:disabled):not(.disabled).active:focus, .show > .btn-line.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(38, 195, 82, 0.5); }
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(38, 195, 82, 0.5); }
 
 .btn-facebook {
   color: #fff;
@@ -960,7 +960,7 @@ a.box:hover {
   background-color: #30497c;
   border-color: #2d4373; }
 .btn-facebook:focus, .btn-facebook.focus {
-  box-shadow: 0 0 0 0.2rem rgba(88, 114, 167, 0.5); }
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(88, 114, 167, 0.5); }
 .btn-facebook.disabled, .btn-facebook:disabled {
   color: #fff;
   background-color: #3b5998;
@@ -970,7 +970,7 @@ a.box:hover {
   background-color: #2d4373;
   border-color: #293e6a; }
 .btn-facebook:not(:disabled):not(.disabled):active:focus, .btn-facebook:not(:disabled):not(.disabled).active:focus, .show > .btn-facebook.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(88, 114, 167, 0.5); }
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(88, 114, 167, 0.5); }
 
 /* Slider */
 .slick-slider {
