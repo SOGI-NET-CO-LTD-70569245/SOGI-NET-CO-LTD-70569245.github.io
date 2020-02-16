@@ -214,8 +214,11 @@
 .editable h2 {
   border-left: 3px solid #F8CD46;
   margin: 2rem 0 !important;
-  padding-left: 5px;
+  padding-left: 30px;
   font-size: 2rem !important; }
+@media (max-width: 991.98px) {
+  .editable h2 {
+    font-size: 1.75rem !important; } }
 .editable .btn {
   text-decoration: none !important; }
 
