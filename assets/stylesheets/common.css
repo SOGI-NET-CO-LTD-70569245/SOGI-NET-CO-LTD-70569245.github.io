@@ -96,6 +96,42 @@ small.text-row-2 {
 .text-underline {
   text-decoration: underline; }
 
+.hashtags .hashtag {
+  margin-left: 15px;
+  font-size: .93rem;
+  font-weight: bold; }
+.hashtags .hashtag:only-child, .hashtags .hashtag:first-child {
+  margin-left: 0; }
+@media (max-width: 991.98px) {
+  .hashtags .hashtag {
+    font-size: .75rem; } }
+
+.card-img-overlay .hashtag {
+  color: #F8CD46; }
+
+.blockquote {
+  position: relative;
+  left: -3px;
+  background-color: #f8f9fa;
+  border: 1px solid #f8cd46; }
+.blockquote:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: inherit;
+  border-radius: inherit;
+  border: inherit;
+  left: 6px;
+  top: 6px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); }
+
+@media (max-width: 991.98px) {
+  .h1 {
+    font-size: 1.75rem; } }
+
 .img-fit {
   max-height: 140px;
   object-fit: contain; }
@@ -927,6 +963,61 @@ a.box:hover {
   max-width: 100%;
   height: auto; }
 
+.dropdown-toggle::after {
+  position: relative;
+  border: none;
+  top: 3px;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f107"; }
+
+.btn-line {
+  color: #fff;
+  background-color: #00b833;
+  border-color: #00b833;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
+.btn-line:hover {
+  color: #fff;
+  background-color: #009228;
+  border-color: #008525; }
+.btn-line:focus, .btn-line.focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 195, 82, 0.5); }
+.btn-line.disabled, .btn-line:disabled {
+  color: #fff;
+  background-color: #00b833;
+  border-color: #00b833; }
+.btn-line:not(:disabled):not(.disabled):active, .btn-line:not(:disabled):not(.disabled).active, .show > .btn-line.dropdown-toggle {
+  color: #fff;
+  background-color: #008525;
+  border-color: #007821; }
+.btn-line:not(:disabled):not(.disabled):active:focus, .btn-line:not(:disabled):not(.disabled).active:focus, .show > .btn-line.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 195, 82, 0.5); }
+
+.btn-facebook {
+  color: #fff;
+  background-color: #3b5998;
+  border-color: #3b5998;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
+.btn-facebook:hover {
+  color: #fff;
+  background-color: #30497c;
+  border-color: #2d4373; }
+.btn-facebook:focus, .btn-facebook.focus {
+  box-shadow: 0 0 0 0.2rem rgba(88, 114, 167, 0.5); }
+.btn-facebook.disabled, .btn-facebook:disabled {
+  color: #fff;
+  background-color: #3b5998;
+  border-color: #3b5998; }
+.btn-facebook:not(:disabled):not(.disabled):active, .btn-facebook:not(:disabled):not(.disabled).active, .show > .btn-facebook.dropdown-toggle {
+  color: #fff;
+  background-color: #2d4373;
+  border-color: #293e6a; }
+.btn-facebook:not(:disabled):not(.disabled):active:focus, .btn-facebook:not(:disabled):not(.disabled).active:focus, .show > .btn-facebook.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(88, 114, 167, 0.5); }
+
 .btn-social {
   width: 38px;
   height: 38px;
@@ -940,10 +1031,10 @@ a.box:hover {
   top: -1px; }
 .btn-social:hover {
   color: #fff; }
-.btn-social:hover.btn-facebook {
+.btn-social:hover.btn-social-facebook {
   background: #3b5998;
   border-color: #3b5998; }
-.btn-social:hover.btn-line {
+.btn-social:hover.btn-social-line {
   background: #00b833;
   border-color: #00b833; }
 
