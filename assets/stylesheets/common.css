@@ -102,9 +102,6 @@ small.text-row-2 {
   font-weight: bold; }
 .hashtags .hashtag:only-child, .hashtags .hashtag:first-child {
   margin-left: 0; }
-@media (max-width: 991.98px) {
-  .hashtags .hashtag {
-    font-size: .75rem; } }
 
 .card-img-overlay .hashtag {
   color: #F8CD46; }
@@ -112,8 +109,10 @@ small.text-row-2 {
 .blockquote {
   position: relative;
   left: -3px;
-  background-color: #f8f9fa;
-  border: 1px solid #f8cd46; }
+  max-width: 640px;
+  background-color: #fff;
+  border: 1px solid #f8cd46;
+  line-height: 2; }
 .blockquote:after {
   content: "";
   position: absolute;
@@ -141,6 +140,18 @@ small.text-row-2 {
   width: 100px;
   height: 75px !important;
   object-fit: cover; }
+
+.size-16by9 {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding-top: 56.25%; }
+.size-16by9 img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 .table-responsive {
   overflow-x: auto;
