@@ -111,7 +111,7 @@ small.text-row-2 {
   left: -3px;
   max-width: 640px;
   background-color: #fff;
-  border: 1px solid #f8cd46;
+  border: 1px solid #f8cd46 !important;
   line-height: 2; }
 .blockquote:after {
   content: "";
