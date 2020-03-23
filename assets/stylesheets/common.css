@@ -217,7 +217,7 @@ input[type=number] {
   background: #fff; }
 .mobile-menu .nav-link {
   padding: 15px 5px;
-  color: #343a40; }
+  color: #263238; }
 .mobile-menu .avatar {
   width: 46px;
   height: 46px;
@@ -231,7 +231,7 @@ input[type=number] {
 .mobile-menu .card-header .btn {
   position: relative;
   padding: 0;
-  color: #343a40;
+  color: #263238;
   text-align: left;
   text-decoration: none; }
 .mobile-menu .card-header .btn[aria-expanded="true"]:after {
@@ -520,7 +520,7 @@ a.disabled .icon-net-5g {
 .hamburger-menu span, .hamburger-menu span:before, .hamburger-menu span:after {
   width: 25px;
   height: 3px;
-  background-color: #343a40;
+  background-color: #263238;
   display: block; }
 .hamburger-menu.active span {
   background-color: transparent;
