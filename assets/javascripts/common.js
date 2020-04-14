@@ -11,6 +11,7 @@ $(function() {
 		$('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top -50
     }, 750);
+        $('#dropdown-category .btn-anchor').parent().hide();
 		return false;
 	});
 
@@ -29,9 +30,6 @@ $(function() {
     $('body').tooltip( {selector: '[data-toggle=tooltip]'} );
 
     // bootstrap.popover - click
-
-
-
     $('[data-toggle=popover]').popover({
         html : true,
         offset: '0 100px',
@@ -81,28 +79,6 @@ $(function() {
     $('.btn-msg-close').click(function() {
         $('.alert').fadeOut();
     })
-
-
-//    $(function() {
-//    function reposition() {
-//        var modal = $(this),
-//            dialog = modal.find('.modal-dialog');
-//        modal.css('display', 'block');
-//
-//        // Dividing by two centers the modal exactly, but dividing by three
-//        // or four works better for larger screens.
-//        dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
-//    }
-//    // Reposition when a modal is shown
-//    $('.modal').on('show.bs.modal', reposition);
-//    // Reposition when the window is resized
-//    $(window).on('resize', function() {
-//        $('.modal:visible').each(reposition);
-//    });
-//});
-
-
-
 
 });
 
