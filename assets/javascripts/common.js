@@ -84,6 +84,23 @@ $(function() {
 
 $(document).ready(function(){
 
+    $('.owl-center').owlCarousel({
+        loop:true,
+        margin:0,
+        autoplay:true,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                center: false,
+                items:1
+            },
+            640:{
+                center: true,
+                items:2
+            }
+        }
+    });
+
     $('.slider-rwd-3').slick({
         slidesToShow: 3,
         autoplay: false,

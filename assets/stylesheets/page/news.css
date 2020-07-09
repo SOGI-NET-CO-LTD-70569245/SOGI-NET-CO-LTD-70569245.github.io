@@ -264,9 +264,6 @@
 @media (max-width: 991.98px) {
   .news .headlines .headlines-desc {
     -webkit-line-clamp: 3; } }
-.news .section-topic {
-  background-color: #263238;
-  color: #fff; }
 .news .card .card-img-fit {
   height: 100%;
   object-fit: cover; }
@@ -275,24 +272,6 @@
   .img-md-fluid {
     max-width: 100%;
     height: auto; } }
-
-.text-row-12 {
-  -webkit-line-clamp: 1; }
-@media (max-width: 991.98px) {
-  .text-row-12 {
-    -webkit-line-clamp: 2; } }
-
-.text-row-13 {
-  -webkit-line-clamp: 1; }
-@media (max-width: 991.98px) {
-  .text-row-13 {
-    -webkit-line-clamp: 3; } }
-
-.text-row-32 {
-  -webkit-line-clamp: 3; }
-@media (max-width: 991.98px) {
-  .text-row-32 {
-    -webkit-line-clamp: 2; } }
 
 #quiz {
   position: relative; }
