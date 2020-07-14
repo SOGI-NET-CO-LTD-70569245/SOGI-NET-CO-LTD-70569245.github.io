@@ -1051,7 +1051,8 @@ a.box:hover {
 .card-focus {
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  min-height: 495px; }
 @media (max-width: 767.98px) {
   .card-focus {
     min-height: 420px; } }
@@ -2952,12 +2953,35 @@ a.box:hover {
   width: 100%; }
 .owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
   display: none; }
-.owl-carousel .owl-dots {
+.owl-carousel .owl-nav, .owl-carousel .owl-dots {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 10; }
+.owl-carousel .owl-nav {
+  top: 50%;
+  bottom: auto;
+  margin-top: -50px !important; }
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+  position: absolute; }
+.owl-carousel .owl-nav .owl-prev:before, .owl-carousel .owl-nav .owl-next:before {
+  font-family: "FontAwesome";
+  font-size: 100px;
+  font-weight: 900 !important;
+  line-height: 1;
+  color: #000;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+.owl-carousel .owl-nav .owl-prev {
+  left: 5%; }
+.owl-carousel .owl-nav .owl-prev:before {
+  content: ""; }
+.owl-carousel .owl-nav .owl-next {
+  right: 5%; }
+.owl-carousel .owl-nav .owl-next:before {
+  content: ""; }
 .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
   cursor: pointer;
   -webkit-user-select: none;
@@ -3086,7 +3110,7 @@ a.box:hover {
   -webkit-tap-highlight-color: transparent; }
 .owl-theme .owl-nav [class*='owl-'] {
   color: #FFF;
-  font-size: 14px;
+  font-size: 0;
   margin: 5px;
   padding: 4px 7px;
   background: #D6D6D6;
@@ -3094,7 +3118,7 @@ a.box:hover {
   cursor: pointer;
   border-radius: 3px; }
 .owl-theme .owl-nav [class*='owl-']:hover {
-  background: #869791;
+  background: none;
   color: #FFF;
   text-decoration: none; }
 .owl-theme .owl-nav .disabled {

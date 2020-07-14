@@ -87,7 +87,9 @@ $(document).ready(function(){
     $('.owl-center').owlCarousel({
         loop:true,
         margin:0,
-        autoplay:true,
+//        autoplay:true,
+        nav: true,
+        navText: ['',''],
         autoplayHoverPause:true,
         responsive:{
             0:{
