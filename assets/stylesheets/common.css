@@ -171,6 +171,10 @@ small.text-row-2 {
   left: 0;
   right: 0; }
 
+.card-img-fit {
+  height: 100%;
+  object-fit: cover; }
+
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%; }
@@ -1040,6 +1044,17 @@ a.box:hover {
 
 .btn-secondary {
   color: #fff; }
+
+.pos-a-lt .badge {
+  border-radius: 0; }
+
+.card-focus {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+@media (max-width: 767.98px) {
+  .card-focus {
+    min-height: 420px; } }
 
 .btn-line {
   color: #fff;
@@ -3101,10 +3116,12 @@ a.box:hover {
   background: #D6D6D6;
   display: block;
   -webkit-backface-visibility: visible;
-  transition: opacity 200ms ease;
+  transition: all 200ms ease;
   border-radius: 30px; }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  background: #869791; }
+  background: #F8CD46; }
+.owl-theme .owl-dots .owl-dot.active span {
+  width: 40px; }
 
 .editable {
   margin: 0;

@@ -230,13 +230,6 @@
 
 .news #dropdown-category {
   z-index: 10; }
-.news .card-focus {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-@media (max-width: 767.98px) {
-  .news .card-focus {
-    min-height: 420px; } }
 .news .headlines {
   position: relative; }
 .news .headlines .bg {
@@ -264,9 +257,6 @@
 @media (max-width: 991.98px) {
   .news .headlines .headlines-desc {
     -webkit-line-clamp: 3; } }
-.news .card .card-img-fit {
-  height: 100%;
-  object-fit: cover; }
 
 @media (max-width: 991.98px) {
   .img-md-fluid {
