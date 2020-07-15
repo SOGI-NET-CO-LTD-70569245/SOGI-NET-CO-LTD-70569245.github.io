@@ -175,6 +175,16 @@ small.text-row-2 {
   height: 100%;
   object-fit: cover; }
 
+.img-square {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%; }
+.img-square img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%; }
