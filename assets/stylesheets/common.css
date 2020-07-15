@@ -1021,6 +1021,8 @@ a.box:hover {
 .badge.badge-outline {
   color: #495057;
   border: 1px solid #ced4da; }
+.badge.badge-price {
+  background-color: #E7E8EA; }
 
 .tooltip-inner {
   white-space: pre-wrap; }

@@ -9,6 +9,20 @@
 /* Icon */
 .section-shop .nav-responsive {
   margin-top: -35px; }
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .section-shop .nav-responsive {
     margin-top: 0; } }
+
+.bg-text-color {
+  position: relative;
+  display: inline-block; }
+.bg-text-color:before {
+  position: absolute;
+  left: -5%;
+  bottom: 5%;
+  z-index: -1;
+  display: block;
+  width: 110%;
+  height: 10px;
+  content: '';
+  background: #F8CD46; }
