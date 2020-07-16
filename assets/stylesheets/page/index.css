@@ -16,11 +16,14 @@
 .bg-text-color {
   position: relative;
   display: inline-block; }
+.bg-text-color span {
+  position: relative;
+  z-index: 1; }
 .bg-text-color:before {
   position: absolute;
   left: -5%;
-  bottom: 5%;
-  z-index: -1;
+  bottom: 2%;
+  z-index: 0;
   display: block;
   width: 110%;
   height: 15px;

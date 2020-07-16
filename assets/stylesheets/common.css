@@ -1013,6 +1013,13 @@ a.box:hover {
   font-family: FontAwesome;
   content: '\f0d7'; }
 
+.badge-group-nowrap {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  height: 1.6rem; }
+
 .badge.badge-cht {
   background-color: #3d8ce3;
   color: #fff; }
