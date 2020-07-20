@@ -113,7 +113,7 @@ $(document).ready(function(){
                 settings: "unslick"
             },
             {
-                breakpoint: 800,
+                breakpoint: 835,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,

@@ -339,3 +339,9 @@
   font-weight: bold; }
 #PDI_container9369622 .pds-links-back {
   display: none !important; }
+
+.card-focus {
+  min-height: auto; }
+@media (max-width: 1199.98px) {
+  .card-focus {
+    min-height: auto; } }

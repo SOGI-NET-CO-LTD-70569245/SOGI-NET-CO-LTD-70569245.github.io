@@ -155,7 +155,7 @@ small.text-row-2 {
 
 .img-prod-thumb {
   max-width: 100px;
-  width: 100px;
+  width: 90px;
   height: 75px !important;
   object-fit: cover; }
 
@@ -1018,7 +1018,9 @@ a.box:hover {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  height: 1.7rem; }
+  text-overflow: ellipsis;
+  height: 1.7rem;
+  color: #fff; }
 
 .badge.badge-cht {
   background-color: #3d8ce3;
@@ -1072,7 +1074,7 @@ a.box:hover {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 495px; }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) {
   .card-focus {
     min-height: 420px; } }
 
@@ -2986,7 +2988,7 @@ a.box:hover {
   position: absolute; }
 .owl-carousel .owl-nav .owl-prev:before, .owl-carousel .owl-nav .owl-next:before {
   font-family: "FontAwesome";
-  font-size: 100px;
+  font-size: 60px;
   font-weight: 900 !important;
   line-height: 1;
   color: #F8CD46;
