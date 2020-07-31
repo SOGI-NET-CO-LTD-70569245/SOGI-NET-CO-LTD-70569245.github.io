@@ -56,6 +56,9 @@ a.text-price {
 .text-gray-lighter {
   color: #e9ecef; }
 
+.text-line {
+  color: #00b900; }
+
 .text-max-5 {
   display: inline-block;
   width: 5.7rem;
