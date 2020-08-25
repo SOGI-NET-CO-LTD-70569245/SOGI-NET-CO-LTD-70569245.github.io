@@ -178,6 +178,22 @@ small.text-row-2 {
   height: 100%;
   object-fit: cover; }
 
+.card-img-container {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+  width: 100%;
+  display: block; }
+.card-img-container .card-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
 .img-square {
   position: relative;
   overflow: hidden;
