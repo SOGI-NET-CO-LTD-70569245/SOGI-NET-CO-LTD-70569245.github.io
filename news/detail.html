@@ -201,12 +201,13 @@
                             <!-- Compare -->
                         <div class="my-2">
                             <div class="mx-auto" style="width: 479px;"> <!-- 寬度以圖片寬度為主 -->
-                                <div class="b-dics dics-h3">
+                                <div class="b-dics dics-h2">
                                     <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/test/article/img/202008/2020083109083120768_ExtraLargeSize-640x640.jpg" alt="test1">
                                     <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/test/article/img/202008/2020083109083175277_ExtraLargeSize-640x640.jpg" alt="test2">
                                 </div>
                             </div>
-
+                        </div>
+                        <div class="my-2">
                             <div class="b-dics dics-h3">
                                 <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112206342279045_ExtraLargeSize-640x640.jpg" alt="test1">
                                 <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112209152249233_ExtraLargeSize-640x640.jpg" alt="test2">
@@ -1133,6 +1134,10 @@
             document.addEventListener('DOMContentLoaded', domReady);
 
             function domReady() {
+                new Dics({
+                    container: document.querySelectorAll('.dics-h2')[0],
+    //                hideTexts: true,
+                });
                 new Dics({
                     container: document.querySelectorAll('.dics-h3')[0],
     //                hideTexts: true,
