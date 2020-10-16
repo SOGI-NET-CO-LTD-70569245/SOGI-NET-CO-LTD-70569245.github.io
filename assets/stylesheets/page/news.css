@@ -341,7 +341,10 @@
   display: none !important; }
 
 .card-focus {
-  min-height: auto; }
+  min-height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
 @media (max-width: 1199.98px) {
   .card-focus {
-    min-height: auto; } }
+    min-height: 300px; } }
