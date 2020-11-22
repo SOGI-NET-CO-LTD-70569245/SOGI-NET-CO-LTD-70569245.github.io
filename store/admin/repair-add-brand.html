@@ -44,7 +44,6 @@
 
         <div id="main" class="push">
             <div class="container">
-
                 <div class="nav-responsive">
                     <ul class="nav nav-pills nav-styled">
                         <li class="nav-item"><a class="nav-link" href="product-list.html">新機</a></li>
@@ -59,27 +58,57 @@
                 <div class="btn-group mt-2" role="group">
                     <a class="btn btn-secondary" href="repair-list.html">維修商品列表</a>
                     <a class="btn btn-secondary" href="repair-add-price.html">新增維修報價</a>
-                    <a class="btn btn-secondary" href="repair-add-brand.html">品牌快速新增</a>
-                    <a class="btn btn-secondary active" href="promo-repair.html">維修優惠</a>
+                    <a class="btn btn-secondary active" href="repair-add-brand.html">品牌快速新增</a>
+                    <a class="btn btn-secondary" href="promo-repair.html">維修優惠</a>
                 </div>
 
                 <div class="row my-2 mb-10">
                     <div class="col-12">
-                        <div class="section-title mb-2">維修優惠</div>
+                        <div class="section-title my-2">
+                            品牌快速新增
+                        </div>
                     </div>
                     <div class="col-12">
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5"></textarea>
+                        <div class="alert alert-warning font-small">
+                            注意事項：
+                            <ol class="pl-3 mb-0">
+                                <li>每次最多選擇一個品牌，系統將自動建立品牌下所有型號與零件的報價資料。</li>
+                                <li>系統將依據<span class="text-danger">目前鎖價金額(底價)作為價格、保固期 3 個月、有現場快修及維修時間為現場評估</span>等資料作為報價標準。</li>
+                                <li>新增後，請務必耐心等候系統提示結束後，再離開網頁，否則可能導致報價資料建立失敗。</li>
+                                <li>若維修報價資料已存在，使用本功能新增後系統會移除原先既有的報價資料、再重新建立。</li>
+                                <li>快速新增的報價資料，可至「維修商品列表」修改內容。</li>
+                            </ol>
                         </div>
 
-                        <!-- module: upload-images -->
-                        <div id="upload-images"></div>
-                        <!-- ./module: upload-images -->
-
-                        <div class="mt-2 text-center">
-                            <a class="btn btn-primary" href=""><i class="fas fa-fw fa-check"></i> 更新</a>
-                            <a class="btn btn-outline-secondary" href=""><i class="fas fa-fw fa-times"></i> 取消</a>
-                        </div>
+                        <form class="row">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>請選擇品牌</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>3個月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>現場評估</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            <div class="col-12">
+                                <div class="text-center my-2">
+                                    <a class="btn btn-primary" href="#" data-toggle="modal" data-target=".modal-refresh"><i class="fas fa-fw fa-plus"></i> 新增</a>
+                                    <a class="btn btn-outline-secondary" href=""><i class="fas fa-fw fa-times"></i> 取消</a>
+                                </div>
+                            </div>
+                            </form>
                     </div>
                 </div>
             </div>
@@ -89,6 +118,10 @@
         <!-- module: store-admin-footer -->
         <div id="store-admin-footer"></div>
         <!-- module: ./store-admin-footer -->
+
+        <!-- module: modal-refresh -->
+        <div id="modal-refresh"></div>
+        <!-- module: ./modal-refresh -->
 
         <div id="menu-bottom">
             <a class="btn btn-outline-secondary d-block btn-top" href="#header">
@@ -105,15 +138,8 @@
         <script src="/assets/javascripts/common.js"></script>
 
         <!-- Single -->
-        <script src="/assets/javascripts/vendor/bootstrap.fileinput.min.js"></script>
-        <script src="/assets/javascripts/locales/bootstrap.fileinput_locale_zh-TW.js"></script>
-        <script>
-            $(".fileinput").fileinput({
-                language: 'zh-TW',
-                showCaption: false,
-                browseLabel: '上傳圖片'
-            });
-        </script>
+        <script src="/assets/javascripts/vendor/bootstrap.editable.min.js"></script>
+        <script src="/assets/javascripts/function/editable.js"></script>
 
         <!-- module include -->
         <script src="/assets/javascripts/function/include.js"></script>
