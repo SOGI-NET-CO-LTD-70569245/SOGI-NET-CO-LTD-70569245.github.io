@@ -295,7 +295,7 @@
   position: absolute;
   top: 44px;
   left: 0px;
-  background: #f8f9fa;
+  background: #f8f8f8;
   width: 100%;
   height: calc(100% - 44px); }
 
@@ -332,7 +332,7 @@
   text-align: right; }
 #PDI_container9369622 .pds-box-inner {
   padding: 10px;
-  background-color: #f8f9fa; }
+  background-color: #f8f8f8; }
 #PDI_container9369622 .pds-total-votes {
   padding-top: 10px;
   border-top: 1px solid #dee2e6;

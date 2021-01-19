@@ -12,6 +12,7 @@ html, body {
   height: 100%; }
 
 body {
+  position: relative;
   -webkit-overflow-scrolling: touch; }
 body.scroll-hidden {
   overflow: hidden; }
@@ -42,7 +43,7 @@ h2 {
   color: #FF8C00; }
 
 .text-price {
-  color: #c80000 !important; }
+  color: #B82519 !important; }
 
 a.text-price {
   text-decoration: underline; }
@@ -152,6 +153,23 @@ small.text-row-2 {
   .h1 {
     font-size: 1.75rem; } }
 
+.bg-text-color {
+  position: relative;
+  display: inline-block; }
+.bg-text-color span {
+  position: relative;
+  z-index: 1; }
+.bg-text-color:before {
+  position: absolute;
+  left: -5%;
+  bottom: 2%;
+  z-index: 0;
+  display: block;
+  width: 110%;
+  height: 15px;
+  content: '';
+  background: #F8CD46; }
+
 .img-fit {
   max-height: 140px;
   object-fit: contain; }
@@ -255,6 +273,12 @@ input[type=number] {
   background-color: #337ab7;
   color: #fff; }
 
+.nav-underline .nav-link {
+  color: #9DA2A7; }
+.nav-underline .nav-link:hover, .nav-underline .nav-link:focus, .nav-underline .nav-link.active {
+  color: #337ab7;
+  border-bottom: 1px solid #337ab7; }
+
 .mobile-menu {
   overflow: auto;
   position: fixed;
@@ -314,6 +338,15 @@ input[type=number] {
 .breadcrumb .breadcrumb-item a:hover, .breadcrumb .breadcrumb-item a:focus {
   text-decoration: underline; }
 
+#navbar-brands .nav-pills .nav-link {
+  background: none;
+  color: #9DA2A7;
+  border-radius: 0;
+  border-bottom: 2px solid #fff; }
+#navbar-brands .nav-pills .nav-link:hover, #navbar-brands .nav-pills .nav-link.active {
+  color: #263238;
+  border-bottom-color: #263238; }
+
 #menu-bottom {
   position: fixed;
   right: 1rem;
@@ -321,15 +354,18 @@ input[type=number] {
   z-index: 10;
   display: none; }
 #menu-bottom .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: .25rem 0;
   padding: 0;
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  text-align: center;
-  line-height: 42px; }
+  font-size: 1.25rem;
+  text-align: center; }
 #menu-bottom .btn:hover, #menu-bottom .btn:focus {
   text-decoration: none; }
 
@@ -381,6 +417,9 @@ input[type=number] {
   opacity: 0.5; }
 .btn-img:hover {
   text-decoration: none; }
+
+.btn-loadmore[aria-expanded="true"] {
+  display: none; }
 
 [class^="icon-"], [class*="icon-"] {
   position: relative;
@@ -478,9 +517,20 @@ a.disabled .icon-net-5g {
     min-height: 100%;
     border-radius: 0; } }
 
+.modal-func .modal-body {
+  overflow-y: scroll;
+  height: 400px;
+  min-height: 100%; }
+.modal-func .modal-body .tab-content, .modal-func .modal-body .tab-pane {
+  height: 100%; }
+.modal-func .modal-footer .nav .nav-link {
+  color: #263238; }
+.modal-func .modal-footer .nav .nav-link:hover, .modal-func .modal-footer .nav .nav-link:focus, .modal-func .modal-footer .nav .nav-link.active {
+  color: #337ab7; }
+
 #header {
   z-index: 1030;
-  background: #fc0;
+  background: #fff;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -502,6 +552,9 @@ a.disabled .icon-net-5g {
   top: 0; }
 #header.scroll-down {
   top: -100px; }
+#header .container {
+  position: relative;
+  z-index: 1; }
 #header .navbar-brand img {
   max-height: 40px; }
 #header .navbar-nav .nav-link {
@@ -528,7 +581,7 @@ a.disabled .icon-net-5g {
   min-width: auto;
   padding: 15px 0;
   width: 100%;
-  background: #f8f9fa;
+  background: #f8f8f8;
   border: none;
   border-bottom: 1px solid #dee2e6; }
 #header .badge {
@@ -536,11 +589,16 @@ a.disabled .icon-net-5g {
   right: 0;
   top: -5px;
   z-index: 11;
-  background: #c80000;
+  background: #B82519;
   font-size: .65rem; }
 #header .mobile-menu-main {
-  position: relative;
-  z-index: 1; }
+  background: #fefefe; }
+#header .mobile-menu-main .nav .nav-item {
+  padding: .25rem 0; }
+#header .mobile-menu-main .nav .nav-item .nav-link {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  border-left: 1px solid #fff; }
 
 .popover.bs-tether-element-attached-top::after, .popover.bs-tether-element-attached-top::before {
   left: 80%; }
@@ -1097,6 +1155,17 @@ a.box:hover {
 @media (max-width: 1199.98px) {
   .card-focus {
     min-height: 420px; } }
+
+.badge-custom {
+  position: absolute;
+  left: -2px;
+  border-radius: 0; }
+
+.toast {
+  border-left: 10px solid #8cba51; }
+@media (max-width: 991.98px) {
+  .toast {
+    max-width: 320px; } }
 
 .btn-line {
   color: #fff;
@@ -3006,23 +3075,6 @@ a.box:hover {
   margin-top: -50px !important; }
 .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
   position: absolute; }
-.owl-carousel .owl-nav .owl-prev:before, .owl-carousel .owl-nav .owl-next:before {
-  font-family: "FontAwesome";
-  font-size: 60px;
-  font-weight: 900 !important;
-  line-height: 1;
-  color: #F8CD46;
-  opacity: 0.75;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-.owl-carousel .owl-nav .owl-prev {
-  left: 5%; }
-.owl-carousel .owl-nav .owl-prev:before {
-  content: ""; }
-.owl-carousel .owl-nav .owl-next {
-  right: 5%; }
-.owl-carousel .owl-nav .owl-next:before {
-  content: ""; }
 .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
   cursor: pointer;
   -webkit-user-select: none;
@@ -3150,18 +3202,28 @@ a.box:hover {
   text-align: center;
   -webkit-tap-highlight-color: transparent; }
 .owl-theme .owl-nav [class*='owl-'] {
-  color: #FFF;
-  font-size: 0;
-  margin: 5px;
-  padding: 4px 7px;
-  background: #D6D6D6;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 3px; }
+  cursor: pointer; }
 .owl-theme .owl-nav [class*='owl-']:hover {
   background: none;
   color: #FFF;
   text-decoration: none; }
+.owl-theme .owl-nav [class*='owl-']:before {
+  font-family: "FontAwesome";
+  font-size: 60px;
+  font-weight: 900 !important;
+  line-height: 1;
+  color: #F8CD46;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+.owl-theme .owl-nav .owl-prev {
+  left: 5%; }
+.owl-theme .owl-nav .owl-prev:before {
+  content: ""; }
+.owl-theme .owl-nav .owl-next {
+  right: 5%; }
+.owl-theme .owl-nav .owl-next:before {
+  content: ""; }
 .owl-theme .owl-nav .disabled {
   opacity: 0.5;
   cursor: default; }

@@ -37,6 +37,7 @@ $("#modal-buy").load("/module/modal-buy.html");
 $("#modal-login").load("/module/modal-login.html");
 $("#modal-track").load("/module/modal-track.html");
 $("#modal-pk").load("/module/modal-pk.html");
+$("#modal-quickview").load("/module/modal-quickview.html");
 
 // AD
 $("#ad-header").load("/module/ad-header.html");

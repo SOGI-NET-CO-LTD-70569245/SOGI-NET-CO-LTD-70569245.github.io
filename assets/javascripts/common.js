@@ -84,6 +84,8 @@ $(function() {
 
 $(document).ready(function(){
 
+//    $(".toast").toast('show');
+
     $('.owl-center').owlCarousel({
         loop:true,
         margin:0,
@@ -102,6 +104,24 @@ $(document).ready(function(){
             }
         }
     });
+//    $('.owl-grid').owlCarousel({
+//        margin:20,
+//        center: false,
+//        dots:false,
+//        navText : ["",""],
+//        responsive:{
+//            0:{
+//                items:1,
+//                stagePadding: 70,
+//                nav:false,
+//            },
+//            640:{
+//                items:3,
+//                stagePadding: 40,
+//                nav:true,
+//            },
+//        }
+//    });
 
     $('.slider-rwd-3').slick({
         slidesToShow: 3,
