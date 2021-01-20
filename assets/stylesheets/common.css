@@ -369,6 +369,11 @@ input[type=number] {
 #menu-bottom .btn:hover, #menu-bottom .btn:focus {
   text-decoration: none; }
 
+.nav .nav-link {
+  color: #263238; }
+.nav .nav-link:hover, .nav .nav-link:focus, .nav .nav-link.active {
+  color: #337ab7; }
+
 .btn-service {
   position: fixed;
   bottom: 40px;

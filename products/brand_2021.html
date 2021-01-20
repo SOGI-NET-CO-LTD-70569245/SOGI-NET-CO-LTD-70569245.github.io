@@ -481,6 +481,322 @@
                     <div class="h2 mb-7">
                         所有產品
                     </div>
+                    <div class="nav-responsive">
+                        <ul class="nav nav-underline mb-3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#tab-product-01" role="tab" data-toggle="tab">手機</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab-product-02" role="tab" data-toggle="tab">平板電腦</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab-product-03" role="tab" data-toggle="tab">穿戴裝置</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="tab-product-01">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-6 col-lg-6">
+                            <div class="font-weight-bold h5">產品系列</div>
+                        </div>
+                        <div class="col-auto">
+                            <select id="SortSelect-1" class="form-control">
+                                <option>排序方式</option>
+                                <optgroup label="依空機價">
+                                    <option value="sort-price:desc">由高至低</option>
+                                    <option value="sort-price:asc">由低至高</option>
+                                </optgroup>
+                                <optgroup label="依上市日">
+                                    <option value="sort-date:desc">由新至舊</option>
+                                    <option value="sort-date:asc">由舊至新</option>
+                                </optgroup>
+                                <optgroup label="依熱門度">
+                                    <option value="sort-hot:desc">由高至低</option>
+                                    <option value="sort-hot:asc">由低至高</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            <div class="nav flex-column my-2" id="accordion-product-01">
+                                <div class="nav-item">
+                                    <a class="nav-link filter-1 active" href="javascript:void();" data-filter="all">
+                                        全部
+                                    </a>
+                                </div>
+                                <div class="nav-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#collapse-product-01-cat1">
+                                        旗艦 <i class="fas fa-fw fa-angle-down"></i>
+                                    </a>
+                                </div>
+                                <div class="collapse pl-3" id="collapse-product-01-cat1" data-parent="#accordion-product-01">
+                                    <div class="nav-item">
+                                        <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-s">
+                                            Galaxy S 系列
+                                        </a>
+                                    </div>
+                                    <div class="nav-item">
+                                        <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-note">
+                                            Galaxy Note 系列
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="nav-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#collapse-product-01-cat2">
+                                        中高階 <i class="fas fa-fw fa-angle-down"></i>
+                                    </a>
+                                </div>
+                                <div class="collapse pl-3" id="collapse-product-01-cat2" data-parent="#accordion-product-01">
+                                    <div class="nav-item">
+                                        <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-a">
+                                            Galaxy A 系列
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="nav-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#collapse-product-01-cat3">
+                                        入門 <i class="fas fa-fw fa-angle-down"></i>
+                                    </a>
+                                </div>
+                                <div class="collapse pl-3" id="collapse-product-01-cat3" data-parent="#accordion-product-01">
+                                    <div class="nav-item">
+                                        <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-m">
+                                            Galaxy M 系列
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-top py-3 d-none d-lg-block">
+                                <p class="m-0 text-center">
+                                    想試更多條件?<br>請試試<a href="#">進階搜尋</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-9">
+                    <div class="row align-items-center" id="mixitup-1">
+                        <div class="col-6 col-lg-4 my-2 mix-item cat-galaxy-s" data-sort-price="0" data-sort-date="20210220" data-sort-hot="8000">
+                            <div class="card shadow text-center p-2">
+                                <div class="h5 mb-2">
+                                    <span class="badge text-white w-75" style="background: #337ab7;">手機王推薦</span>
+                                </div>
+                                    <a href="#">
+                                        <span class="badge badge-custom" style="background: #ffcc00; color: #fff;">一二三四</span>
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s20_0212063512931_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <div class="h5 badge-group-nowrap my-2">
+                                        <span class="badge badge-pill badge-outline">大螢幕</span>
+                                        <span class="badge badge-pill badge-outline">高效能</span>
+                                        <span class="badge badge-pill badge-outline">iOS</span>
+                                    </div>
+                                    <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy S20 5G</a>
+                                <div class="row no-gutters">
+                                    <div class="col-6 border-right">
+                                        <div class="">
+                                            <small class="text-muted">手機王購物</small>
+                                            <div class="font-weight-bold text-secondary">-</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="">
+                                            <small class="text-muted">門市最低</small>
+                                            <div class="font-weight-bold text-secondary">-</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-8 col-md-9 mt-2">
+                                        <a class="btn btn-secondary btn-sm btn-block px-0" href="#" data-toggle="modal" data-target=".modal-quickview">
+                                            <i class="fas fa-sm fa-eye"></i> 快速檢視
+                                        </a>
+                                    </div>
+                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                        <a class="btn btn-secondary btn-sm btn-block px-0" href="#">
+                                            <i class="fas fa-sm fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 my-2 mix-item cat-galaxy-s" data-sort-price="16800" data-sort-date="20200601" data-sort-hot="2500">
+                            <div class="card shadow text-center p-2">
+                                <div class="h5 mb-2">
+                                    <span class="badge text-white w-75" style="background: #8cba51;">折扣中</span>
+                                </div>
+                                    <a href="">
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_plus_0220113220241_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <div class="h5 badge-group-nowrap my-2">
+                                        <span class="badge badge-pill badge-outline">大螢幕</span>
+                                        <span class="badge badge-pill badge-outline">高效能</span>
+                                        <span class="badge badge-pill badge-outline">iOS</span>
+                                    </div>
+                                    <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy S10+</a>
+                                <div class="row no-gutters">
+                                    <div class="col-6 border-right">
+                                        <a class="" href="#">
+                                            <small class="text-muted">手機王購物</small>
+                                            <div class="font-weight-bold">$16,800</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="" href="#">
+                                            <small class="text-muted">門市最低</small>
+                                            <div class="font-weight-bold">$17,990</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-8 col-md-9 mt-2">
+                                        <a class="btn btn-secondary btn-sm btn-block px-0" href="#" data-toggle="modal" data-target=".modal-quickview">
+                                            <i class="fas fa-sm fa-eye"></i> 快速檢視
+                                        </a>
+                                    </div>
+                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                        <a class="btn btn-secondary btn-sm btn-block px-0" href="#">
+                                            <i class="fas fa-sm fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 my-2 mix-item cat-galaxy-a" data-sort-price="7600" data-sort-date="20201001" data-sort-hot="3000">
+                            <div class="card shadow text-center p-2">
+                                <div class="h5 mb-2">
+                                    <span class="badge text-white w-75" style="background: #263238 ;">獨家</span>
+                                </div>
+                                    <a href="">
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_a51_1213055013699_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <div class="h5 badge-group-nowrap my-2">
+                                        <span class="badge badge-pill badge-outline">大螢幕</span>
+                                        <span class="badge badge-pill badge-outline">高效能</span>
+                                        <span class="badge badge-pill badge-outline">iOS</span>
+                                    </div>
+                                    <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy A21</a>
+                                <div class="row no-gutters">
+                                    <div class="col-6 border-right">
+                                        <a class="" href="#">
+                                            <small class="text-muted">手機王購物</small>
+                                            <div class="font-weight-bold">$7,600</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="" href="#">
+                                            <small class="text-muted">門市最低</small>
+                                            <div class="font-weight-bold">$17,990</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-8 col-md-9 mt-2">
+                                        <a class="btn btn-secondary btn-sm btn-block px-0" href="#" data-toggle="modal" data-target=".modal-quickview">
+                                            <i class="fas fa-sm fa-eye"></i> 快速檢視
+                                        </a>
+                                    </div>
+                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                        <a class="btn btn-secondary btn-sm btn-block px-0" href="#">
+                                            <i class="fas fa-sm fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 my-2 mix-item cat-galaxy-note" data-sort-price="24600" data-sort-date="20201231" data-sort-hot="10000">
+                            <div class="card shadow text-center p-2">
+                                <div class="h5 mb-2">
+                                    <span class="badge text-white w-75" style="background: #c80000;">預購</span>
+                                </div>
+                                    <a href="">
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_20_0805144705667_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <div class="h5 badge-group-nowrap my-2">
+                                        <span class="badge badge-pill badge-outline">大螢幕</span>
+                                        <span class="badge badge-pill badge-outline">高效能</span>
+                                        <span class="badge badge-pill badge-outline">iOS</span>
+                                    </div>
+                                    <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy Note 20</a>
+                                <div class="row no-gutters">
+                                    <div class="col-6 border-right">
+                                        <a class="" href="#">
+                                            <small class="text-muted">手機王購物</small>
+                                            <div class="font-weight-bold">$24,600</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="" href="#">
+                                            <small class="text-muted">門市最低</small>
+                                            <div class="font-weight-bold">$17,990</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-8 col-md-9 mt-2">
+                                        <a class="btn btn-secondary btn-sm btn-block px-0" href="#" data-toggle="modal" data-target=".modal-quickview">
+                                            <i class="fas fa-sm fa-eye"></i> 快速檢視
+                                        </a>
+                                    </div>
+                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                        <a class="btn btn-secondary btn-sm btn-block px-0" href="#">
+                                            <i class="fas fa-sm fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 my-2 mix-item cat-galaxy-m" data-sort-price="3700" data-sort-date="20201205" data-sort-hot="3000">
+                            <div class="card shadow text-center p-2">
+                                <div class="h5 mb-2">
+                                    <span class="badge text-white w-75" style="background: #c80000;">預購</span>
+                                </div>
+                                    <a href="">
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_m11_0427033427620_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <div class="h5 badge-group-nowrap my-2">
+                                        <span class="badge badge-pill badge-outline">大螢幕</span>
+                                        <span class="badge badge-pill badge-outline">高效能</span>
+                                        <span class="badge badge-pill badge-outline">iOS</span>
+                                    </div>
+                                    <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy M11</a>
+                                <div class="row no-gutters">
+                                    <div class="col-6 border-right">
+                                        <a class="" href="#">
+                                            <small class="text-muted">手機王購物</small>
+                                            <div class="font-weight-bold">$24,600</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="" href="#">
+                                            <small class="text-muted">門市最低</small>
+                                            <div class="font-weight-bold">$3,700</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-8 col-md-9 mt-2">
+                                        <a class="btn btn-secondary btn-sm btn-block px-0" href="#" data-toggle="modal" data-target=".modal-quickview">
+                                            <i class="fas fa-sm fa-eye"></i> 快速檢視
+                                        </a>
+                                    </div>
+                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                        <a class="btn btn-secondary btn-sm btn-block px-0" href="#">
+                                            <i class="fas fa-sm fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                        <div class="col-12 d-lg-none">
+                            <div class="border-top py-3">
+                                <p class="m-0 text-center">
+                                    想試更多條件?<br>請試試<a href="#">進階搜尋</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tab-product-02">
+                            平板電腦
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tab-product-03">
+                            穿戴裝置
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -2753,9 +3069,21 @@
         <!-- module: ./common-footer -->
 
         <div id="menu-bottom">
-            <a class="btn btn-outline-secondary d-block btn-top" href="#header">
-                <i class="fas fa-fw fa-chevron-up"></i>
-            </a>
+            <div class="my-2">
+                <a class="btn btn-light shadow" href="#" data-toggle="modal" data-target=".modal-func">
+                    <i class="fas fa-fw fa-list-ul"></i>
+                </a>
+            </div>
+            <div class="my-2">
+                <a class="btn btn-warning" href="#" data-toggle="modal" data-target=".modal-pk">
+                    PK
+                </a>
+            </div>
+            <div class="my-2">
+                <a class="btn btn-outline-secondary btn-top" href="#header">
+                    <i class="fas fa-fw fa-chevron-up"></i>
+                </a>
+            </div>
         </div>
 
         <!-- module: modal-quickview -->
@@ -2771,12 +3099,8 @@
         <script src="/assets/javascripts/common.js"></script>
 
         <!-- Single -->
-        <script>
-            $(function() {
-//                $('body').scrollspy({ target: '#navbar-brand' });
-//                $('#sections').scrollspy();
-            });
-        </script>
+        <script src="/assets/javascripts/vendor/jquery.mixitup.min.js"></script>
+        <script src="/assets/javascripts/function/mixitup.js"></script>
 
         <!-- module include -->
         <script src="/assets/javascripts/function/include.js"></script>
