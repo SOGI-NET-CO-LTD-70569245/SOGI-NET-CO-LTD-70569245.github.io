@@ -1,3 +1,6 @@
+//var noMixItemMsg = document.getElementById("noMixItemMsg");
+//noMixItemMsg.style.display = "none";
+
 $(".row").each(function(i){
 
     var layout = 'grid',
@@ -16,15 +19,10 @@ $(".row").each(function(i){
             target: '.mix-item'
         },
         animation: {
-//            animateChangeLayout: true, // Animate the positions of targets as the layout changes
-//            animateResizeTargets: true, // Animate the width/height of targets as the layout changes
-//            effects: 'fade rotateX(-40deg) translateZ(-100px)',
             enable: false
         },
         controls: {
-//            toggleFilterButtons: true,
             toggleLogic: 'or',
-//            activeClass: 'active',
         },
         callbacks: {
             onMixLoad: function(){
@@ -33,7 +31,13 @@ $(".row").each(function(i){
                         enable: true
                     }
                 });
-            }
+            },
+//            onMixStart: function(state){
+//                noMixItemMsg.style.display = "none";
+//            },
+//            onMixFail: function(state){
+//                noMixItemMsg.style.display = "flex";
+//            },
         },
 //        layout: {
 //            containerClass: 'grid-view' // Add the class 'list' to the container on load
