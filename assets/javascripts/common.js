@@ -21,9 +21,9 @@ $(function() {
 //    });
 
     $('.dropdown').hover(function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+        $(this).find('.dropdown-menu').stop(true, true).delay(500).fadeIn(200);
     }, function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+        $(this).find('.dropdown-menu').stop(true, true).delay(500).fadeOut(200);
     });
 
     // bootstrap.tooltip

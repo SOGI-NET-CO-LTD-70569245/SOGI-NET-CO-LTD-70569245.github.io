@@ -274,9 +274,9 @@ input[type=number] {
   color: #fff; }
 
 .nav-underline .nav-link {
-  color: #9DA2A7; }
+  color: #9DA2A7 !important; }
 .nav-underline .nav-link:hover, .nav-underline .nav-link:focus, .nav-underline .nav-link.active {
-  color: #337ab7;
+  color: #337ab7 !important;
   border-bottom: 1px solid #337ab7; }
 
 .mobile-menu {
@@ -523,11 +523,8 @@ a.disabled .icon-net-5g {
     border-radius: 0; } }
 
 .modal-func .modal-body {
-  overflow-y: scroll;
-  height: 400px;
-  min-height: 100%; }
-.modal-func .modal-body .tab-content, .modal-func .modal-body .tab-pane {
-  height: 100%; }
+  overflow-y: auto;
+  height: 600px; }
 .modal-func .modal-footer .nav .nav-link {
   color: #263238; }
 .modal-func .modal-footer .nav .nav-link:hover, .modal-func .modal-footer .nav .nav-link:focus, .modal-func .modal-footer .nav .nav-link.active {
