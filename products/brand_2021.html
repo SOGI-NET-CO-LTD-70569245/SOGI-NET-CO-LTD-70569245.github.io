@@ -518,7 +518,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-lg-3">
+                        <div class="col-12 col-lg-3 d-none d-lg-block">
                             <div class="nav flex-column my-2 border-top" id="accordion-product-01">
                                 <div class="nav-item">
                                     <a class="nav-link h4 filter-1 active" href="javascript:void();" data-filter="all">
@@ -570,12 +570,28 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="border-top py-3 d-none d-lg-block">
+                            <div class="border-top py-3">
                                 <p class="m-0 text-center">
                                     想試更多條件?<br>請試試<a href="#">進階搜尋</a>
                                 </p>
                             </div>
+                        </div>
+                        <div class="col-12 d-lg-none">
+                            <select id="FilterSelect-1" class="form-control my-2">
+                                <option selected>請選擇</option>
+                                <option value="all">全部</option>
+                                <optgroup label="旗艦">
+                                    <option value=".cat-galaxy-s">Galaxy S 系列</option>
+                                    <option value=".cat-galaxy-note">Galaxy Note 系列</option>
+                                </optgroup>
+                                <optgroup label="中高階">
+                                    <option value=".cat-galaxy-a">Galaxy A 系列</option>
+                                </optgroup>
+                                <optgroup label="入門">
+                                    <option value=".cat-galaxy-m">Galaxy M 系列</option>
+                                    <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
+                                </optgroup>
+                            </select>
                         </div>
                         <div class="col-12 col-lg-9">
 <!--
@@ -3045,7 +3061,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-lg-3">
+                        <div class="col-12 col-lg-3 d-none d-lg-block">
                             <div class="nav flex-column my-2 border-top" id="accordion-second-01">
                                 <div class="nav-item">
                                     <a class="nav-link h4 filter-4 active" href="javascript:void();" data-filter="all">
@@ -3097,6 +3113,23 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-12 d-lg-none">
+                            <select id="FilterSelect-4" class="form-control my-2">
+                                <option selected>請選擇</option>
+                                <option value="all">全部</option>
+                                <optgroup label="旗艦">
+                                    <option value=".cat-galaxy-s">Galaxy S 系列</option>
+                                    <option value=".cat-galaxy-note">Galaxy Note 系列</option>
+                                </optgroup>
+                                <optgroup label="中高階">
+                                    <option value=".cat-galaxy-a">Galaxy A 系列</option>
+                                </optgroup>
+                                <optgroup label="入門">
+                                    <option value=".cat-galaxy-m">Galaxy M 系列</option>
+                                    <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
+                                </optgroup>
+                            </select>
                         </div>
                         <div class="col-12 col-lg-9">
 <!--
