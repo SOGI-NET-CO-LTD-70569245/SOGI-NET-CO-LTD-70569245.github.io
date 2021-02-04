@@ -896,7 +896,6 @@ a.disabled .icon-net-5g {
   background-color: #e9ecef; }
 .row-hs-bar::-webkit-scrollbar {
   border-radius: 0.25rem;
-  width: 8px;
   height: 8px;
   background-color: #e9ecef; }
 .row-hs-bar::-webkit-scrollbar-thumb {
@@ -935,6 +934,7 @@ a.disabled .icon-net-5g {
   background-color: #F5F5F5; }
 
 #style-2::-webkit-scrollbar {
+  -webkit-appearance: none;
   width: 12px;
   background-color: #F5F5F5; }
 
