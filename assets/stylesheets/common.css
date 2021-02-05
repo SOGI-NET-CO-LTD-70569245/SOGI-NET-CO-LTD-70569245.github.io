@@ -1159,8 +1159,8 @@ a.box:hover {
 
 .badge-custom {
   position: absolute;
-  left: -2px;
-  border-radius: 0; }
+  left: 5px;
+  border-radius: 1rem; }
 
 .toast {
   border-left: 10px solid #8cba51; }

@@ -141,7 +141,7 @@
                                                     <div class="col-1 font-small text-muted">
                                                         <i class="fas fa-fw fa-microchip"></i>
                                                     </div>
-                                                    <div class="col-10 h5">Apple A13 Bionic</div>
+                                                    <div class="col-10">Apple A13 Bionic</div>
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
@@ -149,7 +149,7 @@
                                                     <div class="col-1 font-small text-muted">
                                                         <i class="fas fa-fw fa-mobile-alt"></i>
                                                     </div>
-                                                    <div class="col-10 h5">5.8吋OLED</div>
+                                                    <div class="col-10">5.8吋OLED</div>
                                                 </div>
                                             </li>
 
@@ -162,7 +162,7 @@
                                                     <div class="col-1 font-small text-muted">
                                                         <i class="fas fa-fw fa-weight-hanging"></i>
                                                     </div>
-                                                    <div class="col-10 h5">187 g</div>
+                                                    <div class="col-10">187 g</div>
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
@@ -170,7 +170,7 @@
                                                     <div class="col-1 font-small text-muted">
                                                         <i class="fas fa-fw fa-palette"></i>
                                                     </div>
-                                                    <div class="col-10 h5">太平洋藍,石墨,金,銀</div>
+                                                    <div class="col-10">太平洋藍,石墨,金,銀</div>
                                                 </div>
                                             </li>
                                         </ul>
@@ -2287,7 +2287,7 @@
                                     <span class="badge text-white w-75" style="background: #337ab7;">手機王推薦</span>
                                 </div>
                                             <a href="#">
-                                                <span class="badge badge-custom">一二三四</span>
+                                                <span class="badge badge-custom" style="background: #ffcc00; color: #fff;">一二三四</span>
                                                 <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_12_pro_1013212413139_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
                                             </a>
                                             <div class="h5 badge-group-nowrap my-2">
@@ -3688,6 +3688,19 @@
         <script src="/assets/javascripts/vendor/jquery.mixitup.min.js"></script>
         <script src="/assets/javascripts/function/mixitup.js"></script>
 
+<!--
+        <script>
+        window.onload = function () {
+        document.getElementsByClassName('navbar-brands')[0].scrollLeft = 0;
+        var menus = document.getElementsByClassName('btn-anchor');
+        for (var i = 0; i < menus.length; i++) {
+            if (menus[i].classList.contains('active')) {
+                document.getElementsByClassName('navbar-brands')[0].scrollLeft = menus[i].offsetLeft;
+            }
+        }
+    }
+        </script>
+-->
         <!-- module include -->
         <script src="/assets/javascripts/function/include.js"></script>
 
