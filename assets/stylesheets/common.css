@@ -41,6 +41,9 @@ h2 {
   font-weight: bold;
   color: #FF8C00; }
 
+.h6 {
+  line-height: 1.5; }
+
 .text-price {
   color: #B82519 !important; }
 
