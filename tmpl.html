@@ -412,6 +412,7 @@
         </div>
 
         <div id="main" class="push">
+<!--
             <style type="text/css">
             .scrollbar
 {
@@ -450,11 +451,14 @@
             <div class="scrollbar" id="style-2">
                     <div class="force-overflow"></div>
                 </div>
+-->
             <div class="container">
 
                 <!-- module: ad-header -->
                 <div id="ad-header"></div>
                 <!-- ./module: ad-header -->
+
+                <a class="btn btn-primary" href="javascript:void();" data-toggle="modal" data-target=".modal-help">popup通知視窗效果</a>
 
                 <div class="toast mx-auto show" role="alert" aria-live="assertive" aria-atomic="true">
                     <div class="toast-body">
@@ -1244,7 +1248,12 @@
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="tab-func-compare-02">
-                                        平板電腦
+                                        <div class="p-3 text-center">
+                                            <div class="display-4">
+                                                <i class="far fa-grin-beam-sweat"></i>
+                                            </div>
+                                            這邊看起來還沒有東西喔，放點產品進來吧！
+                                        </div>
                                         <div class="pt-2 text-center">
                                             <a href="#" class="btn btn-primary btn-sm rounded-pill px-8">立即比較</a>
                                         </div>
@@ -1612,6 +1621,24 @@
             </div>
         </div>
 
+        <div class="modal fade modal-help" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            <div class="d-inline-block">
+                                查詢價格提醒
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        搜尋所有縣市僅提供最新 100 筆報價，建議您重新選擇所在區域，將顯示所有完整的報價。
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="menu-bottom">
             <div class="my-2">
                 <a class="btn btn-light shadow" href="#" data-toggle="modal" data-target=".modal-func">
@@ -1640,8 +1667,8 @@
         <script>
 
             $(function() {
-  $("body").prognroll();
-});
+                $("body").prognroll();
+            });
 
 //            $('a[data-slide]').click(function(e) {
 //                e.preventDefault();

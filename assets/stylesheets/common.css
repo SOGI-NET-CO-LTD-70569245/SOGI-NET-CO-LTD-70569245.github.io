@@ -371,11 +371,6 @@ input[type=number] {
 #menu-bottom .btn:hover, #menu-bottom .btn:focus {
   text-decoration: none; }
 
-.nav .nav-link {
-  color: #263238; }
-.nav .nav-link:hover, .nav .nav-link:focus, .nav .nav-link.active {
-  color: #337ab7; }
-
 .btn-service {
   position: fixed;
   bottom: 40px;
@@ -526,7 +521,7 @@ a.disabled .icon-net-5g {
 
 .modal-func .modal-body {
   overflow-y: auto;
-  height: 600px; }
+  min-height: 480px; }
 .modal-func .modal-footer .nav .nav-link {
   color: #263238; }
 .modal-func .modal-footer .nav .nav-link:hover, .modal-func .modal-footer .nav .nav-link:focus, .modal-func .modal-footer .nav .nav-link.active {
