@@ -458,8 +458,9 @@
                 <div id="ad-header"></div>
                 <!-- ./module: ad-header -->
 
-                <a class="btn btn-primary" href="javascript:void();" data-toggle="modal" data-target=".modal-help">popup通知視窗效果</a>
+                <a class="btn btn-primary" href="javascript:void();" data-toggle="modal" data-target=".modal-toast">popup通知視窗效果</a>
 
+<!--
                 <div class="toast mx-auto show" role="alert" aria-live="assertive" aria-atomic="true">
                     <div class="toast-body">
                         <div class="media align-items-center">
@@ -473,6 +474,7 @@
                         </div>
                     </div>
                 </div>
+-->
 
                 <div class="row my-2">
                     <section class="col-lg-8 col-12">
@@ -1621,19 +1623,19 @@
             </div>
         </div>
 
-        <div class="modal fade modal-help" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="modal-title">
-                            <div class="d-inline-block">
-                                查詢價格提醒
+        <div class="modal fade modal-toast" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content toast mx-auto show rounded-sm mt-n20" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-body">
+                        <div class="media align-items-center">
+                            <div class="text-success h1">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="ml-5">
+                                <div class="font-weight-bold h5">成功！</div>
+                                產品已成功加入至<a href="#">產品追蹤清單</a>
                             </div>
                         </div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        搜尋所有縣市僅提供最新 100 筆報價，建議您重新選擇所在區域，將顯示所有完整的報價。
                     </div>
                 </div>
             </div>
