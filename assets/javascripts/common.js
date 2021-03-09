@@ -20,10 +20,15 @@ $(function() {
 //        scrollImg: true,
 //    });
 
-    $('.dropdown').hover(function() {
+    $('#header .dropdown').hover(function() {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
     }, function() {
         $(this).find('.dropdown-menu').stop(true, true).delay(3000).fadeOut(200);
+    });
+    $('#main .dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+    }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
     });
 
     // bootstrap.tooltip

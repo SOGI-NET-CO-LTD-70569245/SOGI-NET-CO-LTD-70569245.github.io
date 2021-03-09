@@ -340,15 +340,6 @@ input[type=number] {
 .breadcrumb .breadcrumb-item a:hover, .breadcrumb .breadcrumb-item a:focus {
   text-decoration: underline; }
 
-#navbar-brands .nav-pills .nav-link {
-  background: none;
-  color: #9DA2A7;
-  border-radius: 0;
-  border-bottom: 2px solid #fff; }
-#navbar-brands .nav-pills .nav-link:hover, #navbar-brands .nav-pills .nav-link.active {
-  color: #263238;
-  border-bottom-color: #263238; }
-
 #menu-bottom {
   position: fixed;
   right: 1rem;
