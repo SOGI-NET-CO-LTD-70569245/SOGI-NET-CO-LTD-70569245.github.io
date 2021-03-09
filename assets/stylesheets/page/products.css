@@ -272,3 +272,7 @@
 @media print {
   .rating-container .clear-rating {
     display: none; } }
+#main .flex-column .nav-link {
+  color: #263238; }
+#main .flex-column .nav-link.active {
+  color: #337ab7; }

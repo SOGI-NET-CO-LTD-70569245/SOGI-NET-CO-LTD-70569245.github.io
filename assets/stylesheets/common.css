@@ -522,6 +522,8 @@ a.disabled .icon-net-5g {
 .modal-func .modal-body {
   overflow-y: auto;
   min-height: 480px; }
+.modal-func .modal-func-login {
+  min-height: 480px; }
 .modal-func .modal-footer .nav .nav-link {
   color: #263238; }
 .modal-func .modal-footer .nav .nav-link:hover, .modal-func .modal-footer .nav .nav-link:focus, .modal-func .modal-footer .nav .nav-link.active {
