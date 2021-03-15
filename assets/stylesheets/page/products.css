@@ -285,3 +285,5 @@
 #navbar-brands .nav-pills .nav-link:hover, #navbar-brands .nav-pills .nav-link.active {
   color: #263238;
   border-bottom-color: #263238; }
+#navbar-brands .dropdown-toggle::after {
+  font-size: 1.5rem; }
