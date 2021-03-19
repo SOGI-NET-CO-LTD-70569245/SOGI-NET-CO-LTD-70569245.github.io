@@ -395,6 +395,7 @@
             </div>
         </nav>
 
+<!--
         <div class="container-fluid bg-secondary push alert fade show">
             <div class="container">
                 <div class="row align-items-center">
@@ -410,6 +411,7 @@
                 </div>
             </div>
         </div>
+-->
 
         <div id="main" class="push">
 <!--
@@ -458,6 +460,7 @@
                 <div id="ad-header"></div>
                 <!-- ./module: ad-header -->
 
+                <button id="reload-cookies" type="button" class="btn btn-danger ml-auto mr-1"><i class="fa fa-refresh fa-fw"></i> Reload page cookies</button>
                 <a class="btn btn-primary" href="javascript:void();" data-toggle="modal" data-target=".modal-toast">popup通知視窗效果</a>
 
 <!--
@@ -1660,6 +1663,7 @@
         <script src="https://kit.fontawesome.com/5ab387053e.js" crossorigin="anonymous"></script>
 		<script src="/assets/javascripts/vendor/jquery.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.cookieBar.min.js"></script>
         <script src="/assets/javascripts/vendor/jquery.slick.min.js"></script>
         <script src="/assets/javascripts/vendor/owl.carousel.min.js"></script>
         <script src="/assets/javascripts/common.js"></script>
@@ -1669,7 +1673,6 @@
         <script src="/assets/javascripts/vendor/bootstrap-swipe-carousel.min.js"></script>
         <script src="/assets/javascripts/vendor/dics.min.js"></script>
         <script>
-
             $(function() {
                 $("body").prognroll();
             });
@@ -1696,6 +1699,15 @@
                 });
             }
 
+            //測試用，可刪
+        $(function() {
+			$('#reload-cookies').on('click', function() {
+				if($.cookieBar('getCookie', 'cookies-state') === 'accepted') {
+					$.cookieBar('setCookie', 'cookies-state', '', 0);
+					$.cookieBar('displayBar');
+				}
+			});
+        });
     </script>
 
     </body>
