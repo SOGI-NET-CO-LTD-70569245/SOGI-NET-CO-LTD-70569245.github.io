@@ -566,16 +566,14 @@ a.disabled .icon-net-5g {
   line-height: 1;
   font-weight: 500; }
 #header .dropdown-menu-w100 {
-  position: fixed !important;
-  top: 53px;
   left: 0;
   right: 0;
   min-width: auto;
   padding: 15px 0;
   width: 100%;
   background: #f8f8f8;
-  border: none;
-  border-bottom: 1px solid #dee2e6; }
+  border: 1px solid #dee2e6;
+  border-top: none; }
 #header .badge {
   position: absolute;
   right: 0;
