@@ -1,6 +1,14 @@
 $(function() {
     "use strict";
 
+    $('.btn-anchor').click(function(){
+		$('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top -50
+    }, 750);
+        $('#dropdown-category .btn-anchor').parent().hide();
+		return false;
+	});
+
     $.cookieBar('addTranslation', 'zh-TW', {
 		message:	'為了提供您更優質的個人化體驗，本網站使用 cookies，若您繼續瀏覽本網站，代表您同意我們的 cookies 政策。',
 		acceptText:	'我知道了!',
@@ -15,13 +23,6 @@ $(function() {
 		$('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 750);
-		return false;
-	});
-    $('.btn-anchor').click(function(){
-		$('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top -50
-    }, 750);
-        $('#dropdown-category .btn-anchor').parent().hide();
 		return false;
 	});
 

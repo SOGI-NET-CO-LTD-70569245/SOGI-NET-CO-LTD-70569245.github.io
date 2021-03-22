@@ -283,7 +283,9 @@ input[type=number] {
 
 .mobile-menu {
   overflow: auto;
-  position: relative;
+  position: fixed;
+  top: 0;
+  padding-top: 55px;
   z-index: 1029;
   display: none;
   padding-bottom: 65px;
@@ -1239,6 +1241,11 @@ a.box:hover {
   font-size: .875rem;
   padding: .375rem .5rem;
   text-align: center; }
+@media (max-width: 61rem) {
+  .cookie-bar__inner {
+    position: fixed;
+    bottom: 65px;
+    z-index: 20; } }
 @media (min-width: 62rem) {
   .cookie-bar__inner {
     display: flex;
