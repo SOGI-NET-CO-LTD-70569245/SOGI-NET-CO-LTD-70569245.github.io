@@ -5,7 +5,7 @@ $(function() {
 		$('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top -50
     }, 750);
-        $('#dropdown-category .btn-anchor').parent().hide();
+//        $('#dropdown-category .btn-anchor').parent().hide();
 		return false;
 	});
 
@@ -26,10 +26,6 @@ $(function() {
 		return false;
 	});
 
-//    jquery.scrollUp
-//    $.scrollUp({
-//        scrollImg: true,
-//    });
 
     $('#header .dropdown').hover(function() {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
