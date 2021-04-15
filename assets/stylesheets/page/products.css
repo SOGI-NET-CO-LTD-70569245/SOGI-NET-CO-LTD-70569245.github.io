@@ -278,12 +278,17 @@
   color: #337ab7; }
 
 #navbar-brands .nav-pills .nav-link {
-  background: none;
   color: #9DA2A7;
   border-radius: 0;
   border-bottom: 2px solid #fff; }
-#navbar-brands .nav-pills .nav-link:hover, #navbar-brands .nav-pills .nav-link.active {
+@media (min-width: 992px) {
+  #navbar-brands .nav-pills .nav-link:hover {
+    color: #263238;
+    background-color: #fff;
+    border-bottom-color: #263238; } }
+#navbar-brands .nav-pills .nav-link.active, #navbar-brands .nav-pills .show > .nav-link {
   color: #263238;
+  background-color: #fff;
   border-bottom-color: #263238; }
 #navbar-brands .dropdown-toggle::after {
   font-size: 1.5rem; }
