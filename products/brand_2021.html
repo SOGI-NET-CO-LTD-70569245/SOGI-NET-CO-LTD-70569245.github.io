@@ -597,7 +597,7 @@
                             </div>
                         </div>
                         <div class="col-12 d-lg-none">
-                            <select id="FilterSelect-1" class="form-control my-2">
+                            <select id="FilterSelect-1" class="form-control filter-select my-2">
                                 <option selected hidden>請選擇</option>
                                 <option value="all">全部</option>
                                 <optgroup label="旗艦">
@@ -3144,7 +3144,7 @@
                             </div>
                         </div>
                         <div class="col-12 d-lg-none">
-                            <select id="FilterSelect-4" class="form-control my-2">
+                            <select id="FilterSelect-4" class="form-control filter-select my-2">
                                 <option selected>請選擇</option>
                                 <option value="all">全部</option>
                                 <optgroup label="旗艦">
@@ -3564,6 +3564,16 @@
         <!-- Single -->
         <script src="/assets/javascripts/vendor/jquery.mixitup.min.js"></script>
         <script src="/assets/javascripts/function/mixitup.js"></script>
+        <script>
+            var selectOption = document.querySelectorAll('.filter-select option');
+
+for (var i = 0; i < selectOption.length; i++) {
+  var item = selectOption[i];
+  if (item.innerHTML.charAt(0) === "–") {
+    item.remove();
+  };
+}
+        </script>
 
         <!-- module include -->
         <script src="/assets/javascripts/function/include.js"></script>
