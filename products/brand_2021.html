@@ -3566,17 +3566,6 @@
         <script src="/assets/javascripts/function/mixitup.js"></script>
         <script>
 //            $('.filter-select option[data-hidable="true"]').hide();
-            //將select通過clone方法儲存
-var select= $(".filter-select").clone();
-//刪除所有的option
-$(".filter-select").find('option').remove();
-//查詢出需要顯示的option並複製
-var options = select.find("option[value=1]").clone();
-//將需要顯示的option新增到select中
-$(".filter-select").append(options);
-//因為option.remove()不會重新整理控制元件,需要將新的option切換上去
-//這裡排除了options.size() == 0的情況
-$(".filter-select").find('option').eq(0).attr("selected",true);
 
         </script>
         <!-- module include -->
