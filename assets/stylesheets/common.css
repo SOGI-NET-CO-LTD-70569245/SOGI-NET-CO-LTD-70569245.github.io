@@ -1331,14 +1331,16 @@ a.box:hover {
   left: 0; }
 
 .cookie-bar--bottom-left {
-  left: 10px; }
+  left: 10px;
+  margin-bottom: 7.5rem; }
 
 .cookie-bar--bottom-right {
   right: 10px; }
 
 .cookie-bar--bottom-right, .cookie-bar--bottom-left {
-  bottom: 10px; }
-@media (min-width: 48rem) {
+  bottom: 10px;
+  width: 95%; }
+@media (min-width: 24rem) {
   .cookie-bar--bottom-right, .cookie-bar--bottom-left {
     width: 22.5rem; } }
 

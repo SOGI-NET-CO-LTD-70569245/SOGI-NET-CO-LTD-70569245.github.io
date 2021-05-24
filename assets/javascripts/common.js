@@ -15,7 +15,7 @@ $(function() {
 		infoText:	'了解隱私權政策',
 	});
     $.cookieBar({
-		style: 'top',
+		style: 'bottom-left',
         language: 'zh-TW'
 	});
 
