@@ -1229,7 +1229,8 @@ a.box:hover {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", "微软雅黑";
   font-size: .875rem;
   padding: .375rem .5rem;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); }
 @media (min-width: 62rem) {
   .cookie-bar__inner {
     display: flex;
@@ -1339,7 +1340,7 @@ a.box:hover {
 
 .cookie-bar--bottom-right, .cookie-bar--bottom-left {
   bottom: 10px;
-  width: 95%; }
+  width: 70%; }
 @media (min-width: 24rem) {
   .cookie-bar--bottom-right, .cookie-bar--bottom-left {
     width: 22.5rem; } }
