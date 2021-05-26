@@ -1116,8 +1116,11 @@ a.box:hover {
   position: relative;
   border: none;
   top: 3px;
-  font: normal normal normal 14px/1 FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
   font-weight: normal;
+  font-size: 14px;
+  line-height: 1;
   content: "\f107"; }
 
 .btn-secondary {
