@@ -1340,8 +1340,8 @@ a.box:hover {
 
 .cookie-bar--bottom-right, .cookie-bar--bottom-left {
   bottom: 10px;
-  width: 70%; }
-@media (min-width: 560px) {
+  width: 260px; }
+@media (min-width: 768px) {
   .cookie-bar--bottom-right, .cookie-bar--bottom-left {
     width: 320px; } }
 
