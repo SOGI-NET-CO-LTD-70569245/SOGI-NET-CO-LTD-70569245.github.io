@@ -1118,7 +1118,7 @@ a.box:hover {
   top: 3px;
   font-family: "Font Awesome 5 Free";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 900;
   font-size: 14px;
   line-height: 1;
   content: "\f107"; }
