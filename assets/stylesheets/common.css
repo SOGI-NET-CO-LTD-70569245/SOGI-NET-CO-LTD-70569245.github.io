@@ -1117,6 +1117,7 @@ a.box:hover {
   border: none;
   top: 3px;
   font: normal normal normal 14px/1 FontAwesome;
+  font-weight: normal;
   content: "\f107"; }
 
 .btn-secondary {
