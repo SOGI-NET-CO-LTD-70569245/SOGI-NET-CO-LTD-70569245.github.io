@@ -97,7 +97,7 @@ $(document).ready(function(){
         loop:true,
         margin:0,
         autoplay:true,
-        nav: true,
+        nav: false,
         navText: ['',''],
         autoplayHoverPause:true,
         responsive:{
