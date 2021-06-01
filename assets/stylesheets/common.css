@@ -1130,6 +1130,7 @@ a.box:hover {
   border-radius: 0; }
 
 .card-focus {
+  height: 495px;
   min-height: 495px; }
 .card-focus a.d-block {
   background-position: center center;
@@ -1137,6 +1138,7 @@ a.box:hover {
   background-size: cover; }
 @media (max-width: 1199.98px) {
   .card-focus {
+    height: 420px;
     min-height: 420px; } }
 
 .badge-custom {
@@ -3248,10 +3250,10 @@ a.box:hover {
   opacity: 1; }
 
 .owl-center {
-  min-height: 495px; }
+  height: 495px; }
 @media (max-width: 1199.98px) {
   .owl-center {
-    min-height: 420px; } }
+    height: 420px; } }
 
 /*
  *  Owl Carousel - Animate Plugin
