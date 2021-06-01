@@ -3242,6 +3242,17 @@ a.box:hover {
 .no-js .owl-carousel {
   display: block; }
 
+/* CLS Fix */
+.owl-carousel {
+  display: block;
+  opacity: 1; }
+
+.owl-center {
+  min-height: 495px; }
+@media (max-width: 1199.98px) {
+  .owl-center {
+    min-height: 420px; } }
+
 /*
  *  Owl Carousel - Animate Plugin
  */
