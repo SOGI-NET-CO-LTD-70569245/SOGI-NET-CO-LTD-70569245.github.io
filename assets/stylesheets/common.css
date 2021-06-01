@@ -1129,10 +1129,15 @@ a.box:hover {
 .pos-a-lt .badge {
   border-radius: 0; }
 
+.card-focus {
+  min-height: 495px; }
 .card-focus a.d-block {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }
+@media (max-width: 1199.98px) {
+  .card-focus {
+    min-height: 420px; } }
 
 .badge-custom {
   position: absolute;
