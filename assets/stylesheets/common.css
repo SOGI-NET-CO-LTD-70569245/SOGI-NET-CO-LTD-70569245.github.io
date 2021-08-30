@@ -682,6 +682,16 @@ a.disabled .icon-net-5g {
 .text-ad a:hover {
   text-decoration: underline !important; }
 
+.ad-slot-970 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px; }
+@media (max-width: 991.98px) {
+  .ad-slot-970 {
+    min-height: 280px; } }
+
 .section-title {
   padding: 10px 0;
   font-size: 1.2em;
