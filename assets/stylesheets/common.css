@@ -3532,3 +3532,6 @@ a.box:hover {
   margin: 15px 0; }
 .editable p:first-child, .editable p:only-child {
   margin-top: 0; }
+.editable h3 {
+  font-size: 1.5rem;
+  color: #337ab7; }
