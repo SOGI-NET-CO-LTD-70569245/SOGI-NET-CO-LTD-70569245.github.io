@@ -711,10 +711,6 @@ a.disabled .icon-net-5g {
   -webkit-border-radius: 4px;
   border-radius: 4px; }
 
-.fixed-header.bg-blue {
-  background-image: url(../images/ui/bg-fixed-header-blue.jpg); }
-.fixed-header.bg-yellow {
-  background-image: url(../images/ui/bg-fixed-header-yellow.jpg); }
 .fixed-header .media-object {
   width: 80px;
   height: 80px;
