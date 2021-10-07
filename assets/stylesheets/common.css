@@ -1146,6 +1146,13 @@ a.box:hover {
   .card-focus {
     height: 420px;
     min-height: 420px; } }
+.card-focus.article-headlines {
+  height: 420px;
+  min-height: 420px; }
+@media (max-width: 1199.98px) {
+  .card-focus.article-headlines {
+    height: 380px;
+    min-height: 380px; } }
 
 .badge-custom {
   position: absolute;
