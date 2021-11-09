@@ -12,12 +12,24 @@ body {
 
 #header {
   background: #000; }
+#header .hamburger-menu span, #header .hamburger-menu span:before, #header .hamburger-menu span:after {
+  background-color: #fff; }
+#header .hamburger-menu.active span {
+  background-color: transparent; }
+@media (max-width: 991px) {
+  #header {
+    background: rgba(0, 0, 0, 0.9); }
+  #header .navbar-collapse {
+    height: 100vh; }
+  #header .navbar-nav {
+    font-size: 2rem;
+    text-align: center; } }
 
 #kv {
   position: relative;
   background-position: center 0;
   background-repeat: no-repeat;
-  background-image: url("/event/2021_vote/img/kv.png");
+  background-image: url("/event/2021_vote/img/kv-desktop.png");
   background-attachment: fixed;
   background-size: cover; }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
@@ -36,6 +48,9 @@ body {
   display: table-cell;
   vertical-align: middle;
   height: 100%; }
+@media (max-width: 991px) {
+  #kv {
+    background-image: url("/event/2021_vote/img/kv-mobile.png"); } }
 
 .cta {
   position: absolute;
