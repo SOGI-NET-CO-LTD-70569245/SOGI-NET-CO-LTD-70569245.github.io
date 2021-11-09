@@ -896,6 +896,15 @@ a.disabled .icon-net-5g {
   flex-wrap: nowrap;
   overflow-x: auto; }
 
+.login-social .btn {
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem; }
+.login-social .btn:hover, .login-social .btn:active {
+  color: #337ab7;
+  border-color: #337ab7; }
+
 @media (min-width: 1200px) {
   .headlines .headlines-main {
     width: 855px; }
