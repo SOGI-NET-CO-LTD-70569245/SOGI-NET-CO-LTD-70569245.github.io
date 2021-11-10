@@ -44,6 +44,9 @@ body {
   display: table-cell;
   vertical-align: middle;
   height: 100%; }
+@media (max-width: 1199px) {
+  #kv {
+    background-image: url("/event/2021_vote/img/kv-mobile.png"); } }
 
 .cta {
   position: absolute;
