@@ -30,7 +30,6 @@ body {
   background-position: center 0;
   background-repeat: no-repeat;
   background-image: url("/event/2021_vote/img/kv-desktop.png");
-  background-attachment: fixed;
   background-size: cover; }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   #kv {
