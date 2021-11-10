@@ -50,7 +50,8 @@ body {
   height: 100%; }
 @media (max-width: 991px) {
   #kv {
-    background-image: url("/event/2021_vote/img/kv-mobile.png"); } }
+    background-image: url("/event/2021_vote/img/kv-mobile.png");
+    background-size: 100% 100%; } }
 
 .cta {
   position: absolute;

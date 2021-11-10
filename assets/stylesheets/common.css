@@ -896,6 +896,21 @@ a.disabled .icon-net-5g {
   flex-wrap: nowrap;
   overflow-x: auto; }
 
+.text-centerline {
+  position: relative;
+  border-bottom: 1px solid #dee2e6; }
+.text-centerline span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.45rem;
+  width: 8rem;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1;
+  background: #fff; }
+
 .login-social .btn {
   padding: 0;
   width: 3rem;
