@@ -58,10 +58,13 @@ body {
   color: #2B0474; }
 
 .nav-cat .nav-link {
-  border-bottom: 1px solid #fff;
-  color: #000; }
+  border-bottom: 1px solid #fff; }
+.nav-cat .nav-link h2 {
+  color: #000;
+  font-weight: normal; }
 .nav-cat .nav-link.active {
-  border-bottom-color: #337ab7;
+  border-bottom-color: #337ab7; }
+.nav-cat .nav-link.active h2 {
   color: #337ab7; }
 
 #dropdown-category {
