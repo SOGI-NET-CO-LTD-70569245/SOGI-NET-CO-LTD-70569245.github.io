@@ -122,7 +122,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <div class="badge badge-secondary badge-pill text-white">已完成</div>
+                                <div class="badge badge-pill text-white">&nbsp;</div>
                                 <a class="nav-link h2 my-3" data-toggle="tab" href="#vote2" role="tab">
                                     <h2>高 CP 鬥機組</h2>
                                 </a>
@@ -164,7 +164,14 @@
                                     <p class="text-gray">這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準</p>
                                     <div class="row">
                                         <div class="col-4 my-3">
-                                            <a href="javascript:void();" class="btn-shot-day-a d-inline-block position-relative">
+                                            <a href="https://upload.wikimedia.org/wikipedia/commons/4/49/Fann_Mountains_vertical_2013.jpg" class="d-inline-block position-relative fresco" data-fresco-group="group1" data-fresco-caption="A圖說 (點擊任意處關閉圖片)" data-fresco-group-options="
+            onShow: function() {
+                disableScroll()
+            },
+            afterHide: function() {
+                enableScroll()
+            }
+        ">
                                                 <span class="pos-a-rt mr-2 mt-2">
                                                     <i class="fas fa-search text-warning h4"></i>
                                                 </span>
@@ -173,7 +180,7 @@
                                             <div class="text-center h4">A</div>
                                         </div>
                                         <div class="col-4 my-3">
-                                            <a href="javascript:void();" class="btn-shot-day-b d-inline-block position-relative">
+                                            <a href="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/2021101216441290360_OriginalSize.jpg" class="d-inline-block position-relative fresco" data-fresco-group="group1" data-fresco-caption="B圖說 (點擊任意處關閉圖片)">
                                                 <span class="pos-a-rt mr-2 mt-2">
                                                     <i class="fas fa-search text-warning h4"></i>
                                                 </span>
@@ -182,7 +189,7 @@
                                             <div class="text-center h4">B</div>
                                         </div>
                                         <div class="col-4 my-3">
-                                            <a href="javascript:void();" class="btn-shot-day-c d-inline-block position-relative">
+                                            <a href="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/2021102818592828111_ExtraLargeSize-640x640.jpg" class="d-inline-block position-relative fresco" data-fresco-group="group1" data-fresco-caption="C圖說 (點擊任意處關閉圖片)">
                                                 <span class="pos-a-rt mr-2 mt-2">
                                                     <i class="fas fa-search text-warning h4"></i>
                                                 </span>
@@ -191,7 +198,7 @@
                                             <div class="text-center h4">C</div>
                                         </div>
                                         <div class="col-4 my-3">
-                                            <a href="javascript:void();" class="btn-shot-day-d d-inline-block position-relative">
+                                            <a href="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/202110281859288267_ExtraLargeSize-640x640.jpg" class="d-inline-block position-relative fresco" data-fresco-group="group1" data-fresco-caption="D圖說 (點擊任意處關閉圖片)">
                                                 <span class="pos-a-rt mr-2 mt-2">
                                                     <i class="fas fa-search text-warning h4"></i>
                                                 </span>
@@ -448,14 +455,15 @@
 
         <!-- Global -->
         <script src="https://kit.fontawesome.com/5ab387053e.js" crossorigin="anonymous"></script>
-		<script src="/assets/javascripts/vendor/jquery.min.js"></script>
+<!--		<script src="/assets/javascripts/vendor/jquery.min.js"></script>-->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
         <script src="/assets/javascripts/vendor/owl.carousel.min.js"></script>
         <script src="/assets/javascripts/vendor/jquery.slick.min.js"></script>
         <script src="/assets/javascripts/common.js"></script>
 
         <!-- Single -->
-        <script src="/assets/javascripts/vendor/fresco.js"></script>
+        <script src="/assets/javascripts/vendor/_fresco.v225.js"></script>
         <script src="/assets/javascripts/vendor/jquery.hc-sticky.min.js"></script>
         <script>
             jQuery(document).ready(function($){
@@ -469,42 +477,56 @@
                     top:10,
                 });
             });
-            $('.btn-shot-day-a').on('click', function(event) {
-                event.preventDefault();
-                Fresco.show([
-'https://upload.wikimedia.org/wikipedia/commons/4/49/Fann_Mountains_vertical_2013.jpg',
-                            ], {
-                    thumbnails: 'true',
-                    onClick: 'close'
-                });
-            });
-            $('.btn-shot-day-b').on('click', function(event) {
-                event.preventDefault();
-                Fresco.show([
-'https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/2021101216441290360_OriginalSize.jpg',
-                            ], {
-                    thumbnails: 'true',
-                    onClick: 'close'
-                });
-            });
-            $('.btn-shot-day-c').on('click', function(event) {
-                event.preventDefault();
-                Fresco.show([
-'https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/2021102818592828111_ExtraLargeSize-640x640.jpg',
-                            ], {
-                    thumbnails: 'true',
-                    onClick: 'close'
-                });
-            });
-            $('.btn-shot-day-d').on('click', function(event) {
-                event.preventDefault();
-                Fresco.show([
-'https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/202110281859288267_ExtraLargeSize-640x640.jpg',
-                            ], {
-                    thumbnails: 'true',
-                    onClick: 'close'
-                });
-            });
+//            $('.btn-shot-day-a').on('click', function(event) {
+//                event.preventDefault();
+//                Fresco.show([
+//'https://upload.wikimedia.org/wikipedia/commons/4/49/Fann_Mountains_vertical_2013.jpg',
+//                            ], {
+//                    thumbnails: 'true',
+//                    onClick: 'close'
+//                });
+//            });
+//            $('.btn-shot-day-b').on('click', function(event) {
+//                event.preventDefault();
+//                Fresco.show([
+//'https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/2021101216441290360_OriginalSize.jpg',
+//                            ], {
+//                    thumbnails: 'true',
+//                    onClick: 'close'
+//                });
+//            });
+//            $('.btn-shot-day-c').on('click', function(event) {
+//                event.preventDefault();
+//                Fresco.show([
+//'https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/2021102818592828111_ExtraLargeSize-640x640.jpg',
+//                            ], {
+//                    thumbnails: 'true',
+//                    onClick: 'close'
+//                });
+//            });
+//            $('.btn-shot-day-d').on('click', function(event) {
+//                event.preventDefault();
+//                Fresco.show([
+//'https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/202110281859288267_ExtraLargeSize-640x640.jpg',
+//                            ], {
+//                    thumbnails: 'true',
+//                    onClick: 'close'
+//                });
+//            });
+            function disableScroll() {
+    // Get the current page scroll position
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+}
+
+function enableScroll() {
+    window.onscroll = function() {};
+}
             $('.modal-login').modal('show')
         </script>
 
