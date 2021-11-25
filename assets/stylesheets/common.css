@@ -3075,8 +3075,18 @@ a.box:hover {
 
 /* - transition */
 .fr-window-skin-fresco.fr-svg .fr-close .fr-close-icon {
-  background-position: -210px -8px;
+  position: relative;
+  background: none;
   opacity: .8; }
+.fr-window-skin-fresco.fr-svg .fr-close .fr-close-icon:before {
+  width: 26px;
+  display: block;
+  content: '\f00d';
+  color: #fff;
+  font-family: "FontAwesome";
+  font-size: 1.5rem;
+  line-height: 26px;
+  text-align: center; }
 
 .fr-window-skin-fresco .fr-close:hover .fr-close-icon {
   opacity: 1; }
