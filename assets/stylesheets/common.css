@@ -3079,13 +3079,14 @@ a.box:hover {
   background: none;
   opacity: .8; }
 .fr-window-skin-fresco.fr-svg .fr-close .fr-close-icon:before {
-  width: 26px;
+  width: 36px;
+  background: #000;
   display: block;
   content: '\f00d';
   color: #fff;
   font-family: "FontAwesome";
   font-size: 1.5rem;
-  line-height: 26px;
+  line-height: 36px;
   text-align: center; }
 
 .fr-window-skin-fresco .fr-close:hover .fr-close-icon {
