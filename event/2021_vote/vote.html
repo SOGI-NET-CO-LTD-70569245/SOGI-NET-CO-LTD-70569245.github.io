@@ -477,56 +477,20 @@
                     top:10,
                 });
             });
-//            $('.btn-shot-day-a').on('click', function(event) {
-//                event.preventDefault();
-//                Fresco.show([
-//'https://upload.wikimedia.org/wikipedia/commons/4/49/Fann_Mountains_vertical_2013.jpg',
-//                            ], {
-//                    thumbnails: 'true',
-//                    onClick: 'close'
-//                });
-//            });
-//            $('.btn-shot-day-b').on('click', function(event) {
-//                event.preventDefault();
-//                Fresco.show([
-//'https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/2021101216441290360_OriginalSize.jpg',
-//                            ], {
-//                    thumbnails: 'true',
-//                    onClick: 'close'
-//                });
-//            });
-//            $('.btn-shot-day-c').on('click', function(event) {
-//                event.preventDefault();
-//                Fresco.show([
-//'https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/2021102818592828111_ExtraLargeSize-640x640.jpg',
-//                            ], {
-//                    thumbnails: 'true',
-//                    onClick: 'close'
-//                });
-//            });
-//            $('.btn-shot-day-d').on('click', function(event) {
-//                event.preventDefault();
-//                Fresco.show([
-//'https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/202110/202110281859288267_ExtraLargeSize-640x640.jpg',
-//                            ], {
-//                    thumbnails: 'true',
-//                    onClick: 'close'
-//                });
-//            });
             function disableScroll() {
-    // Get the current page scroll position
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                // Get the current page scroll position
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
 
-        // if any scroll is attempted, set this to the previous value
-        window.onscroll = function() {
-            window.scrollTo(scrollLeft, scrollTop);
-        };
-}
+                    // if any scroll is attempted, set this to the previous value
+                    window.onscroll = function() {
+                        window.scrollTo(scrollLeft, scrollTop);
+                    };
+            }
 
-function enableScroll() {
-    window.onscroll = function() {};
-}
+            function enableScroll() {
+                window.onscroll = function() {};
+            }
             $('.modal-login').modal('show')
         </script>
 
