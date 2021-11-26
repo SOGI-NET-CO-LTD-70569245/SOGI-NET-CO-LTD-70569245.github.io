@@ -161,7 +161,7 @@
                                 <div class="shadow my-5 p-5" id="shot-day">
                                     <div class="badge badge-light badge-pill px-5">日拍組</div>
                                     <div class="h4 font-weight-bold my-3">（1/11）標準鏡頭 - 建築</div>
-                                    <p class="text-gray">這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準</p>
+                                    <p class="text-gray">這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準這是一個標準A</p>
                                     <div class="row">
                                         <div class="col-4 my-3">
                                             <a href="https://upload.wikimedia.org/wikipedia/commons/4/49/Fann_Mountains_vertical_2013.jpg" class="d-inline-block position-relative fresco" data-fresco-group="group1" data-fresco-caption="A圖說 (點擊任意處關閉圖片)" data-fresco-group-options="
@@ -477,19 +477,37 @@
                     top:10,
                 });
             });
+//            function disableScroll() {
+//                // Get the current page scroll position
+//                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+//
+//                    // if any scroll is attempted, set this to the previous value
+//                    window.onscroll = function() {
+//                        window.scrollTo(scrollLeft, scrollTop);
+//                    };
+//            }
+//
+//            function enableScroll() {
+//                window.onscroll = function() {};
+//            }
             function disableScroll() {
-                // Get the current page scroll position
-                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-
-                    // if any scroll is attempted, set this to the previous value
-                    window.onscroll = function() {
-                        window.scrollTo(scrollLeft, scrollTop);
-                    };
+                var scrollPosition = [
+                    self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+                    self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+                ];
+                var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+                html.data('scroll-position', scrollPosition);
+                html.data('previous-overflow', html.css('overflow'));
+                html.css('overflow', 'hidden');
+                window.scrollTo(scrollPosition[0], scrollPosition[1]);
             }
 
             function enableScroll() {
-                window.onscroll = function() {};
+                var html = jQuery('html');
+                var scrollPosition = html.data('scroll-position');
+                html.css('overflow', html.data('previous-overflow'));
+                window.scrollTo(scrollPosition[0], scrollPosition[1]);
             }
             $('.modal-login').modal('show')
         </script>
