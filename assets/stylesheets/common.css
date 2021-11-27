@@ -2146,6 +2146,10 @@ a.box:hover {
   line-height: 1%;
   filter: none;
   opacity: 1; }
+@media (max-width: 767.98px) {
+  .fr-info-background {
+    top: auto;
+    bottom: 100px; } }
 
 .fr-ui-inside .fr-info-background {
   filter: alpha(opacity=80);
@@ -2168,6 +2172,9 @@ a.box:hover {
   position: relative;
   width: auto;
   font-size: 20px; }
+@media (max-width: 767.98px) {
+  .fr-info-padder {
+    bottom: 100px !important; } }
 
 .fr-caption {
   width: auto;
