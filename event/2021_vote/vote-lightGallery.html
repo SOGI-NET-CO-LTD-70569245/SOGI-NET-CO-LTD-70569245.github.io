@@ -13,7 +13,7 @@
         <meta property="og:url" content="http://www.sogi.com.tw/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="SOGI 手機王" />
-        <title>SOGI 手機王</title>
+        <title>SOGI 手機王 vote test</title>
 
         <!-- Global -->
         <link rel="stylesheet" href="/assets/stylesheets/bootstrap-431.css">
@@ -118,13 +118,13 @@
                         <ul class="nav nav-cat nav-justified justify-content-center text-center">
                             <li class="nav-item">
                                 <div class="badge badge-secondary badge-pill text-white">已完成</div>
-                                <a class="nav-link h2 my-3 active" data-toggle="tab" href="#vote1" role="tab">
+                                <a class="nav-link h2 my-3 px-1 active" data-toggle="tab" href="#vote1" role="tab">
                                     <h2>旗艦鬥機組</h2>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <div class="badge badge-pill text-white">&nbsp;</div>
-                                <a class="nav-link h2 my-3" data-toggle="tab" href="#vote2" role="tab">
+                                <a class="nav-link h2 my-3 px-1" data-toggle="tab" href="#vote2" role="tab">
                                     <h2>高 CP 鬥機組</h2>
                                 </a>
                             </li>
@@ -302,53 +302,40 @@
 
 
 
-//            lightGallery(document.getElementById('lightgallery-1'), {
-//                plugins: [lgZoom, lgThumbnail, lgHash],
-//                selector: '.d-block',
-//                hash: true,
-//                galleryId: 1,
-//                speed: 500,
-//                download: false,
-//                mobileSettings: { controls: true, showCloseIcon: true, },
-//                licenseKey: '0000-0000-000-0000'
-//            });
-//            lightGallery(document.getElementById('lightgallery-2'), {
-//                plugins: [lgZoom, lgThumbnail, lgHash],
-//                selector: '.d-block',
-//                hash: true,
-//                galleryId: 2,
-//                speed: 500,
-//                download: false,
-//                mobileSettings: { controls: true, showCloseIcon: true, },
-//                licenseKey: '0000-0000-000-0000'
-//            });
+            lightGallery(document.getElementById('lightgallery-1'), {
+                plugins: [lgZoom, lgThumbnail, lgHash],
+                selector: '.d-block',
+                hash: true,
+                galleryId: 1,
+                speed: 500,
+                download: false,
+                mobileSettings: { controls: true, showCloseIcon: true, },
+                licenseKey: '9930C033-BA934852-AB7DF391-10CF0D21'
+            });
+            lightGallery(document.getElementById('lightgallery-2'), {
+                plugins: [lgZoom, lgThumbnail, lgHash],
+                selector: '.d-block',
+                hash: true,
+                galleryId: 2,
+                speed: 500,
+                download: false,
+                mobileSettings: { controls: true, showCloseIcon: true, },
+                licenseKey: '9930C033-BA934852-AB7DF391-10CF0D21'
+            });
 
-            var elements = document.getElementsByClassName('lightgallery');
-            for (let item of elements) {
-                lightGallery(item, {
-                    plugins: [lgZoom, lgThumbnail, lgHash],
-                    selector: '.d-block',
-                    hash: false,
-//                    galleryId: 1,
-                    speed: 500,
-                    download: false,
-                    mobileSettings: { controls: true, showCloseIcon: true, },
-                    licenseKey: '0000-0000-000-0000'
-                })
-            }
-
-//    lightGallery(document.getElementsById('lightgallery'), {
-//        plugins: [lgZoom, lgThumbnail, lgHash],
-//        selector: '.d-block',
-//        galleryId: 1,
-//        speed: 500,
-////        customSlideName: true,
-//        download: false,
-//        mobileSettings: { controls: true, showCloseIcon: true, },
-//        licenseKey: '0000-0000-000-0000'
-//    });
-
-
+//            var elements = document.getElementsByClassName('lightgallery');
+//            for (let item of elements) {
+//                lightGallery(item, {
+//                    plugins: [lgZoom, lgThumbnail, lgHash],
+//                    selector: '.d-block',
+//                    hash: false,
+////                    galleryId: 1,
+//                    speed: 500,
+//                    download: false,
+//                    mobileSettings: { controls: true, showCloseIcon: true, },
+//                    licenseKey: '0000-0000-000-0000'
+//                })
+//            }
 
             jQuery(document).ready(function($){
                 $('#dropdown-category').hcSticky({
