@@ -125,7 +125,20 @@
                                     <button class="btn btn-primary btn-sm ml-2"><i class="fas fa-search"></i> 搜尋</button>
                                 </div>
                             </form>
-                                <div class="table-responsive mt-4">
+                        <div class="form-row align-items-center justify-content-end">
+                            <div class="col-auto my-1">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="selectAll">
+                                    <label class="form-check-label" for="selectAll">
+                                        全選
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-auto my-1">
+                                <button type="submit" class="btn btn-primary">關閉產品</button>
+                            </div>
+                        </div>
+                                <div class="table-responsive mt-2">
                                     <table class="table table-bordered table-striped">
                                         <thead>
                                             <tr class="table-primary">
@@ -137,6 +150,7 @@
                                                 <th class="text-center" nowrap>保固期</th>
                                                 <th class="text-center" nowrap>現場快修</th>
                                                 <th class="text-center" nowrap>維修時間</th>
+                                                <th width="10%" class="text-center">資料狀態</th>
                                                 <th width="10%">&nbsp;</th>
                                             </tr>
                                         </thead>
@@ -168,7 +182,12 @@
                                                     <a href="#" class="editable-select-time" data-pk="1" data-placeholder="維修時間">30分鐘</a>
                                                 </td>
                                                 <td class="text-center align-middle">
-                                                    <a class="btn btn-outline-secondary btn-sm" href="">關閉</a>
+                                                    開啟
+                                                </td>
+                                                <td class="text-center align-middle">
+                                                    <input type="checkbox" class="">
+                                                    <br>
+                                                    <a class="btn btn-outline-secondary btn-sm" href="">編輯</a><br>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -198,7 +217,12 @@
                                                     <a href="#" class="editable-select-time" data-pk="1" data-placeholder="維修時間">30分鐘</a>
                                                 </td>
                                                 <td class="text-center align-middle">
-                                                    <a class="btn btn-outline-secondary btn-sm" href="">關閉</a>
+                                                    開啟
+                                                </td>
+                                                <td class="text-center align-middle">
+                                                    <input type="checkbox" class="">
+                                                    <br>
+                                                    <a class="btn btn-outline-secondary btn-sm" href="">編輯</a><br>
                                                 </td>
                                             </tr>
                                         </tbody>
