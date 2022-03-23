@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'商圈',cssFile:'shop'})
+    </head>
+
+	<body class="products">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_ad-970.html',{textAd:'true'})
+            @@include('../../partial/comp/_breadcrumb.html')
+            
+            @@include('../../partial/page/shop/_form.html')
+            @@include('../../partial/page/common/_store-list.html',{
+                id:'section-store-list',
+                fullpage:'true',
+                fpBgClass:'bg-light',
+                title:'活動限定店家',
+                bgClass:'bg-light',
+                searchFunc:'true',
+                itemBtnNumber:'2',
+            })
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+
+        @@include('../../partial/modal/_refresh.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+    </body>
+</html>
