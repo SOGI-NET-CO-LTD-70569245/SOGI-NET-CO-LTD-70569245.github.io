@@ -1,0 +1,89 @@
+
+.owl-theme {
+	// Styling Next and Prev buttons
+	.owl-nav {
+		margin-top: 10px;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		[class*='owl-'] {
+//			color: $nav-color;
+//			font-size: $nav-font-size;
+//			margin: $nav-margin;
+//			padding: $nav-padding;
+//			background: $nav-background;
+//			display: inline-block;
+			cursor: pointer;
+			&:hover {
+				background: $nav-background-hover;
+				color:$nav-color-hover;
+				text-decoration: none;
+			}
+            &:before {
+                font-family: $slick-font-family;
+                font-size: 60px;
+                font-weight: 900 !important;
+                line-height: 1;
+                color: $warning;
+                opacity: $slick-opacity-default;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+		}
+        .owl-prev {
+            left: 5%;
+            &:before {
+                content: $slick-prev-character;
+            }
+        }
+        .owl-next {
+            right: 5%;
+            &:before {
+                content: $slick-next-character;
+            }
+        }
+		.disabled {
+			opacity: $nav-disabled-opacity;
+			cursor: default;
+		}
+	}
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+
+	.owl-dots {
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+
+			span {
+				width: $dot-width;
+				height: $dot-height;
+				margin: $dot-margin;
+				background: $dot-background;
+				display: block;
+				-webkit-backface-visibility: visible;
+				transition: all 200ms ease;
+				border-radius: $dot-rounded;
+			}
+
+			&.active,
+			&:hover {
+				span {
+					background: $dot-background-active;
+				}
+			}
+            &.active {
+                span {
+                    width: $dot-width * 4;
+                }
+            }
+		}
+	}
+}

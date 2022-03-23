@@ -1,0 +1,37 @@
+.headlines {
+    @include media-breakpoint-only(xl) {
+        .headlines-main {
+            width: 855px;
+//            h1,
+//            .h1 {
+//                font-size: 1rem;
+//            }
+        }
+        .headlines-side {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 300px;
+        }
+    }
+    .nav-pills {
+        .nav-link {
+            font-size: 0.9rem;
+            &.active,
+            &:hover,
+            &:focus {
+                background-color: #fc0;
+                color: #000;
+            }
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        .headlines-product {
+            .col-product-main {
+                max-width: 535px !important;
+            }
+            .col-product-news {
+                max-width: 320px !important;
+            }
+        }
+    }
+}

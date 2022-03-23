@@ -1,0 +1,192 @@
+// Card
+.card-img-overlay {
+    top: auto;
+    background-color: rgba($black,.7);
+}
+
+
+// Breadcrumb
+.breadcrumb {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: $font-size-sm;
+    a {
+        color: $gray-600;
+    }
+}
+
+
+// Button Group
+.btn-group-justified {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    .btn,
+    .btn-group {
+        float: none;
+        display: table-cell;
+        width: 1%;
+        .btn {
+            width: 100%;
+        }
+        .dropdown-menu {
+            left: auto;
+        }
+    }
+}
+
+
+// Pagination
+@include media-breakpoint-down(sm) {
+    .pagination {
+        display: block;
+        .page-item {
+            float: left;
+            display: block !important;
+        }
+    }
+}
+
+
+// List Group
+.list-group-collapse {
+    position: relative;
+	&[aria-expanded="true"] {
+		&:after {
+            content: '\f0d8';
+        }
+	}
+	&[aria-expanded="false"] {
+        &:after {
+            content: '\f0d7';
+        }
+	}
+    &:after {
+        position: absolute;
+		top:50%;
+        right: 20px;
+		margin-top:-10px;
+        font-family: FontAwesome;
+        content: '\f0d7';
+    }
+}
+
+
+// Badge
+
+.badge-group-nowrap {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    height: 1.7rem;
+    color: $white;
+}
+
+.badge {
+    &.badge-cht {
+        background-color: #3d8ce3;
+        color: $white;
+    }
+    &.badge-twm {
+        background-color: #e5883d;
+        color: $white;
+    }
+    &.badge-fetnet {
+        background-color: #d14237;
+        color: $white;
+    }
+    &.badge-aptg {
+        background-color: #7bbd36;
+        color: $white;
+    }
+    &.badge-tstartel {
+        background-color: #9c2875;
+        color: $white;
+    }
+    &.badge-outline {
+        color: $gray-700;
+        border: 1px solid $gray-400;
+    }
+    &.badge-price {
+        background-color: #E7E8EA;
+    }
+}
+
+
+// Tooltip
+.tooltip-inner {
+    white-space:pre-wrap;
+}
+
+.btn-outline-secondary {
+    background: $white;
+}
+
+.blockquote {
+    border-left: 4px solid $gray-300;
+}
+
+.js-lazy, .img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.dropdown-toggle {
+    &::after {
+        position: relative;
+        border: none;
+        top: 3px;
+        font-family: "Font Awesome 5 Free";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 1;
+        content: "\f107";
+    }
+}
+
+.btn-secondary {
+    color: $white;
+}
+
+.pos-a-lt {
+    .badge {
+        border-radius: 0;
+    }
+}
+
+.card-focus {
+    height: 495px;
+    min-height: 495px;
+    a.d-block {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    @include media-breakpoint-down(lg) {
+        height: 420px;
+        min-height: 420px;
+    }
+    &.article-headlines {
+        height: 420px;
+        min-height: 420px;
+        @include media-breakpoint-down(lg) {
+            height: 380px;
+            min-height: 380px;
+        }
+    }
+}
+.badge-custom {
+    position: absolute;
+    left: 5px;
+    border-radius: $border-radius-lg;
+}
+.toast {
+    border-left: 10px solid $green;
+    @include media-breakpoint-down(md) {
+        max-width: 320px;
+    }
+}

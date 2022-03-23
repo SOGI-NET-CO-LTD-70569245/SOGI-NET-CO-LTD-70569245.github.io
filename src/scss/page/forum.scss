@@ -1,0 +1,13 @@
+@import "../common/config/mixin";
+@import "../common/config/variables";
+
+@import "../bootstrap4/variables";
+@import "../bootstrap4/mixins";
+
+@import "../utils/bootstrap.datetimepicker";
+@import "../utils/bootstrap.fileinput";
+@import "../utils/bootstrap.editable";
+
+.editable-content {
+    min-height: 100px;
+}
