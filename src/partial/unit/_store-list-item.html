@@ -1,0 +1,136 @@
+<div class="col-12 col-md-6 col-lg-3 my-2 @@if(context.cat){mix-item @@cat}" @@if(context.cat){data-sort-price="@@sortPrice" data-sort-date="@@sortDate" data-sort-hot="@@sortHot"}>
+    <div class="h-100 p-0 p-lg-2 shadow border bd-2 border-@@borderColor">
+        @@if(context.badgeFlagTitle){
+        <div class="position-absolute right-0 top-0 z-1 mr-2">
+            <div class="badge-flag font-small text-center">
+                <span>一二三</span>
+            </div>
+        </div>
+        }
+        <div class="row">
+            <div class="col-4 col-lg-12 mb-0 mb-lg-2">
+                <figure class="position-relative h-100">
+                    <a class="d-block h-100" href="#">
+                        <img class="of-cover" src="@@img" alt="">
+                    </a>
+                    @@if(context.badgeSP1Title){
+                    <div class="position-absolute left-0 top-0 pt-1 pl-1">
+                        <div class="h5">
+                            <span class="badge badge-@@badgeSP1Bg rounded-pill">@@badgeSP1Title</span>
+                            @@if(context.badgeSP2Title){
+                            <br>
+                            <span class="badge badge-@@badgeSP2Bg rounded-pill">@@badgeSP2Title</span>
+                            }
+                        </div>
+                    </div>
+                    }
+                    @@if(context.badge1){
+                    <div class="position-absolute bottom-0 left-0 right-0 text-lg-center">
+                        <div class="d-block d-lg-inline">
+                            <span class="badge badge-light rounded-0 mx-0">@@badge1</span>
+                        </div>
+                        @@if(context.badge2){
+                        <div class="d-block d-lg-inline">
+                            <span class="badge badge-light rounded-0 mx-0">@@badge2</span>
+                        </div>
+                        }
+                        @@if(context.badge3){
+                        <div class="d-block d-lg-inline">
+                            <span class="badge badge-light rounded-0 mx-0">@@badge3</span>
+                        </div>
+                        }
+                        @@if(context.badge4){
+                        <div class="d-block d-lg-inline">
+                            <span class="badge badge-light rounded-0 mx-0">@@badge4</span>
+                        </div>
+                        }
+                    </div>
+                    }
+                </figure>
+            </div>
+            <div class="col-8 col-lg-12">
+                <div class="py-2 pr-3 pl-0 p-lg-0">
+                    <a class="text-row-1 mb-2 w-75 w-lg-100" href="#">
+                        @@title
+                    </a>
+                    <div class="">
+                        <a class="text-dark text-decoration-none" href="#">
+                            <small>
+                            @@rateScore <span class="text-warning"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half"></i></span> (@@rateCount)
+                            </small>
+                        </a>
+                    </div>
+                    <div class="text-row-1 mb-2">
+                        <a class="text-muted text-decoration-none" href="#">
+                            <small>@@address</small>
+                        </a>
+                    </div>
+                    <div class="mb-1">
+                        <div class="text-danger">@@if(context.priceTitle){@@priceTitle}&nbsp;</div>
+                        @@if(context.priceLogin=='true'){
+                        <del>$@@price</del> <span class="h4 text-danger font-weight-bold">登入驚喜價</span>
+                        }
+                        @@if(context.priceLogin==''){
+                        <span class="h4 text-danger font-weight-bold">$@@price</span>
+                        }
+                    </div>
+                    @@if(context.update){
+                    <div class="font-small text-muted mb-2">
+                        更新時間：@@update
+                    </div>
+                    }
+                    <div class="row">
+                        @@if(context.btn!=''){
+                        <div class="col-6 pr-1">
+                            @@if(context.btn=='primary'){
+                            <a class="btn btn-block btn-primary rounded-pill" href="#">預約訂購</a>
+                            }
+                            @@if(context.btn=='danger'){
+                            <a class="btn btn-block btn-danger rounded-pill" href="#">現貨搶購</a>
+                            }
+                        </div>
+                        <div class="col-3 px-1">
+                            <a class="btn btn-block btn-secondary rounded-pill" href="tel:0910123456" data-toggle="tooltip" data-placement="top" title="0900123456">
+                                <i class="fas fa-fw fa-phone"></i>
+                            </a>
+                        </div>
+                        <div class="col-3 pl-1">
+                            <a class="btn btn-block btn-secondary rounded-pill" href="#">
+                                <i class="fab fa-fw fa-line"></i>
+                            </a>
+                        </div>
+                        }
+                        @@if(context.btn==''){
+                        <div class="col-6 pr-1">
+                            <a class="btn btn-block btn-primary rounded-pill" href="tel:0910123456" data-toggle="tooltip" data-placement="top" title="0900123456">
+                                <i class="fas fa-fw fa-phone"></i>
+                            </a>
+                        </div>
+                        <div class="col-6 pl-1">
+                            <a class="btn btn-block btn-primary rounded-pill" href="#">
+                                <i class="fab fa-fw fa-line"></i>
+                            </a>
+                        </div>
+                        }
+                    </div>
+                    <hr class="my-3">
+                    <div class="text-row-2 font-small mb-2">
+                        @@desc
+                    </div>
+                    <div class="text-row-1 font-small">
+                        @@if(context.tag1){
+                        <a class="mr-2" href="#">#@@tag1</a>
+                        }
+                        @@if(context.tag2){
+                        <a class="mr-2" href="#">#@@tag2</a>
+                        }
+                        @@if(context.tag3){
+                        <a class="mr-2" href="#">#@@tag3</a>
+                        }
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

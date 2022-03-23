@@ -1,0 +1,227 @@
+<div @@if(context.fullpage=='true'){class="container-fluid @@if(context.fpBgClass){@@fpBgClass}"} @@if(context.id){id="@@id"}>
+    <div class="container py-10">
+
+        <div class="row">
+            <div class="col-2 d-none d-lg-flex">
+                <figure class="m-0 h-100">
+                    <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/LG_lg_stylus_3_0320081720195_360x270.jpg" class="of-contain" alt="@@title1">
+                </figure>
+            </div>
+            <div class="col-12 col-lg-10">
+                <div class="row mb-3">
+                    <div class="col-4 d-lg-none">
+                        <figure class="m-0 h-100">
+                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/LG_lg_stylus_3_0320081720195_360x270.jpg" class="of-cover" alt="@@title1">
+                        </figure>
+                    </div>
+                    <div class="col col-lg-12">
+                        <h1 class="d-block fs-h4 mb-3">@@title1 <br class="d-block d-lg-none"><div class="d-inline fs-h5">@@title2</div></h1>
+                        <div class="row mb-5">
+                            @@if(context.group){
+                            <div class="col-6 pr-1">
+                                <a class="btn btn-block btn-primary rounded-pill px-1" href="detail.html">
+                                    <i class="fa-fw fas fa-chevron-left"></i>
+                                    <span class="d-none d-md-inline">回規格介紹</span>
+                                </a>
+                            </div>
+                            @@if(context.group!='repair-store'){
+                            <div class="col-3 px-1">
+                                <a class="btn btn-block btn-secondary rounded-pill px-1" href="#">
+                                    <i class="fa-fw fas fa-bell"></i>
+                                    <span class="d-none d-md-inline">價格追蹤</span>
+                                </a>
+                            </div>
+                            }
+                            <div class="col-3 pl-1">
+                                <a class="btn btn-block btn-secondary rounded-pill px-1" href="#">
+                                    <i class="fa-fw fas fa-share"></i>
+                                    <span class="d-none d-md-inline">分享</span>
+                                </a>
+                            </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                @@if(context.group=='repair-store'){
+                <div class="row justify-content-center">
+                    <div class="col-6 col-lg-3 mb-3 border-right">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <div class="text-dark font-small mb-1">換螢幕(顯示觸控正常)</div>
+                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-3 border-lg-right">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <div class="text-dark font-small mb-1">換螢幕(顯示觸控異常)</div>
+                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-3 border-right">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <div class="text-dark font-small mb-1">換電池</div>
+                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-3">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <div class="text-dark font-small mb-1">前相機</div>
+                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-3 border-right">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <div class="text-dark font-small mb-1">後相機</div>
+                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-3 border-lg-right">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <div class="text-dark font-small mb-1">現場檢測</div>
+                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-3 border-right">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <div class="text-dark font-small mb-1">充電線插孔問題</div>
+                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-3">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col">
+                                <a class="text-decoration-none" href="#">
+                                    <div class="text-dark font-small mb-1">軟體重灌</div>
+                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+                @@if(context.group!='repair-store'){
+                <div class="row justify-content-center">
+                    <div class="col col-lg">
+                        <div class="row align-items-center">
+                            <div class="col col-md-5 mb-3 mb-md-0">
+                                <a class="d-flex text-decoration-none" href="#">
+                                    <h2 class="sr-only">門市空機價 (最低) $29,000</h2>
+                                    <div class="w-100 m-0">
+                                        <div class="text-dark font-small mb-1">門市空機價 (最低)</div>
+                                        <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col col-md-7">
+                                <a class="d-flex text-decoration-none" href="#">
+                                    <div class="d-none d-md-flex flex-shrink-1 pr-2 text-success">
+                                        <i class="fas fa-3x fa-arrow-circle-down"></i>
+                                    </div>
+                                    <div class="w-100">
+                                        <div class="text-muted font-small mb-1">與建議售價相比</div>
+                                        <div class="h5 font-weight-bold text-success">
+                                            <div class="d-inline d-md-none">
+                                                <i class="fas fa-arrow-circle-down"></i>
+                                            </div>
+                                            降價 $1,490
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-1 text-center">
+                        <div class="d-inline-block border-left h-100"></div>
+                    </div>
+
+                    <div class="col col-lg">
+                        <div class="row align-items-center">
+                            <div class="col col-md-5 mb-3 mb-md-0">
+                                <a class="d-flex text-decoration-none" href="#">
+                                    <div class="w-100 m-0">
+                                        <div class="text-dark font-small mb-1">門市二手價</div>
+                                        <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col col-md-7">
+                                <a class="d-flex text-decoration-none" href="#">
+                                    <div class="d-none d-md-flex flex-shrink-1 pr-2 text-success">
+                                        <i class="fas fa-3x fa-arrow-circle-down"></i>
+                                    </div>
+                                    <div class="w-100">
+                                        <div class="text-muted font-small mb-1">與建議售價相比</div>
+                                        <div class="h5 font-weight-bold text-success">
+                                            <div class="d-inline d-md-none">
+                                                <i class="fas fa-arrow-circle-down"></i>
+                                            </div>
+                                            降價 $1,490
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                }
+            </div>
+        </div>
+        <div class="mt-5">
+        @@include('../../../partial/comp/_ad-sponsor.html')
+        </div>
+    </div>
+</div>
