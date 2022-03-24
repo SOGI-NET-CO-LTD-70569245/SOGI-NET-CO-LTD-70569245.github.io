@@ -6,3 +6,8 @@ node_modules
 # output/
 psd/
 __*
+
+.gitignore
+gulpfile.js
+package.json
+package-lock.json
