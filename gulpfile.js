@@ -12,6 +12,7 @@ const removeHtmlComments = require('gulp-remove-html-comments');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const uglify = require('gulp-uglify');
+const ghPages = require('gulp-gh-pages');
 
 const paths = {
   html: {
@@ -157,3 +158,8 @@ exports.build = build;
  * Define default task that can be called by just running `gulp` from cli
  */
 exports.default = default_build;
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});

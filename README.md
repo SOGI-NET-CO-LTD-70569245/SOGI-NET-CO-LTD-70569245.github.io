@@ -34,3 +34,8 @@ npm install
 gulp
 ```
 
+
+# Deploy to gh-pages
+```
+gulp deploy
+```
