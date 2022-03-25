@@ -160,6 +160,9 @@ exports.build = build;
 exports.default = default_build;
 
 gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
+  return gulp.src('./output/**/*')
+    .pipe(ghPages({
+      origin:'SOGI-preview',
+      message: 'Update ' + new Date().toLocaleString('zh-TW', {timeZone: 'Asia/Taipei'})
+    }));
 });
