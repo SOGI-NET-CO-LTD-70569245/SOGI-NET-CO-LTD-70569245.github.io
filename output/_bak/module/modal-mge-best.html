@@ -1,0 +1,202 @@
+        <div class="modal fade modal-mge-best" tabindex="-1" role="dialog" aria-labelledby="modalMgeBest">
+
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title">收錄精選文</div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="nav-responsive">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#mge-best-upload" aria-controls="mge-best-upload" role="tab" data-toggle="tab">圖片上傳</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#mge-best-collect" aria-controls="mge-best-collect" role="tab" data-toggle="tab">收錄設定</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#mge-best-set" aria-controls="mge-best-set" role="tab" data-toggle="tab">相關設定</a>
+                                </li>
+                            </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active py-2" id="mge-best-upload">
+                                    <figure class="d-block text-center">
+                                        <img src="/assets/images/uploads/pic-640x480.jpg" alt="" class="img-fluid">
+                                    </figure>
+                                    <small class="form-text text-muted">請上傳圖片尺寸640*480</small>
+                                    <div class="text-center mt-2">
+<!--                                        <input type="file" class="file fileinput mb-2" data-show-preview="false"><br>-->
+                                        <input type="file" class="form-control" multiple>
+                                        <br>
+                                        <button type="button" class="btn btn-outline-secondary">取消</button>
+                                        <button type="button" class="btn btn-primary">儲存</button>
+
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane py-2" id="mge-best-collect">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-3 col-md-2 col-form-label pr-0">收錄標題</label>
+                                            <div class="col-sm-9 col-md-10">
+                                                <input type="text" class="form-control" value="用手機行動支付 可能將是未來趨勢？">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-3 col-md-2 col-form-label pr-0">收錄引言</label>
+                                            <div class="col-sm-9 col-md-10">
+                                                <textarea class="form-control" rows="4"></textarea>
+                                                <small class="form-text text-muted">*勿超過120字元數，包括中英文、空格及各種符號</small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-3 col-md-2 col-form-label pr-0">收錄關鍵字</label>
+                                            <div class="col-sm-9 col-md-10">
+                                                <input type="text" class="form-control" value="">
+                                                <small class="form-text text-muted">*勿超過30字元數，包括中英文、空格及各種符號</small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-3 col-md-2 col-form-label pr-0">收錄版位</label>
+                                            <div class="col-sm-9 col-md-10">
+                                                <select multiple class="form-control">
+                                                    <option>討論鑽石</option>
+                                                    <option>討論鑽石</option>
+                                                    <option>討論鑽石</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-3 col-md-2 col-form-label pr-0">上稿時間</label>
+                                            <div class="col-sm-9 col-md-10 form-inline">
+                                                <select class="form-control mr-sm-2 my-1">
+                                                    <option>2000</option>
+                                                </select>
+                                                <select class="form-control mr-sm-2 my-1">
+                                                    <option>12</option>
+                                                </select>
+                                                <select class="form-control mr-sm-2 my-1">
+                                                    <option>31</option>
+                                                </select>
+                                                <select class="form-control mr-sm-2 my-1">
+                                                    <option>時</option>
+                                                </select>
+                                                <select class="form-control mr-sm-2 my-1">
+                                                    <option>分</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-3 col-md-2 col-form-label pr-0">著作權</label>
+                                            <div class="col-sm-9 col-md-10">
+                                                <select class="form-control">
+                                                    <option>站方,官方</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-3 col-md-2 col-form-label pr-0">精選文分類</label>
+                                            <div class="col-sm-9 col-md-10">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 開箱文
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 開箱文
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="text-center mt-2">
+                                        <button type="button" class="btn btn-primary">儲存</button>
+                                        <button type="button" class="btn btn-primary">更新地圖與RSS</button>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane py-2" id="mge-best-set">
+                                    <form class="">
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-3 col-md-2 col-form-label">相關產品</label>
+                                            <div class="col-sm-6 col-md-8">
+                                                <select class="form-control my-1">
+                                                    <option>1</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="" class="btn btn-outline-secondary my-1">新增</a>
+                                            </div>
+                                            <ul class="list-unstyled col-12 col-sm-9 offset-sm-3 col-md-10 offset-md-2 mt-2">
+                                                <li>
+                                                    <a href="">
+                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                        Sony Xperia C5 Ultra
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                        Sony Xperia C5 Ultra
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-3 col-md-2 col-form-label">相關品牌</label>
+                                            <div class="col-sm-6 col-md-8">
+                                                <input type="text" class="form-control my-1">
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="" class="btn btn-outline-secondary my-1">新增</a>
+                                            </div>
+                                            <ul class="list-unstyled col-12 col-sm-9 offset-sm-3 col-md-10 offset-md-2 mt-2">
+                                                <li>
+                                                    <a href="">
+                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                        Sony
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                        Sony
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-3 col-md-2 col-form-label">相關討論</label>
+                                            <div class="col-sm-6 col-md-8">
+                                                <input type="text" class="form-control my-1">
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="" class="btn btn-outline-secondary my-1">新增</a>
+                                            </div>
+                                            <ul class="list-unstyled col-12 col-sm-9 offset-sm-3 col-md-10 offset-md-2 mt-2">
+                                                <li>
+                                                    <a href="">
+                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                        你的不爽!我來改進!分享維修經驗抽手機
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                        你的不爽!我來改進!分享維修經驗抽手機
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                    <div class="text-center mt-2">
+                                        <button type="button" class="btn btn-primary">儲存</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
