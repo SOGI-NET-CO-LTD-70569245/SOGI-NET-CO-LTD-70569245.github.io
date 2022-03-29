@@ -915,7 +915,7 @@ a.disabled .icon-net-5g {
   color: #fff; }
 
 .row-hs-bar::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 0.25rem;
   background-color: #e9ecef; }
 
@@ -1137,6 +1137,9 @@ a.box:hover {
 @media (min-width: 992px) {
   .w-lg-100 {
     width: 100% !important; } }
+
+.shadow-warning {
+  box-shadow: 0 0 0.5rem #F8CD46 !important; }
 
 .card-img-overlay {
   top: auto;

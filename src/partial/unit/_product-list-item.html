@@ -13,7 +13,6 @@
                 <span class="badge badge-pill badge-outline">@@tag1</span>
                 <span class="badge badge-pill badge-outline">@@tag2</span>
                 <span class="badge badge-pill badge-outline">@@tag3</span>
-
             </div>
         <h3 class="m-0">
             <a href="#" class="text-row-2 text-dark h5 mb-2">@@title</a>
@@ -26,8 +25,8 @@
                     <div class="font-weight-bold">$@@priceSogi</div>
                     }
                     @@if(context.priceSogi==''){
-                        <div class="font-weight-bold text-secondary">-</div>
-                        }
+                    <div class="font-weight-bold text-secondary">-</div>
+                    }
                 </a>
             </div>
             <div class="col-6">
@@ -42,14 +41,22 @@
                 </a>
             </div>
             <div class="col-8 col-md-9 mt-2">
-                <a class="btn btn-secondary btn-sm btn-block px-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview">
-                    <i class="fas fa-sm fa-eye"></i> 快速檢視
-                </a>
+                @@include('_btn.html',{
+                    btnBlock:'true',
+                    btnColor:'secondary',
+                    href:'javascript:void();',
+                    modal:'modal-quickview',
+                    btnIcon:'fas fa-eye',
+                    btnName:'快速檢視',
+                })
             </div>
             <div class="col-4 col-md-3 mt-2 pl-1">
-                <a class="btn btn-secondary btn-sm btn-block px-0" href="#">
-                    <i class="fas fa-sm fa-plus"></i>
-                </a>
+                @@include('_btn.html',{
+                    btnBlock:'true',
+                    btnColor:'secondary',
+                    href:'javascript:void();',
+                    btnIcon:'fas fa-plus',
+                })
             </div>
         </div>
     </div>

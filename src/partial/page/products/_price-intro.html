@@ -1,4 +1,4 @@
-<div @@if(context.fullpage=='true'){class="container-fluid @@if(context.fpBgClass){@@fpBgClass}"} @@if(context.id){id="@@id"}>
+<div @@if(context.fullpage=='true'){class="container-fluid px-0 @@if(context.fpBgClass){@@fpBgClass}"} @@if(context.id){id="@@id"}>
     <div class="container py-10">
 
         <div class="row">
@@ -9,34 +9,49 @@
             </div>
             <div class="col-12 col-lg-10">
                 <div class="row mb-3">
-                    <div class="col-4 d-lg-none">
+                    <div class="col-2 d-lg-none">
                         <figure class="m-0 h-100">
-                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/LG_lg_stylus_3_0320081720195_360x270.jpg" class="of-cover" alt="@@title1">
+                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/LG_lg_stylus_3_0320081720195_360x270.jpg" class="of-cover" alt="@@title1" style="height: 75px;">
                         </figure>
                     </div>
                     <div class="col col-lg-12">
                         <h1 class="d-block fs-h4 mb-3">@@title1 <br class="d-block d-lg-none"><div class="d-inline fs-h5">@@title2</div></h1>
+
                         <div class="row mb-5">
                             @@if(context.group){
-                            <div class="col-6 pr-1">
-                                <a class="btn btn-block btn-primary rounded-pill px-1" href="detail.html">
-                                    <i class="fa-fw fas fa-chevron-left"></i>
-                                    <span class="d-none d-md-inline">回規格介紹</span>
-                                </a>
+                            <div class="col-6 col-md-4 col-lg-3 pr-1">
+                                @@include('../../unit/_btn.html',{
+                                    btnBlock:'true',
+                                    btnRounded:'pill',
+                                    btnColor:'primary',
+                                    href:'detail.html',
+                                    btnIcon:'fas fa-chevron-left',
+                                    btnName:'回規格介紹',
+                                })
                             </div>
                             @@if(context.group!='repair-store'){
-                            <div class="col-3 px-1">
-                                <a class="btn btn-block btn-secondary rounded-pill px-1" href="#">
-                                    <i class="fa-fw fas fa-bell"></i>
-                                    <span class="d-none d-md-inline">價格追蹤</span>
-                                </a>
+                            <div class="col-3 col-md-3 col-lg-2 px-1">
+                                @@include('../../unit/_btn.html',{
+                                    btnBlock:'true',
+                                    btnRounded:'pill',
+                                    btnColor:'secondary',
+                                    href:'#',
+                                    btnIcon:'fas fa-bell',
+                                    btnName:'價格追蹤',
+                                    btnRWD:'true',
+                                })
                             </div>
                             }
-                            <div class="col-3 pl-1">
-                                <a class="btn btn-block btn-secondary rounded-pill px-1" href="#">
-                                    <i class="fa-fw fas fa-share"></i>
-                                    <span class="d-none d-md-inline">分享</span>
-                                </a>
+                            <div class="col-3 col-md-3 col-lg-2 pl-1">
+                                @@include('../../unit/_btn.html',{
+                                    btnBlock:'true',
+                                    btnRounded:'pill',
+                                    btnColor:'secondary',
+                                    href:'#',
+                                    btnIcon:'fas fa-share',
+                                    btnName:'分享',
+                                    btnRWD:'true',
+                                })
                             </div>
                             }
                         </div>
@@ -45,7 +60,7 @@
 
                 @@if(context.group=='repair-store'){
                 <div class="row justify-content-center">
-                    <div class="col-6 col-lg-3 mb-3 border-right">
+                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-right">
                         <div class="row align-items-center">
                             <div class="col">
                                 <a class="text-decoration-none" href="#">
@@ -54,11 +69,16 @@
                                 </a>
                             </div>
                             <div class="col-auto">
-                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                                @@include('../../unit/_btn.html',{
+                                    btnColor:'primary',
+                                    btnRounded:'pill',
+                                    href:'#',
+                                    btnName:'查詢',
+                                })
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 mb-3 border-lg-right">
+                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-lg-right">
                         <div class="row align-items-center justify-content-between">
                             <div class="col">
                                 <a class="text-decoration-none" href="#">
@@ -67,11 +87,16 @@
                                 </a>
                             </div>
                             <div class="col-auto">
-                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                                @@include('../../unit/_btn.html',{
+                                    btnColor:'primary',
+                                    btnRounded:'pill',
+                                    href:'#',
+                                    btnName:'查詢',
+                                })
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 mb-3 border-right">
+                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-right">
                         <div class="row align-items-center justify-content-between">
                             <div class="col">
                                 <a class="text-decoration-none" href="#">
@@ -80,11 +105,16 @@
                                 </a>
                             </div>
                             <div class="col-auto">
-                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                                @@include('../../unit/_btn.html',{
+                                    btnColor:'primary',
+                                    btnRounded:'pill',
+                                    href:'#',
+                                    btnName:'查詢',
+                                })
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 mb-3">
+                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2">
                         <div class="row align-items-center justify-content-between">
                             <div class="col">
                                 <a class="text-decoration-none" href="#">
@@ -93,11 +123,16 @@
                                 </a>
                             </div>
                             <div class="col-auto">
-                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                                @@include('../../unit/_btn.html',{
+                                    btnColor:'primary',
+                                    btnRounded:'pill',
+                                    href:'#',
+                                    btnName:'查詢',
+                                })
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 mb-3 border-right">
+                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-right">
                         <div class="row align-items-center justify-content-between">
                             <div class="col">
                                 <a class="text-decoration-none" href="#">
@@ -106,11 +141,16 @@
                                 </a>
                             </div>
                             <div class="col-auto">
-                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                                @@include('../../unit/_btn.html',{
+                                    btnColor:'primary',
+                                    btnRounded:'pill',
+                                    href:'#',
+                                    btnName:'查詢',
+                                })
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 mb-3 border-lg-right">
+                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-lg-right">
                         <div class="row align-items-center justify-content-between">
                             <div class="col">
                                 <a class="text-decoration-none" href="#">
@@ -119,11 +159,16 @@
                                 </a>
                             </div>
                             <div class="col-auto">
-                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                                @@include('../../unit/_btn.html',{
+                                    btnColor:'primary',
+                                    btnRounded:'pill',
+                                    href:'#',
+                                    btnName:'查詢',
+                                })
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 mb-3 border-right">
+                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-right">
                         <div class="row align-items-center justify-content-between">
                             <div class="col">
                                 <a class="text-decoration-none" href="#">
@@ -132,11 +177,16 @@
                                 </a>
                             </div>
                             <div class="col-auto">
-                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                                @@include('../../unit/_btn.html',{
+                                    btnColor:'primary',
+                                    btnRounded:'pill',
+                                    href:'#',
+                                    btnName:'查詢',
+                                })
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 mb-3">
+                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2">
                         <div class="row align-items-center justify-content-between">
                             <div class="col">
                                 <a class="text-decoration-none" href="#">
@@ -145,7 +195,12 @@
                                 </a>
                             </div>
                             <div class="col-auto">
-                                <a class="btn btn-primary rounded-pill py-0" href="#">查詢</a>
+                                @@include('../../unit/_btn.html',{
+                                    btnColor:'primary',
+                                    btnRounded:'pill',
+                                    href:'#',
+                                    btnName:'查詢',
+                                })
                             </div>
                         </div>
                     </div>
@@ -153,7 +208,7 @@
                 }
                 @@if(context.group!='repair-store'){
                 <div class="row justify-content-center">
-                    <div class="col col-lg">
+                    <div class="col-5 col-md">
                         <div class="row align-items-center">
                             <div class="col col-md-5 mb-3 mb-md-0">
                                 <a class="d-flex text-decoration-none" href="#">
@@ -164,6 +219,7 @@
                                     </div>
                                 </a>
                             </div>
+                            @@if(context.group!='repair-store' && context.discount=='true'){
                             <div class="col col-md-7">
                                 <a class="d-flex text-decoration-none" href="#">
                                     <div class="d-none d-md-flex flex-shrink-1 pr-2 text-success">
@@ -180,14 +236,14 @@
                                     </div>
                                 </a>
                             </div>
+                            }
                         </div>
                     </div>
-                    
+                    @@if(context.group!='second'){
                     <div class="col-1 text-center">
-                        <div class="d-inline-block border-left h-100"></div>
+                        <div class="d-inline-block border-right h-100"></div>
                     </div>
-
-                    <div class="col col-lg">
+                    <div class="col-5 col-md">
                         <div class="row align-items-center">
                             <div class="col col-md-5 mb-3 mb-md-0">
                                 <a class="d-flex text-decoration-none" href="#">
@@ -197,6 +253,7 @@
                                     </div>
                                 </a>
                             </div>
+                            @@if(context.group!='repair-store' && context.discount=='true'){
                             <div class="col col-md-7">
                                 <a class="d-flex text-decoration-none" href="#">
                                     <div class="d-none d-md-flex flex-shrink-1 pr-2 text-success">
@@ -213,8 +270,10 @@
                                     </div>
                                 </a>
                             </div>
+                            }
                         </div>
                     </div>
+                    }
                     
                 </div>
                 }

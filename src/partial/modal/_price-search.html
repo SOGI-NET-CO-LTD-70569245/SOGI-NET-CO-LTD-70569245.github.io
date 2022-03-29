@@ -2,17 +2,19 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <div class="modal-title">
-                    <div class="d-inline-block">
+                <div class="modal-title w-100">
+                    <div class="h4 font-weight-bold text-center">
                         搜尋條件
                     </div>
                 </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="position-absolute right-0 top-0 mr-3 mt-3">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
             </div>
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="area">所在區域</label>
+                        <label class="lead font-weight-bold" for="area">所在區域</label>
                         <div class="form-row">
                             <div class="col">
                                 <select class="form-control">
@@ -27,7 +29,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="purchase">購買方式</label>
+                        <label class="lead font-weight-bold" for="purchase">購買方式</label>
                         <div class="form-row">
                             <div class="col-12 mb-2">
                                 <select class="form-control">
@@ -46,15 +48,20 @@
                                     <option value="►綁約：24個月 ►預繳洽店家 ►吃到飽（上網限速10Mbps)►網內免費 /網外送30分鐘">4G - 青春無敵388(30)</option>
                                     <option value="►綁約：30個月►預繳12000►網速級限:500Mbps►行動上網量:100G(超過上網量後 改為4G高速吃到飽) ►網內免費 ►網外:160分">5G - 精彩5G 1399(30)</option>
                                 </select>
-                                <textarea id="planDetail" class="border-0 form-control" rows="5">方案說明</textarea>
+                                <textarea id="planDetail" class="border-0 form-control" rows="5" placeholder="方案說明"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="position-absolute bottom-0 left-0 right-0 w-100">
                         <div class="px-3 pb-5">
-                            <a class="btn btn-block btn-primary rounded-pill" href="#">
-                                <i class="fa-fw fas fa-search"></i> 搜尋價格
-                            </a>
+                            @@include('../unit/_btn.html',{
+                                btnBlock:'true',
+                                btnRounded:'pill',
+                                btnColor:'primary',
+                                href:'javascript:void();',
+                                btnIcon:'fas fa-search',
+                                btnName:'搜尋價格',
+                            })
                         </div>
                     </div>
                 </form>

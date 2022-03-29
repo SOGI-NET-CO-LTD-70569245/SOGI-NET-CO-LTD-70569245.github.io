@@ -14,7 +14,7 @@
     mixitupId:'number',
 -->
 <div @@if(context.id){id="@@id">
-    <div class="container-fluid"}>
+    <div class="container-fluid px-0"}>
         <div class="container">
             @@if(context.title){
                 @@include('../../unit/_section-title-h2.html',{
@@ -30,90 +30,21 @@
         </div>
     </div>
 
-    <div class="container-fluid border-top @@if(context.fpBgClass){@@fpBgClass}">
+    <div class="container-fluid px-0 border-top @@if(context.fpBgClass){@@fpBgClass}">
         <div class="container py-5">
 
             @@if(context.searchFunc=='true'){
-            <div class="bg-white border sticky-top mb-3 p-2">
-                <div class="d-none d-lg-block">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-5">
-                            <div class="form-row">
-                                <div class="col-12">
-                                    <label class="font-weight-bold">所在區域</label>
-                                </div>
-                                <div class="col-6">
-                                    <select class="form-control">
-                                        <option>所有縣市</option>
-                                    </select>
-                                </div>
-                                @@if(context.searchArea2=='true'){
-                                <div class="col-6">
-                                    <select class="form-control">
-                                        <option>全區域</option>
-                                    </select>
-                                </div>
-                                }
-                            </div>
-                        </div>
-                        @@if(context.searchPurchase=='true'){
-                        <div class="col-5">
-                            <div class="form-row">
-                                <div class="col-12">
-                                    <label class="font-weight-bold">購買方式</label>
-                                </div>
-                                <div class="col">
-                                    <select class="form-control">
-                                        <option>不搭專案（買空機）</option>
-                                    </select>
-                                </div>
-                                <div class="col">
-                                    <select class="form-control">
-                                        <option>請選擇電信</option>
-                                    </select>
-                                </div>
-                                <div class="col">
-                                    <div class="dropdown">
-                                        <a class="btn btn-block btn-outline-dark border dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
-                                            請選擇方案
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="javascript:void();" data-trigger="hover" data-container="body" data-toggle="popover" data-content="►綁約：36個月 ►預繳1500►上網1GB，網內送20分鐘、網外+市話20分鐘">4G - 大4G299(36)</a>  
-                                            <a class="dropdown-item" href="javascript:void();" data-trigger="hover" data-container="body" data-toggle="popover" data-content="►綁約：36個月 ►預繳1500►上網1GB，網內送20分鐘、網外+市話20分鐘">4G - 青春無敵388(30)</a>  
-                                            <a class="dropdown-item" href="javascript:void();" data-trigger="hover" data-container="body" data-toggle="popover" data-content="►綁約：36個月 ►預繳1500►上網1GB，網內送20分鐘、網外+市話20分鐘">5G - 精彩5G 1399(30)</a>  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        }
-                        <div class="col-2">
-                            <a class="btn btn-block btn-primary rounded-pill" href="#">
-                                <i class="fa-fw fas fa-search"></i> 搜尋價格
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-block d-lg-none">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col">
-                            <div class="text-primary h5">台北市,大安區</div>
-                            <div class="text-muted font-small">不搭專案（買空機）｜遠傳電信｜5G - 心5G方案1399(24)</div>
-                        </div>
-                        <div class="col-auto">
-                            <a class="btn btn-block btn-primary rounded-pill" href="javascript:void();" data-toggle="modal" data-target=".modal-price-search">
-                                <i class="fa-fw fas fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @@include('../products/_price-search-func.html',{
+                    navActive: '@@navActive',
+                    searchArea2: '@@searchArea2',
+                    searchPurchase: '@@searchPurchase',
+                })
             }
 
             @@if(context.filter=='true'){
-            <div class="row align-items-center mb-3">
-                <div class="col">
+            <div class="row align-items-center justify-content-between mb-3">
+                <div class="col col-lg-4">
+                    @@if(context.navActive!='repair'){
                     <span class="mr-1 d-none d-lg-inline">快速篩選</span>
                     <a class="text-decoration-none" href="#">
                         <span class="badge badge-light rounded-0 border mx-0">無卡分期</span>
@@ -127,10 +58,31 @@
                     <a class="text-decoration-none" href="#">
                         <span class="badge badge-light rounded-0 border mx-0">街口支付</span>
                     </a>
+                    }
                 </div>
-                <div class="col-3 col-lg-auto">
-                    <select id="SortSelect-@@mixitupId" class="form-control">
-                        <!-- <option>排序方式</option> -->
+                @@if(context.searchResult=='true'){
+                <div class="col text-center d-none d-lg-block">
+                    共有 108 個結果符合要求。
+                </div>
+                }
+                <div class="col-auto col-lg-4 text-right">
+                    <div class="dropdown dropdown-select">
+                        <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
+                            <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-@@mixitupId">
+                            <div class="dropdown-header">依門市最低</div>
+                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
+                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
+                            <div class="dropdown-header">依上市日</div>
+                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
+                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
+                            <div class="dropdown-header">依熱門度</div>
+                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
+                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
+                        </div>
+                    </div>
+                    <!-- <select id="SortSelect-@@mixitupId" class="form-control">
                         <option hidden>&#xf160;</option>
                         <optgroup label="依門市最低">
                             <option value="sort-price:desc">由高至低</option>
@@ -144,24 +96,17 @@
                             <option value="sort-hot:desc">由高至低</option>
                             <option value="sort-hot:asc">由低至高</option>
                         </optgroup>
-                    </select>
+                    </select> -->
                 </div>
-            </div>
-            }
-
-            @@if(context.searchResult=='true'){
-            <div class="text-center mb-3">
-                共有 108 個結果符合要求。
             </div>
             }
 
             <div class="row @@if(context.mixitupId){mixitup}" @@if(context.mixitupId){id="mixitup-@@mixitupId"}>
                 @@loop('../../unit/_store-list-item.html', [
                 {
-                    borderColor:'light',
                     cat:'taipei', sortPrice:'9700', sortDate:'20191231', sortHot:'3000',
                     badgeFlagTitle:'一二三', badgeSP1Bg:'danger', badgeSP2Bg:'warning', badgeSP1Title:'快速到貨', badgeSP2Title:'獨家贈好禮',
-                    badge1:'無卡分期', badge2:'LINEPay', badge3:'信用卡', badge4:'街口支付',
+                    badge1:'@@badge1', badge2:'@@badge2', badge3:'@@badge3', badge4:'@@badge4',
                     img:'//d3c6c8kv4if4l0.cloudfront.net/www/Shop/1334/big/____001.jpg',
                     title:'一二三四五六七八九十一二三四五六七八九十',
                     rateScore:'4.3', rateCount:'1200',
@@ -172,18 +117,18 @@
                     }
                     @@if(context.itemBtnNumber=='3'){
                         btn:'primary',
+                        btnPrimaryName:'@@btnPrimaryName',
                     }
                     @@if(context.itemBtnNumber=='2'){
                         btn:'',
                     }
                     desc:'新辦/攜碼/續約各大電信業者皆可辦理！iPhone 全系列【低價現貨供應中】',
-                    tag1:'五倍券', tag2:'低價現貨', tag3:'最多三個',
+                    tag1:'五倍券', tag2:'低價現貨低價現貨', tag3:'最多三個',
                 },
                 {
-                    borderColor:'light',
                     cat:'newtaipei', sortPrice:'18000', sortDate:'20220105', sortHot:'700',
                     badgeSP1Bg:'danger', badgeSP1Title:'快速到貨',
-                    badge1:'無卡分期', badge2:'LINEPay', badge3:'信用卡',
+                    badge1:'@@badge1', badge2:'@@badge2', badge3:'@@badge3',
                     img:'//d3c6c8kv4if4l0.cloudfront.net/www/Shop/1411/big/_____.jpg',
                     title:'鋐聖通信',
                     rateScore:'5.0', rateCount:'138',
@@ -194,14 +139,16 @@
                     }
                     @@if(context.itemBtnNumber=='3'){
                         btn:'danger',
+                        btnDangerName:'@@btnDangerName',
                     }
                     @@if(context.itemBtnNumber=='2'){
                         btn:'',
                     }
                     desc:'[新機／二手機買賣]、[門號申裝]、[無卡分期］、[小米家電]、[手機包膜、維修]',
+                    tag1:'五倍券', tag2:'低價現貨低價現貨',
                 },
                 {
-                    borderColor:'warning',
+                    shadowColor:'warning',
                     cat:'newtaipei', sortPrice:'7000', sortDate:'20210520', sortHot:'1800',
                     img:'//d3c6c8kv4if4l0.cloudfront.net/www/Shop/1446/big/107766910_141896967532165_1986716186513360365_o.jpg',
                     title:'林口指標通訊',
@@ -213,6 +160,7 @@
                     }
                     @@if(context.itemBtnNumber=='3'){
                         btn:'primary',
+                        btnPrimaryName:'@@btnPrimaryName',
                     }
                     @@if(context.itemBtnNumber=='2'){
                         btn:'',
@@ -220,7 +168,6 @@
                     desc:'A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務',
                 },
                 {
-                    borderColor:'light',
                     cat:'taoyuan', sortPrice:'6500', sortDate:'20220301', sortHot:'2150',
                     img:'//d3c6c8kv4if4l0.cloudfront.net/www/Shop/1538/big/LOGO.jpg',
                     title:'金馬講數位通訊',
@@ -232,6 +179,7 @@
                     }
                     @@if(context.itemBtnNumber=='3'){
                         btn:'primary',
+                        btnPrimaryName:'@@btnPrimaryName',
                     }
                     @@if(context.itemBtnNumber=='2'){
                         btn:'',
@@ -239,7 +187,6 @@
                     desc:'A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務',
                 },
                 {
-                    borderColor:'light',
                     cat:'taoyuan', sortPrice:'8200', sortDate:'20220311', sortHot:'250',
                     img:'//d3c6c8kv4if4l0.cloudfront.net/www/Shop/1608/big/0119-S-LOGO______1.jpg',
                     title:'中華行動屋-龍東店',
@@ -251,6 +198,7 @@
                     }
                     @@if(context.itemBtnNumber=='3'){
                         btn:'primary',
+                        btnPrimaryName:'@@btnPrimaryName',
                     }
                     @@if(context.itemBtnNumber=='2'){
                         btn:'',

@@ -1,9 +1,10 @@
 <div class="col-12 col-md-6 col-lg-3 my-2 @@if(context.cat){mix-item @@cat}" @@if(context.cat){data-sort-price="@@sortPrice" data-sort-date="@@sortDate" data-sort-hot="@@sortHot"}>
-    <div class="h-100 p-0 p-lg-2 shadow border bd-2 border-@@borderColor">
+    <!-- <div class="h-100 p-0 p-lg-2 shadow border bd-2 border-@@borderColor"> -->
+    <div class="h-100 p-0 p-lg-2 bg-white shadow @@if(context.shadowColor){shadow-@@shadowColor}">
         @@if(context.badgeFlagTitle){
         <div class="position-absolute right-0 top-0 z-1 mr-2">
-            <div class="badge-flag font-small text-center">
-                <span>一二三</span>
+            <div class="badge-flag text-center">
+                <span class="font-small font-weight-bold">一二三</span>
             </div>
         </div>
         }
@@ -75,7 +76,7 @@
                         }
                     </div>
                     @@if(context.update){
-                    <div class="font-small text-muted mb-2">
+                    <div class="font-small text-muted mb-4">
                         更新時間：@@update
                     </div>
                     }
@@ -83,33 +84,67 @@
                         @@if(context.btn!=''){
                         <div class="col-6 pr-1">
                             @@if(context.btn=='primary'){
-                            <a class="btn btn-block btn-primary rounded-pill" href="#">預約訂購</a>
+                                @@include('_btn.html',{
+                                    btnBlock:'true',
+                                    btnRounded:'pill',
+                                    btnPaddingX:'1',
+                                    btnColor:'primary',
+                                    href:'#',
+                                    btnName:'@@btnPrimaryName',
+                                })
                             }
                             @@if(context.btn=='danger'){
-                            <a class="btn btn-block btn-danger rounded-pill" href="#">現貨搶購</a>
+                                @@include('_btn.html',{
+                                    btnBlock:'true',
+                                    btnRounded:'pill',
+                                    btnPaddingX:'1',
+                                    btnColor:'danger',
+                                    href:'#',
+                                    btnName:'@@btnDangerName',
+                                })
                             }
                         </div>
                         <div class="col-3 px-1">
-                            <a class="btn btn-block btn-secondary rounded-pill" href="tel:0910123456" data-toggle="tooltip" data-placement="top" title="0900123456">
-                                <i class="fas fa-fw fa-phone"></i>
-                            </a>
+                            @@include('_btn.html',{
+                                btnBlock:'true',
+                                btnRounded:'pill',
+                                btnPaddingX:'1',
+                                btnColor:'secondary',
+                                href:'tel:0910123456',
+                                btnIcon:'fas fa-phone',
+                            })
                         </div>
                         <div class="col-3 pl-1">
-                            <a class="btn btn-block btn-secondary rounded-pill" href="#">
-                                <i class="fab fa-fw fa-line"></i>
-                            </a>
+                            @@include('_btn.html',{
+                                btnBlock:'true',
+                                btnRounded:'pill',
+                                btnColor:'secondary',
+                                btnPaddingX:'1',
+                                href:'#',
+                                btnIcon:'fab fa-line',
+                            })
                         </div>
                         }
                         @@if(context.btn==''){
                         <div class="col-6 pr-1">
-                            <a class="btn btn-block btn-primary rounded-pill" href="tel:0910123456" data-toggle="tooltip" data-placement="top" title="0900123456">
-                                <i class="fas fa-fw fa-phone"></i>
-                            </a>
+                            @@include('_btn.html',{
+                                btnBlock:'true',
+                                btnRounded:'pill',
+                                btnPaddingX:'1',
+                                btnColor:'primary',
+                                href:'tel:0910123456',
+                                btnIcon:'fas fa-phone',
+                            })
                         </div>
                         <div class="col-6 pl-1">
-                            <a class="btn btn-block btn-primary rounded-pill" href="#">
-                                <i class="fab fa-fw fa-line"></i>
-                            </a>
+                            @@include('_btn.html',{
+                                btnBlock:'true',
+                                btnRounded:'pill',
+                                btnPaddingX:'1',
+                                btnColor:'primary',
+                                href:'#',
+                                btnIcon:'fab fa-line',
+                            })
                         </div>
                         }
                     </div>
@@ -117,7 +152,7 @@
                     <div class="text-row-2 font-small mb-2">
                         @@desc
                     </div>
-                    <div class="text-row-1 font-small">
+                    <div class="text-row-2 font-small">
                         @@if(context.tag1){
                         <a class="mr-2" href="#">#@@tag1</a>
                         }

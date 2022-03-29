@@ -208,6 +208,12 @@ $(document).ready(function(){
         // instead of a settings object
       ]
     });
+
+    // select change className
+    $('.form-control-color').on('change', function () {
+        $(this).focus().select();
+        this.className = this.options[this.selectedIndex].className;
+    });
 });
 
 (function(d, s, id) {
@@ -275,8 +281,29 @@ $(document).scroll(function() {
 
 //220321
 $(function () {
+    // js:ofi
     objectFitImages('img.of-cover');
     $('img.of-cover').css('opacity',1);
+
+    // bootstrap dropdown change text on selection
+    $(".dropdown-menu-select").on('click', 'a', function(){
+        $(this).closest('.dropdown-select').find('.btn:first-child').text($(this).text());
+        $(this).closest('.dropdown-select').find('.btn:first-child').val($(this).text());
+    });
+});
+
+const shareData = {
+    title: document.title,
+    text: '我想與你分享' + document.title + '的精彩內容!',
+    url: document.location.href,
+}, btn = document.querySelector('#btn-share');
+
+btn.addEventListener('click', async () => {
+    try {
+        await navigator.share(shareData)
+    } catch(err) {
+        console.log( 'Error: ' + err );
+    }
 });
 
 // var swiper = new Swiper(".swiper-center", {

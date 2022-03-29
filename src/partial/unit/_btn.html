@@ -1,0 +1,4 @@
+<a class="btn btn-@@btnColor @@if(context.btnBlock=='true'){btn-block} @@if(context.btnRounded=='pill'){rounded-@@btnRounded} @@if(context.btnPaddingX){px-@@btnPaddingX} py-0" href="@@href" @@if(context.modal){data-toggle="modal" data-target=".@@modal"} @@if(context.btnName=='分享'){id="btn-share"}>
+    @@if(context.btnIcon){<i class="fa-fw @@btnIcon"></i>}
+    @@if(context.btnName){@@if(context.btnRWD=='true'){<span class="d-none d-md-inline">}@@btnName@@if(context.btnRWD=='true'){</span>}}
+</a>

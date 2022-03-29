@@ -22,6 +22,7 @@
                 title1:'SAMSUNG Galaxy S22 Ultra 256GB',
                 title2:'價格查詢',
                 group:'new',
+                discount:'true',
             })
 
             @@include('../../partial/page/common/_store-list.html',{
@@ -31,12 +32,15 @@
                 navActive: 'new',
                 searchFunc: 'true',
                 searchArea2: 'true',
-                searchPurchase: 'true',
+                searchPurchase: '購買方式',
                 filter: 'true',
                 searchResult: 'true',
                 itemBtnNumber:'3',
                 itemPrice: 'true',
                 mixitupId:'1',
+                badge1:'無卡分期', badge2:'LINEPay', badge3:'信用卡', badge4:'街口支付',
+                btnPrimaryName:'預約訂購',
+                btnDangerName:'現貨搶購',
             })
 
             @@include('../../partial/comp/_ad-300-250-double.html',{
@@ -56,7 +60,7 @@
         @@include('../../partial/global/_footer.html')
 
         @@include('../../partial/modal/_quickview.html')
-        @@include('../../partial/modal/_price-mobile-search.html')
+        @@include('../../partial/modal/_price-search.html')
         @@include('../../partial/modal/_price-tip.html')
         @@include('../../partial/modal/_refresh.html')
 
