@@ -15,7 +15,7 @@
                         </figure>
                     </div>
                     <div class="col col-lg-12">
-                        <h1 class="d-block fs-h4 mb-3">@@title1 <br class="d-block d-lg-none"><div class="d-inline fs-h5">@@title2</div></h1>
+                        <h1 class="d-block fs-h4 mb-3">@@title1 @@title2</h1>
 
                         <div class="row mb-5">
                             @@if(context.group){
@@ -207,20 +207,20 @@
                 </div>
                 }
                 @@if(context.group!='repair-store'){
-                <div class="row justify-content-center">
-                    <div class="col-5 col-md">
+                <div class="row justify-content-center justify-content-lg-start">
+                    <div class="col-5 col-md-auto">
                         <div class="row align-items-center">
-                            <div class="col col-md-5 mb-3 mb-md-0">
+                            <div class="col col-md-auto mb-3 mb-md-0">
                                 <a class="d-flex text-decoration-none" href="#">
-                                    <h2 class="sr-only">門市空機價 (最低) $29,000</h2>
+                                    <h2 class="sr-only">門市空機價 (最低) $@@priceNew</h2>
                                     <div class="w-100 m-0">
                                         <div class="text-dark font-small mb-1">門市空機價 (最低)</div>
-                                        <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                        <div class="h3 font-weight-bold text-primary">$@@priceNew</div>
                                     </div>
                                 </a>
                             </div>
-                            @@if(context.group!='repair-store' && context.discount=='true'){
-                            <div class="col col-md-7">
+                            @@if(context.discount){
+                            <div class="col col-md-auto">
                                 <a class="d-flex text-decoration-none" href="#">
                                     <div class="d-none d-md-flex flex-shrink-1 pr-2 text-success">
                                         <i class="fas fa-3x fa-arrow-circle-down"></i>
@@ -231,7 +231,7 @@
                                             <div class="d-inline d-md-none">
                                                 <i class="fas fa-arrow-circle-down"></i>
                                             </div>
-                                            降價 $1,490
+                                            降價 $@@discount
                                         </div>
                                     </div>
                                 </a>
@@ -239,22 +239,22 @@
                             }
                         </div>
                     </div>
-                    @@if(context.group!='second'){
+                    @@if(context.priceSecond){
                     <div class="col-1 text-center">
                         <div class="d-inline-block border-right h-100"></div>
                     </div>
-                    <div class="col-5 col-md">
+                    <div class="col-5 col-md-auto">
                         <div class="row align-items-center">
-                            <div class="col col-md-5 mb-3 mb-md-0">
+                            <div class="col col-md-auto mb-3 mb-md-0">
                                 <a class="d-flex text-decoration-none" href="#">
                                     <div class="w-100 m-0">
                                         <div class="text-dark font-small mb-1">門市二手價</div>
-                                        <div class="h3 font-weight-bold text-primary">$29,000</div>
+                                        <div class="h3 font-weight-bold text-primary">$@@priceSecond</div>
                                     </div>
                                 </a>
                             </div>
-                            @@if(context.group!='repair-store' && context.discount=='true'){
-                            <div class="col col-md-7">
+                            @@if(context.discount){
+                            <div class="col col-md-auto">
                                 <a class="d-flex text-decoration-none" href="#">
                                     <div class="d-none d-md-flex flex-shrink-1 pr-2 text-success">
                                         <i class="fas fa-3x fa-arrow-circle-down"></i>
@@ -265,7 +265,7 @@
                                             <div class="d-inline d-md-none">
                                                 <i class="fas fa-arrow-circle-down"></i>
                                             </div>
-                                            降價 $1,490
+                                            降價 $@@discount
                                         </div>
                                     </div>
                                 </a>

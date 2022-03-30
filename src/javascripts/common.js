@@ -210,10 +210,10 @@ $(document).ready(function(){
     });
 
     // select change className
-    $('.form-control-color').on('change', function () {
-        $(this).focus().select();
-        this.className = this.options[this.selectedIndex].className;
-    });
+    // $('.form-control-color').on('change', function () {
+    //     $(this).focus().select();
+    //     this.className = this.options[this.selectedIndex].className;
+    // });
 });
 
 (function(d, s, id) {

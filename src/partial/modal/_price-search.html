@@ -17,27 +17,31 @@
                         <label class="lead font-weight-bold" for="area">所在區域</label>
                         <div class="form-row">
                             <div class="col">
-                                <select class="form-control">
+                                <select class="form-control text-primary">
                                     <option>所有縣市</option>
                                 </select>
                             </div>
+                            @@if(context.navActive!='repair'){
                             <div class="col">
-                                <select class="form-control">
+                                <select class="form-control text-primary">
                                     <option>全區域</option>
                                 </select>
                             </div>
+                            }
                         </div>
                     </div>
+                    @@if(context.navActive!='repair'){
                     <div class="form-group">
                         <label class="lead font-weight-bold" for="purchase">購買方式</label>
                         <div class="form-row">
+                            @@if(context.navActive=='new'){
                             <div class="col-12 mb-2">
-                                <select class="form-control">
+                                <select class="form-control text-primary">
                                     <option>不搭專案（買空機）</option>
                                 </select>
                             </div>
                             <div class="col-12 mb-2">
-                                <select class="form-control">
+                                <select class="form-control px-1 text-secondary" disabled>
                                     <option>請選擇電信</option>
                                 </select>
                             </div>
@@ -50,8 +54,27 @@
                                 </select>
                                 <textarea id="planDetail" class="border-0 form-control" rows="5" placeholder="方案說明"></textarea>
                             </div>
+                            }
+                            @@if(context.navActive=='second'){
+                            <div class="col-12 mb-2">
+                                <select class="form-control px-1 text-primary">
+                                    <option class="text-primary">不拘</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <select class="form-control px-1 text-primary">
+                                    <option>貨源</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <select class="form-control px-1 text-primary">
+                                    <option>保固</option>
+                                </select>
+                            </div>
+                            }
                         </div>
                     </div>
+                    }
                     <div class="position-absolute bottom-0 left-0 right-0 w-100">
                         <div class="px-3 pb-5">
                             @@include('../unit/_btn.html',{
