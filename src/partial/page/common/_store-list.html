@@ -43,7 +43,7 @@
 
             @@if(context.filter=='true'){
             <div class="row align-items-center justify-content-between mb-3">
-                <div class="col col-lg-4">
+                <div class="col col-lg">
                     @@if(context.navActive!='repair'){
                     <span class="mr-1 d-none d-lg-inline">快速篩選</span>
                     <a class="text-decoration-none" href="#">
@@ -61,11 +61,11 @@
                     }
                 </div>
                 @@if(context.searchResult=='true'){
-                <div class="col text-center d-none d-lg-block">
+                <div class="col-auto text-center d-none d-lg-block">
                     共有 108 個結果符合要求。
                 </div>
                 }
-                <div class="col-auto col-lg-4 text-right">
+                <div class="col-auto text-right">
                     <div class="dropdown dropdown-select">
                         <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
                             <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>

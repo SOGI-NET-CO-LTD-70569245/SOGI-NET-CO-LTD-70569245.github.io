@@ -22,7 +22,9 @@
                 title1:'SAMSUNG Galaxy S22 Ultra 256GB',
                 title2:'價格查詢',
                 group:'new',
-                discount:'true',
+                priceNew:'29,000',
+                priceSecond:'22,000',
+                discount:'1,290',
             })
 
             @@include('../../partial/page/common/_store-list.html',{
@@ -60,7 +62,9 @@
         @@include('../../partial/global/_footer.html')
 
         @@include('../../partial/modal/_quickview.html')
-        @@include('../../partial/modal/_price-search.html')
+        @@include('../../partial/modal/_price-search.html',{
+            navActive: 'new',
+        })
         @@include('../../partial/modal/_price-tip.html')
         @@include('../../partial/modal/_refresh.html')
 
