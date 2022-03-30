@@ -1,0 +1,73 @@
+<!--
+    id:'string',
+    hr:'true',
+    title:'string',
+    fpBgClass:'string',
+-->
+<div @@if(context.id){id="@@id">
+    <div class="container-fluid"}>
+        <div class="container">
+            @@if(context.title){
+                @@include('../../unit/_section-title-h2.html',{
+                    hr:'@@hr',
+                    title:'@@title',
+                })
+            }
+            @@if(context.nav=='true'){
+                @@include('../../unit/_store-list-nav.html',{
+                    navActive:'@@navActive',
+                })
+            }
+        </div>
+    </div>
+
+    <div class="container-fluid border-top @@if(context.fpBgClass){@@fpBgClass}">
+        <div class="container py-5">
+
+            <div class="row"}>
+                @@loop('../../unit/_repair-cat-list-item.html', [
+                {
+                    icon:'fas fa-battery-empty',
+                    desc:'換電池',
+                    price:'15,000',
+                },
+                {
+                    icon:'fas fa-mobile-alt',
+                    desc:'換螢幕（顯示觸控正常）',
+                    price:'15,000',
+                },
+                {
+                    icon:'fas fa-mobile-alt',
+                    desc:'換螢幕（顯示觸控異常）',
+                    price:'15,000',
+                },
+                {
+                    icon:'fas fa-camera',
+                    desc:'前相機',
+                    price:'15,000',
+                },
+                {
+                    icon:'fas fa-camera',
+                    desc:'後相機',
+                    price:'15,000',
+                },
+                {
+                    icon:'fab fa-usb',
+                    desc:'充電線插孔問題',
+                    price:'15,000',
+                },
+                {
+                    icon:'fas fa-search',
+                    desc:'現場檢測',
+                    price:'15,000',
+                },
+                {
+                    icon:'fas fa-undo-alt',
+                    desc:'軟體重灌',
+                    price:'15,000',
+                },
+                ])
+            </div>
+        </div>
+    </div>
+</div>

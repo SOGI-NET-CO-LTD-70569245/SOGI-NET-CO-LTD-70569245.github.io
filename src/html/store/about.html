@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'關於商店',cssFile:'store'})
+    </head>
+
+	<body class="store">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_ad-970.html',{textAd:'true'})
+            @@include('../../partial/page/store/_store-intro.html')
+            @@include('../../partial/page/store/_store-information.html',{
+                id: 'section-information',
+                icon:'',
+                title:'門市資訊'
+            })
+
+            @@include('../../partial/comp/_popup-message.html')
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+        <!-- Single -->
+        <script src="/assets/javascripts/vendor/jquery.expandable.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                $('.js-readmore').expandable({
+                    height: 200
+                });
+            });
+        </script>
+
+    </body>
+</html>

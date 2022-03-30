@@ -1,0 +1,28 @@
+<div class="container-fluid" id="@@id">
+    <div class="container">
+
+        @@include('../../unit/_section-title-h2.html',{
+            hr:'@@hr',
+            title:'@@title',
+        })
+        <div class="h4 my-5">系列比較</div>
+        <div class="row row-hs row-hs-bar">
+            @@loop('../../unit/_compare-item.html', [
+                {img1:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_6_0419092419468_160x120.jpg", title1:"SAMSUNG Gear S SAMSUNG Gear S2", img2:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_j7_pro_0629071629081_160x120.jpg", title2:"Sony XZ"},
+                {img1:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_6_0419092419468_160x120.jpg", title1:"SAMSUNG Gear S SAMSUNG Gear S", img2:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_j7_pro_0629071629081_160x120.jpg", title2:"Sony XZ"},
+                {img1:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_6_0419092419468_160x120.jpg", title1:"SAMSUNG Gear S SAMSUNG Gear S", img2:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_j7_pro_0629071629081_160x120.jpg", title2:"Sony XZ"},
+            ])
+        </div>
+        <div class="h4 my-5">熱門比較</div>
+        <div class="row row-hs row-hs-bar">
+            @@loop('../../unit/_compare-item.html', [
+                {img1:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_6_0419092419468_160x120.jpg", title1:"SAMSUNG Gear S SAMSUNG Gear S2", img2:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_j7_pro_0629071629081_160x120.jpg", title2:"Sony XZ"},
+                {img1:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_6_0419092419468_160x120.jpg", title1:"SAMSUNG Gear S SAMSUNG Gear S", img2:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_j7_pro_0629071629081_160x120.jpg", title2:"Sony XZ"},
+                {img1:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_6_0419092419468_160x120.jpg", title1:"SAMSUNG Gear S SAMSUNG Gear S", img2:"//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_j7_pro_0629071629081_160x120.jpg", title2:"Sony XZ"},
+            ])
+        </div>
+        <div class="text-center mt-4">
+            <a class="btn btn-warning btn-sm px-10 rounded-pill" href="#">更多比較</a>
+        </div>
+    </div>
+</div>

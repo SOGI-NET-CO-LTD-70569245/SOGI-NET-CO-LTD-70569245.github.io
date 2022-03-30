@@ -1,0 +1,18 @@
+.text-ad {
+    a {
+        color: $color-ci-dark !important;
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+}
+.ad-slot-970 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    @include media-breakpoint-down(md) {
+        min-height: 280px;
+    }
+}

@@ -1,0 +1,116 @@
+<div class="bg-white border sticky-top mb-3 p-2">
+    <div class="d-none d-lg-block">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-4">
+                <div class="form-row">
+                    <div class="col-12">
+                        <label class="font-weight-bold">所在區域</label>
+                    </div>
+                    <div class="col-6">
+                        <select class="form-control px-1 form-control-color text-primary">
+                            <option>所有縣市</option>
+                        </select>
+                    </div>
+                    @@if(context.searchArea2=='true'){
+                    <div class="col-6">
+                        <select class="form-control px-1 form-control-color text-primary">
+                            <option>全區域</option>
+                        </select>
+                    </div>
+                    }
+                </div>
+            </div>
+            @@if(context.searchPurchase!=''){
+            <div class="col-6">
+                <div class="form-row">
+                    <div class="col-12">
+                        <label class="font-weight-bold">@@searchPurchase</label>
+                    </div>
+                    @@if(context.navActive=='new'){
+                    <div class="col">
+                        <select class="form-control px-1 form-control-color text-primary">
+                            <option class="form-control px-1 text-primary">不搭專案（買空機）</option>
+                            <option class="form-control px-1 text-secondary">搭專案（買空機）</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control px-1 form-control-color text-primary">
+                            <option>請選擇電信</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <div class="dropdown dropdown-select">
+                            <a class="btn d-flex px-2 btn-outline-dark border bg-white text-primary dropdown-toggle align-items-center justify-content-between text-truncate" href="#" data-toggle="dropdown">
+                                請選擇方案
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-select">
+                                <a class="dropdown-item" href="javascript:void();" data-trigger="hover" data-container="body" data-toggle="popover" data-content="►綁約：36個月 ►預繳1500►上網1GB，網內送20分鐘、網外+市話20分鐘">4G - 大4G299(36)</a>  
+                                <a class="dropdown-item" href="javascript:void();" data-trigger="hover" data-container="body" data-toggle="popover" data-content="►綁約：36個月 ►預繳1500►上網1GB，網內送20分鐘、網外+市話20分鐘">4G - 青春無敵388(30)</a>  
+                                <a class="dropdown-item" href="javascript:void();" data-trigger="hover" data-container="body" data-toggle="popover" data-content="►綁約：36個月 ►預繳1500►上網1GB，網內送20分鐘、網外+市話20分鐘">5G - 精彩5G 1399(30)</a>  
+                            </div>
+                        </div>
+                    </div>
+                    }
+                    @@if(context.navActive=='second'){
+                    <div class="col">
+                        <select class="form-control px-1 form-control-color text-primary">
+                            <option class="text-primary">不拘</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control px-1 form-control-color text-primary">
+                            <option>貨源</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control px-1 form-control-color text-primary">
+                            <option>保固</option>
+                        </select>
+                    </div>
+                    }
+                    @@if(context.navActive=='repair'){
+                    <div class="col">
+                        <input type="text" readonly class="form-control-plaintext" value="更換螢幕顯示觸控正常玻璃破裂">
+                    </div>
+                    }
+                </div>
+            </div>
+            }
+            <div class="col-2">
+                @@include('../../unit/_btn.html',{
+                    btnBlock:'true',
+                    btnRounded:'pill',
+                    btnColor:'primary',
+                    href:'#',
+                    btnIcon:'fas fa-search',
+                    btnName:'搜尋價格',
+                    btnRWD:'true',
+                })
+            </div>
+        </div>
+    </div>
+
+    <div class="d-block d-lg-none">
+        <div class="row align-items-center justify-content-between">
+            <div class="col">
+                @@if(context.searchPurchase!=''){
+                <div class="text-primary h5">台北市,大安區</div>
+                <div class="text-muted font-small">不搭專案（買空機）｜遠傳電信｜5G - 心5G方案1399(24)</div>
+                }
+                @@if(context.searchPurchase==''){
+                <div class="text-primary">台北市</div>
+                }
+            </div>
+            <div class="col-auto">
+                @@include('../../unit/_btn.html',{
+                    btnBlock:'true',
+                    btnRounded:'pill',
+                    btnColor:'primary',
+                    modal:'modal-price-search',
+                    href:'javascript:void();',
+                    btnIcon:'fas fa-search',
+                })
+            </div>
+        </div>
+    </div>
+</div>

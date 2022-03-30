@@ -1,0 +1,42 @@
+$social-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$social-colors: map-merge(
+  (
+    "line":    $color-line,
+    "facebook":  $color-fb,    
+  ),
+  $social-colors
+);
+
+@each $color, $value in $social-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+
+.btn-social {
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    padding: 0;
+    border-radius: 50%;
+    border-color: $gray-600;
+    i {
+        position: relative;
+        top: -1px; 
+    }
+    &:hover {
+        color: $white;
+        &.btn-social-facebook {
+            background: $color-fb;
+            border-color: $color-fb;
+        }
+        &.btn-social-line {
+            background: $color-line;
+            border-color: $color-line;
+        }
+    }
+    
+}

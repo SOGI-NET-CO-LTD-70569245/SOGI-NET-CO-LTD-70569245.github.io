@@ -1,0 +1,193 @@
+@import "../common/config/mixin";
+@import "../common/config/variables";
+
+@import "../bootstrap-431/functions";
+@import "../bootstrap-431/variables";
+@import "../bootstrap-431/mixins";
+
+@import "../utils/dics";
+
+
+.editable {
+    h2 {
+        border-left: 3px solid $warning;
+        margin: 2rem 0 !important;
+        padding-left: 30px;
+        font-size: 2rem !important;
+        @include media-breakpoint-down(md) {
+            font-size: 1.75rem !important;
+        }
+    }
+    .btn {
+        text-decoration: none !important;
+    }
+}
+
+.sogi-comments {
+    .media-object {
+        
+    }
+}
+
+.img-avatar {
+    width: 60px;
+    height: 60px;
+    @include border-radius(50%);
+    object-fit: cover;
+}
+
+.news {
+    #dropdown-category {
+        z-index: 10;
+    }
+    .headlines {
+        position: relative;
+        .bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            background-color: $warning;
+            width: 100%;
+            height: 250px;
+        }
+        .headlines-title {
+            text-overflow:ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .headlines-desc {
+            text-overflow:ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+//            height: 6rem;
+            -webkit-line-clamp: 6;
+            @include media-breakpoint-down(md) {
+                -webkit-line-clamp: 3;
+            }
+        }
+    }
+}
+.img-md-fluid {
+    @include media-breakpoint-down(md) {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+#quiz {
+    position: relative;
+}
+
+
+#question h2 {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#question {
+    input[type=radio] {
+        display: none;
+    }
+    label {
+        display: inline-block;
+        margin: 4px;
+        padding: 8px;
+        background: #FAE3BB;
+        color: #4C3000;
+        width: calc(50% - 8px);
+        min-width: 100px;
+        cursor: pointer;
+        &:hover {
+            background: $warning;
+        }
+    }
+    input[type=radio]:checked + label {
+        background: #CB8306;
+        color: #FAFAFA;
+    }
+}
+
+#quiz-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 44px;
+  left: 0px;
+  background: $gray-100;
+  width: 100%;
+  height: calc(100% - 44px);
+}
+
+#quiz-results-message {
+  display: block;
+  color: #00403C;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#quiz-results-score {
+  display: block;
+  color: #31706c;
+  font-size: 20px;
+}
+
+#quiz-results-score b {
+  color: #00403C;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#PDI_container9369622 {
+    margin: 10px 0;
+    .pds-box {}
+    .pds-question-top {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+        border-bottom: 1px solid $gray-300;
+    }
+    .pds-answer-group {
+        display: block;
+    }
+    .pds-answer {
+        padding: 10px 0;
+    }
+    .pds-input-label {
+        margin-left: 10px;
+    }
+    .pds-votebutton-outer {
+        text-align: right;
+    }
+    .pds-box-inner {
+        padding: 10px;
+        background-color: $gray-100;
+    }
+    .pds-total-votes {
+        padding-top: 10px;
+        border-top: 1px solid $gray-300;
+        font-weight: bold;
+    }
+    .pds-links-back {
+        display: none !important;
+    }
+}
+
+// #PDI_container9369622 .pds-feedback-result {float:right;} #PDI_container9369622 .pds-answer-text {float:left} #PDI_container9369622 .pds-feedback-per{font-weight: bold;} #PDI_container9369622 .pds-feedback-votes{font-weight: normal;} #PDI_container9369622 .pds-answer-feedback {background-color: #f1f1f1;border: 1px solid #d1d1d1;position: relative;} #PDI_container9369622 .pds-answer-feedback-bar {font-size: 2px;background: #3478e3;height: 18px;} #PDI_container9369622 .pds-vote {padding: 10px 0px;} #PDI_container9369622 .pds-votebutton-outer {} #PDI_container9369622 .pds-vote BR{display: none;} #PDI_container9369622 .pds-vote-button {color: #464646;padding: 3px 25px;white-space: nowrap;background:#F2F2F2 url(https://polldaddy.com/images/white-grad.png) repeat-x scroll left top;-webkit-border-radius: 11px;-moz-border-radius:11px;border-radius: 11px;border: 1px solid #999;cursor: pointer;font-size: 12px;font-family: \"Lucida Grande\",Verdana,Arial;text-decoration: none;line-height: 25px;font-weight: bold;white-space: nowrap;} #PDI_container9369622 .pds-vote-button:hover{border: 1px solid #333;} #PDI_container9369622 .pds-vote-button-load {color: #464646;padding: 3px 25px;white-space: nowrap;-webkit-border-radius: 11px;-moz-border-radius:11px;border-radius: 11px;border: 1px solid #999;cursor: pointer;font-size: 12px;font-family: \"Lucida Grande\",Verdana,Arial;text-decoration: none;line-height: 25px;font-weight: bold;white-space: nowrap;background:#EEE url(https://polldaddy.com/polls/vote-loader-eeeeee.gif) no-repeat scroll 50% 50%;} #PDI_container9369622 .pds-vote-button-load SPAN{visibility: hidden;} #PDI_container9369622 .pds-links {padding: 10px 0px 0px 0px;display: block;text-align: center;} #PDI_container9369622 .pds-links-back {padding: 10px 0px 0px 0px;display: block;text-align: center;} #PDI_container9369622 .pds-links A {font-family: Helvetica, Arial, sans-serif;font-size:12px;color: #4e4e4e;text-decoration: none;padding: 0px 4px 0px 4px;line-height: 24px;display: inline-block;font-weight: bold;} #PDI_container9369622 .pds-links-back A {font-family: Helvetica, Arial, sans-serif;font-size:12px;color: #4e4e4e;text-decoration: none;padding: 0px 4px 0px 4px;line-height: 24px;display: inline-block;font-weight: bold;} #PDI_container9369622 .pds-links A:hover {text-decoration: underline;} #PDI_container9369622 .pds-links-back A:hover {text-decoration: underline;} #PDI_container9369622 .pds-comments SPAN{font-weight: normal;} #PDI_container9369622 .pds-total-votes{padding: 10px 0px 0px 0px;position: relative;} #PDI_container9369622 .pds-total-votes SPAN{font-weight: bold;} #PDI_container9369622 div {margin:0;padding:0;}
+
+.card-focus {
+    min-height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include media-breakpoint-down(lg) {
+        min-height: 300px;
+    }
+}

@@ -1,0 +1,14 @@
+<div class="container">
+    <ol class="breadcrumb mb-2 border-bottom rounded-0">
+        <li class="breadcrumb-item"><a href="/index.html"><i class="fas fa-home"></i> 首頁</a></li>
+        @@if(context.lv1Label){
+        <li class="breadcrumb-item"><a href="@@lv1Url">@@lv1Label</a></li>
+        }
+        @@if(context.lv2Label){
+        <li class="breadcrumb-item"><a href="@@lv2Url">@@lv2Label</a></li>
+        }
+        @@if(context.lv3Label){
+        <li class="breadcrumb-item"><a href="@@lv3Url">@@lv3Label</a></li>
+        }
+    </ol>
+</div>

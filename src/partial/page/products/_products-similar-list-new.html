@@ -1,0 +1,19 @@
+<!-- 
+    fullpage:'true',
+    fpBgColor:'string',
+    id:'text',
+    hr:'true',
+    title:'string'
+-->
+<div @@if(context.fullpage=='true'){class="container-fluid px-0 @@if(context.fpBgClass){@@fpBgClass}"} @@if(context.id){id="@@id"}>
+    <div class="container pb-10">
+        @@include('../../unit/_section-title-h2.html',{
+            hr:'@@hr',
+            title:'@@title'
+        })
+        @@include('../../page/common/_products-list.html',{
+            rowStyle:'hs',
+            item:'5'
+        })
+    </div>
+</div>

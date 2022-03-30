@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Language" content="zh-TW">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <meta name="keywords" content=""/>
+        <meta name="description" content="">
+        <meta property="og:image" itemprop="image" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="http://www.sogi.com.tw/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="SOGI 手機王" />
+        <title>SOGI 手機王</title>
+
+        <!-- Global -->
+        <link rel="stylesheet" href="/assets/stylesheets/bootstrap-431.css">
+        <link rel="stylesheet" href="/assets/stylesheets/common.css">
+
+        <!-- Single -->
+        <link href="/assets/stylesheets/page/store-admin.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+	<body class="store">
+
+        <nav class="pushy pushy-right bg-white">
+            <!-- module: nav-mobile-store-header -->
+            <div id="nav-mobile-store-header"></div>
+            <!-- module: ./nav-mobile-store-header -->
+        </nav>
+
+        <div class="site-overlay"></div>
+
+        <!-- module: store-admin-header -->
+        <div id="store-admin-header"></div>
+        <!-- module: ./store-admin-header -->
+
+        <div id="main" class="push">
+            <div class="container">
+                <div class="nav-responsive">
+                    <ul class="nav nav-pills nav-styled">
+                        <li class="nav-item"><a class="nav-link" href="product-list.html">新機</a></li>
+                        <li class="nav-item"><a class="nav-link" href="second-list.html">二手</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="repair-list.html">維修</a></li>
+                        <li class="nav-item"><a class="nav-link" href="chart-list.html">資費</a></li>
+                        <li class="nav-item"><a class="nav-link" href="promo-product.html">宣傳</a></li>
+                        <li class="nav-item"><a class="nav-link" href="store-account.html">商店</a></li>
+                        <li class="nav-item"><a class="nav-link" href="public-list.html">公告</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group mt-2" role="group">
+                    <a class="btn btn-secondary" href="repair-list.html">商品列表</a>
+                    <a class="btn btn-secondary" href="repair-add-price.html">新增報價</a>
+                    <a class="btn btn-secondary active" href="repair-add-brand.html">快速新增</a>
+                    <a class="btn btn-secondary" href="promo-repair.html">優惠</a>
+                </div>
+
+                <div class="row my-2 mb-10">
+                    <div class="col-12">
+                        <div class="section-title my-2">
+                            品牌快速新增
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="alert alert-warning font-small">
+                            注意事項：
+                            <ol class="pl-3 mb-0">
+                                <li>每次最多選擇一個品牌，系統將自動建立品牌下所有型號與零件的報價資料。</li>
+                                <li>系統將依據<span class="text-danger">目前鎖價金額(底價)作為價格、保固期 3 個月、有現場快修及維修時間為現場評估</span>等資料作為報價標準。</li>
+                                <li>新增後，請務必耐心等候系統提示結束後，再離開網頁，否則可能導致報價資料建立失敗。</li>
+                                <li>若維修報價資料已存在，使用本功能新增後系統會移除原先既有的報價資料、再重新建立。</li>
+                                <li>快速新增的報價資料，可至「維修商品列表」修改內容。</li>
+                            </ol>
+                        </div>
+
+                        <form class="row">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>請選擇品牌</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <select class="form-control" disabled>
+                                            <option>3個月</option>
+                                            <option>6個月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <select class="form-control" disabled>
+                                            <option>現場評估</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            <div class="col-12">
+                                <div class="text-center my-2">
+                                    <a class="btn btn-primary" href="#" data-toggle="modal" data-target=".modal-refresh"><i class="fas fa-fw fa-plus"></i> 新增</a>
+                                    <a class="btn btn-outline-secondary" href=""><i class="fas fa-fw fa-times"></i> 取消</a>
+                                </div>
+                            </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- module: store-admin-footer -->
+        <div id="store-admin-footer"></div>
+        <!-- module: ./store-admin-footer -->
+
+        <!-- module: modal-refresh -->
+        <div id="modal-refresh"></div>
+        <!-- module: ./modal-refresh -->
+
+        <div id="menu-bottom">
+            <a class="btn btn-outline-secondary d-block btn-top" href="#header">
+                <i class="fas fa-fw fa-chevron-up"></i>
+            </a>
+        </div>
+
+        <!-- Global -->
+        <script src="https://kit.fontawesome.com/5ab387053e.js" crossorigin="anonymous"></script>
+		<script src="/assets/javascripts/vendor/jquery.min.js"></script>
+        <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.pushy.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.slick.min.js"></script>
+        <script src="/assets/javascripts/common.js"></script>
+
+        <!-- Single -->
+        <script src="/assets/javascripts/vendor/bootstrap.editable.min.js"></script>
+        <script src="/assets/javascripts/function/editable.js"></script>
+
+        <!-- module include -->
+        <script src="/assets/javascripts/function/include.js"></script>
+
+    </body>
+</html>

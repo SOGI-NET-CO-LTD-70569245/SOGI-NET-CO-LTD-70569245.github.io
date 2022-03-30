@@ -1,0 +1,13 @@
+<div @@if(context.fullpage=='true'){class="container-fluid px-0 @@if(context.fpBgClass){@@fpBgClass}"} @@if(context.id){id="@@id"}>
+    <div class="container">
+        @@include('../../../partial/unit/_section-title-h3.html',{
+            icon:'@@icon',
+            title:'@@title'
+        })
+    </div>
+</div>
+@@loop('../../../partial/unit/_store-information-item.html', [
+    {title:'咕咕手機通訊大安店'},
+    {title:'咕咕手機通訊忠孝店'},
+    {title:'咕咕手機通訊北捷店'},
+])

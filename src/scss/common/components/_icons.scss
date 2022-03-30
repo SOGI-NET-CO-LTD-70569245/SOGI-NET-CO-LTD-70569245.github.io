@@ -1,0 +1,97 @@
+[class^="icon-"],
+[class*="icon-"] {
+	position:relative;
+    display: inline-block;
+    vertical-align: middle;
+    //background-image: url(#{$path-ui}icons.png);
+    background-repeat: no-repeat;
+	background-size:100%;
+    @include ir;
+}
+
+.icon-sogi {
+     top:-2px;
+     width: 20px;
+     height: 20px;
+     background-position: center;
+     &.color {
+         background-image: url(data:image/png;base64,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);
+    }
+}
+
+.icon-limited {
+    width: 18px;
+    height: 18px;
+    background-image: url(#{$path-ui}icon-limited-circle.png);
+}
+.icon-best {
+    width: 47px;
+    height: 30px;
+    background-image: url(#{$path-ui}icon-best.png);
+}
+
+.fa-refresh-animate {
+    animation:spin .7s infinite linear;
+}
+
+@keyframes spin {
+    from { transform:scale(1) rotate(0deg);}
+    to { transform:scale(1) rotate(360deg);}
+}
+
+.icon-wireless {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$path-ui}icon-wireless.png);
+}
+
+[class^="icon-net"],
+[class*="icon-net"] {
+    width: 32px;
+    height: 32px;
+}
+a {
+    .icon-net-2g {
+        background-image: url(#{$path-ui}icon-net-2G-normal.png);
+    }
+    .icon-net-3g {
+        background-image: url(#{$path-ui}icon-net-3G-normal.png);
+    }
+    .icon-net-4g {
+        background-image: url(#{$path-ui}icon-net-4G-normal.png);
+    }
+    .icon-net-5g {
+        background-image: url(#{$path-ui}icon-net-5G-normal.png);
+    }
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+        .icon-net-2g {
+            background-image: url(#{$path-ui}icon-net-2G-active.png);
+        }
+        .icon-net-3g {
+            background-image: url(#{$path-ui}icon-net-3G-active.png);
+        }
+        .icon-net-4g {
+            background-image: url(#{$path-ui}icon-net-4G-active.png);
+        }
+        .icon-net-5g {
+            background-image: url(#{$path-ui}icon-net-5G-active.png);
+        }
+    }
+    &.disabled {
+        .icon-net-2g {
+            background-image: url(#{$path-ui}icon-net-2G-disabled.png);
+        }
+        .icon-net-3g {
+            background-image: url(#{$path-ui}icon-net-3G-disabled.png);
+        }
+        .icon-net-4g {
+            background-image: url(#{$path-ui}icon-net-4G-disabled.png);
+        }
+        .icon-net-5g {
+            background-image: url(#{$path-ui}icon-net-5G-disabled.png);
+        }
+    }
+}

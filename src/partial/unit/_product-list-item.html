@@ -1,0 +1,63 @@
+<div class="my-2 col-@@col @@if(context.colLg){col-lg-@@colLg} @@if(context.colMd){col-md-@@colMd} @@if(context.cat){mix-item @@cat}" @@if(context.cat){data-sort-price="@@sortPrice" data-sort-date="@@sortDate" data-sort-hot="@@sortHot"}>
+    <div class="card shadow text-center p-2">
+        <div class="h5 mb-2">
+            <span class="badge text-white w-75" @@if(context.badge1Color){style="background: @@badge1Color;"}>@@badge1Title@@if(context.badge1Title==''){&nbsp;}</span>
+        </div>
+            <a href="#">
+                @@if(context.badge2Title){
+                <span class="badge badge-custom" style="background: @@badge2bColor; color: @@badge2fColor;">@@badge2Title</span>
+                }
+                <img src="@@img" class="img-fluid mx-auto d-block" alt="@@title">
+            </a>
+            <div class="h5 badge-group-nowrap my-2">
+                <span class="badge badge-pill badge-outline">@@tag1</span>
+                <span class="badge badge-pill badge-outline">@@tag2</span>
+                <span class="badge badge-pill badge-outline">@@tag3</span>
+            </div>
+        <h3 class="m-0">
+            <a href="#" class="text-row-2 text-dark h5 mb-2">@@title</a>
+        </h3>
+        <div class="row no-gutters">
+            <div class="col-6 border-right">
+                <a class="" href="#">
+                    <small class="text-muted">手機王購物</small>
+                    @@if(context.priceSogi){
+                    <div class="font-weight-bold">$@@priceSogi</div>
+                    }
+                    @@if(context.priceSogi==''){
+                    <div class="font-weight-bold text-secondary">-</div>
+                    }
+                </a>
+            </div>
+            <div class="col-6">
+                <a class="" href="#">
+                    <small class="text-muted">門市最低</small>
+                    @@if(context.priceLow){
+                    <div class="font-weight-bold">$@@priceLow</div>
+                    }
+                    @@if(context.priceLow==''){
+                    <div class="font-weight-bold text-secondary">-</div>
+                    }
+                </a>
+            </div>
+            <div class="col-8 col-md-9 mt-2">
+                @@include('_btn.html',{
+                    btnBlock:'true',
+                    btnColor:'secondary',
+                    href:'javascript:void();',
+                    modal:'modal-quickview',
+                    btnIcon:'fas fa-eye',
+                    btnName:'快速檢視',
+                })
+            </div>
+            <div class="col-4 col-md-3 mt-2 pl-1">
+                @@include('_btn.html',{
+                    btnBlock:'true',
+                    btnColor:'secondary',
+                    href:'javascript:void();',
+                    btnIcon:'fas fa-plus',
+                })
+            </div>
+        </div>
+    </div>
+</div>

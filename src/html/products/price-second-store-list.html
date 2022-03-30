@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'找二手',cssFile:'products'})
+    </head>
+
+	<body class="products">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_ad-970.html',{textAd:'true'})
+            @@include('../../partial/comp/_breadcrumb.html',{
+                lv1Label:'SAMSUNG',
+                lv1Url:'index.html',
+                lv2Label:'SAMSUNG Galaxy S22 Ultra 256GB',
+                lv2Url:'detail.html',
+            })
+
+            @@include('../../partial/page/products/_price-intro.html',{
+                title1:'SAMSUNG Galaxy S22 Ultra 256GB',
+                title2:'二手價格查詢',
+                group:'second',
+            })
+
+            @@include('../../partial/page/common/_store-list.html',{
+                id:'section-store-list',
+                fpBgClass:'bg-light',
+                nav:'true',
+                navActive: 'second',
+                searchFunc: 'true',
+                searchArea2: 'true',
+                searchPurchase: '商品狀態',
+                filter: 'true',
+                searchResult: 'true',
+                itemBtnNumber:'3',
+                itemPrice: 'true',
+                mixitupId:'1',
+                badge1:'極新(9成新)', badge2:'公司貨', badge3:'保固內', badge4:'',
+                btnPrimaryName:'預約訂購',
+                btnDangerName:'不滿包退',
+            })
+
+            @@include('../../partial/comp/_ad-300-250-double.html',{
+                fullpage:'true',
+                fpBgClass:'bg-light'
+            })
+            
+            @@include('../../partial/page/products/_products-similar-list-new.html',{
+                id:'section-similar',
+                fullpage:'true',
+                fpBgClass:'bg-light',
+                hr:'true',
+                title:'SAMSUNG 其他產品'
+            })
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+
+        @@include('../../partial/modal/_quickview.html')
+        @@include('../../partial/modal/_price-search.html')
+        @@include('../../partial/modal/_price-tip.html')
+        @@include('../../partial/modal/_refresh.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+        <!-- Single -->
+        <script src="/assets/javascripts/vendor/jquery.mixitup.min.js"></script>
+        <script src="/assets/javascripts/function/mixitup.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.modal-price-tip').modal('show');
+                $("[data-toggle=popover]").popover();
+            });
+            function planSelect(e) {
+                document.getElementById("planDetail").value = e.target.value
+            }
+        </script>
+
+    </body>
+</html>
