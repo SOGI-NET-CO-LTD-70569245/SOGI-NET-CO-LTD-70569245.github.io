@@ -433,7 +433,7 @@
             </div>
             
             <div id="section-store-list">
-                <div class="container-fluid">
+                <div class="container-fluid px-0">
                     <div class="container">
                         
                             
@@ -445,62 +445,65 @@
                     </div>
                 </div>
 
-                <div class="container-fluid border-top bg-light">
+                <div class="container-fluid px-0 border-top bg-light">
                     <div class="container py-5">
 
                         
-                        <div class="bg-white border sticky-top mb-3 p-2">
-                            <div class="d-none d-lg-block">
-                                <div class="row align-items-center justify-content-between">
-                                    <div class="col-5">
-                                        <div class="form-row">
-                                            <div class="col-12">
-                                                <label class="font-weight-bold">所在區域</label>
+                            <div class="bg-white border sticky-top mb-3 p-2">
+                                <div class="d-none d-lg-block">
+                                    <div class="row align-items-center justify-content-between">
+                                        <div class="col-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label class="font-weight-bold">所在區域</label>
+                                                </div>
+                                                <div class="col-6">
+                                                    <select class="form-control px-1 form-control-color text-primary">
+                                                        <option>所有縣市</option>
+                                                    </select>
+                                                </div>
+                                                
                                             </div>
-                                            <div class="col-6">
-                                                <select class="form-control">
-                                                    <option>所有縣市</option>
-                                                </select>
-                                            </div>
-                                            
+                                        </div>
+                                        
+                                        <div class="col-2">
+                                            <a class="btn btn-primary btn-block rounded-pill  py-0" href="#"  >
+                                                <i class="fa-fw fas fa-search"></i>
+                                                <span class="d-none d-md-inline">搜尋價格</span>
+                                            </a>
                                         </div>
                                     </div>
-                                    
-                                    <div class="col-2">
-                                        <a class="btn btn-block btn-primary rounded-pill" href="#">
-                                            <i class="fa-fw fas fa-search"></i> 搜尋價格
-                                        </a>
+                                </div>
+
+                                <div class="d-block d-lg-none">
+                                    <div class="row align-items-center justify-content-between">
+                                        <div class="col">
+                                            
+                                            
+                                            <div class="text-primary">台北市</div>
+                                            
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="btn btn-primary btn-block rounded-pill  py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-price-search" >
+                                                <i class="fa-fw fas fa-search"></i>
+                                                
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="d-block d-lg-none">
-                                <div class="row align-items-center justify-content-between">
-                                    <div class="col">
-                                        <div class="text-primary h5">台北市,大安區</div>
-                                        <div class="text-muted font-small">不搭專案（買空機）｜遠傳電信｜5G - 心5G方案1399(24)</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a class="btn btn-block btn-primary rounded-pill" href="javascript:void();" data-toggle="modal" data-target=".modal-price-search">
-                                            <i class="fa-fw fas fa-search"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-
                         
 
                         
 
                         <div class="row " >
                             <div class="col-12 col-md-6 col-lg-3 my-2 mix-item taipei" data-sort-price="9700" data-sort-date="20191231" data-sort-hot="3000">
-                                <div class="h-100 p-0 p-lg-2 shadow border bd-2 border-light">
+                                
+                                <div class="h-100 p-0 p-lg-2 bg-white shadow ">
                                     
                                     <div class="position-absolute right-0 top-0 z-1 mr-2">
-                                        <div class="badge-flag font-small text-center">
-                                            <span>一二三</span>
+                                        <div class="badge-flag text-center">
+                                            <span class="font-small font-weight-bold">一二三</span>
                                         </div>
                                     </div>
                                     
@@ -572,13 +575,15 @@
                                                     
                                                     
                                                     <div class="col-6 pr-1">
-                                                        <a class="btn btn-block btn-primary rounded-pill" href="tel:0910123456" data-toggle="tooltip" data-placement="top" title="0900123456">
-                                                            <i class="fas fa-fw fa-phone"></i>
+                                                        <a class="btn btn-primary btn-block rounded-pill px-1 py-0" href="tel:0910123456"  >
+                                                            <i class="fa-fw fas fa-phone"></i>
+                                                            
                                                         </a>
                                                     </div>
                                                     <div class="col-6 pl-1">
-                                                        <a class="btn btn-block btn-primary rounded-pill" href="#">
-                                                            <i class="fab fa-fw fa-line"></i>
+                                                        <a class="btn btn-primary btn-block rounded-pill px-1 py-0" href="#"  >
+                                                            <i class="fa-fw fab fa-line"></i>
+                                                            
                                                         </a>
                                                     </div>
                                                     
@@ -587,12 +592,12 @@
                                                 <div class="text-row-2 font-small mb-2">
                                                     新辦/攜碼/續約各大電信業者皆可辦理！iPhone 全系列【低價現貨供應中】
                                                 </div>
-                                                <div class="text-row-1 font-small">
+                                                <div class="text-row-2 font-small">
                                                     
                                                     <a class="mr-2" href="#">#五倍券</a>
                                                     
                                                     
-                                                    <a class="mr-2" href="#">#低價現貨</a>
+                                                    <a class="mr-2" href="#">#低價現貨低價現貨</a>
                                                     
                                                     
                                                     <a class="mr-2" href="#">#最多三個</a>
@@ -604,7 +609,8 @@
                                     </div>
                                 </div>
                             </div><div class="col-12 col-md-6 col-lg-3 my-2 mix-item newtaipei" data-sort-price="18000" data-sort-date="20220105" data-sort-hot="700">
-                                <div class="h-100 p-0 p-lg-2 shadow border bd-2 border-light">
+                                
+                                <div class="h-100 p-0 p-lg-2 bg-white shadow ">
                                     
                                     <div class="row">
                                         <div class="col-4 col-lg-12 mb-0 mb-lg-2">
@@ -667,13 +673,15 @@
                                                     
                                                     
                                                     <div class="col-6 pr-1">
-                                                        <a class="btn btn-block btn-primary rounded-pill" href="tel:0910123456" data-toggle="tooltip" data-placement="top" title="0900123456">
-                                                            <i class="fas fa-fw fa-phone"></i>
+                                                        <a class="btn btn-primary btn-block rounded-pill px-1 py-0" href="tel:0910123456"  >
+                                                            <i class="fa-fw fas fa-phone"></i>
+                                                            
                                                         </a>
                                                     </div>
                                                     <div class="col-6 pl-1">
-                                                        <a class="btn btn-block btn-primary rounded-pill" href="#">
-                                                            <i class="fab fa-fw fa-line"></i>
+                                                        <a class="btn btn-primary btn-block rounded-pill px-1 py-0" href="#"  >
+                                                            <i class="fa-fw fab fa-line"></i>
+                                                            
                                                         </a>
                                                     </div>
                                                     
@@ -682,8 +690,12 @@
                                                 <div class="text-row-2 font-small mb-2">
                                                     [新機／二手機買賣]、[門號申裝]、[無卡分期］、[小米家電]、[手機包膜、維修]
                                                 </div>
-                                                <div class="text-row-1 font-small">
+                                                <div class="text-row-2 font-small">
                                                     
+                                                    <a class="mr-2" href="#">#五倍券</a>
+                                                    
+                                                    
+                                                    <a class="mr-2" href="#">#低價現貨低價現貨</a>
                                                     
                                                     
                                                     &nbsp;
@@ -693,7 +705,8 @@
                                     </div>
                                 </div>
                             </div><div class="col-12 col-md-6 col-lg-3 my-2 mix-item newtaipei" data-sort-price="7000" data-sort-date="20210520" data-sort-hot="1800">
-                                <div class="h-100 p-0 p-lg-2 shadow border bd-2 border-warning">
+                                
+                                <div class="h-100 p-0 p-lg-2 bg-white shadow shadow-warning">
                                     
                                     <div class="row">
                                         <div class="col-4 col-lg-12 mb-0 mb-lg-2">
@@ -732,13 +745,15 @@
                                                     
                                                     
                                                     <div class="col-6 pr-1">
-                                                        <a class="btn btn-block btn-primary rounded-pill" href="tel:0910123456" data-toggle="tooltip" data-placement="top" title="0900123456">
-                                                            <i class="fas fa-fw fa-phone"></i>
+                                                        <a class="btn btn-primary btn-block rounded-pill px-1 py-0" href="tel:0910123456"  >
+                                                            <i class="fa-fw fas fa-phone"></i>
+                                                            
                                                         </a>
                                                     </div>
                                                     <div class="col-6 pl-1">
-                                                        <a class="btn btn-block btn-primary rounded-pill" href="#">
-                                                            <i class="fab fa-fw fa-line"></i>
+                                                        <a class="btn btn-primary btn-block rounded-pill px-1 py-0" href="#"  >
+                                                            <i class="fa-fw fab fa-line"></i>
+                                                            
                                                         </a>
                                                     </div>
                                                     
@@ -747,7 +762,7 @@
                                                 <div class="text-row-2 font-small mb-2">
                                                     A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務
                                                 </div>
-                                                <div class="text-row-1 font-small">
+                                                <div class="text-row-2 font-small">
                                                     
                                                     
                                                     
@@ -758,7 +773,8 @@
                                     </div>
                                 </div>
                             </div><div class="col-12 col-md-6 col-lg-3 my-2 mix-item taoyuan" data-sort-price="6500" data-sort-date="20220301" data-sort-hot="2150">
-                                <div class="h-100 p-0 p-lg-2 shadow border bd-2 border-light">
+                                
+                                <div class="h-100 p-0 p-lg-2 bg-white shadow ">
                                     
                                     <div class="row">
                                         <div class="col-4 col-lg-12 mb-0 mb-lg-2">
@@ -797,13 +813,15 @@
                                                     
                                                     
                                                     <div class="col-6 pr-1">
-                                                        <a class="btn btn-block btn-primary rounded-pill" href="tel:0910123456" data-toggle="tooltip" data-placement="top" title="0900123456">
-                                                            <i class="fas fa-fw fa-phone"></i>
+                                                        <a class="btn btn-primary btn-block rounded-pill px-1 py-0" href="tel:0910123456"  >
+                                                            <i class="fa-fw fas fa-phone"></i>
+                                                            
                                                         </a>
                                                     </div>
                                                     <div class="col-6 pl-1">
-                                                        <a class="btn btn-block btn-primary rounded-pill" href="#">
-                                                            <i class="fab fa-fw fa-line"></i>
+                                                        <a class="btn btn-primary btn-block rounded-pill px-1 py-0" href="#"  >
+                                                            <i class="fa-fw fab fa-line"></i>
+                                                            
                                                         </a>
                                                     </div>
                                                     
@@ -812,7 +830,7 @@
                                                 <div class="text-row-2 font-small mb-2">
                                                     A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務
                                                 </div>
-                                                <div class="text-row-1 font-small">
+                                                <div class="text-row-2 font-small">
                                                     
                                                     
                                                     
@@ -823,7 +841,8 @@
                                     </div>
                                 </div>
                             </div><div class="col-12 col-md-6 col-lg-3 my-2 mix-item taoyuan" data-sort-price="8200" data-sort-date="20220311" data-sort-hot="250">
-                                <div class="h-100 p-0 p-lg-2 shadow border bd-2 border-light">
+                                
+                                <div class="h-100 p-0 p-lg-2 bg-white shadow ">
                                     
                                     <div class="row">
                                         <div class="col-4 col-lg-12 mb-0 mb-lg-2">
@@ -862,13 +881,15 @@
                                                     
                                                     
                                                     <div class="col-6 pr-1">
-                                                        <a class="btn btn-block btn-primary rounded-pill" href="tel:0910123456" data-toggle="tooltip" data-placement="top" title="0900123456">
-                                                            <i class="fas fa-fw fa-phone"></i>
+                                                        <a class="btn btn-primary btn-block rounded-pill px-1 py-0" href="tel:0910123456"  >
+                                                            <i class="fa-fw fas fa-phone"></i>
+                                                            
                                                         </a>
                                                     </div>
                                                     <div class="col-6 pl-1">
-                                                        <a class="btn btn-block btn-primary rounded-pill" href="#">
-                                                            <i class="fab fa-fw fa-line"></i>
+                                                        <a class="btn btn-primary btn-block rounded-pill px-1 py-0" href="#"  >
+                                                            <i class="fa-fw fab fa-line"></i>
+                                                            
                                                         </a>
                                                     </div>
                                                     
@@ -877,7 +898,7 @@
                                                 <div class="text-row-2 font-small mb-2">
                                                     A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務
                                                 </div>
-                                                <div class="text-row-1 font-small">
+                                                <div class="text-row-2 font-small">
                                                     
                                                     
                                                     
