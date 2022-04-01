@@ -212,7 +212,9 @@
                         <div class="row align-items-center">
                             <div class="col col-md-auto mb-3 mb-md-0">
                                 <a class="d-flex text-decoration-none" href="#">
+                                    @@if(context.group!='repair-cat'){
                                     <h2 class="sr-only">門市空機價 (最低) $@@priceNew</h2>
+                                    }
                                     <div class="w-100 m-0">
                                         <div class="text-dark font-small mb-1">門市空機價 (最低)</div>
                                         <div class="h3 font-weight-bold text-primary">$@@priceNew</div>
@@ -247,6 +249,9 @@
                         <div class="row align-items-center">
                             <div class="col col-md-auto mb-3 mb-md-0">
                                 <a class="d-flex text-decoration-none" href="#">
+                                    @@if(context.group!='repair-cat'){
+                                    <h2 class="sr-only">門市二手價 $@@priceSecond</h2>
+                                    }
                                     <div class="w-100 m-0">
                                         <div class="text-dark font-small mb-1">門市二手價</div>
                                         <div class="h3 font-weight-bold text-primary">$@@priceSecond</div>

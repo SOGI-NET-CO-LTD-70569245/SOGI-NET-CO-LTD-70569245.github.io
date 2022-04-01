@@ -8,7 +8,9 @@
                     </div>
                 </div>
                 <div class="position-absolute right-0 top-0 mr-3 mt-3">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa-fw fas fa-times"></i>
+                    </button>
                 </div>
             </div>
             <div class="modal-body">
@@ -21,7 +23,7 @@
                                     <option>所有縣市</option>
                                 </select>
                             </div>
-                            @@if(context.navActive!='repair'){
+                            @@if(context.navActive!='shop'){
                             <div class="col">
                                 <select class="form-control text-primary">
                                     <option>全區域</option>
@@ -30,9 +32,9 @@
                             }
                         </div>
                     </div>
-                    @@if(context.navActive!='repair'){
+                    @@if(context.purchaseName){
                     <div class="form-group">
-                        <label class="lead font-weight-bold" for="purchase">購買方式</label>
+                        <label class="lead font-weight-bold" for="purchase">@@purchaseName</label>
                         <div class="form-row">
                             @@if(context.navActive=='new'){
                             <div class="col-12 mb-2">
@@ -72,21 +74,20 @@
                                 </select>
                             </div>
                             }
+                            @@if(context.navActive=='repair'){
+                            <div class="col-12 mb-2">
+                                <input type="text" readonly class="form-control-plaintext" value="更換螢幕顯示觸控正常玻璃破裂">
+                            </div>
+                            }
                         </div>
                     </div>
                     }
-                    <div class="position-absolute bottom-0 left-0 right-0 w-100">
-                        <div class="px-3 pb-5">
-                            @@include('../unit/_btn.html',{
-                                btnBlock:'true',
-                                btnRounded:'pill',
-                                btnColor:'primary',
-                                href:'javascript:void();',
-                                btnIcon:'fas fa-search',
-                                btnName:'搜尋價格',
-                            })
+                    <a class="position-absolute bottom-0 left-0 right-0 w-100 mb-20 py-5 px-3" href="#">
+                        <div class="btn btn-primary btn-block rounded-pill py-0 text-decoration-none">
+                            <i class="fa-fw fas fa-search"></i>
+                            搜尋價格
                         </div>
-                    </div>
+                    </a>
                 </form>
             </div>
         </div>

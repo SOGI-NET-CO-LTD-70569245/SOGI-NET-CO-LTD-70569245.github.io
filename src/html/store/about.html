@@ -12,11 +12,16 @@
         <div id="main" class="push">
             @@include('../../partial/comp/_ad-970.html',{textAd:'true'})
             @@include('../../partial/page/store/_store-intro.html')
-            @@include('../../partial/page/store/_store-information.html',{
+            
+            @@include('../../partial/unit/_section-title-h3.html',{
                 id: 'section-information',
-                icon:'',
                 title:'門市資訊'
             })
+            @@loop('../../partial/unit/_store-information-item.html', [
+                {title:'咕咕手機通訊大安店'},
+                {title:'咕咕手機通訊忠孝店'},
+                {title:'咕咕手機通訊北捷店'},
+            ])
 
             @@include('../../partial/comp/_popup-message.html')
         </div>

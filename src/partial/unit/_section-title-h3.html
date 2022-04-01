@@ -1,3 +1,15 @@
-<h3 class="section-title" @@if(context.id){id="@@id"}>
-    @@if(context.icon){<i class="fa-fw @@icon text-warning"></i> }@@title
-</h3>
+
+<div @@if(context.fullpage=='true'){class="container-fluid px-0 @@if(context.fpBgClass){@@fpBgClass}"} @@if(context.id){id="@@id"}>
+    <div class="container">
+        <h3 class="d-flex align-items-center justify-content-between lead mb-2 py-2 border-bottom bd-2 border-warning">
+            <div>
+                @@if(context.icon){<i class="fa-fw @@icon text-warning"></i> }@@title
+            </div>
+            @@if(context.btnName){
+            <div>
+                <a class="btn btn-outline-secondary btn-sm" href="@@href" @@if(context.modal){data-toggle="modal" data-target="@@modal"}><i class="fa-fw @@btnIcon"></i> @@btnName</a>
+            </div>
+            }
+        </h3>
+    </div>
+</div>

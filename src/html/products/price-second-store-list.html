@@ -33,6 +33,7 @@
                 searchFunc: 'true',
                 searchArea2: 'true',
                 searchPurchase: '商品狀態',
+                btnName:'搜尋價格',
                 filter: 'true',
                 searchResult: 'true',
                 itemBtnNumber:'3',
@@ -61,7 +62,8 @@
 
         @@include('../../partial/modal/_quickview.html')
         @@include('../../partial/modal/_price-search.html',{
-            navActive: 'second',
+            navActive:'second',
+            purchaseName:'購買方式',
         })
         @@include('../../partial/modal/_price-tip.html')
         @@include('../../partial/modal/_refresh.html')

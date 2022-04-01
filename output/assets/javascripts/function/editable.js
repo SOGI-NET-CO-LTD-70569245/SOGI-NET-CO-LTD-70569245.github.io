@@ -11,7 +11,6 @@ $(function(){
         },
     });
     $('.editable-chk-on').editable({
-
         type: 'checklist',
         source: {'1': '有'},
         emptytext: '無'
