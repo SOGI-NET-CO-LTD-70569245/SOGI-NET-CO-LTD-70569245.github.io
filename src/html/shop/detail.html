@@ -22,6 +22,7 @@
                 bgClass:'bg-light',
                 searchFunc:'true',
                 searchPurchase:'',
+                btnName:'搜尋價格',
                 itemBtnNumber:'2',
                 badge1:'無卡分期', badge2:'LINEPay', badge3:'信用卡', badge4:'街口支付',
             })
@@ -30,6 +31,9 @@
         @@include('../../partial/global/_footer.html')
 
         @@include('../../partial/modal/_refresh.html')
+        @@include('../../partial/modal/_price-search.html',{
+            navActive: 'shop',
+        })
 
         @@include('../../partial/comp/_nav-top.html')
         @@include('../../partial/global/_js.html')

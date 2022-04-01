@@ -38,6 +38,7 @@
                     navActive: '@@navActive',
                     searchArea2: '@@searchArea2',
                     searchPurchase: '@@searchPurchase',
+                    btnName:'@@btnName',
                 })
             }
 
@@ -148,14 +149,14 @@
                     tag1:'五倍券', tag2:'低價現貨低價現貨',
                 },
                 {
-                    shadowColor:'warning',
+                    borderColor:'warning',
                     cat:'newtaipei', sortPrice:'7000', sortDate:'20210520', sortHot:'1800',
                     img:'//d3c6c8kv4if4l0.cloudfront.net/www/Shop/1446/big/107766910_141896967532165_1986716186513360365_o.jpg',
                     title:'林口指標通訊',
                     rateScore:'3.5', rateCount:'50',
                     address:'新北市林口區仁愛路二段514號',
                     @@if(context.itemPrice=='true'){
-                        priceTitle:'會員獨享', price:'7,000', priceLogin:'true',
+                        priceTitle:'超低價！', price:'7,000', priceLogin:'',
                         update:'2021/05/20',
                     }
                     @@if(context.itemBtnNumber=='3'){

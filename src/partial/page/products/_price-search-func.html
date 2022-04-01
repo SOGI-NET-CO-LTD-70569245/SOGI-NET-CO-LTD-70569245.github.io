@@ -83,7 +83,7 @@
                     btnColor:'primary',
                     href:'#',
                     btnIcon:'fas fa-search',
-                    btnName:'搜尋價格',
+                    btnName:'@@btnName',
                     btnRWD:'true',
                 })
             </div>
@@ -91,26 +91,21 @@
     </div>
 
     <div class="d-block d-lg-none">
-        <div class="row align-items-center justify-content-between">
+        <a class="row align-items-center justify-content-between text-decoration-none" href="#" data-toggle="modal" data-target=".modal-price-search">
             <div class="col">
                 @@if(context.searchPurchase!=''){
-                <div class="text-primary h5">台北市,大安區</div>
-                <div class="text-muted font-small">不搭專案（買空機）｜遠傳電信｜5G - 心5G方案1399(24)</div>
+                <div class="text-primary">台北市,大安區</div>
+                <div class="text-muted font-small text-row-2">台北市,大安區｜不搭專案（買空機）｜遠傳電信｜5G - 心5G方案1399(24)</div>
                 }
                 @@if(context.searchPurchase==''){
                 <div class="text-primary">台北市</div>
                 }
             </div>
             <div class="col-auto">
-                @@include('../../unit/_btn.html',{
-                    btnBlock:'true',
-                    btnRounded:'pill',
-                    btnColor:'primary',
-                    modal:'modal-price-search',
-                    href:'javascript:void();',
-                    btnIcon:'fas fa-search',
-                })
+                <div class="btn btn-primary btn-block rounded-pill py-0">
+                    <i class="fa-fw fas fa-search"></i>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>

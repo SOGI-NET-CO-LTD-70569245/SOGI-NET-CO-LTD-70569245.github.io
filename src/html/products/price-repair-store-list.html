@@ -30,7 +30,8 @@
                 nav:'true',
                 navActive: 'repair',
                 searchFunc: 'true',
-                searchPurchase: '維修項目',
+                searchPurchase: '維修方案內容',
+                btnName:'搜尋價格',
                 filter: 'true',
                 searchResult: 'true',
                 itemBtnNumber:'3',
@@ -60,6 +61,7 @@
         @@include('../../partial/modal/_quickview.html')
         @@include('../../partial/modal/_price-search.html',{
             navActive: 'repair',
+            purchaseName:'維修方案內容',
         })
         @@include('../../partial/modal/_price-tip.html')
         @@include('../../partial/modal/_refresh.html')

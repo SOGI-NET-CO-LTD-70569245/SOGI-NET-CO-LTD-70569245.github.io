@@ -45,6 +45,10 @@ a.text-price {
     height: 3rem;
     -webkit-line-clamp: 2;
 }
+h2.text-row-2 {
+    height: auto;
+    -webkit-line-clamp: 2;
+}
 small {
     &.text-row-2 {
         height: 2.5rem;
