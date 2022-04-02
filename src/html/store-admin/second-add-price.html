@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'報價管理系統-二手-新增二手報價',cssFile:'store-admin'})
+    </head>
+
+	<body class="store">
+        @@include('../../partial/page/store-admin/_nav-mobile.html')
+        @@include('../../partial/page/store-admin/_header.html')
+
+        <div id="main" class="py-10 push">
+            @@include('../../partial/page/store-admin/_nav-main.html',{
+                lv1Nav:'second',
+                lv2Nav:'second-add-price'
+            })
+            @@include('../../partial/unit/_section-title-h3.html',{
+                title:'新增二手報價',
+            })
+            @@include('../../partial/page/store-admin/_form-1col.html',{
+                title:'輸入商品資料',
+                btn1Icon:'fas fa-plus',
+                btn1Name:'新增',
+                btn2Icon:'fas fa-times',
+                btn2Name:'取消',
+                multiCol:true,
+                group: {
+                    col: [
+                        {col:12, colSm:4, colMd:2, inputType:'select', inputLabel:'請選擇分類',},
+                        {col:12, colSm:4, colMd:2, inputType:'select', inputLabel:'Apple',},
+                        {col:12, colSm:4, colMd:2, inputType:'select', inputLabel:'iPhone 13 mini',},
+                        {col:12, colSm:4, colMd:2, inputType:'select', inputLabel:'狀態',},
+                        {col:12, colSm:4, colMd:2, inputType:'select', inputLabel:'貨源',},
+                        {col:12, colSm:4, colMd:2, inputType:'select', inputLabel:'保固期',},
+                        {col:12, colSm:6, colMd:2, inputType:'select', inputLabel:'請選擇門市',},
+                        {col:12, colSm:6, colMd:4, inputType:'text', inputLabel:'輸入價格(必填)', tooltipTitle:'價格不得高於：$20,900', inputRequired:true,},
+                    ],
+                },
+            })
+        </div>
+
+        @@include('../../partial/global/_footer.html',{
+            page:'store-admin',
+        })
+
+        @@include('../../partial/modal/_refresh.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+    </body>
+</html>

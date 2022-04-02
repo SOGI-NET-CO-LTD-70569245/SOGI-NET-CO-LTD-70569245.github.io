@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'報價管理系統-問題檢視',cssFile:'store-admin'})
+    </head>
+
+	<body class="store">
+        @@include('../../partial/page/store-admin/_nav-mobile.html')
+        @@include('../../partial/page/store-admin/_header.html')
+
+        <div id="main" class="py-10 push">
+            @@include('../../partial/page/store-admin/_nav-main.html')
+            @@include('../../partial/page/store-admin/_form-1col.html',{
+                title:'問題反映',
+                btn1Icon:'fas fa-check',
+                btn1Name:'送出',
+                btn2Icon:'fas fa-times',
+                btn2Name:'清除',
+                multiRow:true,
+                group: {
+                    row: [
+                        {label:'', inputType:'radio', radio1Label:'系統操作問題與建議', radio2Label:'常見問題二',},
+                        {label:'', inputType:'textarea', inputRows:'10', inputMaxLength:'2000', inputLabel:''},
+                    ]
+                },
+            })
+            @@include('../../partial/page/store-admin/_table.html',{
+                title:'問題列表 (最新30筆)',
+                tBodyRow:'2',
+                theadClass:'table-primary',
+                thead: {
+                    th: [
+                        {thClass:'text-center', thLabel:'類別'},
+                        {thClass:'text-center', thLabel:'內容'},
+                        {thClass:'text-center', thLabel:'建立時間'},
+                        {thClass:'text-center', thLabel:'最後回覆時間'},
+                    ]
+                },
+                tr1: {
+                    td: [
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'常見問題',
+                    },
+                    {
+                        tdType:'link',
+                        tdClass:'text-left',
+                        tdHref:'faq-detail.html',
+                        tdLabel:'忘記密碼怎麼辦', tdBadgeColor:'danger', tdBadgeLabel:'NEW'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'11/16/2015 at 8:32 PM',
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'11/16/2015 at 8:32 PM',
+                    },
+                    ]
+                },
+                tr2: {
+                    td: [
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'常見問題',
+                    },
+                    {
+                        tdType:'link',
+                        tdClass:'text-left',
+                        tdHref:'faq-detail.html',
+                        tdLabel:'忘記密碼怎麼辦',
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'11/16/2015 at 8:32 PM',
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'11/16/2015 at 8:32 PM',
+                    },
+                    ]
+                },
+            })
+        </div>
+
+        @@include('../../partial/global/_footer.html',{
+            page:'store-admin',
+        })
+
+        @@include('../../partial/modal/_refresh.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+        <!-- Single -->
+        <script src="/assets/javascripts/function/input-count.js"></script>
+        <script>
+            //textarea counter
+            var input_text_max = 2000;
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<div>
+    <div class="container pb-10">
+        @@if(context.title){
+            @@include('_sub-title.html',{
+                title:'@@title',
+            })
+        }
+        @@if(context.alertDesc){
+            @@include('_alert.html',{
+                alertColor:'@@alertColor',
+                alertDesc:'@@alertDesc',
+            })
+        }
+        @@if(context.multiCol===true){
+        <div class="form-group row">
+            @@for (var i = 0; i < group.col.length; i++) {
+                @@include('_form-1col-col.html', `+(JSON.stringify(group.col[i]))+`)
+            }
+        </div>
+        }
+        @@if(context.multiRow===true){
+            @@for (var i = 0; i < group.row.length; i++) {
+                @@include('_form-1col-row.html', `+(JSON.stringify(group.row[i]))+`)
+            }
+        }
+        <div class="form-group text-center">
+            @@include('../../unit/_btn.html',{
+                btnColor:'primary',
+                btnPaddingY:'1',
+                href:'#',
+                btnIcon:'@@btn1Icon',
+                btnName:'@@btn1Name',
+            })
+            @@if(context.btn2Name){
+            @@include('../../unit/_btn.html',{
+                btnColor:'outline-secondary',
+                btnPaddingY:'1',
+                href:'#',
+                btnIcon:'@@btn2Icon',
+                btnName:'@@btn2Name',
+            })
+            }
+        </div>
+    </div>
+</div>
