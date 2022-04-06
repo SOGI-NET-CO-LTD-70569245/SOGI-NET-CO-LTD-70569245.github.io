@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'報價管理系統-新機-商品列表',cssFile:'store-admin'})
+    </head>
+
+	<body class="store">
+        @@include('../../partial/page/store-admin/_nav-mobile.html')
+        @@include('../../partial/page/store-admin/_header.html')
+
+        <div id="main" class="py-10 push">
+            @@include('../../partial/page/store-admin/_nav-main.html',{
+                lv1Nav:'product',
+                lv2Nav:'product-list'
+            })
+            @@include('../../partial/unit/_section-title-h3.html',{
+                title:'商品列表 (每頁100筆)',
+                href:'#',
+                modal:'.modal-refresh',
+                btnIcon:'fas fa-sync-alt',
+                btnName:'更新報價日期',
+            })
+            @@include('../../partial/page/store-admin/_product-search.html',{
+                type:'new',
+                colWidth:'4',
+                col1Label:'商品分類',
+                col1Input:'請選擇分類',
+                col2Label:'品牌',
+                col2Input:'請選擇品牌',
+                col3Label:'名稱',
+                col3Input:'請輸入型號',
+                checkbox1Name:'7天內商品鎖價更新',
+                checkbox2Name:'只顯示關閉資料',
+                checkbox3Name:'超低價商品',
+                checkbox4Name:'現貨商品',
+            })
+            @@include('../../partial/page/store-admin/_table.html',{
+                funcBtnName:'關閉產品',
+                tBodyRow:'2',
+                theadClass:'table-primary',
+                pagination:true,
+                thead: {
+                    th: [
+                        {thClass:'text-center', thLabel:'商品名稱'},
+                        {thClass:'text-center', thWidth:'15%', thLabel:'售價'},
+                        {thClass:'text-center', thWidth:'10%', thLabel:'超低價機制'},
+                        {thClass:'text-center', thWidth:'8%', thLabel:'現貨狀況'},
+                        {thClass:'text-center', thWidth:'8%', thLabel:'產品狀態'},
+                        {thClass:'text-center', thWidth:'10%'},
+                    ]
+                },
+                tr1: {
+                    td: [
+                    {
+                        tdType:'img-text',
+                        tdClass:'text-left',
+                        tdImg:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_a53_5g_0317164117055_160x120.jpg',
+                        tdLabel:'Apple iPhone 6S Plus'
+                    },
+                    {
+                        tdType:'editable', editableClass:'price', editableTip:true,
+                        tdClass:'text-center',
+                        tdLabel:'12,300'
+                    },
+                    {
+                        tdType:'editable', editableClass:'select-low',
+                        tdClass:'text-center',
+                        tdLabel:'是'
+                    },
+                    {
+                        tdType:'editable', editableClass:'select-storage',
+                        tdClass:'text-center',
+                        tdLabel:'有'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'開啟'
+                    },
+                    {
+                        tdType:'btn', btnChk:true, btnHref:'product-edit.html',
+                        tdClass:'text-center',
+                        tdLabel:'編輯'
+                    },
+                    ]
+                },
+                tr2: {
+                    td: [
+                    {
+                        tdType:'img-text',
+                        tdClass:'text-left',
+                        tdImg:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_a53_5g_0317164117055_160x120.jpg',
+                        tdLabel:'Apple iPhone 6S Plus'
+                    },
+                    {
+                        tdType:'editable', editableClass:'price', editableTip:true,
+                        tdClass:'text-center',
+                        tdLabel:'12,300'
+                    },
+                    {
+                        tdType:'editable', editableClass:'select-low',
+                        tdClass:'text-center',
+                        tdLabel:'是'
+                    },
+                    {
+                        tdType:'editable', editableClass:'select-storage',
+                        tdClass:'text-center',
+                        tdLabel:'有'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'開啟'
+                    },
+                    {
+                        tdType:'btn', btnChk:true, btnHref:'product-edit.html',
+                        tdClass:'text-center',
+                        tdLabel:'編輯'
+                    },
+                    ]
+                },
+            })
+        </div>
+
+        @@include('../../partial/global/_footer.html',{
+            page:'store-admin',
+        })
+
+        @@include('../../partial/modal/_refresh.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+        <!-- Single -->
+        <script src="/assets/javascripts/vendor/bootstrap.editable.min.js"></script>
+        <script src="/assets/javascripts/function/editable.js"></script>
+
+    </body>
+</html>

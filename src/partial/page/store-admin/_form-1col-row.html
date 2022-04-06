@@ -1,0 +1,92 @@
+<div class="form-group row">
+    <div class="col-12 mb-2">
+        @@if(context.label){
+        <label for="">@@label</label>
+        }
+        @@if(context.inputType=='textarea'){
+            <textarea class="form-control @@if(context.inputMaxLength){input-limit}" rows="@@inputRows" @@if(context.inputMaxLength){maxlength="@@inputMaxLength"} placeholder="@@inputLabel"></textarea>
+            @@if(context.inputMaxLength){
+            <small class="form-text text-muted">
+                最多可輸入 @@inputMaxLength 個字元，目前您還可輸入 <big class="input-count text-danger"></big> 字
+            </small>
+            }
+        }
+        @@if(context.inputType=='file'){
+            <div class="custom-file mb-2">
+                <input type="file" class="custom-file-input" id="customFile" lang="zh-tw" multiple>
+                <label class="custom-file-label" for="customFile">@@inputLabel</label>
+            </div>
+            <div class="row">
+                @@if(context.imgItem=='1' || context.imgItem=='2' || context.imgItem=='3'){
+                <div class="col-6 col-md-3 text-center mb-2">
+                    <a href="#" class="d-block text-center mb-2">
+                        <img src="https://via.placeholder.com/@@img1Size" class="img-thumbnail of-contain w-auto mx-auto" style="max-height: 150px;" alt="">
+                    </a>
+                    @@if(context.imgBtnName){
+                        @@include('../../unit/_btn.html',{
+                            btnColor:'outline-secondary',
+                            href:'#',
+                            btnName:'@@imgBtnName',
+                        })
+                    }
+                </div>
+                }
+                @@if(context.imgItem=='2' || context.imgItem=='3'){
+                <div class="col-6 col-md-3 text-center mb-2">
+                    <a href="#" class="d-block text-center mb-2">
+                        <img src="https://via.placeholder.com/@@img2Size" class="img-thumbnail of-contain w-auto mx-auto" style="max-height: 150px;" alt="">
+                    </a>
+                    @@if(context.imgBtnName){
+                        @@include('../../unit/_btn.html',{
+                            btnColor:'outline-secondary',
+                            href:'#',
+                            btnName:'@@imgBtnName',
+                        })
+                    }
+                </div>
+                }
+                @@if(context.imgItem=='3'){
+                <div class="col-6 col-md-3 text-center mb-2">
+                    <a href="#" class="d-block text-center mb-2">
+                        <img src="https://via.placeholder.com/@@img3Size" class="img-thumbnail of-contain w-auto mx-auto" style="max-height: 150px;" alt="">
+                    </a>
+                    @@if(context.imgBtnName){
+                        @@include('../../unit/_btn.html',{
+                            btnColor:'outline-secondary',
+                            href:'#',
+                            btnName:'@@imgBtnName',
+                        })
+                    }
+                </div>
+                }
+            </div>
+            @@if(context.insBtnName){
+            <div class="text-center mb-2">
+                @@include('../../unit/_btn.html',{
+                    btnColor:'outline-secondary',
+                    href:'#',
+                    btnName:'@@insBtnName',
+                })
+            </div>
+            }
+            @@if(context.alertColor){
+            <div class="alert alert-@@alertColor mb-2" role="alert">
+                <small>
+                使用方法:<br>
+                直接點選圖片單張插入，或使用全部插入放入所有圖片，目前開放 jpg、png 等檔案。
+                <br><span class="text-danger">※每張檔案最大上限為 6MB。</span></small>
+            </div>
+            }
+        }
+        @@if(context.inputType=='radio'){
+            <div class="form-control-plaintext pb-0">
+                <label class="radio-inline mr-2">
+                    <input type="radio" name="" id="" value=""> @@radio1Label
+                </label>
+                <label class="radio-inline mr-2">
+                    <input type="radio" name="" id="" value=""> @@radio2Label
+                </label>
+            </div>
+        }
+    </div>
+</div>

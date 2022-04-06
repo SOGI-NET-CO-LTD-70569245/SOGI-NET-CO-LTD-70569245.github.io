@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'報價管理系統-維修-商品列表',cssFile:'store-admin'})
+    </head>
+
+	<body class="store">
+        @@include('../../partial/page/store-admin/_nav-mobile.html')
+        @@include('../../partial/page/store-admin/_header.html')
+
+        <div id="main" class="py-10 push">
+            @@include('../../partial/page/store-admin/_nav-main.html',{
+                lv1Nav:'repair',
+                lv2Nav:'repair-list'
+            })
+            @@include('../../partial/unit/_section-title-h3.html',{
+                title:'維修商品列表 (每頁100筆)',
+                href:'#',
+                modal:'.modal-refresh',
+                btnIcon:'fas fa-sync-alt',
+                btnName:'更新報價日期',
+            })
+            @@include('../../partial/page/store-admin/_product-search.html',{
+                type:'repair',
+                colWidth:'3',
+                col1Label:'品牌',
+                col1Input:'請選擇品牌',
+                col2Label:'型號',
+                col2Input:'請選擇型號',
+                col3Label:'零件',
+                col3Input:'請選擇零件',
+                col4Label:'報價',
+                col4Input:'請選擇類型',
+                checkbox1Name:'7天內商品鎖價更新',
+                checkbox2Name:'只顯示關閉資料',
+                checkbox3Name:'只顯示現場快修資料',
+            })
+            @@include('../../partial/page/store-admin/_table.html',{
+                funcBtnName:'關閉產品',
+                tBodyRow:'2',
+                theadClass:'table-primary',
+                pagination:true,
+                thead: {
+                    th: [
+                        {thClass:'text-center', thLabel:'品牌'},
+                        {thClass:'text-center', thLabel:'型號'},
+                        {thClass:'text-center', thWrap:true, thLabel:'零件'},
+                        {thClass:'text-center', thLabel:'報價類型'},
+                        {thClass:'text-center', thLabel:'報價'},
+                        {thClass:'text-center', thWrap:true, thLabel:'保固期'},
+                        {thClass:'text-center', thWrap:true, thLabel:'現場快修'},
+                        {thClass:'text-center', thWrap:true, thLabel:'維修時間'},
+                        {thClass:'text-center', thWidth:'10%', thLabel:'產品狀態'},
+                        {thClass:'text-center', thWidth:'10%'},
+                    ]
+                },
+                tr1: {
+                    td: [
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'Apple'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'iPhone 5'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'液晶螢幕'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'原廠價'
+                    },
+                    {
+                        tdType:'editable', editableClass:'price', editableTip:true,
+                        tdClass:'text-center',
+                        tdLabel:'12,300'
+                    },
+                    {
+                        tdType:'editable', editableClass:'select-warranty',
+                        tdClass:'text-center',
+                        tdLabel:'無保固'
+                    },
+                    {
+                        tdType:'editable', editableClass:'chk-fast',
+                        tdClass:'text-center',
+                        tdLabel:'沒有'
+                    },
+                    {
+                        tdType:'editable', editableClass:'select-time',
+                        tdClass:'text-center',
+                        tdLabel:'30分鐘'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'開啟'
+                    },
+                    {
+                        tdType:'btn', btnChk:true, btnHref:'#',
+                        tdClass:'text-center',
+                        tdLabel:'編輯'
+                    },
+                    ]
+                },
+                tr2: {
+                    td: [
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'Apple'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'iPhone 5'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'液晶螢幕'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'原廠價'
+                    },
+                    {
+                        tdType:'editable', editableClass:'price', editableTip:true,
+                        tdClass:'text-center',
+                        tdLabel:'12,300'
+                    },
+                    {
+                        tdType:'editable', editableClass:'select-warranty',
+                        tdClass:'text-center',
+                        tdLabel:'無保固'
+                    },
+                    {
+                        tdType:'editable', editableClass:'chk-fast',
+                        tdClass:'text-center',
+                        tdLabel:'沒有'
+                    },
+                    {
+                        tdType:'editable', editableClass:'select-time',
+                        tdClass:'text-center',
+                        tdLabel:'30分鐘'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'開啟'
+                    },
+                    {
+                        tdType:'btn', btnChk:true, btnHref:'#',
+                        tdClass:'text-center',
+                        tdLabel:'編輯'
+                    },
+                    ]
+                },
+            })
+        </div>
+
+        @@include('../../partial/global/_footer.html',{
+            page:'store-admin',
+        })
+
+        @@include('../../partial/modal/_refresh.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+        <!-- Single -->
+        <script src="/assets/javascripts/vendor/bootstrap.editable.min.js"></script>
+        <script src="/assets/javascripts/function/editable.js"></script>
+
+    </body>
+</html>

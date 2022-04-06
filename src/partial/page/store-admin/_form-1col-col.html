@@ -1,0 +1,21 @@
+<div class="col-@@col col-sm-@@colSm col-md-@@colMd mb-2">
+    @@if(context.inputType=='select'){
+        <select class="form-control" @@if(context.disabled===true){disabled}>
+            <option>@@inputLabel</option>
+        </select>
+    }
+    @@if(context.inputType=='text'){
+        <input type="text" class="form-control" id="" placeholder="@@inputLabel" @@if(context.inputValue){value="@@inputValue"} @@if(context.tooltipTitle){data-toggle="tooltip" data-placement="top" data-html="true" title="@@tooltipTitle"} @@if(context.inputRequired===true){required}>
+    }
+    @@if(context.inputType=='checkbox'){
+        <div class="form-check form-control-plaintext">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">
+                @@inputLabel
+            </label>
+        </div>
+    }
+    @@if(context.inputType=='hr'){
+        <hr class="hr-gray my-4">
+    }
+</div>

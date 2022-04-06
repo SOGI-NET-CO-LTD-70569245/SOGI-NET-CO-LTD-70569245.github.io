@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'報價管理系統-問題檢視',cssFile:'store-admin'})
+    </head>
+
+	<body class="store">
+        @@include('../../partial/page/store-admin/_nav-mobile.html')
+        @@include('../../partial/page/store-admin/_header.html')
+
+        <div id="main" class="py-10 push">
+            @@include('../../partial/page/store-admin/_nav-main.html')
+            @@include('../../partial/unit/_section-title-h3.html',{
+                title:'問題檢視',
+                href:'faq-post.html',
+                btnIcon:'fas fa-angle-left',
+                btnName:'返回問題列表',
+            })
+            <div>
+                <div class="container">
+                    <div class="p-2">
+                        <dl class="row mb-0">
+                            <dt class="col-md-2">問題類別</dt>
+                            <dd class="col-md-10">常見問題</dd>
+                        </dl>
+                        <dl class="row mb-0">
+                            <dt class="col-md-2">建立時間</dt>
+                            <dd class="col-md-10">2015/12/31 at 8：32 PM</dd>
+                        </dl>
+                        <dl class="row mb-0">
+                            <dt class="col-md-2">內容</dt>
+                            <dd class="col-md-10">阿湯自己本身是用倉頡輸入法，所以不管倉頡怎麼改版我一直都用的很習慣，沒有新舊版差異的問題，不過隨著 Windows 的改版，注音的版本似乎也是一改再改，對阿湯來說感受不出來好不好用，但好像不少人最喜歡的還是舊版的ㄅ半注音輸入法，也就是 XP 時代往前的注音，僅管已經推出到 Windows 10，還是有人追著阿湯問舊版注音，其實這早就有解法，而且也適用於 Windows 7 和 8 的系統，還是習慣舊版注音的朋友，就往下來看怎麼加入舊版注音吧。</dd>
+                        </dl>
+                    </div>
+                    <div class="p-2 bg-light">
+                        <dl class="row mb-0">
+                            <dt class="col-md-2">回覆時間</dt>
+                            <dd class="col-md-10">2015/12/31 at 8：32 PM</dd>
+                        </dl>
+                        <dl class="row mb-0">
+                            <dt class="col-md-2">內容</dt>
+                            <dd class="col-md-10">阿湯自己本身是用倉頡輸入法，所以不管倉頡怎麼改版我一直都用的很習慣，沒有新舊版差異的問題，不過隨著 Windows 的改版，注音的版本似乎也是一改再改，對阿湯來說感受不出來好不好用，但好像不少人最喜歡的還是舊版的ㄅ半注音輸入法，也就是 XP 時代往前的注音，僅管已經推出到 Windows 10，還是有人追著阿湯問舊版注音，其實這早就有解法，而且也適用於 Windows 7 和 8 的系統，還是習慣舊版注音的朋友，就往下來看怎麼加入舊版注音吧。</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('../../partial/global/_footer.html',{
+            page:'store-admin',
+        })
+
+        @@include('../../partial/modal/_refresh.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+    </body>
+</html>
