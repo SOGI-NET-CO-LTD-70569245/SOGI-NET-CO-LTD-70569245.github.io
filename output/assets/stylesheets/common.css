@@ -298,6 +298,15 @@ input[type=number] {
 select {
   font-family: 'FontAwesome', Verdana; }
 
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0; }
+
 .nav-responsive {
   overflow: auto;
   -webkit-overflow-scrolling: touch; }
