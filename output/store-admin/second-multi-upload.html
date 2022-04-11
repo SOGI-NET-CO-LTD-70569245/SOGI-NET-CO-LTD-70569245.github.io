@@ -173,9 +173,16 @@
                     <div class="alert alert-warning">
                         注意事項：<ol class="pl-3 mb-0 font-small"><li>每次最多選擇一個品牌，系統將自動建立品牌下所有型號與零件的報價資料。</li><li>系統將依據<span class="text-danger">目前鎖價金額(底價)作為價格、保固期 3 個月、有現場快修及維修時間為現場評估</span>等資料作為報價標準。</li><li>新增後，請務必耐心等候系統提示結束後，再離開網頁，否則可能導致報價資料建立失敗。</li><li>若維修報價資料已存在，使用本功能新增後系統會移除原先既有的報價資料、再重新建立。</li><li>快速新增的報價資料，可至「維修商品列表」修改內容。</li></ol>
                     </div>
-                    <div class="">
+                    <div class="mb-3">
                         <p>模板包含商品所有必填欄位，適用於所有分類商品。</p>
                         <a class="btn btn-success py-1 py-0" href="#">下載模板</a>
+                    </div>
+                    <div>
+                        <div class="alert alert-secondary py-3">
+                            <span class="btn btn-secondary text-dark mr-2">請選擇檔案</span>
+                            <span class="file-message">或者將要上傳的檔案拖曳至此</span>
+                            <input class="file-input" type="file" multiple>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -230,6 +237,20 @@
         <script src="/assets/javascripts/vendor/owl.carousel.min.js"></script>
         <script src="/assets/javascripts/vendor/ofi.min.js"></script>
         <script src="/assets/javascripts/common.js"></script>
+
+        
+        <script>
+            $(document).on('change', '.file-input', function() {
+                var filesCount = $(this)[0].files.length;
+                var textbox = $(this).prev();
+                if (filesCount === 1) {
+                    var fileName = $(this).val().split('\\').pop();
+                    textbox.text(fileName);
+                } else {
+                    textbox.text(filesCount + ' 個檔案已選擇');
+                }
+            });
+        </script>
 
     </body>
 </html>
