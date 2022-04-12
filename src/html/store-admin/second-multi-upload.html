@@ -20,7 +20,7 @@
                 <div class="container pb-10">
                     @@include('../../partial/page/store-admin/_alert.html',{
                         alertColor:'warning',
-                        alertDesc:'注意事項：<ol class="pl-3 mb-0 font-small"><li>每次最多選擇一個品牌，系統將自動建立品牌下所有型號與零件的報價資料。</li><li>系統將依據<span class="text-danger">目前鎖價金額(底價)作為價格、保固期 3 個月、有現場快修及維修時間為現場評估</span>等資料作為報價標準。</li><li>新增後，請務必耐心等候系統提示結束後，再離開網頁，否則可能導致報價資料建立失敗。</li><li>若維修報價資料已存在，使用本功能新增後系統會移除原先既有的報價資料、再重新建立。</li><li>快速新增的報價資料，可至「維修商品列表」修改內容。</li></ol>',
+                        alertDesc:'注意事項：<ol class="pl-3 mb-0 font-small"><li>模板上傳每次最多新增 100 筆報價資料，檔案格式限xlsx，檔案容量最大5MB。</li><li>請務必依照模板內的欄位指示，輸入對應與正確格式之資料，系統只接受檔案與資料格式皆正確的模板才可上傳，只要任一欄位或任一筆資料錯誤、或檔案格式不正確等皆無法上傳。</li><li class="text-danger">請先移除第 5 筆(列)資料範本後，再開始由第 5 筆(列)往下填寫，第 1~4 筆(列)內容請勿移除。</li><li>了解相關 ID 查詢：<a href="https://store.sogi.com.tw/pages/91" target="_blank">如何取得產品型號 ID？</a> | <a href="https://store.sogi.com.tw/pages/92" target="_blank">如何取得門市 ID？</a></li><li>新增後，請務必耐心等候系統提示結束後，再離開網頁，否則可能導致報價資料建立失敗。</li><li>快速新增的報價資料，可至「二手商品列表」修改內容。</li></ol>',
                     })
                     <div class="mb-3">
                         <p>模板包含商品所有必填欄位，適用於所有分類商品。</p>
@@ -38,7 +38,7 @@
                             </div>
                             <div class="mb-2">
                                 <div>選擇或直接拖曳檔案到此上傳</div>
-                                <div class="font-small text-secondary">最大可上傳 10.0 MB 的檔案，檔案格式僅限xxx</div>
+                                <div class="font-small text-secondary">最大可上傳 5MB 檔案，檔案格式僅限xlsx</div>
                             </div>
                             <span class="btn btn-secondary text-dark">請選擇檔案</span>
                             <input class="file-input" type="file" multiple>
