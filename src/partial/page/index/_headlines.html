@@ -1,4 +1,4 @@
-<div class="container-fluid px-0">
+<div class="@@if(context.paddingX){py-@@paddingX} @@if(context.paddingY){py-@@paddingY} @@if(context.paddingTop){pt-@@paddingTop} @@if(context.paddingBottom){pb-@@paddingBottom} @@if(context.fpBgClass){@@fpBgClass}" @@if(context.id){id="@@id"}>
     <div class="row no-gutters">
         <div class="col-12">
 
@@ -61,7 +61,7 @@
 
             <div class="owl-center owl-carousel owl-theme">
                 <div class="card card-focus mx-auto text-white shadow">
-                    <a class="d-block w-100 h-100 position-absolute" style="background-image: url(/assets/images/uploads/pic-820x495.jpg);" href="#"></a>
+                    <a class="d-block w-100 h-100 position-absolute" style="background-image: url(https://via.placeholder.com/820x495/0cd/fff);" href="#"></a>
                     <div class="pos-a-lt ml-1 mt-n1">
                         <span class="badge badge-light">評測文章</span>
                     </div>
@@ -82,10 +82,10 @@
                     </div>
                 </div>
                 <div class="card card-focus mx-auto text-white shadow">
-                    <a class="d-block w-100 h-100 position-absolute" style="background-image: url(/assets/images/uploads/pic-820x520.jpg);" href="#"></a>
+                    <a class="d-block w-100 h-100 position-absolute" style="background-image: url(https://via.placeholder.com/820x520/fc0/fff);" href="#"></a>
                 </div>
                 <div class="card card-focus mx-auto text-white shadow">
-                    <a class="d-block w-100 h-100 position-absolute" style="background-image: url(/assets/images/uploads/pic-820x495.jpg);" href="#"></a>
+                    <a class="d-block w-100 h-100 position-absolute" style="background-image: url(https://via.placeholder.com/820x495/ce0);" href="#"></a>
                     <div class="pos-a-lt ml-1 mt-n1">
                         <span class="badge badge-light">評測文章</span>
                     </div>
@@ -105,53 +105,27 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-6">
-            <div class="card size-16by9 text-white shadow">
-                <a href="#">
-                    <img class="card-img" src="https://d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/24114/extra_large/12.jpg" alt="">
-                </a>
-                <div class="pos-a-lt ml-1 mt-n1">
-                    <span class="badge badge-light">評測文章</span>
-                </div>
-                <div class="card-img-overlay py-1">
-                    <div class="hashtags text-row-1">
-                        <a class="hashtag" href="#">#評測</a>
-                        <a class="hashtag" href="#">#蘋果</a>
-                        <a class="hashtag" href="#">#銷售排行</a>
-                    </div>
-                    <h2 class="m-0">
-                    <a class="h5 text-row-1 font-weight-bold my-1 text-white" href="#">
-                        三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板
-                    </a>
-                    </h2>
-                    <div class="font-small text-light">
-                        <small>2019/12/12</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-6">
-            <div class="card size-16by9 text-white shadow">
-                <a href="#">
-                    <img class="card-img" src="https://d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/24198/extra_large/0IMG_0803.jpg" alt="">
-                </a>
-                <div class="pos-a-lt ml-1 mt-n1">
-                    <span class="badge badge-light">評測文章</span>
-                </div>
-                <div class="card-img-overlay py-1">
-                    <div class="hashtags text-row-1">
-                        <a class="hashtag" href="#">#評測</a>
-                        <a class="hashtag" href="#">#蘋果</a>
-                        <a class="hashtag" href="#">#銷售排行</a>
-                    </div>
-                    <a class="h5 text-row-1 font-weight-bold my-1 text-white" href="#">
-                        三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板
-                    </a>
-                    <div class="font-small text-light">
-                        <small>2019/12/12</small>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @@include('../../unit/_article-card-item.html',{
+            col:'12', colMd:'12', colLg:'6',
+            marginY:'0',
+            cardSize:'size-16by9',
+            href:'#',
+            img:'//d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/24198/extra_large/0IMG_0803.jpg',
+            badgeLabel:'評測文章',
+            tag1:'#評測', tag2:'#SAMSUNG', tag3:'#銷售排行', tag4:'#銷售排行銷售排行',
+            title:'三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen',
+            date:'2022/1/11'
+        })
+        @@include('../../unit/_article-card-item.html',{
+            col:'12', colMd:'12', colLg:'6',
+            marginY:'0',
+            cardSize:'size-16by9',
+            href:'#',
+            img:'//d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/26359/extra_large/1.jpg',
+            badgeLabel:'評測文章',
+            tag1:'#評測', tag2:'#SAMSUNG', tag3:'#銷售排行', tag4:'#銷售排行銷售排行',
+            title:'5千大電量與環繞雙喇叭 OPPO A57 5G中國發表',
+            date:'2022/1/11'
+        })
     </div>
 </div>

@@ -1,0 +1,24 @@
+<div class="col-11 col-md-7 col-lg-4">
+    <div class="card shadow text-center p-2">
+        @@if(context.badgeLabel){
+        <div class="h5 mb-2">
+            <span class="badge text-white w-75" style="background: #337ab7;">@@badgeLabel</span>
+        </div>
+        }
+        <a href="#" class="mb-2">
+            <img src="@@img" class="img-fluid mx-auto d-block" alt="@@title">
+        </a>
+        <a href="#" class="text-row-2 text-dark h5 mb-2">@@title</a>
+        <div class="list-group list-group-flush mb-2">
+            @@for (var i = 0; i < group.item.length; i++) {
+                @@include('_product-price-item.html', `+(JSON.stringify(group.item[i]))+`)
+            }
+        </div>
+        @@include('_btn.html',{
+            btnRounded:'pill',
+            btnColor:'primary',
+            href:'#',
+            btnName:'@@btnName',
+        })
+    </div>
+</div>

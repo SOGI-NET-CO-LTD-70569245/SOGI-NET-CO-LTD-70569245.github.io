@@ -1,0 +1,29 @@
+<div class="col-md-@@colMd col-@@col my-2">
+    <div class="card shadow">
+        <div class="row no-gutters">
+            <div class="col-12 text-center">
+                <a class="d-block p-2" href="@@href">
+                    <img class="img-fluid" src="@@img" style="max-height: 50px;" alt="@@title">
+                </a>
+            </div>
+            <div class="col-12 align-self-center">
+                <div class="card-body p-2">
+                    <div class="card-title mt-2 text-center">
+                        <a class="text-black font-small text-row-2" href="@@href">
+                            @@title
+                        </a>
+                    </div>
+                    <p class="card-text text-center">
+                        @@include('_btn.html',{
+                            btnRounded:'pill',
+                            btnPaddingX:'8',
+                            btnColor:'@@btnColor',
+                            href:'#',
+                            btnName:'@@btnName',
+                        })
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

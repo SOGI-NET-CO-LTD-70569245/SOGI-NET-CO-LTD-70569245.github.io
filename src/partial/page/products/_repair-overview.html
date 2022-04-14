@@ -1,0 +1,91 @@
+<div class="@@if(context.paddingX){py-@@paddingX} @@if(context.paddingY){py-@@paddingY} @@if(context.paddingTop){pt-@@paddingTop} @@if(context.paddingBottom){pb-@@paddingBottom} @@if(context.fpBgClass){@@fpBgClass}" @@if(context.id){id="@@id"}>
+    <div class="container">
+        @@include('../../unit/_section-title-h2.html',{
+            hr:'@@hr',
+            title:'@@title'
+        })
+        <div class="row row-hs row-hs-bar mb-5">
+            @@include('../../unit/_product-price-group.html',{
+                badgeLabel:'手機王推薦',
+                img:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_12_pro_1013212413139_160x120.jpg',
+                title:'SAMSUNG Galaxy Note 9',
+                btnName:'查看更多',
+                group: {
+                    item: [
+                        {borderWidth:'1', listIcon:'fas fa-microchip', listName:'換電池', listPrice:'17,900',},
+                        {borderWidth:'1', listIcon:'fas fa-mobile', listName:'換螢幕<br>(顯示觸控正常)', listPrice:'7,900',},
+                        {borderWidth:'0', listIcon:'fas fa-camera', listName:'後相機', listPrice:'6,900',},
+                    ],
+                },
+            })
+            @@include('../../unit/_product-price-group.html',{
+                badgeLabel:'手機王推薦',
+                img:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_6_0419092419468_160x120.jpg',
+                title:'SAMSUNG Galaxy S22+ 256GB',
+                btnName:'查看更多',
+                group: {
+                    item: [
+                        {borderWidth:'1', listIcon:'fas fa-microchip', listName:'換電池', listPrice:'17,900',},
+                        {borderWidth:'1', listIcon:'fas fa-mobile', listName:'換螢幕<br>(顯示觸控正常)', listPrice:'7,900',},
+                        {borderWidth:'0', listIcon:'fas fa-camera', listName:'後相機', listPrice:'6,900',},
+                    ],
+                },
+            })
+            @@include('../../unit/_product-price-group.html',{
+                badgeLabel:'手機王推薦',
+                img:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_j7_pro_0629071629081_160x120.jpg',
+                title:'SAMSUNG Galaxy A9',
+                btnName:'查看更多',
+                group: {
+                    item: [
+                        {borderWidth:'1', listIcon:'fas fa-microchip', listName:'換電池', listPrice:'17,900',},
+                        {borderWidth:'1', listIcon:'fas fa-mobile', listName:'換螢幕<br>(顯示觸控正常)', listPrice:'7,900',},
+                        {borderWidth:'0', listIcon:'fas fa-camera', listName:'後相機', listPrice:'6,900',},
+                    ],
+                },
+            })
+            @@include('../../unit/_product-price-group.html',{
+                badgeLabel:'手機王推薦',
+                img:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_12_pro_1013212413139_160x120.jpg',
+                title:'SAMSUNG Galaxy Note 9',
+                btnName:'查看更多',
+                group: {
+                    item: [
+                        {borderWidth:'1', listIcon:'fas fa-microchip', listName:'換電池', listPrice:'17,900',},
+                        {borderWidth:'1', listIcon:'fas fa-mobile', listName:'換螢幕<br>(顯示觸控正常)', listPrice:'7,900',},
+                        {borderWidth:'0', listIcon:'fas fa-camera', listName:'後相機', listPrice:'6,900',},
+                    ],
+                },
+            })
+        </div>
+        <div class="row row-md-hs row-hs-bar mb-5">
+            @@loop('../../unit/_repair-part-item.html', [
+            {
+                icon:'fas fa-battery-empty',
+                title:'換電池',
+            },
+            {
+                icon:'fas fa-mobile',
+                title:'換螢幕<br>(含觸控問題)'
+            },
+            {
+                icon:'fas fa-mobile',
+                title:'換螢幕<br>(不含觸控問題)'
+            },
+            {
+                icon:'fas fa-camera',
+                title:'後相機'
+            },
+            ])
+        </div>
+        <div class="text-center">
+            @@include('../../unit/_btn.html',{
+                btnRounded:'pill',
+                btnPaddingX:'10',
+                btnColor:'warning',
+                href:'#',
+                btnName:'查詢更多',
+            })
+        </div>
+    </div>
+</div>

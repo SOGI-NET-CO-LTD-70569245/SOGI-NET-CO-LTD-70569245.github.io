@@ -21,13 +21,9 @@ output/articles/index.html
 output/articles/list.html
 output/articles/tags.html
 output/articles/tags2.html
-src/html/index.html
-output/index.html
 src/html/products/brand-all.html
 src/html/products/detail.html
-src/html/products/index.html
 src/html/products/review-list.html
 output/products/brand-all.html
 output/products/detail.html
-output/products/index.html
 output/products/review-list.html

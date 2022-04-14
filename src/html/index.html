@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../partial/global/_head.html',{title:'',cssFile:'index'})
+    </head>
+
+	<body class="index">
+
+        @@include('../partial/global/_header.html')
+        @@include('../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            <!-- AD1 -->
+            @@include('../partial/comp/_ad-970.html',{textAd:'true'})
+            <!-- 1.頭條新聞 -->
+            @@include('../partial/page/index/_headlines.html')
+            <!-- AD2 -->
+            @@include('../partial/comp/_ad-970.html')
+            <!-- 2.新聞集水 -->
+            @@include('../partial/page/index/_newsgroup.html',{
+                paddingY:'5',
+            })
+            <!-- 3.主題推廣 -->
+            @@include('../partial/page/index/_topic.html',{
+                paddingY:'5',
+                fpBgClass:'section-topic',
+            })
+            <!-- 4.活動特區 -->
+            @@include('../partial/page/index/_event.html',{
+                paddingY:'5',
+            })
+            <!-- 5.特別推薦 -->
+            @@include('../partial/page/index/_product-recommend.html',{
+                paddingY:'5',
+                fpBgClass:'bg-light',
+                title:'特別推薦'
+            })
+            <!-- 6.最新上架 -->
+            @@include('../partial/page/index/_store-new.html',{
+                paddingY:'5',
+                fpBgClass:'bg-light',
+            })
+            <!-- 7.新品發表 -->
+            @@include('../partial/page/index/_product-release.html',{
+                paddingY:'5',
+                hr:'true',
+                title:'新品發表'
+            })
+            <!-- 8.最新上市 -->
+            @@include('../partial/page/index/_product-new-hot.html',{
+                id:'section-product-new',
+                paddingY:'5',
+                hr:'true',
+                title:'最新上市'
+            })
+            <!-- AD3 -->
+            @@include('../partial/comp/_ad-970.html')
+            <!-- 9.熱門商品 -->
+            @@include('../partial/page/index/_product-new-hot.html',{
+                id:'section-product-hot',
+                paddingY:'5',
+                hr:'true',
+                title:'熱門商品'
+            })
+            <!-- 10.比較 -->
+            @@include('../partial/page/common/_compare-series.html',{
+                id:'section-compare',
+                paddingY:'5',
+                hr:'true',
+                title:'比較'
+            })
+            <!-- 11.熱門比價 -->
+            @@include('../partial/page/common/_product-price.html',{
+                id:'section-price-hot',
+                paddingY:'10',
+                hr:'true',
+                title:'熱門比價'
+            })
+            <!-- 12-1.導讀導購版型1：1文+4產品 -->
+            @@include('../partial/page/index/_guide1.html',{
+                paddingY:'5',
+                bgColor:'#333',
+                textColor:'white',
+                row1col1:'article-rich',
+                simpleColLg:'3',
+                simpleTextAlign:'center',
+            })
+            <!-- 12-2.導讀導購版型1：2文+4產品 -->
+            @@include('../partial/page/index/_guide1.html',{
+                paddingY:'5',
+                bgColor:'#eee',
+                textColor:'dark',
+                row1col1:'article-card',
+                simpleColLg:'3',
+                simpleTextAlign:'center',
+            })
+            <!-- 12-3.導讀導購版型2：4文+1文 / N產品 -->
+            @@include('../partial/page/index/_guide2.html',{
+                paddingY:'5',
+                bgColor:'#333',
+                textColor:'white',
+                row1col1:'article-card',
+                row1col2:'article-simple',
+                row2col1:'product-list',
+                order:true,
+                simpleColLg:'6',
+                simpleTextAlign:'center',
+            })
+            <!-- 12-4.導讀導購版型2：1產品+1文 / 3文 -->
+            @@include('../partial/page/index/_guide2.html',{
+                paddingY:'5',
+                bgColor:'#eee',
+                textColor:'dark',
+                row1col1:'product-rich',
+                row1col2:'article-simple',
+                row2col1:'article-list',
+                simpleColLg:'',
+                simpleTextAlign:'center',
+            })
+            <!-- 12-5.導讀導購版型2：1文+1影 / N產品 -->
+            @@include('../partial/page/index/_guide2.html',{
+                paddingY:'5',
+                bgColor:'#333',
+                textColor:'white',
+                row1col1:'article-simple',
+                row1col2:'video',
+                row2col1:'product-list',
+                simpleColLg:'6',
+                simpleTextAlign:'left',
+                videoColLg:'6',
+            })
+            <!-- AD4 -->
+            @@include('../partial/comp/_ad-970.html')
+            <!-- 13.銷售排行 -->
+            @@include('../partial/page/index/_sale-rank.html',{
+                paddingY:'5', 
+                hr:'true',
+                title:'銷售排行',
+            })
+            @@include('../partial/page/common/_products-row-hs.html',{
+                fpBgClass:'bg-light',
+                paddingY:'5',
+                subtitle:'<div class="bg-text-color"><span>手機</span></div><div>排行榜</div>',
+                item:'5',
+                badgeRank:true,
+            })
+            @@include('../partial/page/common/_products-row-hs.html',{
+                fpBgClass:'bg-light',
+                paddingY:'5',
+                subtitle:'<div class="bg-text-color"><span>平板</span></div><div>排行榜</div>',
+                item:'5',
+                badgeRank:true,
+            })
+            <!-- 14.社群動態 -->
+            @@include('../partial/page/index/_social.html',{
+                paddingY:'5',
+                hr:'true',
+                title:'社群動態'
+            })
+        </div>
+
+        @@include('../partial/global/_footer.html')
+
+        @@include('../partial/modal/_quickview.html')
+        
+        @@include('../partial/comp/_nav-top.html')
+        @@include('../partial/global/_js.html')
+
+    </body>
+</html>

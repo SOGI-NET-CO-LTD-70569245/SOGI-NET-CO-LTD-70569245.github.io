@@ -1,114 +1,32 @@
-<div class="container-fluid bg-light">
-    <div class="container py-5">
+<div class="@@if(context.paddingX){py-@@paddingX} @@if(context.paddingY){py-@@paddingY} @@if(context.paddingTop){pt-@@paddingTop} @@if(context.paddingBottom){pb-@@paddingBottom} @@if(context.fpBgClass){@@fpBgClass}" @@if(context.id){id="@@id"}>
+    <div class="container">
         @@include('../../unit/_section-title-h2.html',{
             hr:'@@hr',
             title:'@@title'
         })
         <div class="row">
-            <div class="col-12 col-lg-6 my-2">
-                <div class="card mx-auto text-white shadow h-100">
-                    <div class="pos-a-lt ml-1 mt-n1">
-                        <span class="badge badge-light">評測文章</span>
-                    </div>
-                    <a href="#">
-                        <img class="card-img" src="https://d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/24198/extra_large/0IMG_0803.jpg" alt="">
-                    </a>
-                    <div class="card-img-overlay py-1">
-                        <div class="hashtags text-row-1">
-                            <a class="hashtag" href="#">#評測</a>
-                            <a class="hashtag" href="#">#蘋果</a>
-                            <a class="hashtag" href="#">#銷售排行</a>
-                        </div>
-                        <a href="#" class="h5 text-row-12 font-weight-bold my-1 text-white">
-                            三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板
-                        </a>
-                        <div class="font-small text-light">
-                            <small>2019/12/12</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6 my-2">
-                <div class="card p-2 shadow h-100">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col-12 mb-2">
-                            <div class="text-center badge-group-nowrap h5 my-2">
-                                <span class="badge badge-outline badge-pill mx-1">大螢幕</span>
-                                <span class="badge badge-outline badge-pill mx-1">高效能</span>
-                                <span class="badge badge-outline badge-pill mx-1">iOS</span>
-                                <span class="badge badge-outline badge-pill mx-1">大螢幕</span>
-                                <span class="badge badge-outline badge-pill mx-1">高效能</span>
-                                <span class="badge badge-outline badge-pill mx-1">iOS</span>
-                                <span class="badge badge-outline badge-pill mx-1">大螢幕</span>
-                                <span class="badge badge-outline badge-pill mx-1">高效能</span>
-                                <span class="badge badge-outline badge-pill mx-1">iOS</span>
-                            </div>
-                            <div class="card-title text-center">
-                                <a class="h4 font-weight-bold text-dark" href="">
-                                    Acer Aspire Switch
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6 text-center mb-2 mb-lg-0">
-                            <a href="#">
-                                <span class="badge badge-custom" style="background: #ffcc00; color: #fff;">一二三四</span>
-                                <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_12_mini_1013201313718_640x480.jpg" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <ul class="list-group list-group-flush mb-2">
-                                <li class="list-group-item">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-md-5 font-small">
-                                            <i class="fas fa-fw fa-mobile-alt"></i> 螢幕
-                                        </div>
-                                        <div class="col-6 col-md-7 h5">5.8吋OLED</div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-md-5 font-small">
-                                            <i class="fas fa-fw fa-camera"></i> 主相機
-                                        </div>
-                                        <div class="col-6 col-md-7 h5">1200萬畫素</div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-md-5 font-small">
-                                            <i class="fas fa-fw fa-microchip"></i> 處理器
-                                        </div>
-                                        <div class="col-6 col-md-7 h5">Apple A13 Bionic</div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-md-5 font-small">
-                                            <i class="fas fa-fw fa-sd-card"></i> 記憶體 (RAM)
-                                        </div>
-                                        <div class="col-6 col-md-7 h5">4GB</div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-md-5 font-small">
-                                            <i class="fas fa-fw fa-battery-full"></i> 電池容量
-                                        </div>
-                                        <div class="col-6 col-md-7 h5">4,500 mAh</div>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="col-12">
-                            <div class="text-center">
-                                <a class="btn btn-primary btn-sm rounded-pill" href="#">查看完整規格</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+            @@include('../../unit/_article-card-item.html',{
+                col:'12', colMd:'12', colLg:'6',
+                href:'#',
+                img:'//d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/26365/extra_large/0IMG_2889o.jpg',
+                badgeLabel:'評測文章',
+                tag1:'#評測', tag2:'#SAMSUNG', tag3:'#銷售排行', tag4:'#銷售排行銷售排行',
+                title:'三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen',
+                date:'2022/1/11'
+            })
+            @@include('../../unit/_product-spec-item.html',{
+                col:'12', colMd:'12', colLg:'6',
+                href:'#',
+                img:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_12_mini_1013201313718_640x480.jpg',
+                tag1:'評測', tag2:'SAMSUNG', tag3:'銷售排行', tag4:'銷售排行銷售排行銷售排行',
+                badge2bColor:'#fc0', badge2fColor:'#fff', badge2Title:'一二三四',
+                title:'Acer Aspire Switch',
+                spec1Icon:'fas fa-mobile-alt', spec1Label:'螢幕', spec1Content:'5.8吋OLED',
+                spec2Icon:'fas fa-camera', spec2Label:'主相機', spec2Content:'1200萬畫素',
+                spec3Icon:'fas fa-microchip', spec3Label:'處理器', spec3Content:'Apple A13 Bionic',
+                spec4Icon:'fas fa-sd-card', spec4Label:'記憶體 (RAM)', spec4Content:'4GB',
+                spec5Icon:'fas fa-battery-full', spec5Label:'電池容量', spec5Content:'4,500 mAh',
+            })
         </div>
     </div>
 </div>
