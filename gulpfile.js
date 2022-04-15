@@ -162,7 +162,8 @@ exports.default = default_build;
 gulp.task('deploy', function() {
   return gulp.src('./output/**/*')
     .pipe(ghPages({
-      origin:'SOGI-preview',
+      // origin:'SOGI-preview',
+      origin:'sogi-official',
       message: 'Update ' + new Date().toLocaleString('zh-TW', {timeZone: 'Asia/Taipei'})
     }));
 });
