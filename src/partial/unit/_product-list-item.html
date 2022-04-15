@@ -1,19 +1,26 @@
 <div class="my-2 col-@@col @@if(context.colLg){col-lg-@@colLg} @@if(context.colMd){col-md-@@colMd} @@if(context.cat){mix-item @@cat}" @@if(context.cat){data-sort-price="@@sortPrice" data-sort-date="@@sortDate" data-sort-hot="@@sortHot"}>
     <div class="card shadow text-center p-2">
-        <div class="h5 mb-2">
-            <span class="badge text-white w-75" @@if(context.badge1Color){style="background: @@badge1Color;"}>@@badge1Title@@if(context.badge1Title==''){&nbsp;}</span>
+        @@if(context.badgeRank){
+        <div class="bg-dark text-white h5 mb-2 py-2">
+            #@@badgeRank
         </div>
-            <a href="#">
-                @@if(context.badge2Title){
-                <span class="badge badge-custom" style="background: @@badge2bColor; color: @@badge2fColor;">@@badge2Title</span>
-                }
-                <img src="@@img" class="img-fluid mx-auto d-block" alt="@@title">
-            </a>
-            <div class="h5 badge-group-nowrap my-2">
-                <span class="badge badge-pill badge-outline">@@tag1</span>
-                <span class="badge badge-pill badge-outline">@@tag2</span>
-                <span class="badge badge-pill badge-outline">@@tag3</span>
-            </div>
+        }
+        @@if(context.badge1Title){
+        <div class="h5 mb-2">
+            <span class="badge text-white w-75" @@if(context.badge1Color){style="background: @@badge1Color;"}>@@badge1Title</span>
+        </div>
+        }
+        <a href="#">
+            @@if(context.badge2Title){
+            <span class="badge badge-custom" style="background: @@badge2bColor; color: @@badge2fColor;">@@badge2Title</span>
+            }
+            <img src="@@img" class="img-fluid mx-auto d-block" alt="@@title">
+        </a>
+        <div class="h5 badge-group-nowrap my-2">
+            <span class="badge badge-pill badge-outline">@@tag1</span>
+            <span class="badge badge-pill badge-outline">@@tag2</span>
+            <span class="badge badge-pill badge-outline">@@tag3</span>
+        </div>
         <h3 class="m-0">
             <a href="#" class="text-row-2 text-dark h5 mb-2">@@title</a>
         </h3>

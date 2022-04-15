@@ -1,0 +1,25 @@
+<div class="col-11 col-md-7 col-lg-4 my-2">
+    <h2 class="h2 mb-7 border-bottom">
+        <a href="#" class="text-dark d-block pb-2 border-bottom">
+            @@title <i class="fas fa-chevron-right"></i>
+        </a>
+    </h2>
+    <div class="shadow">
+        @@include('../../unit/_article-card-item.html',{
+            marginY:'0',
+            href:'#',
+            img:'@@cardImg',
+            @@if(context.cardBadgeLabel){
+                badgeLabel:'@@cardBadgeLabel',
+            }
+            tag1:'#評測', tag2:'#SAMSUNG', tag3:'#銷售排行', tag4:'#銷售排行銷售排行',
+            title:'@@cardTitle',
+            date:'@@cardDate'
+        })
+        <div class="px-2">
+            @@for (var i = 0; i < group.item.length; i++) {
+                @@include('../../unit/_article-row-item.html', `+(JSON.stringify(group.item[i]))+`)
+            }
+        </div>
+    </div>
+</div>

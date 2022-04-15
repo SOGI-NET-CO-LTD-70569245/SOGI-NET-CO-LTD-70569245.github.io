@@ -1,0 +1,23 @@
+<div class="@@if(context.paddingX){py-@@paddingX} @@if(context.paddingY){py-@@paddingY} @@if(context.paddingTop){pt-@@paddingTop} @@if(context.paddingBottom){pb-@@paddingBottom} @@if(context.fpBgClass){@@fpBgClass}" @@if(context.id){id="@@id"}>
+    <div class="container">
+        <div class="row align-items-center justify-content-center no-gutters">
+            <div class="col-auto col-md-2 my-2">
+                <div class="h4 font-weight-bold">
+                    <div class="bg-text-color"><span>@@subtitle</span></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-10">
+                @@include('../common/_products-list.html',{
+                    rowStyle:'hs',
+                    item:'@@item',
+                    @@if(context.badgeRank){
+                        badgeRank:'@@badgeRank',
+                    }
+                    @@if(context.badge1Title){
+                        badge1Title:'@@badge1Title',
+                    }
+                })
+            </div>
+        </div>
+    </div>
+</div>

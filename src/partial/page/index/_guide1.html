@@ -1,0 +1,36 @@
+<div class="@@if(context.paddingX){py-@@paddingX} @@if(context.paddingY){py-@@paddingY} @@if(context.paddingTop){pt-@@paddingTop} @@if(context.paddingBottom){pb-@@paddingBottom} @@if(context.fpBgClass){@@fpBgClass}" @@if(context.id){id="@@id"} @@if(context.bgColor){style="background-color: @@bgColor;"}>
+    <div class="container">
+        <div class="row align-items-center">
+            @@include('../../unit/_article-simple-item.html',{
+                colLg:'@@simpleColLg',
+                textAlign:'@@simpleTextAlign',
+                textColor:'@@textColor',
+                title:'標題標題標題標題<br>標題標題標題標題',
+                desc:'內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文',
+            })
+            <div class="col-12 col-lg-9">
+                @@if(context.row1col1=='article-rich'){
+                    @@include('../../unit/_article-rich-item.html',{
+                        href:'#',
+                        img:'//d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/23715/extra_large/3.jpg',
+                        badgeLabel:'評測文章',
+                        tag1:'#評測', tag2:'#SAMSUNG', tag3:'#銷售排行', tag4:'#銷售排行銷售排行',
+                        title:'三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen',
+                        desc:'三星推出全新智慧手機 SAMSUNG GALAXY S6，以精緻工藝融合金屬與玻璃材質，兼具設計美學與強大功能。機身使用 6.8mm 超薄、138g 超輕的設計，搭載 5.1 吋 Quad HD Super AMOLED 螢幕，提供了最高 577ppi 像素密度。透過更明亮的顯示器（600cd/mm），提升戶外操作時的可視性，讓消費者隨時隨地享受觀看樂趣。SAMSUNG GALAXY S6 更搭載 SAMSUNG KNOX 點對點安全行動平台，具備國防等級的即時保護，抵擋潛在的惡意攻擊。',
+                    })
+                }
+                @@if(context.row1col1=='article-card'){
+                    @@include('../../page/common/_article-card.html',{
+                        rowStyle:'grid',
+                        item:'2',
+                    })
+                }
+                @@include('../../page/common/_products-list.html',{
+                    rowStyle:'grid',
+                    item:'4',
+                    badge1Title:true,
+                })
+            </div>
+        </div>
+    </div>
+</div>

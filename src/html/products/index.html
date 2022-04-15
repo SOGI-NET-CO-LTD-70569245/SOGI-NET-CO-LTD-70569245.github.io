@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'所有產品:手機,平板電腦,價格總覽與比較',cssFile:'products'})
+    </head>
+
+	<body class="products" data-spy="scroll" data-target="#navbar-brands">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_ad-970.html')
+            @@include('../../partial/comp/_breadcrumb.html')
+            @@include('../../partial/page/products/_index-header.html')
+            <div class="py-5" data-spy="scroll" data-target="#navbar-brand" data-offset="150" id="sections">
+                <div class="container my-2">
+                    @@include('../../partial/comp/_ad-sponsor.html')
+                </div>
+                <!-- 品牌最新 -->
+                @@include('../../partial/page/products/_products-new-list.html',{
+                    id:'section-new',
+                    title:'品牌最新',
+                    rowStyle:'hs',
+                    item:'4'
+                })
+                <!-- 所有產品 -->
+                @@include('../../partial/page/products/_products-filter.html',{
+                    id:'section-product',
+                    hr:'true',
+                    title:'所有產品',
+                    tabId1:'tab-product-01',
+                    tabId2:'tab-product-02',
+                    tabId3:'tab-product-03',
+                    tabTitle1:'手機',
+                    tabTitle2:'平板電腦',
+                    tabTitle3:'穿戴裝置',
+                    dataParent:'accordion-product-01',
+                    seriesId1:'collapse-product-01-cat1',
+                    seriesId2:'collapse-product-01-cat2',
+                    seriesId3:'collapse-product-01-cat3',
+                    seriesTitle1:'旗艦',
+                    seriesTitle2:'中高階',
+                    seriesTitle3:'入門',
+                    mixitupId:'1',
+                    rowStyle:'filter',
+                    item:'5'
+                })
+                <!-- 最新優惠 -->
+                @@include('../../partial/page/products/_discount.html',{
+                    id:'section-discount',
+                    hr:'true',
+                    title:'最新優惠'
+                })
+                <!-- 比較 -->
+                @@include('../../partial/page/common/_compare-series.html',{
+                    id:'section-compare',
+                    hr:'true',
+                    title:'比較'
+                })
+                <!-- 價格 -->
+                @@include('../../partial/page/common/_product-price.html',{
+                    id:'section-price',
+                    paddingBottom:'10',
+                    hr:'true',
+                    title:'價格'
+                })
+                <!-- 價格區間:萬元以下 -->
+                @@include('../../partial/page/common/_products-row-hs.html',{
+                    fpBgClass:'bg-light',                
+                    id:'section-price-range',
+                    paddingY:'5',
+                    subtitle:'萬元以下',
+                    item:'5',
+                    badge1Title:true,
+                })
+                <!-- 價格區間:1萬~2萬 -->
+                @@include('../../partial/page/common/_products-row-hs.html',{
+                    fpBgClass:'bg-light',
+                    paddingY:'5',
+                    subtitle:'1萬~2萬',
+                    item:'5',
+                    badge1Title:true,
+                })
+                <!-- ad-970 -->
+                @@include('../../partial/comp/_ad-970.html')
+                <!-- 價格區間:2萬~3萬 -->
+                @@include('../../partial/page/common/_products-row-hs.html',{
+                    fpBgClass:'bg-light',
+                    paddingY:'5',
+                    subtitle:'2萬~3萬',
+                    item:'5',
+                    badge1Title:true,
+                })
+                <!-- 價格區間:3萬以上 -->
+                @@include('../../partial/page/common/_products-row-hs.html',{
+                    fpBgClass:'bg-light',
+                    paddingY:'5',
+                    subtitle:'3萬以上',
+                    item:'5',
+                    badge1Title:true,
+                })
+                <!-- 維修 -->
+                @@include('../../partial/page/products/_repair-overview.html',{
+                    id:'section-repair',
+                    hr:'true',
+                    title:'維修',
+                })
+                <!-- 二手 -->
+                @@include('../../partial/page/products/_products-filter.html',{
+                    id:'section-second',
+                    hr:'true',
+                    title:'二手',
+                    tabId1:'tab-second-01',
+                    tabId2:'tab-second-02',
+                    tabId3:'tab-second-03',
+                    tabTitle1:'手機',
+                    tabTitle2:'平板電腦',
+                    tabTitle3:'穿戴裝置',
+                    dataParent:'accordion-second-01',
+                    seriesId1:'collapse-second-01-cat1',
+                    seriesId2:'collapse-second-01-cat2',
+                    seriesId3:'collapse-second-01-cat3',
+                    seriesTitle1:'旗艦',
+                    seriesTitle2:'中高階',
+                    seriesTitle3:'入門',
+                    mixitupId:'2',
+                    rowStyle:'filter',
+                    item:'4'
+                })
+                <!-- 已下市 -->
+                @@include('../../partial/page/products/_products-old-list.html',{
+                    id:'section-old',
+                    hr:'true',
+                    title:'已下市產品',
+                    collapseId:'Old',
+                    year1:'2022',
+                    year2:'2021',
+                    year3:'2020',
+                })
+                <!-- 台灣未上市 -->
+                @@include('../../partial/page/products/_products-old-list.html',{
+                    id:'section-nosale',
+                    hr:'true',
+                    title:'台灣未上市',
+                    collapseId:'Nosale',
+                    year1:'2022',
+                    year2:'2021',
+                    year3:'2020',
+                })
+            </div>
+
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+
+        @@include('../../partial/modal/_quickview.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+        <!-- Single -->
+        <script src="/assets/javascripts/vendor/jquery.mixitup.min.js"></script>
+        <script src="/assets/javascripts/function/mixitup.js"></script>
+        <script>
+//            $('.filter-select option[data-hidable="true"]').hide();
+        </script>
+
+    </body>
+</html>

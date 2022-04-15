@@ -1,0 +1,34 @@
+<div class="@@if(context.col){col-lg-@@colLg col-md-@@colMd col-@@col} @@if(context.marginY!='0'){my-2}">
+    <div class="card mx-auto text-white shadow h-100 @@if(context.cardSize){@@cardSize}">
+        @@if(context.badgeLabel){
+        <div class="pos-a-lt ml-1 mt-n1">
+            <span class="badge badge-light">@@badgeLabel</span>
+        </div>
+        }
+        <a class="h-100" href="@@href">
+            <img src="@@img" class="of-cover" alt="@@title">
+        </a>
+        <div class="card-img-overlay py-1">
+            <div class="hashtags text-row-1">
+                <a class="hashtag" href="#">@@tag1</a>
+                @@if(context.tag2){
+                <a class="hashtag" href="#">@@tag2</a>
+                }
+                @@if(context.tag3){
+                <a class="hashtag" href="#">@@tag3</a>
+                }
+                @@if(context.tag4){
+                <a class="hashtag" href="#">@@tag4</a>
+                }
+            </div>
+            <a href="@@href" class="text-row-12 font-weight-bold my-1 text-white">
+                @@title
+            </a>
+            <div class="d-none d-lg-block">
+                <div class="font-small text-light">
+                    <small>@@date</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
