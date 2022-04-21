@@ -10,7 +10,6 @@ package-lock.json
 .publish
 
 __*
-_notes
 src/html/articles/detail.html
 src/html/articles/index.html
 src/html/articles/list.html
