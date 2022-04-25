@@ -3,3 +3,8 @@
         width: 100% !important;
     }
 }
+.h-lg-180 {
+    @include media-breakpoint-up(lg) {
+        height: 180px !important;
+    }
+}
