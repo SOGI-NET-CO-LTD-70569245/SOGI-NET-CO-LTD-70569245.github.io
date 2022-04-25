@@ -1151,6 +1151,10 @@ a.box:hover {
   .w-lg-100 {
     width: 100% !important; } }
 
+@media (min-width: 992px) {
+  .h-lg-180 {
+    height: 180px !important; } }
+
 .shadow-warning {
   box-shadow: 0 0 0.5rem #F8CD46 !important; }
 
