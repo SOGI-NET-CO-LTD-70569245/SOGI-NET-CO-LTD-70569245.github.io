@@ -1071,6 +1071,9 @@ a.box:hover {
 .bd-2 {
   border-width: 2px !important; }
 
+.bd-3 {
+  border-width: 3px !important; }
+
 .bd-gray-light {
   border-color: #dee2e6; }
 
