@@ -30,9 +30,9 @@
         </div>
     </div>
 
-    <div class="container-fluid px-0 border-top @@if(context.fpBgClass){@@fpBgClass}">
-        <div class="container py-5">
-
+    <div class="container-fluid pt-5 px-0 border-top @@if(context.fpBgClass){@@fpBgClass}">
+        
+        <div class="sticky-top">
             @@if(context.searchFunc=='true'){
                 @@include('../products/_price-search-func.html',{
                     navActive: '@@navActive',
@@ -41,6 +41,9 @@
                     btnName:'@@btnName',
                 })
             }
+        </div>
+        
+        <div class="container pb-5">
 
             @@if(context.filter=='true'){
             <div class="row align-items-center justify-content-between mb-3">
@@ -117,7 +120,7 @@
                         update:'2019/12/31',
                     }
                     @@if(context.itemBtnNumber=='3'){
-                        btn:'primary',
+                        btn:'warning',
                         btnPrimaryName:'@@btnPrimaryName',
                     }
                     @@if(context.itemBtnNumber=='2'){
