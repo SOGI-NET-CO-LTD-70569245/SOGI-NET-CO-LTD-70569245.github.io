@@ -118,6 +118,9 @@ small.text-row-2 {
     .text-row-32 {
       -webkit-line-clamp: 2; } }
 
+.text-fix-3 {
+  min-height: 4rem; }
+
 .font-small {
   font-size: .85rem; }
   .font-small.text-row-2 {
