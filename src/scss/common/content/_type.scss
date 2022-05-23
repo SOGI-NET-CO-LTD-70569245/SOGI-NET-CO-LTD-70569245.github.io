@@ -79,6 +79,11 @@ small {
     }
 }
 
+// text height fix
+.text-fix-3 {
+    min-height: 4rem;
+}
+
 .font-small {
     font-size: .85rem;
     &.text-row-2 {
