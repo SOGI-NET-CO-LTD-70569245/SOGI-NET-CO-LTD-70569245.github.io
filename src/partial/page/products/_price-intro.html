@@ -8,7 +8,7 @@
                 </figure>
             </div>
             <div class="col-12 col-lg-10">
-                <div class="row mb-3">
+                <div class="row mb-5">
                     <div class="col-2 d-lg-none">
                         <figure class="m-0 h-100">
                             <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/LG_lg_stylus_3_0320081720195_360x270.jpg" class="of-cover" alt="@@title1" style="height: 75px;">
@@ -17,7 +17,7 @@
                     <div class="col col-lg-12">
                         <h1 class="d-block fs-h4 mb-3">@@title1 @@title2</h1>
 
-                        <div class="row mb-5">
+                        <div class="row">
                             @@if(context.group){
                             <div class="col-6 col-md-4 col-lg-3 pr-1">
                                 @@include('../../unit/_btn.html',{
@@ -58,152 +58,46 @@
                     </div>
                 </div>
 
+                @@if(context.group=='new'){
+                <div class="row row-hs no-gutters mb-5">
+                    <div class="col-auto px-1">
+                        <a class="btn btn-outline-secondary text-left disabled" href="#">
+                            <div class="lead font-weight-bold">128GB</div>
+                            最低 $26,900
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <a class="btn btn-outline-primary text-left" href="#">
+                            <div class="lead font-weight-bold">256GB</div>
+                            最低 $26,900
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <a class="btn btn-outline-secondary text-left disabled" href="#">
+                            <div class="lead font-weight-bold">512GB</div>
+                            最低 $26,900
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <a class="btn btn-outline-secondary text-left disabled" href="#">
+                            <div class="lead font-weight-bold">終極特別版</div>
+                            最低 $26,900
+                        </a>
+                    </div>
+                </div>
+                }
+
                 @@if(context.group=='repair-store'){
                 <div class="row">
-                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-right">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <a class="text-decoration-none" href="#">
-                                    <div class="text-dark font-small mb-1">換螢幕(顯示觸控正常)</div>
-                                    <div class="h3 font-weight-bold text-primary">$1,000</div>
-                                </a>
-                            </div>
-                            <div class="col-md-auto col-12">
-                                @@include('../../unit/_btn.html',{
-                                    btnColor:'primary',
-                                    btnRounded:'pill',
-                                    href:'#',
-                                    btnName:'查詢',
-                                })
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-lg-right">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col">
-                                <a class="text-decoration-none" href="#">
-                                    <div class="text-dark font-small mb-1">換螢幕(顯示觸控異常)</div>
-                                    <div class="h3 font-weight-bold text-primary">$300</div>
-                                </a>
-                            </div>
-                            <div class="col-md-auto col-12">
-                                @@include('../../unit/_btn.html',{
-                                    btnColor:'primary',
-                                    btnRounded:'pill',
-                                    href:'#',
-                                    btnName:'查詢',
-                                })
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-right">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col">
-                                <a class="text-decoration-none" href="#">
-                                    <div class="text-dark font-small mb-1">換電池</div>
-                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
-                                </a>
-                            </div>
-                            <div class="col-md-auto col-12">
-                                @@include('../../unit/_btn.html',{
-                                    btnColor:'primary',
-                                    btnRounded:'pill',
-                                    href:'#',
-                                    btnName:'查詢',
-                                })
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col">
-                                <a class="text-decoration-none" href="#">
-                                    <div class="text-dark font-small mb-1">前相機</div>
-                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
-                                </a>
-                            </div>
-                            <div class="col-md-auto col-12">
-                                @@include('../../unit/_btn.html',{
-                                    btnColor:'primary',
-                                    btnRounded:'pill',
-                                    href:'#',
-                                    btnName:'查詢',
-                                })
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-right">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col">
-                                <a class="text-decoration-none" href="#">
-                                    <div class="text-dark font-small mb-1">後相機</div>
-                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
-                                </a>
-                            </div>
-                            <div class="col-md-auto col-12">
-                                @@include('../../unit/_btn.html',{
-                                    btnColor:'primary',
-                                    btnRounded:'pill',
-                                    href:'#',
-                                    btnName:'查詢',
-                                })
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-lg-right">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col">
-                                <a class="text-decoration-none" href="#">
-                                    <div class="text-dark font-small mb-1">現場檢測</div>
-                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
-                                </a>
-                            </div>
-                            <div class="col-md-auto col-12">
-                                @@include('../../unit/_btn.html',{
-                                    btnColor:'primary',
-                                    btnRounded:'pill',
-                                    href:'#',
-                                    btnName:'查詢',
-                                })
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2 border-right">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col">
-                                <a class="text-decoration-none" href="#">
-                                    <div class="text-dark font-small mb-1">充電線插孔問題</div>
-                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
-                                </a>
-                            </div>
-                            <div class="col-md-auto col-12">
-                                @@include('../../unit/_btn.html',{
-                                    btnColor:'primary',
-                                    btnRounded:'pill',
-                                    href:'#',
-                                    btnName:'查詢',
-                                })
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-6 col-lg-3 mb-3 pl-6 pl-lg-2">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col">
-                                <a class="text-decoration-none" href="#">
-                                    <div class="text-dark font-small mb-1">軟體重灌</div>
-                                    <div class="h3 font-weight-bold text-primary">$29,000</div>
-                                </a>
-                            </div>
-                            <div class="col-md-auto col-12">
-                                @@include('../../unit/_btn.html',{
-                                    btnColor:'primary',
-                                    btnRounded:'pill',
-                                    href:'#',
-                                    btnName:'查詢',
-                                })
-                            </div>
-                        </div>
-                    </div> -->
+                    @@loop('../../unit/_price-intro-repair-item.html', [
+                        {label:'換螢幕(顯示觸控正常)', price:'1,000', btnColor:'primary',},
+                        {label:'換螢幕(顯示觸控異常)', price:'300', btnColor:'primary',},
+                        {label:'換電池', price:'23,300', btnColor:'primary',},
+                        {label:'前相機', price:'15,200', btnColor:'primary',},
+                        {label:'後相機', price:'8,150', btnColor:'primary',},
+                        {label:'現場檢測', price:'1,500', btnColor:'primary',},
+                        {label:'充電線插孔問題', price:'800', btnColor:'primary',},
+                    ])
                 </div>
                 }
                 @@if(context.group!='repair-store'){

@@ -1,6 +1,6 @@
 <div class="col-12 col-md-6 col-lg-3 my-2 @@if(context.cat){mix-item @@cat}" @@if(context.cat){data-sort-price="@@sortPrice" data-sort-date="@@sortDate" data-sort-hot="@@sortHot"}>
     <!-- <div class="h-100 p-0 p-lg-2 shadow border bd-2 border-@@borderColor"> -->
-    <div class="h-100 p-0 p-lg-2 bg-white shadow @@if(context.borderColor){border bd-3 border-@@borderColor}">
+    <div class="h-100 p-0 p-lg-2 bg-white shadow border bd-3 border-@@borderColor">
         @@if(context.badgeFlagTitle){
         <div class="position-absolute right-0 top-0 z-1 mr-2">
             <div class="badge-flag text-center">
@@ -68,7 +68,11 @@
                         </a>
                     </div>
                     <div class="mb-1">
-                        <div class="text-danger">@@if(context.priceTitle){@@priceTitle}&nbsp;</div>
+                        <div>
+                        <div class="py-1 d-inline-block font-small @@if(context.priceTitleType=='text'){text-danger} @@if(context.priceTitleType=='badge'){px-1 bg-light}">
+                            @@if(context.priceTitle){@@priceTitle}&nbsp;
+                        </div>
+                        </div>
                         @@if(context.priceLogin=='true'){
                         <del>$@@price</del> <span class="h4 text-danger font-weight-bold">登入驚喜價</span>
                         }
