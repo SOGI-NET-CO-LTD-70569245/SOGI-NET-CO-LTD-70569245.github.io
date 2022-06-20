@@ -457,6 +457,11 @@ select {
 .btn-loadmore[aria-expanded="true"] {
   display: none; }
 
+.btn-hover-ol-primary:focus, .btn-hover-ol-primary:hover {
+  background: none !important;
+  border-color: #337ab7 !important;
+  color: #337ab7 !important; }
+
 [class^="icon-"],
 [class*="icon-"] {
   position: relative;
