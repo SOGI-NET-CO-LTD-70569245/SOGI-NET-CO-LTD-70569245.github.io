@@ -23,3 +23,11 @@
 .btn-loadmore[aria-expanded="true"] {
     display: none;
 }
+.btn-hover-ol-primary {
+    &:focus,
+    &:hover {
+        background: none !important;
+        border-color: $primary !important;
+        color: $primary !important;
+    }
+}
