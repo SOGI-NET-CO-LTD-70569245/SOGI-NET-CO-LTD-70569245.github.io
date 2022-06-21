@@ -1,0 +1,29 @@
+<li class="list-group-item d-flex py-2 px-0">
+    <span class="col-4 col-lg-2 text-secondary">
+        @@label
+    </span>
+    <span class="col-8 col-lg-10">
+        @@if(context.href){
+            <a href="@@href">
+        }
+        @@desc
+        @@if(context.tip){
+            <small>@@tip</small>
+        }
+        @@if(context.href){
+                <span class="ml-1 text-danger">
+                    <i class="fas fa-map-marker-alt"></i>
+                </span>
+            </a>
+        }
+        @@if(context.rateCount){
+            <span class="text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>  
+            </span> (@@rateCount)
+        }
+    </span>
+</li>

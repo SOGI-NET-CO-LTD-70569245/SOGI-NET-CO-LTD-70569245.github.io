@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'購物'})
+    </head>
+
+	<body class="products">
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_ad-970.html',{textAd:'true'})
+            @@include('../../partial/comp/_breadcrumb.html')
+            @@include('../../partial/page/shop/_shop-list.html',{
+                group: {
+                    item: [
+                        {
+                            img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_10_iv_0511071811269_360x270.jpg',
+                            title:'Sony Xperia 10 IV',
+                            price:'12,990',
+                            desc:'5G 輕量防水手機 Sony Xperia 10 IV',
+                            countdown:'2022/12/31',
+                            href:'#'
+                        },
+                        {
+                            img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_redmi_note_11s_5g_0520063820993_360x270.jpg',
+                            title:'小米 Redmi Note 11S 5G',
+                            price:'6,190',
+                            desc:'不同顏色價格可能不同，請洽門市',
+                            countdown:'2022/12/31',
+                            href:'#'
+                        },
+                    ],
+                },
+            })
+            @@include('../../partial/page/shop/_scroller-status.html')
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+        <!-- Single -->
+        <script src="/assets/javascripts/vendor/jquery.countdown.min.js"></script>
+        <script src="/assets/javascripts/function/countdown.js"></script>
+        <script src="/assets/javascripts/vendor/infinite-scroll.pkgd.min.js"></script>
+        <script>
+            $('.article').infiniteScroll({
+                path: 'index{{#}}.html',
+                append: '.post',
+//                button: '.view-more-button',
+                status: ".scroller-status",
+            });
+        </script>
+
+    </body>
+</html>

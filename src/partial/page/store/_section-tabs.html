@@ -1,0 +1,97 @@
+<div class="my-2">
+    @@include('unit/_bar-title.html',{
+        title:'@@title'
+    })
+    <div class="nav-responsive">
+        <ul class="nav nav-tabs mt-2" role="tablist">
+            <li class="nav-item"><a class="nav-link active" href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">@@tab1Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">@@tab2Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab-3" aria-controls="tab-3" role="tab" data-toggle="tab">@@tab3Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab-4" aria-controls="tab-4" role="tab" data-toggle="tab">@@tab4Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab-5" aria-controls="tab-5" role="tab" data-toggle="tab">@@tab5Label</a></li>
+        </ul>
+    </div>
+    <div class="tab-content py-2">
+        <div role="tabpanel" class="tab-pane active" id="tab-1">
+            <div class="table-responsive">
+                @@if(context.state=="new"){
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th class="text-center">資費名稱</th>
+                            <th class="text-center">合約內容</th>
+                            <th class="text-center nowrap">新辦</th>
+                            <th class="text-center nowrap">續約</th>
+                            <th class="text-center nowrap">攜碼</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-title="資費名稱">4G-手機絕配599(24)</td>
+                            <td data-title="合約內容">綁約24個</td>
+                            <td data-title="新辦" class="text-center"><span class="text-price">$5,000</span></td>
+                            <td data-title="續約" class="text-center"><span class="text-price">$5,000</span></td>
+                            <td data-title="攜碼" class="text-center"><span class="text-price">$5,000</span></td>
+                        </tr>
+                        <tr>
+                            <td data-title="資費名稱">4G-手機絕配599(24)</td>
+                            <td data-title="合約內容">綁約24個</td>
+                            <td data-title="新辦" class="text-center"><span class="text-price">$5,000</span></td>
+                            <td data-title="續約" class="text-center"><span class="text-price">$5,000</span></td>
+                            <td data-title="攜碼" class="text-center"><span class="text-price">$5,000</span></td>
+                        </tr>
+                        <tr>
+                            <td data-title="資費名稱">4G-手機絕配599(24)</td>
+                            <td data-title="合約內容">綁約24個</td>
+                            <td data-title="新辦" class="text-center"><span class="text-price">$5,000</span></td>
+                            <td data-title="續約" class="text-center"><span class="text-price">$5,000</span></td>
+                            <td data-title="攜碼" class="text-center"><span class="text-price">$5,000</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                }
+                @@if(context.state=="repair"){
+                <table class = "table table-bordered table-striped">
+                    <thead class="thead-inverse">
+                        <tr>
+                        <th class="text-center" width="35%">狀況</th>
+                        <th class="text-center" width="25%">維修方案</th>
+                        <th class="text-center" width="20%">預估時間</th>
+                        <th class="text-center">價格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-title = "狀況" class = "text-center">外層螢幕破碎(螢幕顯示正常)</td>
+                            <td data-title="維修方案" class="text-center">&nbsp;</td>
+                            <td data-title="預估時間" class="text-center">-</td>
+                            <td data-title="價格" class="text-center">- <span class="badge badge-success">原廠價</span></td>
+                        <tr>
+                            <td data-title = "狀況" class = "text-center">內層螢幕破裂(螢幕無法顯示)</td>
+                            <td data-title="維修方案" class="text-center">&nbsp;</td>
+                            <td data-title="預估時間" class="text-center">fifteen_min</td>
+                            <td data-title="價格" class="text-center"><span class="text-price">$ 1,000</span> <span class="badge badge-info">副廠價</span></td>
+                        <tr>
+                            <td data-title = "狀況" class = "text-center">螢幕無法觸控</td>
+                            <td data-title="維修方案" class="text-center">&nbsp;</td>
+                            <td data-title="預估時間" class="text-center">-</td>
+                            <td data-title="價格" class="text-center">-</td>
+                    </tbody>
+                </table>
+                }
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab-2">
+            放表格2
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab-3">
+            放表格3
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab-4">
+            放表格4
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab-5">
+            放表格5
+        </div>
+    </div>
+    </div>

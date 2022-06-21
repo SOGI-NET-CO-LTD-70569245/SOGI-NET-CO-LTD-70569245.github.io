@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'購物'})
+    </head>
+
+	<body class="products">
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_ad-970.html',{textAd:'true'})
+            @@include('../../partial/comp/_breadcrumb.html')
+            @@include('../../partial/page/shop/_shop-list.html',{
+                group: {
+                    item: [
+                        {
+                            img:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_8_plus_0912194512478_360x270.jpg',
+                            title:'活動標題活動標題活動標題',
+                            price:'23,000',
+                            desc:'買IPhone 再送  xxx 無線充電座',
+                            countdown:'2022/12/31',
+                            href:'#'
+                        },
+                        {
+                            img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s22_0209113809496_360x270.jpg',
+                            title:'SAMSUNG Galaxy S22 128GB',
+                            price:'18,890',
+                            desc:'不同顏色價格可能不同，請洽門市',
+                            countdown:'2022/12/31',
+                            href:'#'
+                        },
+                        {
+                            img:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_8_plus_0912194512478_360x270.jpg',
+                            title:'活動標題活動標題活動標題',
+                            price:'23,000',
+                            desc:'買IPhone 再送  xxx 無線充電座',
+                            countdown:'2022/12/31',
+                            href:'#'
+                        },
+                        {
+                            img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s22_0209113809496_360x270.jpg',
+                            title:'SAMSUNG Galaxy S22 128GB',
+                            price:'18,890',
+                            desc:'不同顏色價格可能不同，請洽門市',
+                            countdown:'2022/12/31',
+                            href:'#'
+                        },
+                        {
+                            img:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_8_plus_0912194512478_360x270.jpg',
+                            title:'活動標題活動標題活動標題',
+                            price:'23,000',
+                            desc:'買IPhone 再送  xxx 無線充電座',
+                            countdown:'2022/12/31',
+                            href:'#'
+                        },
+                        {
+                            img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s22_0209113809496_360x270.jpg',
+                            title:'SAMSUNG Galaxy S22 128GB',
+                            price:'18,890',
+                            desc:'不同顏色價格可能不同，請洽門市',
+                            countdown:'2022/12/31',
+                            href:'#'
+                        },
+                        {
+                            img:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_8_plus_0912194512478_360x270.jpg',
+                            title:'活動標題活動標題活動標題',
+                            price:'23,000',
+                            desc:'買IPhone 再送  xxx 無線充電座',
+                            countdown:'2022/12/31',
+                            href:'#'
+                        },
+                        {
+                            img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s22_0209113809496_360x270.jpg',
+                            title:'SAMSUNG Galaxy S22 128GB',
+                            price:'18,890',
+                            desc:'不同顏色價格可能不同，請洽門市',
+                            countdown:'2022/12/31',
+                            href:'#'
+                        },
+                    ],
+                },
+            })
+            @@include('../../partial/page/shop/_scroller-status.html')
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+        <!-- Single -->
+        <script src="/assets/javascripts/vendor/jquery.countdown.min.js"></script>
+        <script src="/assets/javascripts/function/countdown.js"></script>
+        <script src="/assets/javascripts/vendor/infinite-scroll.pkgd.min.js"></script>
+        <script>
+            $('.article').infiniteScroll({
+                path: 'index{{#}}.html',
+                append: '.post',
+//                button: '.view-more-button',
+                status: ".scroller-status",
+            });
+        </script>
+
+    </body>
+</html>

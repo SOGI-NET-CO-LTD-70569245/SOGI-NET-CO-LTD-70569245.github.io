@@ -1,0 +1,23 @@
+<div class="pb-10">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @@include('unit/_bar-title.html',{
+                    title:'@@title'
+                })
+            </div>
+            <div class="col-md-4 col-12 mb-2">
+                <figure class="text-center h-100">
+                    <img class="of-cover rounded" src="@@img" alt="@@title">
+                </figure>
+            </div>
+            <div class="col-md-8 col-12 mb-2">
+                <ul class="list-group">
+                    @@for (var i = 0; i < group.item.length; i++) {
+                        @@include('unit/_store-list-item.html', `+(JSON.stringify(group.item[i]))+`)
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

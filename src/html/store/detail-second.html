@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'二手機價格',cssFile:'store'})
+    </head>
+
+	<body class="store">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_ad-970.html',{textAd:'true'})
+            <div class="container mb-10">
+                @@include('../../partial/page/store/_store-title.html')
+                <div class="row">
+                    <div class="col-lg-9 push-lg-3 col-12">
+                        @@include('../../partial/page/store/_section-product.html',{
+                            title:'SAMSUNG Galaxy S22 128GB 二手報價',
+                            img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s22_0209113809496_360x270.jpg',
+                            btn1Icon:'fab fa-line',
+                            btn1Label:'用LINE訂購',
+                            btn2Icon:'fas fa-phone',
+                            btn2Label:'用電話訂購',
+                            desc:'二手價：<span class="text-price h4 font-weight-bold">$19,000</span><br>狀　態：良好 (8成新)<br>貨　源：公司貨<br>保固期：已過保<br>',
+                            group: {
+                                item: [
+                                    {label:'門市名稱', desc:'一二三四五'},
+                                    {label:'門市電話', desc:'(02)2709-4233', tip:'(來電表明手機王網友)'},
+                                    {label:'門市地址', desc:'台北市106大安區復興南路一段390號8F-4', href:'#'},
+                                    {label:'門市評價', desc:'5.0', rateCount:'1635'},
+                                ],
+                            },
+                        })
+                        @@include('../../partial/page/store/_section-text.html',{
+                            title:'商品使用狀況',
+                            desc:'購買的手機為內建電池，需搭配行動電源或手機包膜<br> 有預訂手機卻又取消時，需付物流費200元<br> 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br> 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br> 購買的手機為內建電池，需搭配行動電源或手機包膜<br> 有預訂手機卻又取消時，需付物流費200元<br> 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br> 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br> 購買的手機為內建電池，需搭配行動電源或手機包膜<br> 有預訂手機卻又取消時，需付物流費200元<br> 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br> 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br>'
+                        })
+                        @@include('../../partial/page/store/_section-table.html',{
+                            title:'商品規格'
+                        })
+                        @@include('../../partial/page/store/_section-text.html',{
+                            title:'注意事項',
+                            desc:'購買的手機為內建電池，需搭配行動電源或手機包膜<br> 有預訂手機卻又取消時，需付物流費200元<br> 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br> 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br> 購買的手機為內建電池，需搭配行動電源或手機包膜<br> 有預訂手機卻又取消時，需付物流費200元<br> 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br> 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br> 購買的手機為內建電池，需搭配行動電源或手機包膜<br> 有預訂手機卻又取消時，需付物流費200元<br> 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br> 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br>'
+                        })
+                    </div>
+                    <div class="col-lg-3 pull-lg-9 col-12">
+                        @@include('../../partial/page/store/_sidebar-list-collapse.html')
+                    </div>
+                </div>
+            </div>
+            @@include('../../partial/comp/_popup-message.html')
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+        @@include('../../partial/page/store/_js-readmore.html')
+    </body>
+</html>

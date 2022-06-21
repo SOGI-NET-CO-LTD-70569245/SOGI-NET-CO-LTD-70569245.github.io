@@ -1,0 +1,47 @@
+<div class="row mb-4">
+    <h1 class="col-12 m-0 mb-4">@@title</h1>
+    <div class="col-md-4 col-12 text-center">
+        <figure>
+            <img class="img-fluid" src="@@img" alt="@@title">
+        </figure>
+        <div class="row no-gutters align-items-center align-items-lg-start justify-content-center my-10">
+            <div class="col-auto">
+                <div class="my-2">
+                    立即購買：
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col col-lg-12 my-1">
+                        <a class="btn btn-block btn-line" href="#">
+                            <i class="fa-fw @@btn1Icon"></i> @@btn1Label
+                        </a>
+                    </div>
+                    @@if(context.btn2Icon){
+                    <div class="col col-lg-12 my-1">
+                        <a class="btn btn-block btn-line" href="#">
+                            <i class="fa-fw @@btn2Icon"></i> @@btn2Label
+                        </a>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 col-12">
+        <div class="clearfix">
+            <div class="mb-4">
+                @@desc
+            </div>
+            <div class="">
+                <small class="text-muted">更新日期：2015/12/3</small>
+            </div>
+            <ul class="list-group">
+                @@for (var i = 0; i < group.item.length; i++) {
+                    @@include('unit/_store-list-item.html', `+(JSON.stringify(group.item[i]))+`)
+                }
+            </ul>
+        </div>
+
+    </div>
+</div>
