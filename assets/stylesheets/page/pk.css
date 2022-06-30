@@ -66,14 +66,6 @@
     */ }
   .table-pk .btn-remove-col,
   .table-pk .btn-remove-row {
-    padding: 2px;
-    width: 20px;
-    height: 20px;
-    font-size: 13px;
-    line-height: 1;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius: 50%;
     opacity: .5; }
     .table-pk .btn-remove-col:hover,
     .table-pk .btn-remove-row:hover {
@@ -91,9 +83,8 @@
   .table-pk tbody td {
     font-size: .8em; }
   .table-pk .drag {
-    position: relative; }
-    .table-pk .drag img {
-      cursor: move; }
+    position: relative;
+    cursor: move; }
     .table-pk .drag .btn {
       position: absolute;
       right: 5px;
