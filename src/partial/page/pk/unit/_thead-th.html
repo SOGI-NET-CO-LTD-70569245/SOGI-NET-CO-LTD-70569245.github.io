@@ -1,0 +1,18 @@
+<th class="text-center drag" @@if(context.width){width="@@width"}>
+    @@if(context.label){
+        @@if(context.href!=''){
+        <div class="d-flex flex-row align-items-center justify-content-center">
+            <a class="text-white" href="#">@@label</a>
+            <div class="ml-1">
+                @@include('_btn-remove.html',{direction:'col', textColor:'white'})
+            </div>
+        </div>
+        }
+        @@if(context.href==''){
+            <div class="text-white">@@label</div>
+        }
+    }
+    @@if(context.img){
+        <img src="@@img" class="img-fluid" style="max-height: 75px;" alt="">
+    }
+</th>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'車拼',cssFile:'pk'})
+    </head>
+
+	<body>
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            產品拖曳效果失效
+            @@include('../../partial/comp/_ad-970.html')
+            <div class="container mb-10">
+                <h1 class="d-flex flex-row align-items-center justify-content-between mt-2">
+                    <div>
+                        車拼
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn px-3 btn-facebook" href="#"><i class="fab fa-fw fa-facebook-square"></i></a>
+                        <a class="btn px-3 btn-line" href="#"><i class="fab fa-fw fa-line white"></i></a>
+                    </div>
+                </h1>
+                <ul class="nav nav-pills nav-styled my-2">
+                    <li class="nav-item"><a class="nav-link active" href="#">手機</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">平板</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">穿戴裝置</a></li>
+                    <li class="nav-item mx-2">
+                        <a href="" class="btn btn-danger" data-toggle="modal" data-target="#modal-type"><i class="fa fa-plus"></i></a>
+                    </li>
+                </ul>
+                <div class="table-overflow">
+                    <table class="table table-bordered table-condensed table-hover table-pk" aria-multiselectable="true">
+                        @@include('../../partial/page/pk/_thead.html',{                                
+                            bgColor:'primary',
+                            group: {
+                                th: [
+                                    {width:'10%', label:'名稱', href:''},
+                                    {width:'18%', label:'小米 Redmi Note 11S 5G', href:'#'},
+                                    {width:'18%', label:'Sony Xperia 1 IV 256GB', href:'#'},
+                                    {width:'18%', label:'realme GT Neo 3T', href:'#'},
+                                    {width:'18%', label:'POCO F4 GT', href:'#'},
+                                    {width:'18%', label:'OPPO A77 5G 128GB', href:'#'},
+                                ]
+                            },
+                        })
+                        @@include('../../partial/page/pk/_thead.html',{                                
+                            group: {
+                                th: [
+                                    {width:'10%', img:'/assets/images/ui/logo-sq.png', alt:'Sogi!手機王'},
+                                    {width:'18%', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_redmi_note_11s_5g_0520063820993_360x270.jpg'},
+                                    {width:'18%', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_1_iv_0511071911418_360x270.jpg'},
+                                    {width:'18%', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Realme_realme_gt_neo_3t_0607052007577_360x270.jpg'},
+                                    {width:'18%', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/POCO_poco_f4_gt_0427063527240_360x270.jpg'},
+                                    {width:'18%', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/OPPO_oppo_a77_5g_0621050221010_360x270.jpg'},
+                                ]
+                            },
+                        })
+                        <tbody>
+                            @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                                align:'center',
+                                label:'原廠價',
+                                group: {
+                                    td: [
+                                        {align:'center', label:'$ 10,000'},
+                                        {align:'center', label:'$ 20,000'},
+                                        {align:'center', label:'$ 30,000'},
+                                        {align:'center', label:'$ 40,000'},
+                                        {align:'center', label:'$ 50,000', btn:true},
+                                    ]
+                                },
+                            })
+                            @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                                align:'center',
+                                label:'空機價',
+                                group: {
+                                    td: [
+                                        {align:'center', label:'$ 10,000', href:'#'},
+                                        {align:'center', label:'$ 20,000', href:'#'},
+                                        {align:'center', label:'$ 30,000', href:'#'},
+                                        {align:'center', label:'$ 40,000', href:'#'},
+                                        {align:'center', label:'$ 50,000', href:'#', btn:true},
+                                    ]
+                                },
+                            })
+                            @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                                align:'center',
+                                label:'二手價',
+                                group: {
+                                    td: [
+                                        {align:'center', label:'$ 20,000', href:'#'},
+                                        {align:'center', label:'$ 20,000', href:'#'},
+                                        {align:'center', label:'$ 20,000', href:'#'},
+                                        {align:'center', label:'$ 20,000', href:'#'},
+                                        {align:'center', label:'$ 20,000', href:'#', btn:true},
+                                    ]
+                                },
+                            })
+                            @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                                align:'center',
+                                label:'上市日期',
+                                group: {
+                                    td: [
+                                        {align:'center', label:'2015/12/31'},
+                                        {align:'center', label:'2014/1/1'},
+                                        {align:'center', label:'2015/5/15'},
+                                        {align:'center', label:'2015/1/15'},
+                                        {align:'center', label:'2022/12/31', btn:true},
+                                    ]
+                                },
+                            })
+                            @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                                align:'center',
+                                label:'評價',
+                                group: {
+                                    td: [
+                                        {align:'center', rate:'5'},
+                                        {align:'center', rate:'4'},
+                                        {align:'center', rate:'3'},
+                                        {align:'center', rate:'2'},
+                                        {align:'center', rate:'1', btn:true},
+                                    ]
+                                },
+                            })
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <td colspan="6">
+                                    <div id="chart_price"></div>
+                                </td>
+                            </tr>
+                        </thead>
+                        @@include('../../partial/page/pk/_tbody-collapse.html',{
+                            bgColor:'info',
+                            colspan:'6',
+                            id:'collapse-1',
+                            label:'手機分類',
+                        })
+                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            align:'left',
+                            label:'手機分類',
+                            group: {
+                                td: [
+                                    {align:'left', label:'雙卡雙待機1'},
+                                    {align:'left', label:'雙卡雙待機2'},
+                                    {align:'left', label:'雙卡雙待機3'},
+                                    {align:'left', label:'雙卡雙待機4'},
+                                    {align:'left', label:'雙卡雙待機5', btn:true},
+                                ]
+                            },
+                        })
+                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            align:'left',
+                            label:'頻率系統',
+                            group: {
+                                td: [
+                                    {align:'left', label:'GSM1900'},
+                                    {align:'left', label:'GSM1900'},
+                                    {align:'left', label:'GSM1900'},
+                                    {align:'left', label:'GSM1900'},
+                                    {align:'left', label:'GSM1900', btn:true},
+                                ]
+                            },
+                        })
+                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            align:'left',
+                            label:'作業系統',
+                            group: {
+                                td: [
+                                    {align:'left', label:'Android 1.1'},
+                                    {align:'left', label:'Android 2.1'},
+                                    {align:'left', label:'Android 3.1'},
+                                    {align:'left', label:'Android 4.1'},
+                                    {align:'left', label:'Android 5.1', btn:true},
+                                ]
+                            },
+                        })
+                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            align:'left',
+                            label:'處理器',
+                            group: {
+                                td: [
+                                    {align:'left', label:'Qualcomm 1'},
+                                    {align:'left', label:'Qualcomm 2'},
+                                    {align:'left', label:'Qualcomm 3'},
+                                    {align:'left', label:'Qualcomm 4'},
+                                    {align:'left', label:'Qualcomm 5', btn:true},
+                                ]
+                            },
+                        })
+                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            align:'left',
+                            label:'處理器分類',
+                            group: {
+                                td: [
+                                    {align:'left', label:'一核心處理器'},
+                                    {align:'left', label:'二核心處理器'},
+                                    {align:'left', label:'三核心處理器'},
+                                    {align:'left', label:'四核心處理器'},
+                                    {align:'left', label:'五核心處理器', btn:true},
+                                ]
+                            },
+                        })
+                        </tbody>
+                        @@include('../../partial/page/pk/_tbody-collapse.html',{
+                            bgColor:'info',
+                            colspan:'6',
+                            id:'collapse-2',
+                            label:'尺寸',
+                        })
+                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            align:'left',
+                            label:'重量',
+                            group: {
+                                td: [
+                                    {align:'left', label:'100g'},
+                                    {align:'left', label:'200g'},
+                                    {align:'left', label:'300g'},
+                                    {align:'left', label:'400g'},
+                                    {align:'left', label:'500g', btn:true},
+                                ]
+                            },
+                        })
+                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            align:'left',
+                            label:'長寬高',
+                            group: {
+                                td: [
+                                    {align:'left', label:'1.24” x 5.96” x 0.33”'},
+                                    {align:'left', label:'2.24” x 5.96” x 0.33”'},
+                                    {align:'left', label:'3.24” x 5.96” x 0.33”'},
+                                    {align:'left', label:'4.24” x 5.96” x 0.33”'},
+                                    {align:'left', label:'5.24” x 5.96” x 0.33”', btn:true},
+                                ]
+                            },
+                        })
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <style type="text/css">
+            [draggable] {
+		  -moz-user-select: none;
+		  -khtml-user-select: none;
+		  -webkit-user-select: none;
+		  user-select: none;
+		  /* Required to make elements draggable in old WebKit */
+		  -khtml-user-drag: element;
+		  -webkit-user-drag: element;
+		}
+        </style>
+        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/modal/_pk-type.html')
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+        @@include('../../partial/page/pk/_js-single.html')
+    </body>
+</html>

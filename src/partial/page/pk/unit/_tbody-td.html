@@ -1,0 +1,17 @@
+<td class="text-@@align">
+    @@if(context.href){
+        <a href="@@href" class="text-danger">
+    }
+        @@if(context.label){
+            @@label
+        }
+        @@if(context.rate){
+            <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+        }
+    @@if(context.href){
+        </a>
+    }
+    @@if(context.btn===true){
+        @@include('_btn-remove.html',{direction:'row', textColor:'muted'})
+    }
+</td>

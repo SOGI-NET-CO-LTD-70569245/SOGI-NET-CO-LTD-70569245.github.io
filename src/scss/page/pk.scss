@@ -36,14 +36,6 @@
     }
     .btn-remove-col,
     .btn-remove-row {
-        padding: 2px;
-        width: 20px;
-        height: 20px;
-        font-size: 13px;
-        line-height: 1;
-        text-align: center;
-        box-sizing: border-box;
-        @include border-radius(50%);
         opacity:.5;
         &:hover {
             opacity:1;
@@ -83,9 +75,7 @@
     }
     .drag {
         position: relative;
-        img {
-            cursor:move;
-        }
+        cursor:move;
         .btn {
             position: absolute;
             right:5px;

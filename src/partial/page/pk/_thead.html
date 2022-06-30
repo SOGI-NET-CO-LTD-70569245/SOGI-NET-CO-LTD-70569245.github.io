@@ -1,0 +1,7 @@
+<thead class="header">
+    <tr class="bg-@@bgColor dnd-moved">
+        @@for (var i = 0; i < group.th.length; i++) {
+            @@include('unit/_thead-th.html', `+(JSON.stringify(group.th[i]))+`)
+        }
+    </tr>
+</thead>

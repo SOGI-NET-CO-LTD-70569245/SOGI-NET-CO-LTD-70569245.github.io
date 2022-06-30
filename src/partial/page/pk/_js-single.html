@@ -1,0 +1,140 @@
+<!-- Single -->
+<script src="/assets/javascripts/vendor/highcharts.js"></script>
+<script src="/assets/javascripts/vendor/highcharts-more.js"></script>
+<script src="/assets/javascripts/vendor/exporting.js"></script>
+<script src="/assets/javascripts/vendor/jquery.stickytableheaders.min.js"></script>
+<!-- <script src="/assets/javascripts/vendor/jquery-ui.min.js?v=1.13"></script>
+<script src="/assets/javascripts/vendor/jquery.dragtable.min.js?v=2.0.15"></script> -->
+<script src="/assets/javascripts/vendor/dragndrop.table.columns.min.js?v=3.1.5"></script>
+<script>
+    Highcharts.theme = {
+        exporting: {
+            buttons: {
+                contextButtons: {
+                    enabled: false,
+                    menuItems: null
+                }
+            },
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        lang: {
+          thousandsSep: ','
+        }
+    };
+
+    Highcharts.setOptions(Highcharts.theme);
+
+    $(function () {
+        $('table').stickyTableHeaders();
+
+        $('#chart_price').highcharts({
+            chart: {
+                height: 300,
+            },
+            title: {
+                text: '',
+                x: -20 //center
+            },
+            xAxis: {
+                categories: ['11-06', '11-07', '11-08', '11-09', '11-10', '11-11', '11-12']
+            },
+            yAxis: {
+                title: {
+                    text: '價格'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                pointFormat: "{point.y}"
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        format: '{y}'
+                    },
+                    //enableMouseTracking: false
+                }
+            },
+            series: [{
+                showInLegend: false,
+                name: 'SAMSUNG GALAXY Note 5 32GB',
+                data: [25000, 24000, 24000, 23500, 23400, 23200, 19000]
+            }, {
+                name: 'LG V10',
+                data: [18000, 16000, 16000, 15800, 15400, 15350, 15400]
+            }, {
+                name: 'Sony Xperia Z5',
+                data: [18790, 17870, 17670, 17699, 18999, 19999, 20000]
+            }, {
+                name: 'OPPO R7s',
+                data: [20300, 20200, 20000, 20000, 18650, 14500, 10000]
+            }, {
+                name: 'HUAWEI G7 Plus',
+                data: [14599, 15999, 16000, 16450, 16800, 16900, 17900]
+            }]
+        });
+    });
+
+    $(document).ready(function() {
+
+        //jquery.dragtable
+        // $('.table').dragtable({
+        //     dragaccept:'.drag',
+        //     maxMovingRows:1
+        // });
+
+        //Expand Collapse all
+//                var active = true;
+//                $('#collapse-init').click(function () {
+//                    if (active) {
+//                        active = false;
+//                        $('.panel-collapse').collapse('show');
+//                        $('.panel-title').attr('data-toggle', '');
+//                        $(this).html('<i class="fas fa-minus"></i> 收合全部');
+//                    } else {
+//                        active = true;
+//                        $('.panel-collapse').collapse('hide');
+//                        $('.panel-title').attr('data-toggle', 'collapse');
+//                        $(this).html('<i class="fas fa-plus"></i> 展開全部');
+//                    }
+//                });
+
+        $('.table').dragableColumns({
+            drag: true,
+            dragClass: 'drag',
+            overClass: 'over',
+            movedContainerSelector: '.dnd-moved'
+        });
+
+        $(document).on("click", ".btn-remove-row", function(){
+            var $killrow = $(this).parents('tr');
+            $killrow.addClass("bg-secondary");
+            $killrow.fadeOut(500, function(){
+                $(this).remove();
+            });
+        });
+
+        //arrow change
+        $('.collapse').on('shown.bs.collapse', function(){
+            $(this).prev().find(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-up");
+            $(this).prev().find(".btn-remove-row").show();
+        }).on('hidden.bs.collapse', function(){
+            $(this).prev().find(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
+            $(this).prev().find(".btn-remove-row").hide();
+        });
+
+    });
+</script>
