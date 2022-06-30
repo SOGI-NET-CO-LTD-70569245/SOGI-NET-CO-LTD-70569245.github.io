@@ -7,49 +7,25 @@
 /* Color */
 /* Path */
 /* Icon */
-/* 
- * dragtable
- *
- * @Version 2.0.14
- *
- * default css
- *
- */
-/*##### the dragtable stuff #####*/
-.dragtable-sortable {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  -moz-user-select: none; }
+th[draggable] a,
+th[draggable] {
+  cursor: move; }
 
-.dragtable-sortable li {
-  margin: 0;
-  padding: 0;
-  float: left;
-  font-size: 1em;
-  background: white; }
+th[draggable] a:hover,
+th[draggable] a {
+  display: block;
+  text-decoration: none;
+  color: #333333; }
 
-.dragtable-sortable th, .dragtable-sortable td {
-  border-left: 0px; }
+.table .drag {
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0.25; }
 
-.dragtable-sortable li:first-child th, .dragtable-sortable li:first-child td {
-  border-left: 1px solid #CCC; }
+.table .dnd-drag {
+  opacity: 0.25; }
 
-.ui-sortable-helper {
-  opacity: 0.7;
-  filter: alpha(opacity=70); }
-
-.ui-sortable-placeholder {
-  box-shadow: 4px 5px 4px #C6C6C6 inset;
-  border-bottom: 1px solid #CCCCCC;
-  border-top: 1px solid #CCCCCC;
-  visibility: visible !important;
-  background: #EFEFEF !important;
-  visibility: visible !important; }
-
-.ui-sortable-placeholder * {
-  opacity: 0.0;
-  visibility: hidden; }
+.table .over {
+  background-color: rgba(0, 0, 255, 0.35); }
 
 .table-overflow {
   overflow-x: auto;
@@ -82,13 +58,6 @@
     cursor: pointer; }
   .table-pk tbody td {
     font-size: .8em; }
-  .table-pk .drag {
-    position: relative;
-    cursor: move; }
-    .table-pk .drag .btn {
-      position: absolute;
-      right: 5px;
-      top: 5px; }
 
 .like {
   position: relative; }
