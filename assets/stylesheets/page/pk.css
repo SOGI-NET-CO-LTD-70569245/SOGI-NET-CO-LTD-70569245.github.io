@@ -7,19 +7,6 @@
 /* Color */
 /* Path */
 /* Icon */
-th[draggable] {
-  cursor: move; }
-
-.table .drag {
-  background-color: rgba(0, 0, 0, 0.25);
-  opacity: 0.25; }
-
-.table .dnd-drag {
-  opacity: 0.25; }
-
-.table .over {
-  background-color: rgba(0, 0, 255, 0.35); }
-
 .table-overflow {
   overflow-x: auto;
   overflow-y: hidden; }
