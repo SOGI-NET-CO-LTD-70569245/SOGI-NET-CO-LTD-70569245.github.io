@@ -5,7 +5,7 @@
 <script src="/assets/javascripts/vendor/jquery.stickytableheaders.min.js"></script>
 <!-- <script src="/assets/javascripts/vendor/jquery-ui.min.js?v=1.13"></script>
 <script src="/assets/javascripts/vendor/jquery.dragtable.min.js?v=2.0.15"></script> -->
-<script src="/assets/javascripts/vendor/dragndrop.table.columns.min.js?v=3.1.5"></script>
+<!-- <script src="/assets/javascripts/vendor/dragndrop.table.columns.min.js?v=3.1.5"></script> -->
 <script>
     Highcharts.theme = {
         exporting: {
@@ -112,12 +112,12 @@
 //                    }
 //                });
 
-        $('.table').dragableColumns({
-            drag: true,
-            dragClass: 'drag',
-            overClass: 'over',
-            movedContainerSelector: '.dnd-moved'
-        });
+        // $('.table').dragableColumns({
+        //     drag: true,
+        //     dragClass: 'drag',
+        //     overClass: 'over',
+        //     movedContainerSelector: '.dnd-moved'
+        // });
 
         $(document).on("click", ".btn-remove-row", function(){
             var $killrow = $(this).parents('tr');

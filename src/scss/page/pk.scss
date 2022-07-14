@@ -4,7 +4,8 @@
 @import "../bootstrap4/variables";
 @import "../bootstrap/mixins";
 
-@import "../utils/jquery.dragtable";
+// @import "../common/plugin/jquery.dragtable";
+// @import "../common/plugin/dragndrop.table.columns";
 //@import "utils/jquery.stickyheader";
 
 .table-overflow {
@@ -73,15 +74,15 @@
             font-size: .8em;
         }
     }
-    .drag {
-        position: relative;
-        cursor:move;
-        .btn {
-            position: absolute;
-            right:5px;
-            top:5px;
-        }
-    }
+    // .drag {
+    //     position: relative;
+    //     cursor:move;
+    //     .btn {
+    //         position: absolute;
+    //         right:5px;
+    //         top:5px;
+    //     }
+    // }
 }
 .like {
     position: relative;

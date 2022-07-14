@@ -1,13 +1,7 @@
-<tr class="dnd-moved">
+<tr>
     @@if(context.label){
     <th class="text-@@align">
         @@label
-        <!-- <div class="d-flex justify-content-between align-items-center">
-            <div>@@label</div>
-            <div>
-                @@include('_btn-remove.html',{direction:'row', textColor:'muted'})
-            </div>
-        </div> -->
     </th>
     }
     @@for (var i = 0; i < group.td.length; i++) {

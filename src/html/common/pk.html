@@ -46,12 +46,12 @@
                         @@include('../../partial/page/pk/_thead.html',{                                
                             group: {
                                 th: [
-                                    {width:'10%', img:'/assets/images/ui/logo-sq.png', alt:'Sogi!手機王'},
-                                    {width:'18%', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_redmi_note_11s_5g_0520063820993_360x270.jpg'},
-                                    {width:'18%', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_1_iv_0511071911418_360x270.jpg'},
-                                    {width:'18%', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Realme_realme_gt_neo_3t_0607052007577_360x270.jpg'},
-                                    {width:'18%', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/POCO_poco_f4_gt_0427063527240_360x270.jpg'},
-                                    {width:'18%', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/OPPO_oppo_a77_5g_0621050221010_360x270.jpg'},
+                                    {img:'/assets/images/ui/logo.png', alt:'Sogi!手機王'},
+                                    {img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Xiaomi_xiaomi_redmi_note_11s_5g_0520063820993_360x270.jpg'},
+                                    {img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_1_iv_0511071911418_360x270.jpg'},
+                                    {img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Realme_realme_gt_neo_3t_0607052007577_360x270.jpg'},
+                                    {img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/POCO_poco_f4_gt_0427063527240_360x270.jpg'},
+                                    {img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/OPPO_oppo_a77_5g_0621050221010_360x270.jpg'},
                                 ]
                             },
                         })
@@ -125,6 +125,7 @@
                         <thead>
                             <tr>
                                 <td colspan="6">
+                                    @@include('../../partial/page/pk/unit/_btn-remove.html',{direction:'row', textColor:'muted'})
                                     <div id="chart_price"></div>
                                 </td>
                             </tr>
