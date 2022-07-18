@@ -76,6 +76,22 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-@@mixitupId">
                             <div class="dropdown-header">依門市最低</div>
+                            <a class="dropdown-item sort" href="javascript:void();">由高至低</a>
+                            <a class="dropdown-item sort" href="javascript:void();">由低至高</a>
+                            <div class="dropdown-header">依上市日</div>
+                            <a class="dropdown-item sort" href="javascript:void();">由新至舊</a>
+                            <a class="dropdown-item sort" href="javascript:void();">由舊至新</a>
+                            <div class="dropdown-header">依熱門度</div>
+                            <a class="dropdown-item sort" href="javascript:void();">由高至低</a>
+                            <a class="dropdown-item sort" href="javascript:void();">由低至高</a>
+                        </div>
+                    </div>
+                    <!-- <div class="dropdown dropdown-select">
+                        <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
+                            <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-@@mixitupId">
+                            <div class="dropdown-header">依門市最低</div>
                             <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
                             <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
                             <div class="dropdown-header">依上市日</div>
@@ -85,7 +101,7 @@
                             <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
                             <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- <select id="SortSelect-@@mixitupId" class="form-control">
                         <option hidden>&#xf160;</option>
                         <optgroup label="依門市最低">
@@ -109,7 +125,6 @@
                 @@loop('../../unit/_store-list-item.html', [
                 {
                     borderColor:'white',
-                    cat:'taipei', sortPrice:'9700', sortDate:'20191231', sortHot:'3000',
                     badgeSP1Bg:'danger', badgeSP2Bg:'warning', badgeSP1Title:'快速到貨', badgeSP2Title:'獨家贈好禮',
                     badge1:'@@badge1', badge2:'@@badge2', badge3:'@@badge3', badge4:'@@badge4',
                     img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/1863/medium/____LOGO-02.jpg',
@@ -132,7 +147,6 @@
                 },
                 {
                     borderColor:'white',
-                    cat:'newtaipei', sortPrice:'18000', sortDate:'20220105', sortHot:'700',
                     badgeSP1Bg:'danger', badgeSP1Title:'快速到貨',
                     badge1:'@@badge1', badge2:'@@badge2', badge3:'@@badge3',
                     img:'//d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/2146/medium/_____-220609-fin-01.jpg',
@@ -156,7 +170,6 @@
                 {
                     borderColor:'warning',
                     badgeFlagTitle:'一二三', 
-                    cat:'newtaipei', sortPrice:'7000', sortDate:'20210520', sortHot:'1800',
                     img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/1850/medium/_______7_.jpg',
                     title:'林口指標通訊林口指標通訊林口指標通訊',
                     rateCount:'&nbsp;',
@@ -176,7 +189,6 @@
                 },
                 {
                     borderColor:'white',
-                    cat:'taoyuan', sortPrice:'6500', sortDate:'20220301', sortHot:'2150',
                     img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/2344/medium/_______1_.jpg',
                     title:'金馬講數位通訊',
                     rateScore:'3.5', rateCount:'50',
@@ -196,7 +208,6 @@
                 },
                 {
                     borderColor:'white',
-                    cat:'taoyuan', sortPrice:'8200', sortDate:'20220311', sortHot:'250',
                     img:'https://d3c6c8kv4if4l0.cloudfront.net/www/Shop/870/medium/55999.jpg',
                     title:'中華行動屋-龍東店',
                     rateScore:'3.5', rateCount:'50',
