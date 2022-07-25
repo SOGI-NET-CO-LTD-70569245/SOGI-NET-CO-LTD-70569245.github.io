@@ -31,7 +31,34 @@
     <div class="col-md-8 col-12">
         <div class="clearfix">
             <div class="mb-4">
-                @@desc
+                <div class="mb-1">
+                    @@if(context.desc1Label){@@desc1Label：}
+                    @@if(context.price1){<span class="text-price h4 font-weight-bold">}@@desc1@@if(context.price1){</span>}
+                </div>
+                @@if(context.desc2){
+                <div class="mb-1">
+                    @@if(context.desc2Label){@@desc2Label：}
+                    @@if(context.price2){<span class="text-price h4 font-weight-bold">}@@desc2@@if(context.price2){</span>}
+                </div>
+                }
+                @@if(context.desc3){
+                <div class="mb-1">
+                    @@if(context.desc3Label){@@desc3Label：}
+                    @@if(context.price3){<span class="text-price h4 font-weight-bold">}@@desc3@@if(context.price3){</span>}
+                </div>
+                }
+                @@if(context.desc4){
+                <div class="mb-1">
+                    @@if(context.desc4Label){@@desc4Label：}
+                    @@desc4
+                </div>
+                }
+                @@if(context.desc5){
+                <div class="mb-1">
+                    @@if(context.desc5Label){@@desc5Label：}
+                    @@desc5
+                </div>
+                }
             </div>
             <div class="">
                 <small class="text-muted">更新日期：2015/12/3</small>
