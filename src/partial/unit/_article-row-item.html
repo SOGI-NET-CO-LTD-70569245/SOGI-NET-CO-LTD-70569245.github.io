@@ -1,4 +1,4 @@
-<div class="card my-4">
+<div class="card my-2 @@if(context.shadow===true){shadow}">
     <div class="row no-gutters">
         <div class="col-5 col-md-4">
             <a class="" href="@@href">
@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="col-7 col-md-8 align-self-center">
-            <div class="card-body px-2 py-0">
+            <div class="card-body px-2 py-@@paddingY">
                 <div class="hashtags card-text text-row-1">
                     <a class="hashtag" href="#">@@tag1</a>
                     @@if(context.tag2){
@@ -19,7 +19,7 @@
                     <a class="hashtag" href="#">@@tag4</a>
                     }
                 </div>
-                <div class="card-title m-0 mt-2">
+                <div class="card-title">
                     <a class="text-black font-weight-bold text-row-2" href="@@href">
                         @@title
                     </a>

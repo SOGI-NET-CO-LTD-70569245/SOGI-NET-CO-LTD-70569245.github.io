@@ -23,7 +23,6 @@ logs
 
 output
 __*
-src/html/articles/detail.html
 src/html/articles/index.html
 src/html/articles/list.html
 src/html/articles/tags.html

@@ -1,0 +1,37 @@
+<div class="container my-2" id="comments">
+    @@include('../../unit/_section-title-h2.html',{
+        hr:'@@hr',
+        title:'@@title'
+    })
+    <div class="sogi-comments">
+        <div class="form-group">
+            <textarea class="form-control" rows="3" placeholder="輸入你的留言..."></textarea>
+            <small class="form-text text-muted">
+                限 500 字以內，內容不可輸入語法或空白
+            </small>
+        </div>
+        <p>
+            <a class="btn btn-outline-primary" href="#">送出留言</a>
+            <a class="btn btn-outline-primary" href="#">以Facebook登入留言</a>
+            <a class="btn btn-outline-primary" href="#" data-toggle="modal" data-target=".modal-login">以Sogi帳號登入留言</a>
+        </p>
+        <ul class="list-unstyled">
+            @@loop('unit/_comment-item.html', [
+                {
+                    img1:"https://via.placeholder.com/336x280",
+                    img2:"https://via.placeholder.com/336x280/cf0",
+                    name1:"大醫生",
+                    name2:"大二生",
+                },
+                {
+                    img1:"https://via.placeholder.com/90x180",
+                    name1:"大三生",
+                },
+            ])
+        </ul>
+    </div>
+    @@include('unit/_fb-comments.html',{
+        id:'fb-comments',
+        numposts:'5',
+    })
+</div>

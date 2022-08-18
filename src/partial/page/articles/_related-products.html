@@ -1,0 +1,37 @@
+<div class="container my-2">
+    @@include('../../unit/_section-title-h2.html',{
+        hr:'@@hr',
+        title:'@@title'
+    })
+    <div class="row slider-rwd-2 slider">
+        @@loop('unit/_related-products-item.html', [
+            {
+                title:'Acer Aspire Switch',
+                img:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s20_fan_edition_0924043024901_160x120.jpg',
+                price1:'12,900',
+                price2:'14,900',
+                tag1:'大螢幕',
+                tag2:'高效能',
+                tag3:'Android',
+            },
+            {
+                title:'SAMSUNG Galaxy Z Fold4 256GB',
+                img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_z_fold4_0810121510702_160x120.jpg',
+                price1:'32,900',
+                price2:'34,900',
+                tag1:'大螢幕',
+                tag2:'高效能',
+                tag3:'Android',
+            },
+            {
+                title:'Apple iPhone 13 128GB',
+                img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_13_0914184114041_160x120.jpg',
+                price1:'32,900',
+                price2:'34,900',
+                tag1:'大螢幕',
+                tag2:'高效能',
+                tag3:'iOS',
+            },
+        ])
+    </div>
+</div>
