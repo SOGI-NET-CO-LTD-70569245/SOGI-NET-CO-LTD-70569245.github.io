@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'報價管理系統-商圈訂購-訂購記錄',cssFile:'store-admin'})
+        @@include('../../partial/global/_head.html',{title:'報價管理系統-商圈訂購-訂購紀錄',cssFile:'store-admin'})
     </head>
 
 	<body class="store">
@@ -14,7 +14,7 @@
                 lv2Nav:'shop-record'
             })
             @@include('../../partial/unit/_section-title-h3.html',{
-                title:'訂購記錄',
+                title:'訂購紀錄',
             })
             @@include('../../partial/page/store-admin/_table.html',{
                 tBodyRow:'2',
@@ -26,6 +26,7 @@
                         {thClass:'text-center', thWidth:'15%', thLabel:'單價'},
                         {thClass:'text-center', thWidth:'10%', thLabel:'數量'},
                         {thClass:'text-center', thWidth:'15%', thLabel:'總價'},
+                        {thClass:'text-center', thWidth:'15%', thLabel:'狀態'},
                     ]
                 },
                 tr1: {
@@ -55,6 +56,11 @@
                         tdType:'text',
                         tdClass:'text-center',
                         tdLabel:'$24,600'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'處理中'
                     },
                     ]
                 },
@@ -86,9 +92,15 @@
                         tdClass:'text-center',
                         tdLabel:'$24,600'
                     },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'已出貨'
+                    },
                     ]
                 },
             })
+            @@include('../../partial/comp/_pagination.html')
         </div>
 
         @@include('../../partial/global/_footer.html',{

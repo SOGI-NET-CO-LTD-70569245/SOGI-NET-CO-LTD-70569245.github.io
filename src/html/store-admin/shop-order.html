@@ -15,6 +15,9 @@
             })
             @@include('../../partial/unit/_section-title-h3.html',{
                 title:'商品訂購',
+                href:'shop-list.html',
+                btnIcon:'fas fa-angle-left',
+                btnName:'返回商品列表',
             })
             @@include('../../partial/page/store-admin/_form-2col.html',{
                 imgUrl:'//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_8_plus_0912194512478_360x270.jpg',
@@ -27,10 +30,10 @@
                         {label:'商品名稱', inputType:'plaintext', inputLabel:'Apple iPhone 6 Plus'},
                         {label:'單價', inputType:'plaintext', inputLabelColor:'danger', inputLabel:'$23,000'},
                         {label:'訂購數量', inputType:'text', inputLabel:'',},
-                        {label:'收貨地址', inputType:'checkbox', chk1Label:'依帳戶資訊為主',},
-                        {label:'', inputType:'text', inputLabel:'',},
+                        {label:'收貨資訊', inputType:'select', input1Label:'帶入門市資訊',  input2Label:'姑姑手機店',},
+                        {label:'', inputType:'multi', input1Label:'收件人姓名',  input2Label:'電話', input3Label:'地址',},
                         {label:'備註', inputType:'textarea', inputRows:'5', inputLabel:'',},
-                        {label:'匯款方式說明', inputType:'plaintext', inputLabel:'一二三四五六七八九十<br>XX銀行 代號000 XX分行 代號XXX<br>帳號：1234567890<br>戶名：手機王'},
+                        {label:'匯款方式說明', inputType:'plaintext', inputLabel:'商品送達後，隔日須以轉帳/匯款方式匯入以下帳戶，手續費由付款人吸收。<br><br>台北富邦銀行 中正分行／代號 012／分行代號 7060<br>帳號：8212-00000-68840<br>戶名：手機王國際有限公司'},
                     ]
                 },
             })

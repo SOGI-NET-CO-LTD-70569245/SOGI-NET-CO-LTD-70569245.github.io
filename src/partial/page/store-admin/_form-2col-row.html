@@ -65,5 +65,24 @@
                 </div>
             </div>
         }
+        @@if(context.inputType=='select'){
+            <select class="form-control">
+                <option>@@input1Label</option>
+                <option>@@input2Label</option>
+            </select>
+        }
+        @@if(context.inputType=='multi'){
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="@@input1Label">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="@@input2Label">
+                </div>
+                <div class="col-12 mt-3">
+                    <input type="text" class="form-control" placeholder="@@input3Label">
+                </div>
+            </div>
+        }
     </div>
 </div>
