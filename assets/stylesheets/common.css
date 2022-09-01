@@ -248,6 +248,10 @@ small.text-row-2 {
     -o-object-fit: cover;
        object-fit: cover; }
 
+.edit-content img {
+  max-width: 100%;
+  height: auto; }
+
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%; }
@@ -3789,6 +3793,3 @@ a.box:hover {
   .editable h3 {
     font-size: 1.5rem;
     color: #337ab7; }
-  .editable img {
-    max-width: 100%;
-    height: auto; }
