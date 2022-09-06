@@ -55,3 +55,9 @@
         object-fit: cover;
     }
 }
+.edit-content {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
