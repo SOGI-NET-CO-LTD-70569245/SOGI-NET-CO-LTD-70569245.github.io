@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'註冊完成-會員註冊'})
+    </head>
+
+	<body class="member">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_breadcrumb.html',{
+                lv1Label:'登入/註冊',
+                lv1Url:'#',
+            })
+            <div class="py-5 py-lg-10">
+                <div class="container">
+                    @@include('../../partial/page/member/_step.html',{
+                        group: {
+                            item: [
+                                {no:'1', label:'驗證手機號碼', state:'done'},
+                                {no:'2', label:'設定密碼', state:'done'},
+                                {no:'3', label:'註冊完成', state:'active', last:true,},
+                            ],
+                        },
+                    })
+                </div>
+                <div class="container">
+                    <div class="modal-dialog shadow rounded-lg">
+                        <div class="modal-content border-0">
+                            @@include('../../partial/page/member/unit/_modal-header.html',{
+                                title:'註冊完成'
+                            })
+                            <div class="modal-body p-4 p-lg-6">
+                                <form>
+                                    <div class="form-group text-center mb-15">
+                                        <label class="h4 m-0">
+                                            <div class="display-3 text-success">
+                                                <i class="fas fa-check-circle"></i>
+                                            </div>
+                                            您已成功加入會員<br>
+                                            3 秒後將為您跳轉回註冊前頁面
+                                        </label>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <div class="text-secondary">
+                                            若您的瀏覽器未正確跳轉，請點擊以下連結返回網站
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <div class="form-row justify-content-center">
+                                            <div class="col-6 col-lg-5">
+                                                <a class="btn btn-block btn-warning" href="#">SOGI手機王</a>
+                                            </div>
+                                            <div class="col-6 col-lg-5">
+                                                <a class="btn btn-block btn-warning" href="#">手機王購物</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/modal/_quickview.html')
+        @@include('../../partial/modal/_toast.html')
+
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+        
+    </body>
+</html>

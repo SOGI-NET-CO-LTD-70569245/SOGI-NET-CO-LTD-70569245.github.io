@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'手機驗證-會員註冊'})
+    </head>
+
+	<body class="member">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_breadcrumb.html',{
+                lv1Label:'登入/註冊',
+                lv1Url:'#',
+            })
+            <div class="py-5 py-lg-10">
+                <div class="container">
+                    @@include('../../partial/page/member/_step.html',{
+                        group: {
+                            item: [
+                                {no:'1', label:'第三方登入授權', state:'done'},
+                                {no:'2', label:'完成手機驗證', state:'active'},
+                                {no:'3', label:'註冊完成', last:true,},
+                            ],
+                        },
+                    })
+                </div>
+                <div class="container">
+                    <div class="modal-dialog shadow rounded-lg">
+                        <div class="modal-content border-0">
+                            @@include('../../partial/page/member/unit/_modal-header.html',{
+                                href:'regist-sso-mobile.html',
+                                title:'手機驗證'
+                            })
+                            <div class="modal-body p-4 p-lg-6">
+                                @@include('../../partial/page/member/_form-otp.html',{
+                                    href:'regist-done.html',
+                                    btnLabel:'完成註冊',
+                                    href2:'regist-sso-otp-resend.html',
+                                })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/modal/_quickview.html')
+        @@include('../../partial/modal/_toast.html')
+        
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+    </body>
+</html>

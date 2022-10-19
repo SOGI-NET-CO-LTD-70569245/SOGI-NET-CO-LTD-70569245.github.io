@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'會員登入'})
+    </head>
+
+	<body class="member">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_breadcrumb.html',{
+                lv1Label:'登入/註冊',
+                lv1Url:'#',
+            })
+            <div class="py-10">
+                <div class="container">
+                    <div class="modal-dialog shadow rounded-lg">
+                        <div class="modal-content border-0">
+                            @@include('../../partial/page/member/unit/_modal-header.html',{
+                                href:'start.html',
+                                title:'會員登入'
+                            })
+                            <div class="modal-body p-4 p-lg-6">
+                                <form>
+                                    <div class="form-group text-center">
+                                        <label class="h3 m-0">0912345678</label>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <input type="password" class="form-control text-center" placeholder="請輸入密碼" id="password">
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <a class="btn btn-warning px-20" href="#">登入</a>
+                                        <div class="mt-3">
+                                            <a class="btn-link" href="pw-verify.html">忘記密碼</a>
+                                        </div>
+                                    </div>
+                                    <div class="mt-10 text-center">
+                                        <a class="btn-link text-secondary" href="#">隱私權政策</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/modal/_quickview.html')
+        @@include('../../partial/modal/_toast.html')
+        
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+    </body>
+</html>

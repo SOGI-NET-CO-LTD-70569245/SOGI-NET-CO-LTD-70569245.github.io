@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'重設密碼'})
+    </head>
+
+	<body class="member">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_breadcrumb.html',{
+                lv1Label:'登入/註冊',
+                lv1Url:'#',
+            })
+            <div class="py-10">
+                <div class="container">
+                    <div class="modal-dialog shadow rounded-lg">
+                        <div class="modal-content border-0">
+                            @@include('../../partial/page/member/unit/_modal-header.html',{
+                                title:'重設密碼'
+                            })
+                            <div class="modal-body p-4 p-lg-6">
+                                @@include('../../partial/page/member/_form-pw.html',{
+                                    href:'#',
+                                    btnLabel:'確認修改'
+                                })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/modal/_quickview.html')
+        @@include('../../partial/modal/_toast.html')
+        
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+    </body>
+</html>

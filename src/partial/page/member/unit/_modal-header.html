@@ -1,0 +1,20 @@
+<div class="modal-header d-block">
+    <div class="row align-items-center">
+        <div class="col-2 col-lg-1">
+            @@if(context.href){
+            <a class="text-secondary h5 m-0" href="@@href">
+                <i class="fas fa-fw fa-chevron-left"></i>
+            </a>
+            }
+        </div>
+        <div class="col text-center">
+            @@if(context.title=='SOGI'){
+            <img src="/assets/images/ui/logo.png" height="40" class="logo" alt="手機王">
+            }
+            @@if(context.title!='SOGI'){
+            <h4 class="modal-title font-weight-bold">@@title</h4>
+            }
+        </div>
+        <div class="col-2 col-lg-1">&nbsp;</div>
+    </div>
+</div>

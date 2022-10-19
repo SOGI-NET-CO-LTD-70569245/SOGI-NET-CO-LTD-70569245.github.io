@@ -63,7 +63,7 @@ function html(cb) {
 
 function css(cb) {
   return src(paths.css.src)
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(dest(paths.css.dest))
 }
