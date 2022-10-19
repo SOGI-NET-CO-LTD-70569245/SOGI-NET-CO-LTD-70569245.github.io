@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Language" content="zh-TW">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <meta name="keywords" content=""/>
+        <meta name="description" content="">
+        <meta property="og:image" itemprop="image" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="http://www.sogi.com.tw/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="SOGI 手機王" />
+        
+        <title>手機驗證-會員註冊 - SOGI 手機王</title>
+        
+        
+        
+        <link rel="stylesheet" href="/assets/stylesheets/bootstrap-431.css">
+        <link rel="stylesheet" href="/assets/stylesheets/common.css">
+        
+    </head>
+
+	<body class="member">
+
+        <header id="header" class="push sticky-top">
+            <div class="shadow">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <h1 class="m-0">
+                        <a class="navbar-brand" title="SOGI手機王" href="/index.html">
+                            <img src="/assets/images/ui/logo.png" height="40" class="logo" alt="手機王">
+                        </a>
+                    </h1>
+                    <ul class="nav navbar-toggler border-0 p-0 mr-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="javascript:void();" data-toggle="modal" data-target=".modal-search">
+                                <i class="fas fa-fw fa-search"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hamburger-menu btn-mobile-menu" href="#menu">
+                                <span></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown position-static">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                    找品牌
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-w100">
+                                    <ul class="nav justify-content-center">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">SAMSUNG</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">ASUS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">OPPO</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">HUAWEI</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Apple</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Sony</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">小米</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">HTC</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">NOKIA</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">LG</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">SHARP</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Koobee</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">更多...</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown position-static">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                    新聞
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-w100">
+                                    <ul class="nav justify-content-center">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">評測文章</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">採訪報導</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">特別企劃</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">展覽直擊</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">產業專欄</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">影音內容</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">新機快訊</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">討論</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void();" data-toggle="modal" data-target=".modal-pk">車拚</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">電信方案</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">維修估價</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">破盤促銷</a>
+                            </li>
+                        </ul>
+                        <div>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="javascript:void();" data-toggle="modal" data-target=".modal-search">
+                                        <i class="fas fa-fw fa-search"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link text-dark dropdown-toggle" href="#" data-toggle="dropdown">
+                                        <i class="fas fa-fw fa-user-circle"></i>
+                                    </a>
+                                    <span class="badge badge-danger badge-pill">99</span>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">個人主頁</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">帳戶設定</a>
+                                        <a class="dropdown-item" href="#">站內訊息</a>
+                                        <a class="dropdown-item" href="#">產品追蹤</a>
+                                        <a class="dropdown-item" href="#">發文草稿</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">商店首頁</a>
+                                        <a class="dropdown-item" href="#">商店管理</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">FB留言管理</a>
+                                        <a class="dropdown-item" href="#">討論串管理</a>
+                                        <a class="dropdown-item" href="#">新聞留言管理</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">登出</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="javascript:void();">
+                                        <i class="fas fa-fw fa-comment-alt"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            </div>
+            <div class="d-lg-none mobile-menu-main">
+                <ul class="nav nav-fill font-weight-bold">
+                    <li class="nav-item">
+                        <a class="nav-link btn-mobile-menu" href="#menu">找品牌</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">新聞</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void();" data-toggle="modal" data-target=".modal-pk">車拚</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">維修估價</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <nav class="mobile-menu">
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action d-flex align-items-center" href="#">
+                    <i class="fas fa-3x fa-user-circle mr-4"></i> 登入
+                </a>
+            </div>
+            <div class="accordion" id="accordionMobile">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="btn btn-link btn-block" data-toggle="collapse" data-target="#collapseMember" href="javascript:void();" aria-expanded="false">
+                            <img class="img-fluid avatar mr-3" src="/assets/images/uploads/avatar.jpg" alt=""> 張三豐
+                        </a>
+                    </div>
+                    <div id="collapseMember" class="collapse" data-parent="#accordionMobile">
+                        <div class="card-body p-0">
+                            <div class="container py-2 text-center">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">個人主頁</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">帳戶設定</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">站內訊息</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">產品追蹤</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">發文草稿</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">商店首頁</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">商店管理</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">FB留言管理</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">討論串管理</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">新聞留言管理</a>
+                                    </div>
+                                </div>
+                                <a class="btn btn-outline-secondary px-10" href="#">登出</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="btn btn-link btn-block" data-toggle="collapse" data-target="#collapseProduct" href="javascript:void();" aria-expanded="true">
+                            <i class="fas fa-fw fa-mobile-alt"></i> 找品牌
+                        </a>
+                    </div>
+                    <div id="collapseProduct" class="collapse show" data-parent="#accordionMobile">
+                        <div class="card-body p-0">
+                            <div class="container py-2 text-center">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">SAMSUNG</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">Sony</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">OPPO</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">SAMSUNG</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">Sony</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">OPPO</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">SAMSUNG</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">Sony</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">OPPO</a>
+                                    </div>
+                                </div>
+                                <a class="btn btn-outline-secondary px-10" href="#">更多...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="btn btn-link btn-block" data-toggle="collapse" data-target="#collapseArticle" href="javascript:void();" aria-expanded="false">
+                            <i class="far fa-fw fa-newspaper"></i> 新聞
+                        </a>
+                    </div>
+                    <div id="collapseArticle" class="collapse" data-parent="#accordionMobile">
+                        <div class="card-body p-0">
+                            <div class="container py-2 text-center">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">評測文章</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">採訪報導</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">特別企劃</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">展覽直擊</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">產業專欄</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">影音內容</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="nav-link" href="#">新機快訊</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" href="#">
+                    <i class="fas fa-fw fa-phone-square-alt"></i> 電信方案
+                </a>
+                <a class="list-group-item list-group-item-action" href="#">
+                    <i class="fas fa-fw fa-comments"></i> 討論
+                </a>
+                <a class="list-group-item list-group-item-action text-danger" href="#">
+                    <i class="icon-limited"></i> 破盤促銷
+                </a>
+                <a class="list-group-item list-group-item-action" href="#">
+                    <i class="fas fa-fw fa-comment-alt"></i> 發簡訊
+                </a>
+            </div>
+            <div class="container fixed-bottom py-2 text-center bg-white border-top">
+                <div class="row align-items-center">
+                    <div class="col-4">
+                        <a class="" href="#">
+                            <img class="img-fluid" src="/assets/images/ui/logo-mb-sogi.png" alt="手機王">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="" href="#">
+                            <img class="img-fluid" src="/assets/images/ui/logo-mb-ec.png" alt="手機王購物">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="" href="#">
+                            <img class="img-fluid" src="/assets/images/ui/logo-mb-ec-ugooz.png" alt="友故事">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <div id="main" class="push">
+            <div class="container">
+                <ol class="breadcrumb mb-2 border-bottom rounded-0">
+                    <li class="breadcrumb-item"><a href="/index.html"><i class="fas fa-home"></i> 首頁</a></li>
+                    
+                    <li class="breadcrumb-item"><a href="#">登入/註冊</a></li>
+                    
+                    
+                    
+                </ol>
+            </div>
+            <div class="py-5 py-lg-10">
+                <div class="container">
+                    <div class="d-none d-md-block col-12 col-md-10 col-lg-6 mx-auto mb-5 mb-md-10">
+                        <div class="row no-gutters justify-content-center step step-by-step">
+                            
+                                <div class="col-auto">
+                                    <div class="step-circle  done">
+                                        <span class="step-label">1</span>
+                                        <div class="step-text">第三方登入授權</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <span class="step-bar"></span>
+                                </div>
+                                
+                            
+                                <div class="col-auto">
+                                    <div class="step-circle active ">
+                                        <span class="step-label">2</span>
+                                        <div class="step-text">完成手機驗證</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <span class="step-bar"></span>
+                                </div>
+                                
+                            
+                                <div class="col-auto">
+                                    <div class="step-circle  ">
+                                        <span class="step-label">3</span>
+                                        <div class="step-text">註冊完成</div>
+                                    </div>
+                                </div>
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="modal-dialog shadow rounded-lg">
+                        <div class="modal-content border-0">
+                            <div class="modal-header d-block">
+                                <div class="row align-items-center">
+                                    <div class="col-2 col-lg-1">
+                                        
+                                        <a class="text-secondary h5 m-0" href="regist-sso-mobile.html">
+                                            <i class="fas fa-fw fa-chevron-left"></i>
+                                        </a>
+                                        
+                                    </div>
+                                    <div class="col text-center">
+                                        
+                                        
+                                        <h4 class="modal-title font-weight-bold">手機驗證</h4>
+                                        
+                                    </div>
+                                    <div class="col-2 col-lg-1">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="modal-body p-4 p-lg-6">
+                                <form>
+                                    <div class="form-group text-center">
+                                        <div class="mb-2 form-text text-muted font-small">您的驗證碼已透過簡訊發送至</div>
+                                        <label class="h3 m-0">0912345678</label>
+                                    </div>
+                                    <div class="form-group text-center mx-10">
+                                        <div class="d-flex mb-2">
+                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" maxlength="1">
+                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" maxlength="1">
+                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" maxlength="1">
+                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" maxlength="1">
+                                        </div>
+                                        <div class="form-text text-muted font-small">※ 驗證碼有效時限為 ３ 分鐘</div>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <div class="form-row justify-content-center">
+                                            <div class="col-6 col-lg-5">
+                                                <a class="btn btn-block btn-warning" href="regist-done.html">完成註冊</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-10 text-center">
+                                        <a class="btn-link text-secondary" href="regist-sso-otp-resend.html">沒收到簡訊驗證碼？</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer" class="bg-dark push">
+            
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-6 col-sm-3 col-md mb-2">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <strong>找品牌</strong>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Apple</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">HTC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Apple</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">HTC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Apple</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">HTC</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md mb-2">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <strong>熱門手機</strong>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">iPhone 6S Plus</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SAMSUNG S7 edge</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sony Xperia XZ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">華碩 ZenFone 3 Deluxe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">iPhone 7 Plus</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">OPPO R9 Plus</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md mb-2">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <strong>手機維修</strong>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">搞懂維修保固</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">手機送修要注意</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">手機泡水怎麼救</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">安卓手機重置</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">蘋果安卓跳槽</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">安卓資料轉移</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md mb-2">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <strong>手機王</strong>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/common/about.html">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/member/signup.html">加入會員</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">里程碑</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/common/contact.html">聯絡我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">隱私權政策</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md mb-2">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <strong>手機王購物</strong>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">申辦查詢</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">如何購買</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">到府服務</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">付款方式</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">售後服務</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">配送時程</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">常見問題</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md mb-2">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <strong>合作聯絡</strong>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">廣告刊登</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">加入商店報價</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">新聞聯絡</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md mb-2">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <strong>合作夥伴</strong>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">法律顧問</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">媒體合作</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-auto px-1">
+                        <a href="" title="隨身手機王app">
+                            <i class="fab fa-android"></i>
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <a href="" title="手機王FB專頁">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <a href="" title="手機王Youtube">
+                            <i class="fab fa-youtube-square"></i>
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <a href="" title="手機王購物" data-trigger="hover" data-popover="true" data-html=true data-content="<div class='text-center'><img src='http://chiangmaiexpertdriver.com/images/qr-code-line2.jpg' width='100'><br>LINE ID: @flp0362y</div>">
+                            <i class="fab fa-line"></i>
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <a href="" title="手機王Weibo">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <a href="" title="手機王服務信箱">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-fluid bg-black">
+                <div class="container py-3 text-center">
+                    <small class="d-inline-block">
+                        Copyright &copy; 1999-2019 首機網路股份有限公司 All rights reserved.
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-quickview fade" id="" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="position-absolute" style="right: 1rem; z-index: 10;">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-4 text-center">
+                                <a href="#">
+                                <div class="d-none d-md-block">
+                                    <img class="img-fluid" src="http://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_1_2_0224083724232_360x270.jpg" alt="">
+                                </div>
+                                <div class="d-md-none">
+                                    <img class="img-fluid" src="http://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_1_2_0224083724232_160x120.jpg" alt="">
+                                </div>
+                                </a>
+                                <div class="h5 my-2">
+                                    <span class="badge badge-outline">星環白</span>
+                                    <span class="badge badge-outline">星環銀</span>
+                                    <span class="badge badge-outline">星環藍</span>
+                                    <span class="badge badge-outline">星環黑</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="row mt-2">
+                                    <div class="col-12 text-center text-md-left">
+                                        <a href="#" class="text-row-12 text-dark h5">Apple iPhone 7 Plus 128GBApple iPhone 7 Plus 128GBApple iPhone 7 Plus 128GB</a>
+                                        <div class="font-small text-muted">
+                                            <span class="mr-2">原廠售價:$23,000</span>
+                                            <span>上市日期: 2020/1</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-8 col-md-4 offset-2 offset-md-0 mt-2">
+                                        <div class="progress position-relative">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="justify-content-center d-flex position-absolute w-100">
+                                                <span class="text-white font-small">9.2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-100 my-2"></div>
+                                    <div class="col-6">
+                                        <ul class="list-group list-group-flush border-bottom">
+                                            <li class="list-group-item">
+                                                <div class="row align-items-center">
+                                                    <div class="col-1 font-small text-muted">
+                                                        <i class="fas fa-fw fa-microchip"></i>
+                                                    </div>
+                                                    <div class="col-10">Apple A13 Bionic</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="row align-items-center">
+                                                    <div class="col-1 font-small text-muted">
+                                                        <i class="fas fa-fw fa-mobile-alt"></i>
+                                                    </div>
+                                                    <div class="col-10">5.8吋OLED</div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-group list-group-flush border-bottom">
+                                            <li class="list-group-item">
+                                                <div class="row align-items-center">
+                                                    <div class="col-1 font-small text-muted">
+                                                        <i class="fas fa-fw fa-weight-hanging"></i>
+                                                    </div>
+                                                    <div class="col-10">187 g</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="row align-items-center">
+                                                    <div class="col-1 font-small text-muted">
+                                                        <i class="fas fa-fw fa-palette"></i>
+                                                    </div>
+                                                    <div class="col-10">太平洋藍,石墨,金,銀</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-lg-6 my-2">
+                                        <div class="row">
+                                            <div class="col-6 border-right">
+                                                <div class="text-center text-muted">
+                                                    <div class="">手機王購物</div>
+                                                    <div class="h4 font-weight-bold">-</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="text-center text-muted">
+                                                    <div class="">門市最低</div>
+                                                    <div class="h4 font-weight-bold">-</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col-8 col-lg-4 col-xl-6">
+                                        <a class="btn btn-primary btn-sm btn-block rounded-pill" href="#">了解更多</a>
+                                    </div>
+                                    <div class="col-2 col-lg-4 col-xl-3">
+                                        <a class="btn btn-secondary btn-sm btn-block rounded-pill px-0" href="#">
+                                            <i class="fas fa-fw fa-plus"></i>
+                                            <span class="d-none d-lg-inline">加入比較</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-2 col-lg-4 col-xl-3">
+                                        <a class="btn btn-secondary btn-sm btn-block rounded-pill px-0" href="#">
+                                            <i class="far fa-fw fa-heart"></i>
+                                            <span class="d-none d-lg-inline">加入最愛</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade modal-toast" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content toast mx-auto show rounded-0 border-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-body">
+                        <div class="row">
+                            <div class="col-auto align-self-center">
+                                <div class="text-danger h1">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="font-weight-bold h5">門號已鎖定！</div>
+                                你的門號已超過驗證上限，請<a class="text-decoration-underline" href="#">聯繫客服</a>獲得協助。
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="menu-bottom">
+            <div class="my-2">
+                <a class="btn btn-light shadow" href="#" data-toggle="modal" data-target=".modal-func">
+                    <i class="fas fa-fw fa-list-ul"></i>
+                </a>
+            </div>
+            <div class="my-2">
+                <a class="btn btn-outline-secondary btn-top" href="#header">
+                    <i class="fas fa-fw fa-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+        
+        <script src="https://kit.fontawesome.com/5ab387053e.js" crossorigin="anonymous"></script>
+        <script src="/assets/javascripts/vendor/jquery.min.js?v=3.1.1"></script>
+        
+        <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
+        <script src="/assets/javascripts/vendor/jquery.slick.min.js"></script>
+        
+        <script src="/assets/javascripts/vendor/jquery.pushy.min.js"></script>
+        <script src="/assets/javascripts/vendor/owl.carousel.min.js"></script>
+        <script src="/assets/javascripts/vendor/ofi.min.js"></script>
+        <script src="/assets/javascripts/common.js"></script>
+    </body>
+</html>
