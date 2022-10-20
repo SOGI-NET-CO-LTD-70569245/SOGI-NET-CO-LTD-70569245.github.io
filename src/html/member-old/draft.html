@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'發文草稿'})
+    </head>
+
+	<body class="member">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_ad-970.html')
+            @@include('../../partial/comp/_breadcrumb.html')
+            <div class="container pb-20">
+                <div class="row my-2">
+                    <div class="col-12">
+                        <div class="nav-responsive">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item"><a class="nav-link" href="profiles.html">帳戶設定</a></li>
+                                <li class="nav-item"><a class="nav-link" href="message.html">站內訊息</a></li>
+                                <li class="nav-item"><a class="nav-link" href="favorite.html">產品追蹤</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="draft.html">發文草稿</a></li>
+                                <li class="nav-item"><a class="nav-link" href="record.html" target="_blank">個人主頁</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title border-0">發文草稿</div>
+                    </div>
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead class="thead-inverse">
+                                    <tr>
+                                        <th class="text-center" width="70%">標題</th>
+                                        <th class="text-center">建立時間</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="">一二三四五</a></td>
+                                        <td class="text-center">2015/12/31</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="">一二三四五</a></td>
+                                        <td class="text-center">2015/12/31</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/modal/_quickview.html')
+        
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+    </body>
+</html>

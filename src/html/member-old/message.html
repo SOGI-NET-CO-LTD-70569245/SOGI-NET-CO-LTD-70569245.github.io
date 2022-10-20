@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'站內訊息'})
+    </head>
+
+	<body class="member">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_ad-970.html')
+            @@include('../../partial/comp/_breadcrumb.html')
+            <div class="container pb-20">
+
+                <div class="row my-2">
+                    <div class="col-12">
+                        <div class="nav-responsive">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item"><a class="nav-link" href="profiles.html">帳戶設定</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="message.html">站內訊息</a></li>
+                                <li class="nav-item"><a class="nav-link" href="favorite.html">產品追蹤</a></li>
+                                <li class="nav-item"><a class="nav-link" href="draft.html">發文草稿</a></li>
+                                <li class="nav-item"><a class="nav-link" href="record.html" target="_blank">個人主頁</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-title border-0">
+                    站內訊息
+                    <div class="float-right">
+                        <a href="" class="btn btn-sm btn-primary btn-msg"><i class="fas fa-comment"></i> 發送訊息</a>
+                        <a href="" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".modal-friend"><i class="fas fa-users"></i> 好友名單</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="col-12 my-2 form-inline">
+                        <input type="text" class="form-control mr-2" id="" placeholder="請輸入會員編號">
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-plus"></i> 新增好友</button>
+                    </form>
+                </div>
+
+
+                <div class="section-title border-0">訊息列表</div>
+                <p class="alert alert-danger my-2">使用右上發送訊息的按鈕發起對話後，請重整頁面方可看見訊息出現於下方列表唷！</p>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left mr-4">
+                                <lable>
+                                    <input type="checkbox" value="">
+                                </lable>
+                                <img class="img-fluid my-1 d-none d-sm-inline" src="//sogi-assets-b.sogiworld.com/assets/steking/ui/avatar/flat-faces-icons-circle-man-1.png" alt="">
+                            </div>
+                            <div class="media-body">
+                                <div class="mb-2">
+                                    <a href="">會員ID</a> <span class="badge badge-danger">NEW</span>
+                                </div>
+                                <p>高台山：位於新竹縣尖石鄉的那羅部落一帶，標高1510公尺，有No.6286三等三角點與山字森林三角點基石各一顆。山頭寬緩、柳杉林筆直，沿途林相優美，無展望。</p>
+                                <p class="text-muted"><small>2016/12/31 11:11</small></p>
+                                <a href="" class="btn btn-outline-secondary"><i class="fas fa-plus"></i> 加好友</a>
+                                <a href="" class="btn btn-outline-secondary"><i class="fas fa-reply"></i>
+ 回覆</a>
+                            </div>
+                        </div>
+                        <hr class="my-6">
+                        <div class="media">
+                            <div class="media-left mr-4">
+                                <lable>
+                                    <input type="checkbox" value="">
+                                </lable>
+                                <img class="img-fluid my-1 d-none d-sm-inline" src="//sogi-assets-b.sogiworld.com/assets/steking/ui/avatar/flat-faces-icons-circle-man-1.png" alt="">
+                            </div>
+                            <div class="media-body">
+                                <div class="mb-2">
+                                    <a href="">會員ID</a> <span class="badge badge-danger">NEW</span>
+                                </div>
+                                <p>高台山：位於新竹縣尖石鄉的那羅部落一帶，標高1510公尺，有No.6286三等三角點與山字森林三角點基石各一顆。山頭寬緩、柳杉林筆直，沿途林相優美，無展望。</p>
+                                <p class="text-muted"><small>2016/12/31 11:11</small></p>
+                                <a href="" class="btn btn-outline-secondary"><i class="fas fa-plus"></i> 加好友</a>
+                                <a href="" class="btn btn-outline-secondary"><i class="fas fa-reply"></i>
+ 回覆</a>
+                            </div>
+                        </div>
+                        <hr class="my-6">
+                        <div class="media">
+                            <div class="media-left mr-4">
+                                <lable>
+                                    <input type="checkbox" value="">
+                                </lable>
+                                <img class="img-fluid my-1 d-none d-sm-inline" src="//sogi-assets-b.sogiworld.com/assets/steking/ui/avatar/flat-faces-icons-circle-man-1.png" alt="">
+                            </div>
+                            <div class="media-body">
+                                <div class="mb-2">
+                                    <a href="">會員ID</a> <span class="badge badge-danger">NEW</span>
+                                </div>
+                                <p>高台山：位於新竹縣尖石鄉的那羅部落一帶，標高1510公尺，有No.6286三等三角點與山字森林三角點基石各一顆。山頭寬緩、柳杉林筆直，沿途林相優美，無展望。</p>
+                                <p class="text-muted"><small>2016/12/31 11:11</small></p>
+                                <a href="" class="btn btn-outline-secondary"><i class="fas fa-plus"></i> 加好友</a>
+                                <a href="" class="btn btn-outline-secondary"><i class="fas fa-reply"></i>
+ 回覆</a>
+                            </div>
+                        </div>
+                        <div class="my-2 text-center"><a class="btn btn-info" href="#">顯示更多 <i class="fas fa-caret-down"></i></a></div>
+                        <hr>
+                        <p class="text-center">
+                            <a href="" class="btn btn-primary btn-sm"><i class="fas fa-check"></i>
+ 全選</a>
+                            <a href="" class="btn btn-primary btn-sm"><i class="fas fa-times"></i>
+ 取消</a>
+                            <a href="" class="btn btn-primary btn-sm"><i class="fas fa-trash"></i>
+ 刪除</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- module: popup-message -->
+            <div id="popup-message"></div>
+            <!-- module: ./popup-message -->
+        </div>
+
+        <!-- module: modal-friend -->
+        <div id="modal-friend"></div>
+        <!-- module: ./modal-friend -->
+
+        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/modal/_quickview.html')
+        
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+        <!-- Single -->
+        <script>
+        $('.btn-close').alert();
+        </script>
+
+    </body>
+</html>

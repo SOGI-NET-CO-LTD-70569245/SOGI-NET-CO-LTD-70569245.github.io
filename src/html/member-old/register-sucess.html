@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'無法登入'})
+    </head>
+
+	<body class="member">
+
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            @@include('../../partial/comp/_ad-970.html')
+            @@include('../../partial/comp/_breadcrumb.html')
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">註冊成功</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>您的帳號 ooxx@mail.com 已啟用，登入後您可以：</p>
+                            <ul class="pl-4">
+                                <li>立即發表您的評論，與機友們互相切磋</li>
+                                <li>使用專屬的一對一私訊功能</li>
+                                <li>提供您電信資費購機的專業諮詢與到府服務</li>
+                            </ul>
+                            <p class="text-center">
+                                <a href="/member/login.html" class="btn btn-primary">立即登入</a>
+                                <a href="/index.html" class="btn btn-primary">回首頁</a>
+                            </p>
+                            <p class="text-danger text-center">*20 秒後跳轉至登入頁面</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/modal/_quickview.html')
+        
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+
+        <!-- Single -->
+        <script>
+        jQuery(function ($) {
+            $('.row-1').hide();
+            $('.row-2').hide();
+            $(document).on('change', 'input:radio[id^="radio-01"]', function (event) {
+                $('.row-1').fadeIn();
+                $('.row-2').fadeOut();
+            });
+            $(document).on('change', 'input:radio[id^="radio-02"]', function (event) {
+                $('.row-1').fadeOut();
+                $('.row-2').fadeIn();
+            });
+        });
+        </script>
+    </body>
+</html>
