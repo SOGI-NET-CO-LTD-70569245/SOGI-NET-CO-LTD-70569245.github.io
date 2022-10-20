@@ -406,20 +406,20 @@
                                         <label class="h3 m-0">0912345678</label>
                                     </div>
                                     <div class="form-group text-center mx-10">
-                                        <div class="d-flex mb-2">
-                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" maxlength="1">
-                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" maxlength="1">
-                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" maxlength="1">
-                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" maxlength="1">
+                                        <div class="d-flex mb-2" id="otp">
+                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" id="otpNumber1" type="text" maxlength="1">
+                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" id="otpNumber2" type="text" maxlength="1">
+                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" id="otpNumber3" type="text" maxlength="1">
+                                            <input class="form-control form-control-lg mx-2 text-center border-top-0 border-left-0 border-right-0 rounded-0 input-otp" id="otpNumber4" type="text" maxlength="1">
                                         </div>
                                         <div class="form-text text-muted font-small">※ 驗證碼有效時限為 ３ 分鐘</div>
                                     </div>
                                     <div class="form-group text-center">
                                         <div class="form-row justify-content-center">
                                             <div class="col-6 col-lg-5">
-                                                <a class="btn btn-block btn-primary" href="#" data-toggle="modal" data-target=".modal-toast">重新發送驗證碼</a>
-                                                <a class="btn btn-block btn-secondary disabled" href="#">重新發送驗證碼</a>
-                                                <div class="text-center font-small">倒數 30 秒後可重新發送</div>
+                                                
+                                                <a class="btn btn-block btn-primary" id="btnOtpSend" href="javascript:void();">重新發送驗證碼</a>
+                                                <div class="text-center font-small text-countdown mt-2" style="display: none;"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -813,5 +813,56 @@
         <script src="/assets/javascripts/vendor/owl.carousel.min.js"></script>
         <script src="/assets/javascripts/vendor/ofi.min.js"></script>
         <script src="/assets/javascripts/common.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+        	function OTPInput() {
+        		const inputs = document.querySelectorAll('#otp > *[id]');
+        		for (let i = 0; i < inputs.length; i++) {
+        			inputs[i].addEventListener('keydown', function(event) {
+        				if (event.key === "Backspace") {
+        					inputs[i].value = '';
+        					if (i !== 0) inputs[i - 1].focus();
+        				} else {
+        					if (i === inputs.length - 1 && inputs[i].value !== '') {
+        						return true;
+        					} else if (event.keyCode > 47 && event.keyCode < 58) {
+        						inputs[i].value = event.key;
+        						if (i !== inputs.length - 1) inputs[i + 1].focus();
+        						event.preventDefault();
+        					} else if (event.keyCode > 64 && event.keyCode < 91) {
+        						inputs[i].value = String.fromCharCode(event.keyCode);
+        						if (i !== inputs.length - 1) inputs[i + 1].focus();
+        						event.preventDefault();
+        					}
+        				}
+        			});
+        		}
+        	}
+        	OTPInput();
+            });
+
+            $(startup);
+            var countdownText = document.querySelector('.text-countdown');
+            var btnOtpSend = document.querySelector('#btnOtpSend');
+    
+            function startup(){
+                $(btnOtpSend).click(start);
+            }
+            function start(){
+                clock = 30;
+                $(countdownText).fadeIn().text("倒數 "+clock+" 秒後可重新發送");
+                timer=setInterval(countdown, 1000);
+                $(btnOtpSend).removeClass("btn-primary").addClass("btn-secondary disabled");
+            }
+            function countdown(){
+                clock--;
+                $(countdownText).text("倒數 "+clock+" 秒後可重新發送");
+                if(clock==0){
+                    clearInterval(timer);
+                    $(btnOtpSend).removeClass("btn-secondary disabled").addClass("btn-primary");
+                    $(countdownText).fadeOut()
+                }
+            }
+        </script>
     </body>
 </html>

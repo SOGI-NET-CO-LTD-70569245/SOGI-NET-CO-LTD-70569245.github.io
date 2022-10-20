@@ -1,15 +1,15 @@
 $(function() {
     "use strict";
 
-    $(".input-otp").keyup(function () {
-        if (this.value.length == this.maxLength) {
-          var $next = $(this).next('.input-otp');
-          if ($next.length)
-              $(this).next('.input-otp').focus();
-          else
-              $(this).blur();
-        }
-    });
+    // $(".input-otp").keyup(function () {
+    //     if (this.value.length == this.maxLength) {
+    //       var $next = $(this).next('.input-otp');
+    //       if ($next.length)
+    //           $(this).next('.input-otp').focus();
+    //       else
+    //           $(this).blur();
+    //     }
+    // });
     
     $('.btn-anchor').click(function(){
 		$('html, body').animate({
