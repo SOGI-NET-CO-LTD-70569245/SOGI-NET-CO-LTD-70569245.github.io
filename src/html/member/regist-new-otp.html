@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'驗證手機號碼-會員註冊'})
+        @@include('../../partial/global/_head.html',{title:'驗證手機號碼-會員註冊',})
     </head>
 
 	<body class="member">
@@ -37,7 +37,7 @@
                                 @@include('../../partial/page/member/_form-otp.html',{
                                     href:'regist-new-pw.html',
                                     btnLabel:'下一步',
-                                    href2:'regist-new-otp-resned.html',
+                                    href2:'regist-new-otp-resend.html',
                                 })
                             </div>
                         </div>
@@ -52,5 +52,6 @@
 
         @@include('../../partial/comp/_nav-top.html')
         @@include('../../partial/global/_js.html')
+        @@include('../../partial/page/member/_js-single.html')
     </body>
 </html>
