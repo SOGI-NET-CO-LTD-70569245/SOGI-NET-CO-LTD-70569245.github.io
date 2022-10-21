@@ -1,8 +1,7 @@
 <form>
-    <div class="form-group text-center">
-        <div class="mb-2 form-text text-muted font-small">您的驗證碼已透過簡訊發送至</div>
-        <label class="h3 m-0">0912345678</label>
-    </div>
+    @@include('unit/_form-group-phone-number.html',{
+        label:'您的驗證碼已透過簡訊發送至'
+    })
     @@include('unit/_form-group-otp.html')
     <div class="form-group text-center">
         <div class="form-row justify-content-center">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'註冊完成-會員註冊'})
+        @@include('../../partial/global/_head.html',{title:'註冊完成-會員註冊',cssFile:'member'})
     </head>
 
 	<body class="member">
@@ -14,7 +14,7 @@
                 lv1Label:'登入/註冊',
                 lv1Url:'#',
             })
-            <div class="py-5 py-lg-10">
+            <div class="py-10">
                 <div class="container">
                     @@include('../../partial/page/member/_step.html',{
                         group: {
@@ -34,15 +34,9 @@
                             })
                             <div class="modal-body p-4 p-lg-6">
                                 <form>
-                                    <div class="form-group text-center mb-15">
-                                        <label class="h4 m-0">
-                                            <div class="display-3 text-success">
-                                                <i class="fas fa-check-circle"></i>
-                                            </div>
-                                            您已成功加入會員<br>
-                                            3 秒後將為您跳轉回註冊前頁面
-                                        </label>
-                                    </div>
+                                    @@include('../../partial/page/member/unit/_form-group-sucess.html',{
+                                        title:'您已成功加入會員<br>3 秒後將為您跳轉回註冊前頁面'
+                                    })
                                     <div class="form-group text-center">
                                         <div class="text-secondary">
                                             若您的瀏覽器未正確跳轉，請點擊以下連結返回網站
