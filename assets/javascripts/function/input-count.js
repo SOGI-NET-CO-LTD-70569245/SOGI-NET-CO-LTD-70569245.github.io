@@ -1,7 +1,1 @@
-var input_text_max = 2000;
-$('.input-count').html(input_text_max);
-$('.input-limit').keyup(function() {
-    var input_text_length = $('.input-limit').val().length;
-    var input_text_remaining = input_text_max - input_text_length;
-    $('.input-count').html(input_text_remaining).addClass('text-imp');
-});
+var input_text_max=2e3;$(".input-count").html(input_text_max),$(".input-limit").keyup(function(){var t=$(".input-limit").val().length,t=input_text_max-t;$(".input-count").html(t).addClass("text-imp")});
