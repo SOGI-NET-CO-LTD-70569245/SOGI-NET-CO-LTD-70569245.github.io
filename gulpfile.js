@@ -1,52 +1,57 @@
 const { src, dest, watch, parallel, series } = require("gulp");
 const gulp = require("gulp");
-const browserSync = require('browser-sync').create();
 const babel = require('gulp-babel');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const autoprefixer = require('gulp-autoprefixer');
 const cache = require('gulp-cache');
+const jsinclude = require('gulp-include');
 const fileinclude = require('gulp-file-include');
 const removeHtmlComments = require('gulp-remove-html-comments');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const uglify = require('gulp-uglify');
+const rename = require("gulp-rename");
 const ghPages = require('gulp-gh-pages');
+const merge = require('merge-stream');
+const browserSync = require('browser-sync').create();
+
+const CONFIGS = [
+  require('./gulp.config.web')
+];
 
 const paths = {
   html: {
     src: 'src/html/**/*.html',
-    dest: 'output/'
+    dest: 'dist/'
   },
   partial_html: {
     src: 'src/partial/**/*.html',
-    dest: 'output/'
+    dest: 'dist/'
   },
   css: {
     src: 'src/scss/**/*.scss',
-    dest: 'output/assets/stylesheets'
+    // dest: 'dist/web/assets/css'
   },
-  scripts: {
+  js: {
     src: 'src/javascripts/**/*.js',
-    dest: 'output/assets/javascripts'
+    // dest: 'dist/web/assets/js'
   },
   media: {
     src: 'src/images/**/*.{jpg,png,svg,json}',
-    dest: 'output/assets/images'
+    // dest: 'dist/web/assets/img'
   },
   assets: {
     src: 'src/assets/**/*.{jpg,png,svg}',
-    dest: 'output/assets'
+    dest: 'dist/assets'
   }
 };
 
 
 function clean(cb) {
-
   cb();
 }
-
 
 function html(cb) {
   return gulp
@@ -60,78 +65,87 @@ function html(cb) {
         .pipe(dest(paths.html.dest))
 }
 
-
 function css(cb) {
-  return src(paths.css.src)
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(dest(paths.css.dest))
+  const tasks = CONFIGS.map(config => {
+      return gulp.src(config.css.sourcePaths)
+          // .pipe(sass().on('error', sass.logError))
+          .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+          .pipe(autoprefixer())
+          .pipe(gulp.dest(config.css.exportPath))
+  });
+  return merge(tasks);
 }
 
-function cssMin(cb) {
-  return src(paths.css.src)
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(dest(paths.css.dest))
-}
+// function cssMin(cb) {
+//   const tasks = CONFIGS.map(config => {
+//       return gulp.src(config.cssMin.sourcePaths)
+//           .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+//           .pipe(autoprefixer())
+//           .pipe(gulp.dest(config.cssMin.exportPath))
+//   });
+//   return merge(tasks);
+// }
 
 function js(cb) {
-  return src(paths.scripts.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
-    .pipe(dest(paths.scripts.dest)); // dest() is given an output directory string
-
+  const tasks = CONFIGS.map(config => {
+    return gulp.src(config.js.sourcePaths)
+        
+        .pipe(jsinclude({extendsion:'js', hardFail: false})).on('error', console.log)
+        .pipe(uglify({output:{comments:"some"}})) //https://github.com/terinjokes/gulp-uglify/releases/tag/v3.0.0
+        // .pipe(rename({ suffix: ".min" }))
+        .pipe(gulp.dest(config.js.exportPath))
+  });
+  return merge(tasks);
 }
 
-function jsMin(){
-  return src(paths.scripts.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
-    // .pipe(minify({
-    //     ext:{
-    //         src:'-debug.js',
-    //         min:'.js'
-    //     },
-    //     exclude: ['tasks'],
-    //     ignoreFiles: ['.min.js','.combo.js', '-min.js']
-    // }))
-    .pipe(uglify())
-    .pipe(dest(paths.scripts.dest)); // dest() is given an output directory string
-}
 function media(cb) {
-  return src(paths.media.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
-    .pipe(dest(paths.media.dest)); // dest() is given an output directory string
+  const tasks = CONFIGS.map(config => {
+      return gulp.src(config.media.sourcePaths)
+          .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 75, progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+              plugins: [
+                {removeViewBox: true},
+                {cleanupIDs: false}
+              ]
+            })
+          ]))
+          .pipe(gulp.dest(config.media.exportPath))
+  });
+  return merge(tasks);
 }
 
 function assets(cb) {
   return src(paths.assets.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
-    // .pipe(concat('bundle.js'))    
-    // .pipe(babel())
-    // .pipe(minify())
     .pipe(dest(paths.assets.dest)); // dest() is given an output directory string
 }
 
 // 圖片一般格式壓縮
+// function compressImage() {
+//   return src(['dist/img/**/*.{jpg,png,svg}'])
+//       .pipe(imagemin())
+//       .pipe(dest('dist/img-opt/'));
+// }
 
-function compressImage() {
-  return src(['output/media/img/**/*.{jpg,png,svg}'])
-      .pipe(imagemin())
-      .pipe(dest('output/img-opt/'));
-}
-
-function generateWebp() {
-  return src(['output/media/img/**/*.{jpg,png,svg}'])
-    .pipe(webp())
-    .pipe(dest('output/img-opt/'));
-}
+// function generateWebp() {
+//   return src(['dist/img/**/*.{jpg,png,svg}'])
+//     .pipe(webp())
+//     .pipe(dest('dist/img-opt/'));
+// }
 
 function watchFiles() {  
   browserSync.init({
     server: {
-      baseDir: "./output",
+      baseDir: "./dist",
       index: "/index.html"
     }
   }); 
   watch(paths.html.src, html).on('change', browserSync.reload);
   watch(paths.partial_html.src, html).on('change', browserSync.reload);
   watch(paths.css.src, css).on('change', browserSync.reload);
-  watch(paths.scripts.src, js).on('change', browserSync.reload);
+  watch(paths.js.src, js).on('change', browserSync.reload);
   watch(paths.media.src, media).on('change', browserSync.reload);
   watch(paths.assets.src, assets).on('change', browserSync.reload);
 }
@@ -149,20 +163,28 @@ const build = series(clean,parallel(html, css, js, media, assets));
  */
 exports.css = css;
 exports.js = js;
-exports.jsMin = jsMin;
 exports.media = media;
 exports.watch = watchFiles;
-exports.output = series(parallel(media,cssMin,jsMin));
+exports.output = series(parallel(media,css,js));
 exports.build = build;
 /*
  * Define default task that can be called by just running `gulp` from cli
  */
 exports.default = default_build;
 
-gulp.task('deploy', function() {
-  return gulp.src('./output/**/*')
+// gulp v3
+// gulp.task('deploy', function() {
+//   return gulp.src('./dist/**/*')
+//     .pipe(ghPages({
+//       message: 'Update ' + new Date().toLocaleString('zh-TW', {timeZone: 'Asia/Taipei'})
+//     }));
+// });
+
+function deploy() {
+  return src('./dist/**/*')
     .pipe(ghPages({
-      // origin:'SOGI-preview',
-      message: 'Update ' + new Date().toLocaleString('zh-TW', {timeZone: 'Asia/Taipei'})
+      message: 'Update ' + new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })
     }));
-});
+}
+
+exports.deploy = deploy;

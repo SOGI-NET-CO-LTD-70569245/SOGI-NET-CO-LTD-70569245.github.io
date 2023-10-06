@@ -1,3 +1,14 @@
+//////////////////////////////////
+//    Utilities & Polyfills     //
+//////////////////////////////////
+
+//=require ./libs/slick.min.js
+//// =require ./vednor/swiper-bundle.min.js
+// =require ./libs/pushy.min.js
+// =require ./libs/owl.carousel.min.js
+// =require ./libs/ofi.min.js
+
+
 $(function() {
     "use strict";
 

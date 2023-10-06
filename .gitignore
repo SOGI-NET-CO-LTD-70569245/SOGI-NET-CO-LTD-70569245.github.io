@@ -21,7 +21,7 @@ logs
 # .publish cache
 .publish
 
-output
+dist
 __*
 src/html/articles/index.html
 src/html/articles/list.html
