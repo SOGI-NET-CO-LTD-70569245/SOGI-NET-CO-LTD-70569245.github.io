@@ -132,6 +132,52 @@ $(document).ready(function(){
             }
         }
     });
+    $('.owl-4col').owlCarousel({
+        loop:true,
+        margin:0,
+        autoplay:true,
+        lazyLoad:true,
+        nav: false,
+        items: 4,
+        navText: ['',''],
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                center: false,
+                items:1
+            },
+            768:{
+                items:4
+            }
+        }
+    });
+
+    $('.slider-rwd-4').slick({
+        slidesToShow: 4,
+        autoplay: true,
+        slidesToScroll: 4,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }
+        ]
+    });
 
     $('.slider-rwd-3').slick({
         slidesToShow: 3,
