@@ -372,6 +372,8 @@ btn.addEventListener('click', async () => {
     }
 });
 
+$('select').selectpicker();
+
 // var swiper = new Swiper(".swiper-center", {
 //     loop: true,
 //     pauseOnMouseEnter: true,
