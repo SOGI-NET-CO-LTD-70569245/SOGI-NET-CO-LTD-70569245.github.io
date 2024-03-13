@@ -28,7 +28,9 @@
                 col2Label:'品牌',
                 col2Input:'請選擇品牌',
                 col3Label:'名稱',
-                col3Input:'請輸入型號',
+                col3Input:'請選擇型號',
+                col4Label:'電池健康度',
+                col4Input:'請選擇區間',
                 checkbox1Name:'只顯示關閉資料',
             })
             @@include('../../partial/page/store-admin/_table.html',{
@@ -40,10 +42,11 @@
                     th: [
                         {thClass:'text-center', thLabel:'編號'},
                         {thClass:'text-center', thLabel:'門市'},
-                        {thClass:'text-center', thLabel:'商品名稱'},
+                        {thClass:'text-center', thLabel:'商品名稱 <a href="#"><i class="fas fa-sort"></i></a>'},
                         {thClass:'text-center', thLabel:'款式'},
                         {thClass:'text-center', thLabel:'售價'},
-                        {thClass:'text-center', thLabel:'使用狀態'},
+                        {thClass:'text-center', thLabel:'電池健康度%'},
+                        {thClass:'text-center', thLabel:'外觀機況'},
                         {thClass:'text-center', thWidth:'10%', thLabel:'產品狀態'},
                         {thClass:'text-center', thWidth:'10%'},
                     ]
@@ -75,6 +78,11 @@
                         tdType:'editable', editableClass:'price',
                         tdClass:'text-center',
                         tdLabel:'12,300'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'95'
                     },
                     {
                         tdType:'text',
@@ -125,6 +133,11 @@
                         tdType:'text',
                         tdClass:'text-center',
                         tdLabel:'二手'
+                    },
+                    {
+                        tdType:'text',
+                        tdClass:'text-center',
+                        tdLabel:'95'
                     },
                     {
                         tdType:'text',

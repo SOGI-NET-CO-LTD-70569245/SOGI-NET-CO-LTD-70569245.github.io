@@ -22,18 +22,18 @@
             <div class="col-sm-@@colWidth">
                 <div class="form-group">
                     <label>@@col3Label</label>
-                    @@if(context.type=='repair'){
-                    <select class="form-control">
-                        <option>@@col3Input</option>
-                    </select>
+                    @@if(context.type=='new'){
+                        <input type="text" class="form-control" id="" placeholder="@@col3Input">
                     }
-                    @@if(context.type!='repair'){
-                    <input type="text" class="form-control" id="" placeholder="@@col3Input">
+                    @@if(context.type!='new'){
+                        <select class="form-control">
+                            <option>@@col3Input</option>
+                        </select>
                     }
                 </div>
             </div>
             }
-            @@if(context.type=='repair'){
+            @@if(context.type!='new'){
             <div class="col-sm-@@colWidth">
                 <div class="form-group">
                     <label>@@col4Label</label>

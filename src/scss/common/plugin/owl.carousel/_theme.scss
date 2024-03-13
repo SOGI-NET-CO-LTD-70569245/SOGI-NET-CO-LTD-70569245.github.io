@@ -81,7 +81,7 @@
 			}
             &.active {
                 span {
-                    width: $dot-width * 4;
+                    width: calc($dot-width * 4);
                 }
             }
 		}
