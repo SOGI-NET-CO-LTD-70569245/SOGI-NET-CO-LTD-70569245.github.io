@@ -25,12 +25,22 @@
                             btn2Label:'用電話訂購',
                             desc1Label:'二手價',
                             desc1:'<span class="text-price h4 font-weight-bold">$19,000</span> <small class="text-muted">(未稅)</small>',
-                            desc2Label:'狀　態',
-                            desc2:'良好 (8成新)',
-                            desc3Label:'貨　源',
-                            desc3:'公司貨',
-                            desc4Label:'保固期',
-                            desc4:'已過保',
+                            desc2Label:'款　式',
+                            desc2:'盒裝',
+                            desc3Label:'盒　裝',
+                            desc3:'有',
+                            desc4Label:'外觀機況',
+                            desc4:'S級，<a href="#">分級說明</a>',
+                            desc5Label:'檢測報告',
+                            desc5:'有，<a href="#">查看報告</a>',
+                            desc6Label:'門市保固',
+                            desc6:'1個月',
+                            desc7Label:'原廠充電線',
+                            desc7:'有',
+                            desc8Label:'電池健康度',
+                            desc8:'92%',
+                            desc9Label:'IMEI',
+                            desc9:'#06#01234567890',
                             group: {
                                 item: [
                                     {label:'門市名稱', desc:'一二三四五'},
@@ -39,6 +49,10 @@
                                     {label:'門市評價', desc:'5.0', rateCount:'1635'},
                                 ],
                             },
+                        })
+                        @@include('../../partial/page/store/_section-text.html',{
+                            title:'二手分級說明',
+                            desc:'<table class="table table-bordered"><tr><th>分級說明</th><td class="text-center" width="20%">S級</td><td class="text-center"  width="20%">A級</td><td class="text-center" width="20%">>B級</td><td class="text-center" width="20%">C級</td></tr><tr><th>外觀狀況</th><td class="text-center">99%</td><td class="text-center">90%</td><td class="text-center">70~80%</td><td class="text-center">70%以下</td></tr><tr><th>商品保固</th><td class="text-center">6個月</td><td class="text-center">3個月</td><td class="text-center">3個月</td><td class="text-center">3個月</td></tr><tr><th>商品配件</th><td class="text-center">全新充電組</td><td class="text-center">全新充電組</td><td class="text-center">全新充電組</td><td class="text-center">3個月</td></tr><tr><th>商品敘述</th><td>媲美新機<br>可能有更換<br>消耗性零件</td><td>機況優異<br>可能有些微刮傷<br>可能有更換<br>消耗性零件</td><td>媲美新機<br>可能有更換<br>消耗性零件</td><td>媲美新機<br>可能有更換<br>消耗性零件</td></tr></table>'
                         })
                         @@include('../../partial/page/store/_section-text.html',{
                             title:'商品使用狀況',
@@ -64,6 +78,7 @@
 
         @@include('../../partial/comp/_nav-top.html')
         @@include('../../partial/global/_js.html')
+        @@include('../../partial/page/store/_js-fresco.html')
         @@include('../../partial/page/store/_js-readmore.html')
     </body>
 </html>

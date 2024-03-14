@@ -1,0 +1,19 @@
+<script src="/assets/javascripts/vendor/fresco.v225.js"></script>
+<script>
+    $('.btn-color-all').on('click', function(event) {
+        event.preventDefault();
+        Fresco.show([
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_p40_pro_plus_0326173026609_640x480.jpg',
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020211_640x480.jpg',
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020714_640x480.jpg',
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020005_640x480.jpg',
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_10_plus_0814032614442_640x480.jpg',
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_10_plus_0813060113639_640x480.jpg',
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020714_640x480.jpg',
+'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020005_640x480.jpg',
+                    ], {
+            thumbnails: 'true',
+            onClick: 'close'
+        });
+    });
+</script>
