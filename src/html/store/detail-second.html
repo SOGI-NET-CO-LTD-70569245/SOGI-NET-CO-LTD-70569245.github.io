@@ -18,7 +18,6 @@
                         @@include('../../partial/page/store/_section-product.html',{
                             title:'SAMSUNG Galaxy S22 128GB 二手報價',
                             img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s22_0209113809496_360x270.jpg',
-                            buyLabel:'立即購買',
                             btn1Icon:'fab fa-line',
                             btn1Label:'用LINE訂購',
                             btn2Icon:'fas fa-phone',
@@ -30,7 +29,7 @@
                             desc3Label:'盒　裝',
                             desc3:'有',
                             desc4Label:'外觀機況',
-                            desc4:'S級，<a href="#">分級說明</a>',
+                            desc4:'S級，<a class="btn-anchor" href="#tips">分級說明</a>',
                             desc5Label:'檢測報告',
                             desc5:'有，<a href="#">查看報告</a>',
                             desc6Label:'門市保固',
@@ -51,6 +50,7 @@
                             },
                         })
                         @@include('../../partial/page/store/_section-text.html',{
+                            id:'tips',
                             title:'二手分級說明',
                             desc:'<table class="table table-bordered"><tr><th>分級說明</th><td class="text-center" width="20%">S級</td><td class="text-center"  width="20%">A級</td><td class="text-center" width="20%">>B級</td><td class="text-center" width="20%">C級</td></tr><tr><th>外觀狀況</th><td class="text-center">99%</td><td class="text-center">90%</td><td class="text-center">70~80%</td><td class="text-center">70%以下</td></tr><tr><th>商品保固</th><td class="text-center">6個月</td><td class="text-center">3個月</td><td class="text-center">3個月</td><td class="text-center">3個月</td></tr><tr><th>商品配件</th><td class="text-center">全新充電組</td><td class="text-center">全新充電組</td><td class="text-center">全新充電組</td><td class="text-center">3個月</td></tr><tr><th>商品敘述</th><td>媲美新機<br>可能有更換<br>消耗性零件</td><td>機況優異<br>可能有些微刮傷<br>可能有更換<br>消耗性零件</td><td>媲美新機<br>可能有更換<br>消耗性零件</td><td>媲美新機<br>可能有更換<br>消耗性零件</td></tr></table>'
                         })
