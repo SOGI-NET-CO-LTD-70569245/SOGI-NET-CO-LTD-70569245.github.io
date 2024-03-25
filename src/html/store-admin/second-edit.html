@@ -39,7 +39,7 @@
                         {col:12, colSm:4, colMd:2, inputType:'select', inputLabel:'盒裝', disabled:true,},
                         {col:12, colSm:4, colMd:2, inputType:'select', inputLabel:'原廠充電線', disabled:true,},
                         {col:12, colSm:6, colMd:2, inputType:'select', inputLabel:'請選擇門市',},
-                        {col:12, colSm:6, colMd:4, inputType:'text', inputLabel:'', inputValue:'電池健康度%，限輸入數字',},
+                        {col:12, colSm:6, colMd:4, inputType:'text', inputLabel:'', inputValue:'Apple產品必填電池健康度%，限輸入數字',},
                         {col:12, colSm:6, colMd:4, inputType:'text', inputLabel:'', inputValue:'IMEI',},
                         {col:12, colSm:6, colMd:4, inputType:'text', inputLabel:'', inputValue:'輸入價格，不可超過新機售價',},
                     ],
@@ -51,10 +51,11 @@
                         imgBtnName:'刪除',
                     },
                     {
-                        label:'商品照片 (必填，可上傳多張，以第一張作為封面照，僅限 jpg 格式)',
+                        label:'商品照片 (必填，僅限 jpg 格式，可上傳多張與更新封面照)',
                         inputType:'file', inputLabel:'請選擇檔案',
                         imgItem:'1', img1Size:'140x140',
                         imgBtnName:'刪除',
+                        select:true,
                     },
                     {
                         label:'商品狀況描述',

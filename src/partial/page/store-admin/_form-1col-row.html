@@ -29,6 +29,11 @@
                             btnName:'@@imgBtnName',
                         })
                     }
+                    @@if(context.select){
+                        <div class="form-check text-center">
+                            <input type="radio" class="form-check-input">
+                        </div>
+                    }
                 </div>
                 }
                 @@if(context.imgItem=='2' || context.imgItem=='3'){
