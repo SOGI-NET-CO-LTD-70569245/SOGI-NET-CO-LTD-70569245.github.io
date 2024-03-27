@@ -35,65 +35,16 @@
     <div class="col-md-7 col-12">
         <div class="clearfix">
             <div class="mb-4">
-                <div class="mb-1">
-                    @@if(context.desc1Label){@@desc1Label：}
-                    @@if(context.price1){<span class="text-price h4 font-weight-bold">}@@desc1@@if(context.price1){</span>}
-                </div>
-                @@if(context.desc2){
-                <div class="mb-1">
-                    @@if(context.desc2Label){@@desc2Label：}
-                    @@if(context.price2){<span class="text-price h4 font-weight-bold">}@@desc2@@if(context.price2){</span>}
-                </div>
-                }
-                @@if(context.desc3){
-                <div class="mb-1">
-                    @@if(context.desc3Label){@@desc3Label：}
-                    @@if(context.price3){<span class="text-price h4 font-weight-bold">}@@desc3@@if(context.price3){</span>}
-                </div>
-                }
-                @@if(context.desc4){
-                <div class="mb-1">
-                    @@if(context.desc4Label){@@desc4Label：}
-                    @@desc4
-                </div>
-                }
-                @@if(context.desc5){
-                <div class="mb-1">
-                    @@if(context.desc5Label){@@desc5Label：}
-                    @@desc5
-                </div>
-                }
-                @@if(context.desc6){
-                <div class="mb-1">
-                    @@if(context.desc6Label){@@desc6Label：}
-                    @@desc6
-                </div>
-                }
-                @@if(context.desc7){
-                <div class="mb-1">
-                    @@if(context.desc7Label){@@desc7Label：}
-                    @@desc7
-                </div>
-                }
-                @@if(context.desc8){
-                <div class="mb-1">
-                    @@if(context.desc8Label){@@desc8Label：}
-                    @@desc8
-                </div>
-                }
-                @@if(context.desc9){
-                <div class="mb-1">
-                    @@if(context.desc9Label){@@desc9Label：}
-                    @@desc9
-                </div>
+                @@for (var i = 0; i < descGroup.item.length; i++) {
+                    @@include('unit/_store-desc-item.html', `+(JSON.stringify(descGroup.item[i]))+`)
                 }
             </div>
             <div class="">
-                <small class="text-muted">上架日期：2015/12/3</small>
+                <small class="text-muted">@@date</small>
             </div>
             <ul class="list-group">
-                @@for (var i = 0; i < group.item.length; i++) {
-                    @@include('unit/_store-list-item.html', `+(JSON.stringify(group.item[i]))+`)
+                @@for (var i = 0; i < infoGroup.item.length; i++) {
+                    @@include('unit/_store-list-item.html', `+(JSON.stringify(infoGroup.item[i]))+`)
                 }
             </ul>
         </div>

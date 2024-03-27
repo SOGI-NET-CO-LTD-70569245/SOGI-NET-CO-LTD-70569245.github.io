@@ -172,3 +172,13 @@ small {
         font-size: $h5-font-size !important;
     }
 }
+
+ol.parentheses {
+    counter-reset: list;
+    list-style: none;
+    li:before {
+        content: "(" counter(list) ") ";
+        counter-increment: list;
+        margin-right: 5px;
+    }
+}
