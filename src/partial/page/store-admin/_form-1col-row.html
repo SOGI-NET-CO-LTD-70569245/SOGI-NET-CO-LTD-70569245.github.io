@@ -3,6 +3,14 @@
         @@if(context.label){
         <label for="">@@label</label>
         }
+        @@if(context.inputType=='date'){
+        <div class="form-group row">
+            <lable class="col-auto col-form-label">到期日：</lable>
+            <div class="col-auto">
+                <input class="form-control" type="date">
+            </div>
+        </div>
+        }
         @@if(context.inputType=='textarea'){
             <textarea class="form-control @@if(context.inputMaxLength){input-limit}" rows="@@inputRows" @@if(context.inputMaxLength){maxlength="@@inputMaxLength"} placeholder="@@inputLabel"></textarea>
             @@if(context.inputMaxLength){
