@@ -17,7 +17,8 @@
 // Container that the modal scrolls within
 .modal {
   position: fixed;
-  top: 100px;
+  top: 0;
+  // top: 100px;
   left: 0;
   z-index: $zindex-modal;
   display: none;
