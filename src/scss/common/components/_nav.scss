@@ -68,21 +68,37 @@
             text-decoration: none;
             &[aria-expanded="true"] {
                 &:after {
-                    content: $icon-caret-up;
+                    // content: $icon-caret-up;
+                    content: "";
+                    border-bottom: $arrow-size solid;
+                    border-top: 0;
+                    border-left: $arrow-size solid transparent;
+                    border-right: $arrow-size solid transparent;
                 }
             }
             &[aria-expanded="false"] {
                 &:after {
-                    content: $icon-caret-down;
+                    // content: $icon-caret-down;
+                    content: "";
+                    border-top: $arrow-size solid;
+                    border-bottom: 0;
+                    border-left: $arrow-size solid transparent;
+                    border-right: $arrow-size solid transparent;
                 }
             }
             &:after {
                 position: absolute;
                 top:50%;
                 right: 0;
-                margin-top:-12px;
-                font-family: FontAwesome;
-                content: $icon-caret-down;
+                // margin-top:-12px;
+                // font-family: FontAwesome;
+                // content: $icon-caret-down;
+                margin-top: calc(-$arrow-size / 2);
+                content: "";
+                border-top: $arrow-size solid;
+                border-bottom: 0;
+                border-left: $arrow-size solid transparent;
+                border-right: $arrow-size solid transparent;
             }
         }
     }
