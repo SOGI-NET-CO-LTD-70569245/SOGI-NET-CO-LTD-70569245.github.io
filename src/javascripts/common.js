@@ -30,15 +30,15 @@ $(function() {
 		return false;
 	});
 
-    $.cookieBar('addTranslation', 'zh-TW', {
-		message:	'為了提供您更優質的個人化體驗，本網站使用 cookies，若您繼續瀏覽本網站，代表您同意我們的 cookies 政策。',
-		acceptText:	'我知道了!',
-		infoText:	'了解隱私權政策',
-	});
-    $.cookieBar({
-		style: 'bottom-left',
-        language: 'zh-TW'
-	});
+    // $.cookieBar('addTranslation', 'zh-TW', {
+	// 	message:	'為了提供您更優質的個人化體驗，本網站使用 cookies，若您繼續瀏覽本網站，代表您同意我們的 cookies 政策。',
+	// 	acceptText:	'我知道了!',
+	// 	infoText:	'了解隱私權政策',
+	// });
+    // $.cookieBar({
+	// 	style: 'bottom-left',
+    //     language: 'zh-TW'
+	// });
 
     $('.btn-top').click(function(){
 		$('html, body').animate({
@@ -282,15 +282,6 @@ $(document).ready(function(){
     // });
 });
 
-// (function(d, s, id) {
-//   var js, fjs = d.getElementsByTagName(s)[0];
-//   if (d.getElementById(id)) return;
-//   js = d.createElement(s); js.id = id;
-//   js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5";
-//   fjs.parentNode.insertBefore(js, fjs);
-// }(document, 'script', 'facebook-jssdk'));
-
-
 // 191026
 
 var didScroll;
@@ -358,19 +349,19 @@ $(function () {
     });
 });
 
-const shareData = {
-    title: document.title,
-    text: '我想與你分享' + document.title + '的精彩內容!',
-    url: document.location.href,
-}, btn = document.querySelector('#btn-share');
+// const shareData = {
+//     title: document.title,
+//     text: '我想與你分享' + document.title + '的精彩內容!',
+//     url: document.location.href,
+// }, btn = document.querySelector('#btn-share');
 
-btn.addEventListener('click', async () => {
-    try {
-        await navigator.share(shareData)
-    } catch(err) {
-        console.log( 'Error: ' + err );
-    }
-});
+// btn.addEventListener('click', async () => {
+//     try {
+//         await navigator.share(shareData)
+//     } catch(err) {
+//         console.log( 'Error: ' + err );
+//     }
+// });
 
 $('select').selectpicker();
 
