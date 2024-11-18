@@ -26,7 +26,7 @@
                                 <li class="nav-item"><a class="nav-link active" href="detail.html">產品總覽</a></li>
                                 <li class="nav-item"><a class="nav-link btn-anchor" href="#intro">介紹規格</a></li>
                                 <li class="nav-item"><a class="nav-link btn-anchor" href="#compare">評測新聞</a></li>
-                                <li class="nav-item"><a class="nav-link btn-anchor" href="#price">優惠價格</a></li>
+                                <li class="nav-item"><a class="nav-link btn-anchor" href="#price">維修價格</a></li>
                             </ul>
                         </div>
                     </div>
@@ -41,9 +41,9 @@
 
                     @@include('../../partial/page/products/_article-list.html',{id:'articles', icon:'fas fa-clipboard-check', title:'評測與新聞'})
 
-                    @@include('../../partial/page/products/_compare-most-viewed.html',{id:'compare', icon:'fas fa-th-large', title:'網友最常比較'})
+                    @@include('../../partial/page/products/_compare-most-viewed.html',{id:'compare', icon:'fas fa-th-large', btnLabel:'立即比較', title:'上一代產品'})
 
-                    @@include('../../partial/page/products/_store-price.html',{id:'price', icon:'fas fa-shopping-bag', title:'手機王購物 | 精選專案價格'})
+                    @@include('../../partial/page/products/_compare-most-viewed.html',{id:'compare', icon:'fas fa-th-large', btnLabel:'對決', title:'網友最常比較'})
 
                     @@include('../../partial/page/products/_price-trend.html',{id:'trend', icon:'fas fa-chart-line', title:'價格走勢'})
 
@@ -143,25 +143,33 @@ jQuery(document).ready(function($){
                         pointFormat: "{point.y}"
                     },
                     legend: {
-                        layout: 'vertical',
-                        align: 'right',
-                        verticalAlign: 'middle',
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom',
                         borderWidth: 0
                     },
                     plotOptions: {
                         line: {
                             dataLabels: {
+                                enabled: false, // 顯示數值
                                 format: '{y}'
                             },
-                            //enableMouseTracking: false
+                            enableMouseTracking: true
                         }
                     },
-                    series: [{
-                        showInLegend: false,
-                        data: [25000, 24000, 24000, 23500, 23400, 23200, 19000]
-                    }]
+                    series: [
+                        {
+                            name: 'Apple iPhone 15',
+                            data: [25000, 24000, 24000, 23500, 23400, 23200, 19000]
+                        },
+                        {
+                            name: 'Apple iPhone 16',
+                            data: [22000, 22500, 23000, 22500, 22000, 21000, 20000]
+                        }
+                    ]
                 });
             });
+
 
             jQuery(document).ready(function() {
                 $('.js-readmore').expandable({
