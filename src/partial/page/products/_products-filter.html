@@ -39,141 +39,236 @@
         </div>
         <div class="tab-content pt-5">
             <div role="tabpanel" class="tab-pane active" id="@@tabId1">
-        <div class="row align-items-center justify-content-between">
-            <div class="col-6 col-lg-6">
-                <div class="font-weight-bold h4">產品系列</div>
-            </div>
-            <div class="col-auto">
-                <div class="dropdown dropdown-select">
-                    <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
-                        <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-@@mixitupId">
-                        <div class="dropdown-header">依門市最低</div>
-                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
-                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
-                        <div class="dropdown-header">依上市日</div>
-                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
-                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
-                        <div class="dropdown-header">依熱門度</div>
-                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
-                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-6 col-lg-6">
+                        <div class="font-weight-bold h4">產品系列</div>
                     </div>
-                </div>
-                <!-- <select id="SortSelect-@@mixitupId" class="form-control">
-                    <option>排序方式</option>
-                    <optgroup label="依門市最低">
-                        <option value="sort-price:desc">由高至低</option>
-                        <option value="sort-price:asc">由低至高</option>
-                    </optgroup>
-                    <optgroup label="依上市日">
-                        <option value="sort-date:desc">由新至舊</option>
-                        <option value="sort-date:asc">由舊至新</option>
-                    </optgroup>
-                    <optgroup label="依熱門度">
-                        <option value="sort-hot:desc">由高至低</option>
-                        <option value="sort-hot:asc">由低至高</option>
-                    </optgroup>
-                </select> -->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-lg-3 d-none d-lg-block">
-                <div class="nav flex-column my-2 border-top" id="@@dataParent">
-                    <div class="nav-item">
-                        <a class="nav-link h4 filter-@@mixitupId active" href="javascript:void();" data-filter="all">
-                            全部
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a class="nav-link h4" data-toggle="collapse" href="#@@seriesId1">
-                            @@seriesTitle1 <i class="fas fa-fw fa-angle-down"></i>
-                        </a>
-                    </div>
-                    <div class="collapse pl-3" id="@@seriesId1" data-parent="#@@dataParent">
-                        <div class="nav-item">
-                            <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-s">
-                                Galaxy S 系列
+                    <div class="col-auto">
+                        <div class="dropdown dropdown-select">
+                            <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
+                                <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
                             </a>
-                        </div>
-                        <div class="nav-item">
-                            <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-note">
-                                Galaxy Note 系列
-                            </a>
-                        </div>
-                    </div>
-                    <div class="nav-item">
-                        <a class="nav-link h4" data-toggle="collapse" href="#@@seriesId2">
-                            @@seriesTitle2 <i class="fas fa-fw fa-angle-down"></i>
-                        </a>
-                    </div>
-                    <div class="collapse pl-3" id="@@seriesId2" data-parent="#@@dataParent">
-                        <div class="nav-item">
-                            <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-a">
-                                Galaxy A 系列
-                            </a>
-                        </div>
-                    </div>
-                    <div class="nav-item">
-                        <a class="nav-link h4" data-toggle="collapse" href="#@@seriesId3">
-                            @@seriesTitle3 <i class="fas fa-fw fa-angle-down"></i>
-                        </a>
-                    </div>
-                    <div class="collapse pl-3" id="@@seriesId3" data-parent="#@@dataParent">
-                        <div class="nav-item">
-                            <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-m">
-                                Galaxy M 系列
-                            </a>
-                            <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-o">
-                                Galaxy O 系列 (無產品測試)
-                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-@@mixitupId">
+                                <div class="dropdown-header">依門市最低</div>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
+                                <div class="dropdown-header">依上市日</div>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
+                                <div class="dropdown-header">依熱門度</div>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="border-top py-3">
-                    <p class="m-0 text-center">
-                        想試更多條件?<br>請試試<a href="#">進階搜尋</a>
-                    </p>
+                <div class="row">
+                    <div class="col-12 col-lg-3 d-none d-lg-block">
+                        <div class="nav flex-column my-2 border-top" id="@@dataParent">
+                            <div class="nav-item">
+                                <a class="nav-link h4 filter-@@mixitupId active" href="javascript:void();" data-filter="all">
+                                    全部
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link h4" data-toggle="collapse" href="#@@seriesId1">
+                                    @@seriesTitle1 <i class="fas fa-fw fa-angle-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse pl-3" id="@@seriesId1" data-parent="#@@dataParent">
+                                <div class="nav-item">
+                                    <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-s">
+                                        Galaxy S 系列
+                                    </a>
+                                </div>
+                                <div class="nav-item">
+                                    <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-note">
+                                        Galaxy Note 系列
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link h4" data-toggle="collapse" href="#@@seriesId2">
+                                    @@seriesTitle2 <i class="fas fa-fw fa-angle-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse pl-3" id="@@seriesId2" data-parent="#@@dataParent">
+                                <div class="nav-item">
+                                    <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-a">
+                                        Galaxy A 系列
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link h4" data-toggle="collapse" href="#@@seriesId3">
+                                    @@seriesTitle3 <i class="fas fa-fw fa-angle-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse pl-3" id="@@seriesId3" data-parent="#@@dataParent">
+                                <div class="nav-item">
+                                    <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-m">
+                                        Galaxy M 系列
+                                    </a>
+                                    <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-o">
+                                        Galaxy O 系列 (無產品測試)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-top py-3">
+                            <p class="m-0 text-center">
+                                想試更多條件?<br>請試試<a href="#">進階搜尋</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-lg-none">
+                        <select id="FilterSelect-@@mixitupId" class="form-control filter-select my-2">
+                            <option selected hidden>請選擇</option>
+                            <option value="all">全部</option>
+                            <optgroup label="旗艦">
+                                <option value=".cat-galaxy-s">Galaxy S 系列</option>
+                                <option value=".cat-galaxy-note">Galaxy Note 系列</option>
+                            </optgroup>
+                            <optgroup label="中高階">
+                                <option value=".cat-galaxy-a">Galaxy A 系列</option>
+                            </optgroup>
+                            <optgroup label="入門">
+                                <option value=".cat-galaxy-m">Galaxy M 系列</option>
+                                <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="col-12 col-lg-9">
+        <!--
+                        <div class="bg-light h-100 align-items-center justify-content-center" style="display: none;" id="noMixItemMsg">
+                            <div class="display-4">無符合產品</div>
+                        </div>
+        -->
+                    @@include('../../page/common/_products-list.html',{
+                        rowStyle:'@@rowStyle',
+                        item:'@@item',
+                        mixitupId:'@@mixitupId',
+                        badge1Title:true,
+                    })
+                
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 d-lg-none">
-                <select id="FilterSelect-@@mixitupId" class="form-control filter-select my-2">
-                    <option selected hidden>請選擇</option>
-                    <option value="all">全部</option>
-                    <optgroup label="旗艦">
-                        <option value=".cat-galaxy-s">Galaxy S 系列</option>
-                        <option value=".cat-galaxy-note">Galaxy Note 系列</option>
-                    </optgroup>
-                    <optgroup label="中高階">
-                        <option value=".cat-galaxy-a">Galaxy A 系列</option>
-                    </optgroup>
-                    <optgroup label="入門">
-                        <option value=".cat-galaxy-m">Galaxy M 系列</option>
-                        <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
-                    </optgroup>
-                </select>
-            </div>
-            <div class="col-12 col-lg-9">
-<!--
-                <div class="bg-light h-100 align-items-center justify-content-center" style="display: none;" id="noMixItemMsg">
-                    <div class="display-4">無符合產品</div>
-                </div>
--->
-            @@include('../../page/common/_products-list.html',{
-                rowStyle:'@@rowStyle',
-                item:'@@item',
-                mixitupId:'@@mixitupId',
-                badge1Title:true,
-            })
-        
-            </div>
-        </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="@@tabId2">
-                @@tabTitle2
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-6 col-lg-6">
+                        <div class="font-weight-bold h4">產品系列</div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="dropdown dropdown-select">
+                            <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
+                                <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-@@mixitupId">
+                                <div class="dropdown-header">依門市最低</div>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
+                                <div class="dropdown-header">依上市日</div>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
+                                <div class="dropdown-header">依熱門度</div>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
+                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-3 d-none d-lg-block">
+                        <div class="nav flex-column my-2 border-top" id="@@dataParent">
+                            <div class="nav-item">
+                                <a class="nav-link h4 filter-@@mixitupId active" href="javascript:void();" data-filter="all">
+                                    全部
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link h4" data-toggle="collapse" href="#@@seriesId1">
+                                    @@seriesTitle1 <i class="fas fa-fw fa-angle-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse pl-3" id="@@seriesId1" data-parent="#@@dataParent">
+                                <div class="nav-item">
+                                    <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-s">
+                                        Galaxy S 系列
+                                    </a>
+                                </div>
+                                <div class="nav-item">
+                                    <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-note">
+                                        Galaxy Note 系列
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link h4" data-toggle="collapse" href="#@@seriesId2">
+                                    @@seriesTitle2 <i class="fas fa-fw fa-angle-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse pl-3" id="@@seriesId2" data-parent="#@@dataParent">
+                                <div class="nav-item">
+                                    <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-a">
+                                        Galaxy A 系列
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link h4" data-toggle="collapse" href="#@@seriesId3">
+                                    @@seriesTitle3 <i class="fas fa-fw fa-angle-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse pl-3" id="@@seriesId3" data-parent="#@@dataParent">
+                                <div class="nav-item">
+                                    <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-m">
+                                        Galaxy M 系列
+                                    </a>
+                                    <a class="nav-link filter-@@mixitupId" href="javascript:void();" data-filter=".cat-galaxy-o">
+                                        Galaxy O 系列 (無產品測試)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-top py-3">
+                            <p class="m-0 text-center">
+                                想試更多條件?<br>請試試<a href="#">進階搜尋</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-lg-none">
+                        <select id="FilterSelect-@@mixitupId" class="form-control filter-select my-2">
+                            <option selected hidden>請選擇</option>
+                            <option value="all">全部</option>
+                            <optgroup label="旗艦">
+                                <option value=".cat-galaxy-s">Galaxy S 系列</option>
+                                <option value=".cat-galaxy-note">Galaxy Note 系列</option>
+                            </optgroup>
+                            <optgroup label="中高階">
+                                <option value=".cat-galaxy-a">Galaxy A 系列</option>
+                            </optgroup>
+                            <optgroup label="入門">
+                                <option value=".cat-galaxy-m">Galaxy M 系列</option>
+                                <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                    @@include('../../page/common/_products-list.html',{
+                        rowStyle:'filter',
+                        item:'10',
+                        mixitupId:'2',
+                        badge1Title:true,
+                    })
+                
+                    </div>
+                </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="@@tabId3">
-                @@tabTitle3
+                <div class="bg-success" style="height: 1000px;">
+                    @@tabTitle3
+                </div>
             </div>
         </div>
         <div class="d-lg-none">
