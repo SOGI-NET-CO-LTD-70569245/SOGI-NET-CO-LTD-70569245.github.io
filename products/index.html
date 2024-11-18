@@ -964,378 +964,485 @@
                         </div>
                         <div class="tab-content pt-5">
                             <div role="tabpanel" class="tab-pane active" id="tab-product-01">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-6 col-lg-6">
-                                <div class="font-weight-bold h4">產品系列</div>
-                            </div>
-                            <div class="col-auto">
-                                <div class="dropdown dropdown-select">
-                                    <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
-                                        <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-1">
-                                        <div class="dropdown-header">依門市最低</div>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
-                                        <div class="dropdown-header">依上市日</div>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
-                                        <div class="dropdown-header">依熱門度</div>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-6 col-lg-6">
+                                        <div class="font-weight-bold h4">產品系列</div>
                                     </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-lg-3 d-none d-lg-block">
-                                <div class="nav flex-column my-2 border-top" id="accordion-product-01">
-                                    <div class="nav-item">
-                                        <a class="nav-link h4 filter-1 active" href="javascript:void();" data-filter="all">
-                                            全部
-                                        </a>
-                                    </div>
-                                    <div class="nav-item">
-                                        <a class="nav-link h4" data-toggle="collapse" href="#collapse-product-01-cat1">
-                                            旗艦 <i class="fas fa-fw fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div class="collapse pl-3" id="collapse-product-01-cat1" data-parent="#accordion-product-01">
-                                        <div class="nav-item">
-                                            <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-s">
-                                                Galaxy S 系列
+                                    <div class="col-auto">
+                                        <div class="dropdown dropdown-select">
+                                            <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
+                                                <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
                                             </a>
-                                        </div>
-                                        <div class="nav-item">
-                                            <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-note">
-                                                Galaxy Note 系列
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="nav-item">
-                                        <a class="nav-link h4" data-toggle="collapse" href="#collapse-product-01-cat2">
-                                            中高階 <i class="fas fa-fw fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div class="collapse pl-3" id="collapse-product-01-cat2" data-parent="#accordion-product-01">
-                                        <div class="nav-item">
-                                            <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-a">
-                                                Galaxy A 系列
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="nav-item">
-                                        <a class="nav-link h4" data-toggle="collapse" href="#collapse-product-01-cat3">
-                                            入門 <i class="fas fa-fw fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div class="collapse pl-3" id="collapse-product-01-cat3" data-parent="#accordion-product-01">
-                                        <div class="nav-item">
-                                            <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-m">
-                                                Galaxy M 系列
-                                            </a>
-                                            <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-o">
-                                                Galaxy O 系列 (無產品測試)
-                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-1">
+                                                <div class="dropdown-header">依門市最低</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
+                                                <div class="dropdown-header">依上市日</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
+                                                <div class="dropdown-header">依熱門度</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="border-top py-3">
-                                    <p class="m-0 text-center">
-                                        想試更多條件?<br>請試試<a href="#">進階搜尋</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12 d-lg-none">
-                                <select id="FilterSelect-1" class="form-control filter-select my-2">
-                                    <option selected hidden>請選擇</option>
-                                    <option value="all">全部</option>
-                                    <optgroup label="旗艦">
-                                        <option value=".cat-galaxy-s">Galaxy S 系列</option>
-                                        <option value=".cat-galaxy-note">Galaxy Note 系列</option>
-                                    </optgroup>
-                                    <optgroup label="中高階">
-                                        <option value=".cat-galaxy-a">Galaxy A 系列</option>
-                                    </optgroup>
-                                    <optgroup label="入門">
-                                        <option value=".cat-galaxy-m">Galaxy M 系列</option>
-                                        <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                            <div class="col-12 col-lg-9">
+                                <div class="row">
+                                    <div class="col-12 col-lg-3 d-none d-lg-block">
+                                        <div class="nav flex-column my-2 border-top" id="accordion-product-01">
+                                            <div class="nav-item">
+                                                <a class="nav-link h4 filter-1 active" href="javascript:void();" data-filter="all">
+                                                    全部
+                                                </a>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-product-01-cat1">
+                                                    旗艦 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-product-01-cat1" data-parent="#accordion-product-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-s">
+                                                        Galaxy S 系列
+                                                    </a>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-note">
+                                                        Galaxy Note 系列
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-product-01-cat2">
+                                                    中高階 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-product-01-cat2" data-parent="#accordion-product-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-a">
+                                                        Galaxy A 系列
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-product-01-cat3">
+                                                    入門 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-product-01-cat3" data-parent="#accordion-product-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-m">
+                                                        Galaxy M 系列
+                                                    </a>
+                                                    <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-o">
+                                                        Galaxy O 系列 (無產品測試)
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-3">
+                                            <p class="m-0 text-center">
+                                                想試更多條件?<br>請試試<a href="#">進階搜尋</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-lg-none">
+                                        <select id="FilterSelect-1" class="form-control filter-select my-2">
+                                            <option selected hidden>請選擇</option>
+                                            <option value="all">全部</option>
+                                            <optgroup label="旗艦">
+                                                <option value=".cat-galaxy-s">Galaxy S 系列</option>
+                                                <option value=".cat-galaxy-note">Galaxy Note 系列</option>
+                                            </optgroup>
+                                            <optgroup label="中高階">
+                                                <option value=".cat-galaxy-a">Galaxy A 系列</option>
+                                            </optgroup>
+                                            <optgroup label="入門">
+                                                <option value=".cat-galaxy-m">Galaxy M 系列</option>
+                                                <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                        
+                                    
+                                    <div class="row  mixitup" id="mixitup-1">
+                                        <div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-s" data-sort-price="0" data-sort-date="20210220" data-sort-hot="8000">
+                                            <div class="card shadow text-center p-2">
+                                                
+                                                
+                                                <div class="h5 mb-2">
+                                                    <span class="badge text-white w-75" style="background: #337ab7;">手機王</span>
+                                                </div>
+                                                
+                                                <a href="#">
+                                                    
+                                                    <span class="badge badge-custom" style="background: #ffcc00; color: #fff;">一二三四</span>
+                                                    
+                                                    <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s20_0212063512931_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy S20 5G">
+                                                </a>
+                                                <div class="h5 badge-group-nowrap my-2">
+                                                    <span class="badge badge-pill badge-outline">大螢幕</span>
+                                                    <span class="badge badge-pill badge-outline">高效能</span>
+                                                    <span class="badge badge-pill badge-outline">iOS</span>
+                                                </div>
+                                                <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy S20 5G</a>
+                                                <div class="row no-gutters">
+                                                    <div class="col-6 border-right">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">空機價</small>
+                                                            
+                                                            
+                                                            <div class="font-weight-bold text-secondary">-</div>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">二手價</small>
+                                                            
+                                                            
+                                                            <div class="font-weight-bold text-secondary">-</div>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-8 col-md-9 mt-2">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
+                                                            <i class="fa-fw fas fa-eye"></i>
+                                                            快速檢視
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
+                                                            <i class="fa-fw fas fa-plus"></i>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-s" data-sort-price="16800" data-sort-date="20200601" data-sort-hot="2500">
+                                            <div class="card shadow text-center p-2">
+                                                
+                                                
+                                                <div class="h5 mb-2">
+                                                    <span class="badge text-white w-75" style="background: #8cba51;">折扣中</span>
+                                                </div>
+                                                
+                                                <a href="#">
+                                                    
+                                                    <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_plus_0220113220241_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy S10+">
+                                                </a>
+                                                <div class="h5 badge-group-nowrap my-2">
+                                                    <span class="badge badge-pill badge-outline">大螢幕</span>
+                                                    <span class="badge badge-pill badge-outline">高效能</span>
+                                                    <span class="badge badge-pill badge-outline">iOS</span>
+                                                </div>
+                                                <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy S10+</a>
+                                                <div class="row no-gutters">
+                                                    <div class="col-6 border-right">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">空機價</small>
+                                                            
+                                                            <div class="font-weight-bold">$16,800</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">二手價</small>
+                                                            
+                                                            <div class="font-weight-bold">$17,990</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-8 col-md-9 mt-2">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
+                                                            <i class="fa-fw fas fa-eye"></i>
+                                                            快速檢視
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
+                                                            <i class="fa-fw fas fa-plus"></i>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-a" data-sort-price="7600" data-sort-date="20201001" data-sort-hot="3000">
+                                            <div class="card shadow text-center p-2">
+                                                
+                                                
+                                                <div class="h5 mb-2">
+                                                    <span class="badge text-white w-75" style="background: #263238;">獨家</span>
+                                                </div>
+                                                
+                                                <a href="#">
+                                                    
+                                                    <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_a51_1213055013699_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy A21">
+                                                </a>
+                                                <div class="h5 badge-group-nowrap my-2">
+                                                    <span class="badge badge-pill badge-outline">大螢幕</span>
+                                                    <span class="badge badge-pill badge-outline">高效能</span>
+                                                    <span class="badge badge-pill badge-outline">iOS</span>
+                                                </div>
+                                                <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy A21</a>
+                                                <div class="row no-gutters">
+                                                    <div class="col-6 border-right">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">空機價</small>
+                                                            
+                                                            <div class="font-weight-bold">$7,600</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">二手價</small>
+                                                            
+                                                            <div class="font-weight-bold">$17,990</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-8 col-md-9 mt-2">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
+                                                            <i class="fa-fw fas fa-eye"></i>
+                                                            快速檢視
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
+                                                            <i class="fa-fw fas fa-plus"></i>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-note" data-sort-price="24600" data-sort-date="20201231" data-sort-hot="10000">
+                                            <div class="card shadow text-center p-2">
+                                                
+                                                
+                                                <div class="h5 mb-2">
+                                                    <span class="badge text-white w-75" style="background: #c80000;">預購</span>
+                                                </div>
+                                                
+                                                <a href="#">
+                                                    
+                                                    <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_20_0805144705667_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy Note 20">
+                                                </a>
+                                                <div class="h5 badge-group-nowrap my-2">
+                                                    <span class="badge badge-pill badge-outline">大螢幕</span>
+                                                    <span class="badge badge-pill badge-outline">高效能</span>
+                                                    <span class="badge badge-pill badge-outline">iOS</span>
+                                                </div>
+                                                <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy Note 20</a>
+                                                <div class="row no-gutters">
+                                                    <div class="col-6 border-right">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">空機價</small>
+                                                            
+                                                            <div class="font-weight-bold">$24,600</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">二手價</small>
+                                                            
+                                                            <div class="font-weight-bold">$17,990</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-8 col-md-9 mt-2">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
+                                                            <i class="fa-fw fas fa-eye"></i>
+                                                            快速檢視
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
+                                                            <i class="fa-fw fas fa-plus"></i>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-m" data-sort-price="3700" data-sort-date="20201205" data-sort-hot="3000">
+                                            <div class="card shadow text-center p-2">
+                                                
+                                                
+                                                <div class="h5 mb-2">
+                                                    <span class="badge text-white w-75" >&nbsp;</span>
+                                                </div>
+                                                
+                                                <a href="#">
+                                                    
+                                                    <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_m11_0427033427620_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy M11">
+                                                </a>
+                                                <div class="h5 badge-group-nowrap my-2">
+                                                    <span class="badge badge-pill badge-outline">大螢幕</span>
+                                                    <span class="badge badge-pill badge-outline">高效能</span>
+                                                    <span class="badge badge-pill badge-outline">iOS</span>
+                                                </div>
+                                                <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy M11</a>
+                                                <div class="row no-gutters">
+                                                    <div class="col-6 border-right">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">空機價</small>
+                                                            
+                                                            <div class="font-weight-bold">$3,700</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">二手價</small>
+                                                            
+                                                            <div class="font-weight-bold">$17,990</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-8 col-md-9 mt-2">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
+                                                            <i class="fa-fw fas fa-eye"></i>
+                                                            快速檢視
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
+                                                            <i class="fa-fw fas fa-plus"></i>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                 
-                            
-                            <div class="row  mixitup" id="mixitup-1">
-                                <div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-s" data-sort-price="0" data-sort-date="20210220" data-sort-hot="8000">
-                                    <div class="card shadow text-center p-2">
-                                        
-                                        
-                                        <div class="h5 mb-2">
-                                            <span class="badge text-white w-75" style="background: #337ab7;">手機王</span>
-                                        </div>
-                                        
-                                        <a href="#">
-                                            
-                                            <span class="badge badge-custom" style="background: #ffcc00; color: #fff;">一二三四</span>
-                                            
-                                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s20_0212063512931_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy S20 5G">
-                                        </a>
-                                        <div class="h5 badge-group-nowrap my-2">
-                                            <span class="badge badge-pill badge-outline">大螢幕</span>
-                                            <span class="badge badge-pill badge-outline">高效能</span>
-                                            <span class="badge badge-pill badge-outline">iOS</span>
-                                        </div>
-                                        <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy S20 5G</a>
-                                        <div class="row no-gutters">
-                                            <div class="col-6 border-right">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">空機價</small>
-                                                    
-                                                    
-                                                    <div class="font-weight-bold text-secondary">-</div>
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-6">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">二手價</small>
-                                                    
-                                                    
-                                                    <div class="font-weight-bold text-secondary">-</div>
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-8 col-md-9 mt-2">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
-                                                    <i class="fa-fw fas fa-eye"></i>
-                                                    快速檢視
-                                                </a>
-                                            </div>
-                                            <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
-                                                    <i class="fa-fw fas fa-plus"></i>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-s" data-sort-price="16800" data-sort-date="20200601" data-sort-hot="2500">
-                                    <div class="card shadow text-center p-2">
-                                        
-                                        
-                                        <div class="h5 mb-2">
-                                            <span class="badge text-white w-75" style="background: #8cba51;">折扣中</span>
-                                        </div>
-                                        
-                                        <a href="#">
-                                            
-                                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_plus_0220113220241_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy S10+">
-                                        </a>
-                                        <div class="h5 badge-group-nowrap my-2">
-                                            <span class="badge badge-pill badge-outline">大螢幕</span>
-                                            <span class="badge badge-pill badge-outline">高效能</span>
-                                            <span class="badge badge-pill badge-outline">iOS</span>
-                                        </div>
-                                        <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy S10+</a>
-                                        <div class="row no-gutters">
-                                            <div class="col-6 border-right">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">空機價</small>
-                                                    
-                                                    <div class="font-weight-bold">$16,800</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-6">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">二手價</small>
-                                                    
-                                                    <div class="font-weight-bold">$17,990</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-8 col-md-9 mt-2">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
-                                                    <i class="fa-fw fas fa-eye"></i>
-                                                    快速檢視
-                                                </a>
-                                            </div>
-                                            <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
-                                                    <i class="fa-fw fas fa-plus"></i>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-a" data-sort-price="7600" data-sort-date="20201001" data-sort-hot="3000">
-                                    <div class="card shadow text-center p-2">
-                                        
-                                        
-                                        <div class="h5 mb-2">
-                                            <span class="badge text-white w-75" style="background: #263238;">獨家</span>
-                                        </div>
-                                        
-                                        <a href="#">
-                                            
-                                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_a51_1213055013699_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy A21">
-                                        </a>
-                                        <div class="h5 badge-group-nowrap my-2">
-                                            <span class="badge badge-pill badge-outline">大螢幕</span>
-                                            <span class="badge badge-pill badge-outline">高效能</span>
-                                            <span class="badge badge-pill badge-outline">iOS</span>
-                                        </div>
-                                        <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy A21</a>
-                                        <div class="row no-gutters">
-                                            <div class="col-6 border-right">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">空機價</small>
-                                                    
-                                                    <div class="font-weight-bold">$7,600</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-6">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">二手價</small>
-                                                    
-                                                    <div class="font-weight-bold">$17,990</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-8 col-md-9 mt-2">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
-                                                    <i class="fa-fw fas fa-eye"></i>
-                                                    快速檢視
-                                                </a>
-                                            </div>
-                                            <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
-                                                    <i class="fa-fw fas fa-plus"></i>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-note" data-sort-price="24600" data-sort-date="20201231" data-sort-hot="10000">
-                                    <div class="card shadow text-center p-2">
-                                        
-                                        
-                                        <div class="h5 mb-2">
-                                            <span class="badge text-white w-75" style="background: #c80000;">預購</span>
-                                        </div>
-                                        
-                                        <a href="#">
-                                            
-                                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_20_0805144705667_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy Note 20">
-                                        </a>
-                                        <div class="h5 badge-group-nowrap my-2">
-                                            <span class="badge badge-pill badge-outline">大螢幕</span>
-                                            <span class="badge badge-pill badge-outline">高效能</span>
-                                            <span class="badge badge-pill badge-outline">iOS</span>
-                                        </div>
-                                        <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy Note 20</a>
-                                        <div class="row no-gutters">
-                                            <div class="col-6 border-right">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">空機價</small>
-                                                    
-                                                    <div class="font-weight-bold">$24,600</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-6">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">二手價</small>
-                                                    
-                                                    <div class="font-weight-bold">$17,990</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-8 col-md-9 mt-2">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
-                                                    <i class="fa-fw fas fa-eye"></i>
-                                                    快速檢視
-                                                </a>
-                                            </div>
-                                            <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
-                                                    <i class="fa-fw fas fa-plus"></i>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-m" data-sort-price="3700" data-sort-date="20201205" data-sort-hot="3000">
-                                    <div class="card shadow text-center p-2">
-                                        
-                                        
-                                        <div class="h5 mb-2">
-                                            <span class="badge text-white w-75" >&nbsp;</span>
-                                        </div>
-                                        
-                                        <a href="#">
-                                            
-                                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_m11_0427033427620_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy M11">
-                                        </a>
-                                        <div class="h5 badge-group-nowrap my-2">
-                                            <span class="badge badge-pill badge-outline">大螢幕</span>
-                                            <span class="badge badge-pill badge-outline">高效能</span>
-                                            <span class="badge badge-pill badge-outline">iOS</span>
-                                        </div>
-                                        <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy M11</a>
-                                        <div class="row no-gutters">
-                                            <div class="col-6 border-right">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">空機價</small>
-                                                    
-                                                    <div class="font-weight-bold">$3,700</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-6">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">二手價</small>
-                                                    
-                                                    <div class="font-weight-bold">$17,990</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-8 col-md-9 mt-2">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
-                                                    <i class="fa-fw fas fa-eye"></i>
-                                                    快速檢視
-                                                </a>
-                                            </div>
-                                            <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
-                                                    <i class="fa-fw fas fa-plus"></i>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-                            </div>
-        
-                            </div>
-                        </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="tab-product-02">
-                                平板電腦
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-6 col-lg-6">
+                                        <div class="font-weight-bold h4">產品系列</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="dropdown dropdown-select">
+                                            <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
+                                                <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-1">
+                                                <div class="dropdown-header">依門市最低</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
+                                                <div class="dropdown-header">依上市日</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
+                                                <div class="dropdown-header">依熱門度</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-3 d-none d-lg-block">
+                                        <div class="nav flex-column my-2 border-top" id="accordion-product-01">
+                                            <div class="nav-item">
+                                                <a class="nav-link h4 filter-1 active" href="javascript:void();" data-filter="all">
+                                                    全部
+                                                </a>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-product-01-cat1">
+                                                    旗艦 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-product-01-cat1" data-parent="#accordion-product-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-s">
+                                                        Galaxy S 系列
+                                                    </a>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-note">
+                                                        Galaxy Note 系列
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-product-01-cat2">
+                                                    中高階 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-product-01-cat2" data-parent="#accordion-product-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-a">
+                                                        Galaxy A 系列
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-product-01-cat3">
+                                                    入門 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-product-01-cat3" data-parent="#accordion-product-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-m">
+                                                        Galaxy M 系列
+                                                    </a>
+                                                    <a class="nav-link filter-1" href="javascript:void();" data-filter=".cat-galaxy-o">
+                                                        Galaxy O 系列 (無產品測試)
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-3">
+                                            <p class="m-0 text-center">
+                                                想試更多條件?<br>請試試<a href="#">進階搜尋</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-lg-none">
+                                        <select id="FilterSelect-1" class="form-control filter-select my-2">
+                                            <option selected hidden>請選擇</option>
+                                            <option value="all">全部</option>
+                                            <optgroup label="旗艦">
+                                                <option value=".cat-galaxy-s">Galaxy S 系列</option>
+                                                <option value=".cat-galaxy-note">Galaxy Note 系列</option>
+                                            </optgroup>
+                                            <optgroup label="中高階">
+                                                <option value=".cat-galaxy-a">Galaxy A 系列</option>
+                                            </optgroup>
+                                            <optgroup label="入門">
+                                                <option value=".cat-galaxy-m">Galaxy M 系列</option>
+                                                <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                    
+                                    <div class="row  mixitup" id="mixitup-2">
+                                        
+                                    </div>
+                
+                                    </div>
+                                </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="tab-product-03">
-                                穿戴裝置
+                                <div class="bg-success" style="height: 1000px;">
+                                    穿戴裝置
+                                </div>
                             </div>
                         </div>
                         <div class="d-lg-none">
@@ -4101,327 +4208,434 @@
                         </div>
                         <div class="tab-content pt-5">
                             <div role="tabpanel" class="tab-pane active" id="tab-second-01">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-6 col-lg-6">
-                                <div class="font-weight-bold h4">產品系列</div>
-                            </div>
-                            <div class="col-auto">
-                                <div class="dropdown dropdown-select">
-                                    <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
-                                        <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-2">
-                                        <div class="dropdown-header">依門市最低</div>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
-                                        <div class="dropdown-header">依上市日</div>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
-                                        <div class="dropdown-header">依熱門度</div>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
-                                        <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-6 col-lg-6">
+                                        <div class="font-weight-bold h4">產品系列</div>
                                     </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-lg-3 d-none d-lg-block">
-                                <div class="nav flex-column my-2 border-top" id="accordion-second-01">
-                                    <div class="nav-item">
-                                        <a class="nav-link h4 filter-2 active" href="javascript:void();" data-filter="all">
-                                            全部
-                                        </a>
-                                    </div>
-                                    <div class="nav-item">
-                                        <a class="nav-link h4" data-toggle="collapse" href="#collapse-second-01-cat1">
-                                            旗艦 <i class="fas fa-fw fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div class="collapse pl-3" id="collapse-second-01-cat1" data-parent="#accordion-second-01">
-                                        <div class="nav-item">
-                                            <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-s">
-                                                Galaxy S 系列
+                                    <div class="col-auto">
+                                        <div class="dropdown dropdown-select">
+                                            <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
+                                                <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
                                             </a>
-                                        </div>
-                                        <div class="nav-item">
-                                            <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-note">
-                                                Galaxy Note 系列
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="nav-item">
-                                        <a class="nav-link h4" data-toggle="collapse" href="#collapse-second-01-cat2">
-                                            中高階 <i class="fas fa-fw fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div class="collapse pl-3" id="collapse-second-01-cat2" data-parent="#accordion-second-01">
-                                        <div class="nav-item">
-                                            <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-a">
-                                                Galaxy A 系列
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="nav-item">
-                                        <a class="nav-link h4" data-toggle="collapse" href="#collapse-second-01-cat3">
-                                            入門 <i class="fas fa-fw fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div class="collapse pl-3" id="collapse-second-01-cat3" data-parent="#accordion-second-01">
-                                        <div class="nav-item">
-                                            <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-m">
-                                                Galaxy M 系列
-                                            </a>
-                                            <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-o">
-                                                Galaxy O 系列 (無產品測試)
-                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-2">
+                                                <div class="dropdown-header">依門市最低</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
+                                                <div class="dropdown-header">依上市日</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
+                                                <div class="dropdown-header">依熱門度</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="border-top py-3">
-                                    <p class="m-0 text-center">
-                                        想試更多條件?<br>請試試<a href="#">進階搜尋</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12 d-lg-none">
-                                <select id="FilterSelect-2" class="form-control filter-select my-2">
-                                    <option selected hidden>請選擇</option>
-                                    <option value="all">全部</option>
-                                    <optgroup label="旗艦">
-                                        <option value=".cat-galaxy-s">Galaxy S 系列</option>
-                                        <option value=".cat-galaxy-note">Galaxy Note 系列</option>
-                                    </optgroup>
-                                    <optgroup label="中高階">
-                                        <option value=".cat-galaxy-a">Galaxy A 系列</option>
-                                    </optgroup>
-                                    <optgroup label="入門">
-                                        <option value=".cat-galaxy-m">Galaxy M 系列</option>
-                                        <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                            <div class="col-12 col-lg-9">
+                                <div class="row">
+                                    <div class="col-12 col-lg-3 d-none d-lg-block">
+                                        <div class="nav flex-column my-2 border-top" id="accordion-second-01">
+                                            <div class="nav-item">
+                                                <a class="nav-link h4 filter-2 active" href="javascript:void();" data-filter="all">
+                                                    全部
+                                                </a>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-second-01-cat1">
+                                                    旗艦 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-second-01-cat1" data-parent="#accordion-second-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-s">
+                                                        Galaxy S 系列
+                                                    </a>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-note">
+                                                        Galaxy Note 系列
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-second-01-cat2">
+                                                    中高階 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-second-01-cat2" data-parent="#accordion-second-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-a">
+                                                        Galaxy A 系列
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-second-01-cat3">
+                                                    入門 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-second-01-cat3" data-parent="#accordion-second-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-m">
+                                                        Galaxy M 系列
+                                                    </a>
+                                                    <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-o">
+                                                        Galaxy O 系列 (無產品測試)
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-3">
+                                            <p class="m-0 text-center">
+                                                想試更多條件?<br>請試試<a href="#">進階搜尋</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-lg-none">
+                                        <select id="FilterSelect-2" class="form-control filter-select my-2">
+                                            <option selected hidden>請選擇</option>
+                                            <option value="all">全部</option>
+                                            <optgroup label="旗艦">
+                                                <option value=".cat-galaxy-s">Galaxy S 系列</option>
+                                                <option value=".cat-galaxy-note">Galaxy Note 系列</option>
+                                            </optgroup>
+                                            <optgroup label="中高階">
+                                                <option value=".cat-galaxy-a">Galaxy A 系列</option>
+                                            </optgroup>
+                                            <optgroup label="入門">
+                                                <option value=".cat-galaxy-m">Galaxy M 系列</option>
+                                                <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                        
+                                    
+                                    <div class="row  mixitup" id="mixitup-2">
+                                        <div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-s" data-sort-price="0" data-sort-date="20210220" data-sort-hot="8000">
+                                            <div class="card shadow text-center p-2">
+                                                
+                                                
+                                                <div class="h5 mb-2">
+                                                    <span class="badge text-white w-75" style="background: #337ab7;">手機王</span>
+                                                </div>
+                                                
+                                                <a href="#">
+                                                    
+                                                    <span class="badge badge-custom" style="background: #ffcc00; color: #fff;">一二三四</span>
+                                                    
+                                                    <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s20_0212063512931_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy S20 5G">
+                                                </a>
+                                                <div class="h5 badge-group-nowrap my-2">
+                                                    <span class="badge badge-pill badge-outline">大螢幕</span>
+                                                    <span class="badge badge-pill badge-outline">高效能</span>
+                                                    <span class="badge badge-pill badge-outline">iOS</span>
+                                                </div>
+                                                <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy S20 5G</a>
+                                                <div class="row no-gutters">
+                                                    <div class="col-6 border-right">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">空機價</small>
+                                                            
+                                                            
+                                                            <div class="font-weight-bold text-secondary">-</div>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">二手價</small>
+                                                            
+                                                            
+                                                            <div class="font-weight-bold text-secondary">-</div>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-8 col-md-9 mt-2">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
+                                                            <i class="fa-fw fas fa-eye"></i>
+                                                            快速檢視
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
+                                                            <i class="fa-fw fas fa-plus"></i>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-s" data-sort-price="16800" data-sort-date="20200601" data-sort-hot="2500">
+                                            <div class="card shadow text-center p-2">
+                                                
+                                                
+                                                <div class="h5 mb-2">
+                                                    <span class="badge text-white w-75" style="background: #8cba51;">折扣中</span>
+                                                </div>
+                                                
+                                                <a href="#">
+                                                    
+                                                    <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_plus_0220113220241_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy S10+">
+                                                </a>
+                                                <div class="h5 badge-group-nowrap my-2">
+                                                    <span class="badge badge-pill badge-outline">大螢幕</span>
+                                                    <span class="badge badge-pill badge-outline">高效能</span>
+                                                    <span class="badge badge-pill badge-outline">iOS</span>
+                                                </div>
+                                                <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy S10+</a>
+                                                <div class="row no-gutters">
+                                                    <div class="col-6 border-right">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">空機價</small>
+                                                            
+                                                            <div class="font-weight-bold">$16,800</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">二手價</small>
+                                                            
+                                                            <div class="font-weight-bold">$17,990</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-8 col-md-9 mt-2">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
+                                                            <i class="fa-fw fas fa-eye"></i>
+                                                            快速檢視
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
+                                                            <i class="fa-fw fas fa-plus"></i>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-a" data-sort-price="7600" data-sort-date="20201001" data-sort-hot="3000">
+                                            <div class="card shadow text-center p-2">
+                                                
+                                                
+                                                <div class="h5 mb-2">
+                                                    <span class="badge text-white w-75" style="background: #263238;">獨家</span>
+                                                </div>
+                                                
+                                                <a href="#">
+                                                    
+                                                    <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_a51_1213055013699_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy A21">
+                                                </a>
+                                                <div class="h5 badge-group-nowrap my-2">
+                                                    <span class="badge badge-pill badge-outline">大螢幕</span>
+                                                    <span class="badge badge-pill badge-outline">高效能</span>
+                                                    <span class="badge badge-pill badge-outline">iOS</span>
+                                                </div>
+                                                <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy A21</a>
+                                                <div class="row no-gutters">
+                                                    <div class="col-6 border-right">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">空機價</small>
+                                                            
+                                                            <div class="font-weight-bold">$7,600</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">二手價</small>
+                                                            
+                                                            <div class="font-weight-bold">$17,990</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-8 col-md-9 mt-2">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
+                                                            <i class="fa-fw fas fa-eye"></i>
+                                                            快速檢視
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
+                                                            <i class="fa-fw fas fa-plus"></i>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-note" data-sort-price="24600" data-sort-date="20201231" data-sort-hot="10000">
+                                            <div class="card shadow text-center p-2">
+                                                
+                                                
+                                                <div class="h5 mb-2">
+                                                    <span class="badge text-white w-75" style="background: #c80000;">預購</span>
+                                                </div>
+                                                
+                                                <a href="#">
+                                                    
+                                                    <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_20_0805144705667_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy Note 20">
+                                                </a>
+                                                <div class="h5 badge-group-nowrap my-2">
+                                                    <span class="badge badge-pill badge-outline">大螢幕</span>
+                                                    <span class="badge badge-pill badge-outline">高效能</span>
+                                                    <span class="badge badge-pill badge-outline">iOS</span>
+                                                </div>
+                                                <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy Note 20</a>
+                                                <div class="row no-gutters">
+                                                    <div class="col-6 border-right">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">空機價</small>
+                                                            
+                                                            <div class="font-weight-bold">$24,600</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a class="" href="#">
+                                                            <small class="text-muted">二手價</small>
+                                                            
+                                                            <div class="font-weight-bold">$17,990</div>
+                                                            
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-8 col-md-9 mt-2">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
+                                                            <i class="fa-fw fas fa-eye"></i>
+                                                            快速檢視
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 mt-2 pl-1">
+                                                        <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
+                                                            <i class="fa-fw fas fa-plus"></i>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                 
-                            
-                            <div class="row  mixitup" id="mixitup-2">
-                                <div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-s" data-sort-price="0" data-sort-date="20210220" data-sort-hot="8000">
-                                    <div class="card shadow text-center p-2">
-                                        
-                                        
-                                        <div class="h5 mb-2">
-                                            <span class="badge text-white w-75" style="background: #337ab7;">手機王</span>
-                                        </div>
-                                        
-                                        <a href="#">
-                                            
-                                            <span class="badge badge-custom" style="background: #ffcc00; color: #fff;">一二三四</span>
-                                            
-                                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s20_0212063512931_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy S20 5G">
-                                        </a>
-                                        <div class="h5 badge-group-nowrap my-2">
-                                            <span class="badge badge-pill badge-outline">大螢幕</span>
-                                            <span class="badge badge-pill badge-outline">高效能</span>
-                                            <span class="badge badge-pill badge-outline">iOS</span>
-                                        </div>
-                                        <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy S20 5G</a>
-                                        <div class="row no-gutters">
-                                            <div class="col-6 border-right">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">空機價</small>
-                                                    
-                                                    
-                                                    <div class="font-weight-bold text-secondary">-</div>
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-6">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">二手價</small>
-                                                    
-                                                    
-                                                    <div class="font-weight-bold text-secondary">-</div>
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-8 col-md-9 mt-2">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
-                                                    <i class="fa-fw fas fa-eye"></i>
-                                                    快速檢視
-                                                </a>
-                                            </div>
-                                            <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
-                                                    <i class="fa-fw fas fa-plus"></i>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-s" data-sort-price="16800" data-sort-date="20200601" data-sort-hot="2500">
-                                    <div class="card shadow text-center p-2">
-                                        
-                                        
-                                        <div class="h5 mb-2">
-                                            <span class="badge text-white w-75" style="background: #8cba51;">折扣中</span>
-                                        </div>
-                                        
-                                        <a href="#">
-                                            
-                                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_plus_0220113220241_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy S10+">
-                                        </a>
-                                        <div class="h5 badge-group-nowrap my-2">
-                                            <span class="badge badge-pill badge-outline">大螢幕</span>
-                                            <span class="badge badge-pill badge-outline">高效能</span>
-                                            <span class="badge badge-pill badge-outline">iOS</span>
-                                        </div>
-                                        <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy S10+</a>
-                                        <div class="row no-gutters">
-                                            <div class="col-6 border-right">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">空機價</small>
-                                                    
-                                                    <div class="font-weight-bold">$16,800</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-6">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">二手價</small>
-                                                    
-                                                    <div class="font-weight-bold">$17,990</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-8 col-md-9 mt-2">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
-                                                    <i class="fa-fw fas fa-eye"></i>
-                                                    快速檢視
-                                                </a>
-                                            </div>
-                                            <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
-                                                    <i class="fa-fw fas fa-plus"></i>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-a" data-sort-price="7600" data-sort-date="20201001" data-sort-hot="3000">
-                                    <div class="card shadow text-center p-2">
-                                        
-                                        
-                                        <div class="h5 mb-2">
-                                            <span class="badge text-white w-75" style="background: #263238;">獨家</span>
-                                        </div>
-                                        
-                                        <a href="#">
-                                            
-                                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_a51_1213055013699_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy A21">
-                                        </a>
-                                        <div class="h5 badge-group-nowrap my-2">
-                                            <span class="badge badge-pill badge-outline">大螢幕</span>
-                                            <span class="badge badge-pill badge-outline">高效能</span>
-                                            <span class="badge badge-pill badge-outline">iOS</span>
-                                        </div>
-                                        <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy A21</a>
-                                        <div class="row no-gutters">
-                                            <div class="col-6 border-right">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">空機價</small>
-                                                    
-                                                    <div class="font-weight-bold">$7,600</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-6">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">二手價</small>
-                                                    
-                                                    <div class="font-weight-bold">$17,990</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-8 col-md-9 mt-2">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
-                                                    <i class="fa-fw fas fa-eye"></i>
-                                                    快速檢視
-                                                </a>
-                                            </div>
-                                            <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
-                                                    <i class="fa-fw fas fa-plus"></i>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="my-2 col-6 col-lg-4  mix-item cat-galaxy-note" data-sort-price="24600" data-sort-date="20201231" data-sort-hot="10000">
-                                    <div class="card shadow text-center p-2">
-                                        
-                                        
-                                        <div class="h5 mb-2">
-                                            <span class="badge text-white w-75" style="background: #c80000;">預購</span>
-                                        </div>
-                                        
-                                        <a href="#">
-                                            
-                                            <img src="//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_20_0805144705667_160x120.jpg" class="img-fluid mx-auto d-block" alt="SAMSUNG Galaxy Note 20">
-                                        </a>
-                                        <div class="h5 badge-group-nowrap my-2">
-                                            <span class="badge badge-pill badge-outline">大螢幕</span>
-                                            <span class="badge badge-pill badge-outline">高效能</span>
-                                            <span class="badge badge-pill badge-outline">iOS</span>
-                                        </div>
-                                        <a href="#" class="text-row-2 text-dark h5 mb-2">SAMSUNG Galaxy Note 20</a>
-                                        <div class="row no-gutters">
-                                            <div class="col-6 border-right">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">空機價</small>
-                                                    
-                                                    <div class="font-weight-bold">$24,600</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-6">
-                                                <a class="" href="#">
-                                                    <small class="text-muted">二手價</small>
-                                                    
-                                                    <div class="font-weight-bold">$17,990</div>
-                                                    
-                                                    
-                                                </a>
-                                            </div>
-                                            <div class="col-8 col-md-9 mt-2">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
-                                                    <i class="fa-fw fas fa-eye"></i>
-                                                    快速檢視
-                                                </a>
-                                            </div>
-                                            <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
-                                                    <i class="fa-fw fas fa-plus"></i>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-                            </div>
-        
-                            </div>
-                        </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="tab-second-02">
-                                平板電腦
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-6 col-lg-6">
+                                        <div class="font-weight-bold h4">產品系列</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="dropdown dropdown-select">
+                                            <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
+                                                <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-2">
+                                                <div class="dropdown-header">依門市最低</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
+                                                <div class="dropdown-header">依上市日</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
+                                                <div class="dropdown-header">依熱門度</div>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
+                                                <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-3 d-none d-lg-block">
+                                        <div class="nav flex-column my-2 border-top" id="accordion-second-01">
+                                            <div class="nav-item">
+                                                <a class="nav-link h4 filter-2 active" href="javascript:void();" data-filter="all">
+                                                    全部
+                                                </a>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-second-01-cat1">
+                                                    旗艦 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-second-01-cat1" data-parent="#accordion-second-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-s">
+                                                        Galaxy S 系列
+                                                    </a>
+                                                </div>
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-note">
+                                                        Galaxy Note 系列
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-second-01-cat2">
+                                                    中高階 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-second-01-cat2" data-parent="#accordion-second-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-a">
+                                                        Galaxy A 系列
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="nav-link h4" data-toggle="collapse" href="#collapse-second-01-cat3">
+                                                    入門 <i class="fas fa-fw fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse pl-3" id="collapse-second-01-cat3" data-parent="#accordion-second-01">
+                                                <div class="nav-item">
+                                                    <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-m">
+                                                        Galaxy M 系列
+                                                    </a>
+                                                    <a class="nav-link filter-2" href="javascript:void();" data-filter=".cat-galaxy-o">
+                                                        Galaxy O 系列 (無產品測試)
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-3">
+                                            <p class="m-0 text-center">
+                                                想試更多條件?<br>請試試<a href="#">進階搜尋</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-lg-none">
+                                        <select id="FilterSelect-2" class="form-control filter-select my-2">
+                                            <option selected hidden>請選擇</option>
+                                            <option value="all">全部</option>
+                                            <optgroup label="旗艦">
+                                                <option value=".cat-galaxy-s">Galaxy S 系列</option>
+                                                <option value=".cat-galaxy-note">Galaxy Note 系列</option>
+                                            </optgroup>
+                                            <optgroup label="中高階">
+                                                <option value=".cat-galaxy-a">Galaxy A 系列</option>
+                                            </optgroup>
+                                            <optgroup label="入門">
+                                                <option value=".cat-galaxy-m">Galaxy M 系列</option>
+                                                <option value=".cat-galaxy-o">Galaxy O 系列 (無產品測試)</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                    
+                                    <div class="row  mixitup" id="mixitup-2">
+                                        
+                                    </div>
+                
+                                    </div>
+                                </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="tab-second-03">
-                                穿戴裝置
+                                <div class="bg-success" style="height: 1000px;">
+                                    穿戴裝置
+                                </div>
                             </div>
                         </div>
                         <div class="d-lg-none">
@@ -4839,23 +5053,23 @@
 
 
         <div class="modal modal-quickview fade" id="" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
                     <div class="modal-body">
                         <div class="position-absolute" style="right: 1rem; z-index: 10;">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <i class="fas fa-times"></i>
                             </button>
                         </div>
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-4 text-center">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-12 text-center">
                                 <a href="#">
-                                <div class="d-none d-md-block">
-                                    <img class="img-fluid" src="http://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_1_2_0224083724232_360x270.jpg" alt="">
-                                </div>
-                                <div class="d-md-none">
                                     <img class="img-fluid" src="http://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_1_2_0224083724232_160x120.jpg" alt="">
-                                </div>
                                 </a>
                                 <div class="h5 my-2">
                                     <span class="badge badge-outline">星環白</span>
@@ -4864,98 +5078,137 @@
                                     <span class="badge badge-outline">星環黑</span>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-8">
-                                <div class="row mt-2">
-                                    <div class="col-12 text-center text-md-left">
-                                        <a href="#" class="text-row-12 text-dark h5">Apple iPhone 7 Plus 128GBApple iPhone 7 Plus 128GBApple iPhone 7 Plus 128GB</a>
-                                        <div class="font-small text-muted">
-                                            <span class="mr-2">原廠售價:$23,000</span>
-                                            <span>上市日期: 2020/1</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-8 col-md-4 offset-2 offset-md-0 mt-2">
-                                        <div class="progress position-relative">
-                                            <div class="progress-bar bg-success" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="justify-content-center d-flex position-absolute w-100">
-                                                <span class="text-white font-small">9.2</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-100 my-2"></div>
-                                    <div class="col-6">
-                                        <ul class="list-group list-group-flush border-bottom">
-                                            <li class="list-group-item">
-                                                <div class="row align-items-center">
-                                                    <div class="col-1 font-small text-muted">
-                                                        <i class="fas fa-fw fa-microchip"></i>
-                                                    </div>
-                                                    <div class="col-10">Apple A13 Bionic</div>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <div class="row align-items-center">
-                                                    <div class="col-1 font-small text-muted">
-                                                        <i class="fas fa-fw fa-mobile-alt"></i>
-                                                    </div>
-                                                    <div class="col-10">5.8吋OLED</div>
-                                                </div>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-6">
-                                        <ul class="list-group list-group-flush border-bottom">
-                                            <li class="list-group-item">
-                                                <div class="row align-items-center">
-                                                    <div class="col-1 font-small text-muted">
-                                                        <i class="fas fa-fw fa-weight-hanging"></i>
-                                                    </div>
-                                                    <div class="col-10">187 g</div>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <div class="row align-items-center">
-                                                    <div class="col-1 font-small text-muted">
-                                                        <i class="fas fa-fw fa-palette"></i>
-                                                    </div>
-                                                    <div class="col-10">太平洋藍,石墨,金,銀</div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-lg-6 my-2">
-                                        <div class="row">
-                                            <div class="col-6 border-right">
-                                                <div class="text-center text-muted">
-                                                    <div class="">空機價</div>
-                                                    <div class="h4 font-weight-bold text-primary">-</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="text-center text-muted">
-                                                    <div class="">二手價</div>
-                                                    <div class="h4 font-weight-bold text-primary">$10,800</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-100"></div>
-                                    <div class="col-8 col-lg-4 col-xl-6">
-                                        <a class="btn btn-primary btn-sm btn-block rounded-pill" href="#">了解更多</a>
-                                    </div>
-                                    <div class="col-2 col-lg-4 col-xl-3">
-                                        <a class="btn btn-secondary btn-sm btn-block rounded-pill px-0" href="#">
-                                            <i class="fas fa-fw fa-plus"></i>
-                                            <span class="d-none d-lg-inline">加入比較</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-2 col-lg-4 col-xl-3">
-                                        <a class="btn btn-secondary btn-sm btn-block rounded-pill px-0" href="#">
-                                            <i class="far fa-fw fa-heart"></i>
-                                            <span class="d-none d-lg-inline">加入最愛</span>
-                                        </a>
+                            <div class="col-12 text-center">
+                                <a href="#" class="text-row-12 text-dark h5">Apple iPhone 7 Plus 128GBApple iPhone 7 Plus 128GB</a>
+                                <div class="font-small text-muted my-2">
+                                    <span>上市日期: 2020/1</span>
+                                </div>
+                            </div>
+                            <div class="col-8 col-md-4">
+                                <div class="progress position-relative">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="justify-content-center d-flex position-absolute w-100">
+                                        <span class="text-white font-small">9.2</span>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="w-100 my-2"></div>
+                            <div class="col-6">
+                                <ul class="list-group list-group-flush border-bottom">
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-1 font-small text-muted">
+                                                <i class="fas fa-fw fa-microchip"></i>
+                                            </div>
+                                            <div class="col-10">Apple A13 Bionic</div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-1 font-small text-muted">
+                                                <i class="fas fa-fw fa-mobile-alt"></i>
+                                            </div>
+                                            <div class="col-10">5.8吋OLED</div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-group list-group-flush border-bottom">
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-1 font-small text-muted">
+                                                <i class="fas fa-fw fa-weight-hanging"></i>
+                                            </div>
+                                            <div class="col-10">187 g</div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-1 font-small text-muted">
+                                                <i class="fas fa-fw fa-palette"></i>
+                                            </div>
+                                            <div class="col-10">太平洋藍,石墨,金,銀</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-100 my-2"></div>
+                            <div class="col-12">
+                                <div class="rounded-lg border mb-4">
+                                    <div class="font-small text-muted m-3">
+                                        門市最低價
+                                    </div>
+                                    <a class="d-block btn-price rounded-lg border shadow-sm m-3 p-3" href="#">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                128GB<br>
+                                                <span>原廠售價：<del>$111,000</del></span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="h4 font-weight-bold text-primary">$100,800</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="d-block btn-price rounded-lg border shadow-sm m-3 p-3" href="#">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                256GB<br>
+                                                <span>原廠售價：$111,000</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="h4 font-weight-bold text-primary">$100,800</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="rounded-lg border">
+                                    <div class="font-small text-muted m-3">
+                                        二手價
+                                    </div>
+                                    <a class="d-block btn-price rounded-lg border shadow-sm m-3 p-3" href="#">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                128GB
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="h4 font-weight-bold text-primary">$100,800</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="d-block btn-price rounded-lg border shadow-sm m-3 p-3" href="#">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                256GB
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="h4 font-weight-bold text-primary">$100,800</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <div class="row w-100">
+                            <div class="col-5">
+                                <a class="btn btn-primary btn-sm btn-block rounded-pill" href="#">了解更多</a>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-secondary btn-sm btn-block rounded-pill px-0" href="#">
+                                    <i class="fas fa-fw fa-plus"></i>
+                                    <span class="d-none d-lg-inline">加入比較</span>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-secondary btn-sm btn-block rounded-pill px-0" href="#">
+                                    <i class="far fa-fw fa-heart"></i>
+                                    <span class="d-none d-lg-inline">加入最愛</span>
+                                </a>
                             </div>
                         </div>
                     </div>
