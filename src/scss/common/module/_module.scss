@@ -45,6 +45,9 @@
     margin:0 auto;
     height: 250px;
     min-height: 100px;
+    @include media-breakpoint-down(md) {
+        height: 450px;
+    }
 }
 
 #sogi-comments {
