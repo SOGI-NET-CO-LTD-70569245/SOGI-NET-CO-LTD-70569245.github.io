@@ -25,7 +25,7 @@
                             <ul class="nav nav-pills nav-styled nav-justified">
                                 <li class="nav-item"><a class="nav-link active" href="detail.html">產品總覽</a></li>
                                 <li class="nav-item"><a class="nav-link btn-anchor" href="#intro">介紹規格</a></li>
-                                <li class="nav-item"><a class="nav-link btn-anchor" href="#compare">評測新聞</a></li>
+                                <li class="nav-item"><a class="nav-link btn-anchor" href="#articles">評測新聞</a></li>
                                 <li class="nav-item"><a class="nav-link btn-anchor" href="#price">維修價格</a></li>
                             </ul>
                         </div>
@@ -41,7 +41,7 @@
 
                     @@include('../../partial/page/products/_article-list.html',{id:'articles', icon:'fas fa-clipboard-check', title:'評測與新聞'})
 
-                    @@include('../../partial/page/products/_compare-most-viewed.html',{id:'compare', icon:'fas fa-th-large', btnLabel:'立即比較', title:'上一代產品'})
+                    @@include('../../partial/page/products/_previous.html',{id:'previous', icon:'fas fa-th-large', title:'上一代產品'})
 
                     @@include('../../partial/page/products/_compare-most-viewed.html',{id:'compare', icon:'fas fa-th-large', btnLabel:'對決', title:'網友最常比較'})
 
@@ -165,7 +165,39 @@ jQuery(document).ready(function($){
                         {
                             name: 'Apple iPhone 16',
                             data: [22000, 22500, 23000, 22500, 22000, 21000, 20000]
-                        }
+                        },
+                        {
+                            name: 'Apple iPhone 15',
+                            data: [25000, 24000, 24000, 23500, 23400, 23200, 19000]
+                        },
+                        {
+                            name: 'Apple iPhone 16',
+                            data: [22000, 22500, 23000, 22500, 22000, 21000, 20000]
+                        },
+                        {
+                            name: 'Apple iPhone 15',
+                            data: [25000, 24000, 24000, 23500, 23400, 23200, 19000]
+                        },
+                        {
+                            name: 'Apple iPhone 16',
+                            data: [12000, 14300, 21300, 20500, 12000, 11000, 10000]
+                        },
+                        {
+                            name: 'Apple iPhone 15',
+                            data: [25000, 24000, 24000, 23500, 23400, 23200, 19000]
+                        },
+                        {
+                            name: 'Apple iPhone 16',
+                            data: [22000, 22500, 23000, 22500, 22000, 21000, 20000]
+                        },
+                        {
+                            name: 'Apple iPhone 15',
+                            data: [8000, 7000, 7500, 6500, 6400, 6200, 5900]
+                        },
+                        {
+                            name: 'Apple iPhone 16',
+                            data: [22000, 22500, 23000, 22500, 22000, 21000, 20000]
+                        },
                     ]
                 });
             });

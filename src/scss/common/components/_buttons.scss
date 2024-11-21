@@ -32,10 +32,8 @@
     }
 }
 .btn-price {
-    color: $dark;
     &:hover,
     &:focus {
-        color: $primary;
         text-decoration: none;
         border-color: $primary !important;
     }
