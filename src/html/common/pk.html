@@ -58,40 +58,27 @@
                         <tbody>
                             @@include('../../partial/page/pk/unit/_tbody-tr.html',{
                                 align:'center',
-                                label:'原廠價',
+                                label:'門市空機價',
                                 group: {
                                     td: [
-                                        {align:'center', label:'$ 10,000'},
-                                        {align:'center', label:'$ 20,000'},
-                                        {align:'center', label:'$ 30,000'},
-                                        {align:'center', label:'$ 40,000'},
-                                        {align:'center', label:'$ 50,000', btn:true},
+                                        {align:'center', cat:'1st', price:'$10,000',},
+                                        {align:'center', cat:'1st', price:'$20,000',},
+                                        {align:'center', cat:'1st', price:'$20,000',},
+                                        {align:'center', cat:'1st', price:'$30,000',},
+                                        {align:'center', cat:'1st', price:'$40,000',},
                                     ]
                                 },
                             })
                             @@include('../../partial/page/pk/unit/_tbody-tr.html',{
                                 align:'center',
-                                label:'空機價',
+                                label:'門市二手價',
                                 group: {
                                     td: [
-                                        {align:'center', label:'$ 10,000', href:'#'},
-                                        {align:'center', label:'$ 20,000', href:'#'},
-                                        {align:'center', label:'$ 30,000', href:'#'},
-                                        {align:'center', label:'$ 40,000', href:'#'},
-                                        {align:'center', label:'$ 50,000', href:'#', btn:true},
-                                    ]
-                                },
-                            })
-                            @@include('../../partial/page/pk/unit/_tbody-tr.html',{
-                                align:'center',
-                                label:'二手價',
-                                group: {
-                                    td: [
-                                        {align:'center', label:'$ 20,000', href:'#'},
-                                        {align:'center', label:'$ 20,000', href:'#'},
-                                        {align:'center', label:'$ 20,000', href:'#'},
-                                        {align:'center', label:'$ 20,000', href:'#'},
-                                        {align:'center', label:'$ 20,000', href:'#', btn:true},
+                                        {align:'center', cat:'2nd', price:'$10,000',},
+                                        {align:'center', cat:'2nd', price:'$20,000',},
+                                        {align:'center', cat:'2nd', price:'$20,000',},
+                                        {align:'center', cat:'2nd', price:'$30,000',},
+                                        {align:'center', cat:'2nd', price:'$40,000',},
                                     ]
                                 },
                             })
