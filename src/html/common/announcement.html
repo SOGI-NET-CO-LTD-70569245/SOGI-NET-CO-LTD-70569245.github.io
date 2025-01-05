@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/global/_head.html',{title:'車拼',cssFile:'pk'})
+    </head>
+
+	<body>
+        @@include('../../partial/global/_header.html')
+        @@include('../../partial/comp/_nav-main.html')
+
+        <div id="main" class="push">
+            <div class="container mb-10">
+                <div class="row justify-content-center my-10">
+                    <div class="col-12 col-lg-8 text-center">
+                        <img src="/assets/images/ui/pic-maintenance.png" alt="系統維護中" class="img-fluid mb-6">
+                        <h1 class="mb-4">系統維護中</h1>
+                        <p>
+                            親愛的用戶，您好：<br><br>
+                            目前網站正在進行系統更新作業，作業時間為 2025年1月16日凌晨 02:00 至 04:00。<br><br>
+                            在此期間，網站將暫時無法使用，我們正在努力確保更新順利完成，並盡快恢復服務。<br><br>
+                            感謝您的耐心等候與理解！<br><br>
+                            <strong>手機王管理團隊 敬上</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/modal/_pk-type.html')
+        @@include('../../partial/comp/_nav-top.html')
+        @@include('../../partial/global/_js.html')
+        @@include('../../partial/page/pk/_js-single.html')
+    </body>
+</html>
