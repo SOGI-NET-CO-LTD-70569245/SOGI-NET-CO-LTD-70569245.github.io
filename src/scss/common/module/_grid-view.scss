@@ -52,33 +52,6 @@ a.box {
             text-decoration: none;
         }
     }
-//    figure {
-//        img {
-//            display:block;
-//            width: 100%;
-//        }
-//        .label-group {
-//            position: absolute;
-//            left:5px;
-//            top:5px;
-//        }
-//    }
-//    .info-subtitle {
-//        padding: 0 10px;
-//        
-//        font-size: 13px;
-//        height: 2.7em;
-//        overflow: hidden;
-//        text-overflow : ellipsis;
-//        line-height: 1.3 !important;
-//        color: $brand-warning !important;
-//    }
-//    .info-title {
-//        overflow: hidden;
-//        text-overflow : ellipsis;
-//        height: 3em;
-//        line-height: 1.3 !important;
-//    }
     .info {
         h4, .info-title {
             color: #000;
@@ -104,22 +77,12 @@ a.box {
         }
     }
 }
-
-//#infscr-loading {
-//	position:fixed;
-//	bottom:30px;
-//	left:50%;
-//	z-index:100;
-//	margin-left:-60px;
-//	padding:20px;
-//	min-width:100px;
-//	background:rgba(0,0,0,0.8);
-//	color:#fff;
-//	font-size:15px;
-//	font-weight:bold;
-//	text-align:center;
-//	@include border-radius(10px);
-//}
+.mixitup-item {
+    &:hover,
+    &:active {
+        border-color: $warning !important;
+    }
+}
 
 .box-price {
     .badge {

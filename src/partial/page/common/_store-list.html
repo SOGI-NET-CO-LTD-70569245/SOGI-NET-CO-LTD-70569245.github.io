@@ -33,101 +33,73 @@
     <div class="container-fluid pt-5 px-0 border-top @@if(context.fpBgClass){@@fpBgClass}">
         
         <div class="sticky-top">
-            @@if(context.searchFunc=='true'){
-                @@include('../products/_price-search-func.html',{
-                    navActive: '@@navActive',
-                    searchArea2: '@@searchArea2',
-                    searchPurchase: '@@searchPurchase',
-                    btnName:'@@btnName',
-                })
-            }
-        </div>
-        
-        <div class="container pb-5">
-
-            @@if(context.filter=='true'){
-            <div class="row align-items-center justify-content-between mb-3">
-                <div class="col col-lg">
-                    @@if(context.navActive!='repair'){
-                    <span class="mr-1 d-none d-lg-inline">快速篩選</span>
-                    <a class="text-decoration-none" href="#">
-                        <span class="badge badge-light rounded-0 border mx-0">無卡分期</span>
-                    </a>
-                    <a class="text-decoration-none" href="#">
-                        <span class="badge badge-light rounded-0 border mx-0">LINEPay</span>
-                    </a>
-                    <a class="text-decoration-none" href="#">
-                        <span class="badge badge-light rounded-0 border mx-0">信用卡</span>
-                    </a>
-                    <a class="text-decoration-none" href="#">
-                        <span class="badge badge-light rounded-0 border mx-0">街口支付</span>
-                    </a>
-                    }
-                </div>
-                @@if(context.searchResult=='true'){
-                <div class="col-auto text-center d-none d-lg-block">
-                    共有 108 個結果符合要求。
-                </div>
+            <div class="bg-white border shadow-sm mb-3 p-2">
+                @@if(context.searchFunc=='true'){
+                    @@include('../products/_price-search-func.html',{
+                        navActive: '@@navActive',
+                        searchArea2: '@@searchArea2',
+                        searchPurchase: '@@searchPurchase',
+                        btnName:'@@btnName',
+                    })
                 }
-                <div class="col-auto text-right">
-                    <div class="dropdown dropdown-select">
-                        <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
-                            <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-@@mixitupId">
-                            <div class="dropdown-header">依門市最低</div>
-                            <a class="dropdown-item sort" href="javascript:void();">由高至低</a>
-                            <a class="dropdown-item sort" href="javascript:void();">由低至高</a>
-                            <div class="dropdown-header">依上市日</div>
-                            <a class="dropdown-item sort" href="javascript:void();">由新至舊</a>
-                            <a class="dropdown-item sort" href="javascript:void();">由舊至新</a>
-                            <div class="dropdown-header">依熱門度</div>
-                            <a class="dropdown-item sort" href="javascript:void();">由高至低</a>
-                            <a class="dropdown-item sort" href="javascript:void();">由低至高</a>
+                
+                @@if(context.filter=='true'){
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col col-lg">
+                            @@if(context.navActive!='repair'){
+                            <span class="mr-1 d-none d-lg-inline font-small">快速篩選</span>
+                            <a class="btn btn-sm btn-warning font-small" href="#">
+                                無卡分期
+                            </a>
+                            <a class="btn btn-sm btn-outline-dark font-small" href="#">
+                                LINEPay
+                            </a>
+                            <a class="btn btn-sm btn-outline-dark font-small" href="#">
+                                信用卡
+                            </a>
+                            <a class="btn btn-sm btn-outline-dark font-small" href="#">
+                                街口支付
+                            </a>
+                            }
+                        </div>
+                        
+                        <div class="col-auto text-right">
+                            <div class="dropdown dropdown-select">
+                                <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle font-small" href="#" role="button" data-toggle="dropdown" data-display="static">
+                                    <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">價格</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-@@mixitupId">
+                                    <div class="dropdown-header">依門市最低</div>
+                                    <a class="dropdown-item sort" href="javascript:void();">由高至低</a>
+                                    <a class="dropdown-item sort" href="javascript:void();">由低至高</a>
+                                    <div class="dropdown-header">依上市日</div>
+                                    <a class="dropdown-item sort" href="javascript:void();">由新至舊</a>
+                                    <a class="dropdown-item sort" href="javascript:void();">由舊至新</a>
+                                    <div class="dropdown-header">依熱門度</div>
+                                    <a class="dropdown-item sort" href="javascript:void();">由高至低</a>
+                                    <a class="dropdown-item sort" href="javascript:void();">由低至高</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- <div class="dropdown dropdown-select">
-                        <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static">
-                            <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">排序方式</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-@@mixitupId">
-                            <div class="dropdown-header">依門市最低</div>
-                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:desc">由高至低</a>
-                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-price:asc">由低至高</a>
-                            <div class="dropdown-header">依上市日</div>
-                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:desc">由新至舊</a>
-                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-date:asc">由舊至新</a>
-                            <div class="dropdown-header">依熱門度</div>
-                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:desc">由高至低</a>
-                            <a class="dropdown-item sort" href="javascript:void();" data-sort="sort-hot:asc">由低至高</a>
-                        </div>
-                    </div> -->
-                    <!-- <select id="SortSelect-@@mixitupId" class="form-control">
-                        <option hidden>&#xf160;</option>
-                        <optgroup label="依門市最低">
-                            <option value="sort-price:desc">由高至低</option>
-                            <option value="sort-price:asc">由低至高</option>
-                        </optgroup>
-                        <optgroup label="依上市日">
-                            <option value="sort-date:desc">由新至舊</option>
-                            <option value="sort-date:asc">由舊至新</option>
-                        </optgroup>
-                        <optgroup label="依熱門度">
-                            <option value="sort-hot:desc">由高至低</option>
-                            <option value="sort-hot:asc">由低至高</option>
-                        </optgroup>
-                    </select> -->
                 </div>
+                }
+            </div>
+        </div>
+
+        <div class="container pb-5">
+            @@if(context.searchResult=='true'){
+            <div class="text-right">
+                <div class="font-small">108 個結果符合要求。</div>
             </div>
             }
-
             <div class="row @@if(context.mixitupId){mixitup}" @@if(context.mixitupId){id="mixitup-@@mixitupId"}>
                 @@loop('../../unit/_store-list-item.html', [
                 {
                     borderColor:'white',
                     badgeSP1Bg:'danger', badgeSP2Bg:'warning', badgeSP1Title:'快速到貨', badgeSP2Title:'獨家贈好禮',
-                    badge1:'@@badge1', badge2:'@@badge2', badge3:'@@badge3', badge4:'@@badge4',
-                    img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/1863/medium/____LOGO-02.jpg',
+                    img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/841/extra_large/0610__.jpg',
                     title:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十',
                     rateScore:'4.3', rateCount:'1200',
                     address:'台北市大安區中山南路599巷599號',
@@ -143,12 +115,10 @@
                         btn:'',
                     }
                     desc:'外觀機況：S級<br>門市保固：1個月<br>電池健康度：良好',
-                    tag1:'五倍券', tag2:'低價現貨低價現貨', tag3:'最多三個',
                 },
                 {
                     borderColor:'white',
                     badgeSP1Bg:'danger', badgeSP1Title:'快速到貨',
-                    badge1:'@@badge1', badge2:'@@badge2', badge3:'@@badge3',
                     img:'//d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/2146/medium/_____-220609-fin-01.jpg',
                     title:'鋐聖通信',
                     rateScore:'5.0', rateCount:'138',
@@ -165,7 +135,6 @@
                         btn:'',
                     }
                     desc:'[新機／二手機買賣]、[門號申裝]、[無卡分期］、[小米家電]、[手機包膜、維修]',
-                    tag1:'五倍券', tag2:'低價現貨低價現貨',
                 },
                 {
                     borderColor:'warning',
@@ -228,5 +197,7 @@
                 ])
             </div>
         </div>
+        
+        
     </div>
 </div>

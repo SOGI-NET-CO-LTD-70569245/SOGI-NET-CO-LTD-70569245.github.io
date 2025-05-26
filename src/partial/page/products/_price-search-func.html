@@ -1,120 +1,18 @@
-<div class="bg-white border shadow-sm mb-3 p-2">
-    <div class="container">
-        <div class="d-none d-lg-block">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-4">
-                    <div class="form-row">
-                        <div class="col-12">
-                            <label class="font-weight-bold">所在區域</label>
-                        </div>
-                        <div class="col-6">
-                            <select class="form-control px-1 text-primary">
-                                <option>所有縣市</option>
-                            </select>
-                        </div>
-                        @@if(context.searchArea2=='true'){
-                        <div class="col-6">
-                            <select class="form-control px-1 text-primary">
-                                <option>全區域</option>
-                            </select>
-                        </div>
-                        }
-                    </div>
-                </div>
+<div class="container search-container">
+        <a class="row align-items-center justify-content-between text-decoration-none" href="#" data-toggle="modal" data-target=".modal-price-search">
+            <div class="col">
                 @@if(context.searchPurchase!=''){
-                <div class="col-6">
-                    <div class="form-row">
-                        <div class="col-12">
-                            <label class="font-weight-bold">@@searchPurchase</label>
-                        </div>
-                        @@if(context.navActive=='new'){
-                        <div class="col">
-                            <select class="form-control px-1 text-primary">
-                                <option>不搭專案（買空機）</option>
-                                <option>搭專案（買空機）</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <select class="form-control px-1 bg-light text-secondary" disabled>
-                                <option>請選擇電信</option>
-                            </select>
-                        </div>
-                        <div class="col-4">
-                            <div class="dropdown dropdown-select">
-                                <!-- <select class="form-control px-1 bg-light text-secondary" disabled>
-                                    <option>請選擇方案</option>
-                                </select> -->
-                                <a class="btn d-flex pl-2 pr-1 btn-outline-dark border bg-white text-primary dropdown-toggle align-items-center justify-content-between text-truncate" href="#" data-toggle="dropdown">
-                                    請選擇方案
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-select">
-                                    <a class="dropdown-item" href="javascript:void();" data-html="true" data-trigger="hover" data-container="body" data-toggle="popover" data-content="►綁約：36個月<br>►預繳1500<br>►上網1GB，網內送20分鐘、網外+市話20分鐘">4G - 大4G299(36)</a>
-                                    <a class="dropdown-item" href="javascript:void();" data-html="true" data-trigger="hover" data-container="body" data-toggle="popover" data-content="►綁約：36個月<br>►預繳1500<br>►上網1GB，網內送20分鐘、網外+市話20分鐘">4G - 青春無敵388(30)</a>  
-                                    <a class="dropdown-item" href="javascript:void();" data-html="true" data-trigger="hover" data-container="body" data-toggle="popover" data-content="►綁約：36個月<br>►預繳1500<br>►上網1GB，網內送20分鐘、網外+市話20分鐘">5G - 精彩5G 1399(30)</a>  
-                                </div>
-                            </div>
-                        </div>
-                        }
-                        @@if(context.navActive=='second'){
-                        <div class="col">
-                            <select class="form-control px-1 text-primary selectpicker" multiple>
-                                <option selected>外觀機況</option>
-                                <option>外觀機況</option>
-                                <option>外觀機況</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <select class="form-control px-1 text-primary">
-                                <option>電池健康度</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <select class="form-control px-1 text-primary selectpicker" multiple>
-                                <option selected>門市保固</option>
-                                <option>門市保固</option>
-                                <option>門市保固</option>
-                            </select>
-                        </div>
-                        }
-                        @@if(context.navActive=='repair'){
-                        <div class="col">
-                            <input type="text" readonly class="form-control-plaintext" value="更換螢幕顯示觸控正常玻璃破裂">
-                        </div>
-                        }
-                    </div>
-                </div>
+                <div class="text-primary text-row-1">SAMSUNG Galaxy S22 Ultra 256GB</div>
+                <div class="text-muted font-small text-row-1">台北市,大安區｜不搭專案（買空機）｜遠傳電信｜5G - 心5G方案1399(24)</div>
                 }
-                <div class="col-2">
-                    @@include('../../unit/_btn.html',{
-                        btnBlock:'true',
-                        btnRounded:'pill',
-                        btnColor:'primary',
-                        href:'#',
-                        btnIcon:'fas fa-search',
-                        btnName:'@@btnName',
-                        btnRWD:'true',
-                    })
+                @@if(context.searchPurchase==''){
+                <div class="text-primary">台北市</div>
+                }
+            </div>
+            <div class="col-auto">
+                <div class="btn btn-primary btn-block rounded-pill py-0">
+                    <i class="fa-fw fas fa-search"></i>
                 </div>
             </div>
-        </div>
-
-        <div class="d-block d-lg-none">
-            <a class="row align-items-center justify-content-between text-decoration-none" href="#" data-toggle="modal" data-target=".modal-price-search">
-                <div class="col">
-                    @@if(context.searchPurchase!=''){
-                    <div class="text-primary text-row-1">SAMSUNG Galaxy S22 Ultra 256GB</div>
-                    <div class="text-muted font-small text-row-2">台北市,大安區｜不搭專案（買空機）｜遠傳電信｜5G - 心5G方案1399(24)</div>
-                    }
-                    @@if(context.searchPurchase==''){
-                    <div class="text-primary">台北市</div>
-                    }
-                </div>
-                <div class="col-auto">
-                    <div class="btn btn-primary btn-block rounded-pill py-0">
-                        <i class="fa-fw fas fa-search"></i>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+        </a>
 </div>
