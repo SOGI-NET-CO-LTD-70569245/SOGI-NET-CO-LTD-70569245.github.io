@@ -22,6 +22,37 @@ $(function() {
     //     }
     // });
     
+    let lastScrollTop = 0;
+    let ticking = false;
+    const navbar = document.querySelector('.filterNav');
+    const threshold = 150; // 增加閾值減少敏感度
+
+    function updateNavbar() {
+        let scrollTop = window.pageYOffset;
+        let scrollDiff = Math.abs(scrollTop - lastScrollTop);
+        
+        // 只有滾動距離足夠大才觸發
+        if (scrollDiff > threshold) {
+            if (scrollTop > lastScrollTop) {
+                // 向下滾動 - 隱藏
+                navbar.classList.add('hidden');
+            } else {
+                // 向上滾動 - 顯示
+                navbar.classList.remove('hidden');
+            }
+            lastScrollTop = scrollTop;
+        }
+        
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(updateNavbar);
+            ticking = true;
+        }
+    });
+
     $('.btn-anchor').click(function(){
 		$('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top -50

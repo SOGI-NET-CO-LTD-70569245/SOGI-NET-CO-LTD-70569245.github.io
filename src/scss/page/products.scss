@@ -49,3 +49,17 @@
         }
     }
 }
+
+.filterNav {            
+    height: auto;
+    max-height: 3rem;
+    opacity: 1;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    will-change: max-height, opacity;
+    &.hidden {
+        max-height: 0;
+        opacity: 0;
+    }
+}
