@@ -24,29 +24,57 @@ $(function() {
     
     let lastScrollTop = 0;
     let ticking = false;
-    const navbar = document.querySelector('.filterNav');
-    const threshold = 150; // 增加閾值減少敏感度
+    const filterNav = document.querySelector('#filterNav');
+    const stickyWrapper = document.querySelector('.header-middle');
+    let stickyTriggered = false;
+    let stickyBuffer = false; // 添加緩衝狀態
+
+    function isSticky() {
+        return stickyWrapper.getBoundingClientRect().top <= 0;
+    }
 
     function updateNavbar() {
-        let scrollTop = window.pageYOffset;
-        let scrollDiff = Math.abs(scrollTop - lastScrollTop);
-        
-        // 只有滾動距離足夠大才觸發
-        if (scrollDiff > threshold) {
-            if (scrollTop > lastScrollTop) {
-                // 向下滾動 - 隱藏
-                navbar.classList.add('hidden');
+        const scrollTop = window.pageYOffset;
+        const scrollDiff = Math.abs(scrollTop - lastScrollTop);
+        const currentlySticky = isSticky();
+
+        // 處理sticky狀態變化
+        if (currentlySticky && !stickyTriggered) {
+            // 剛進入sticky狀態
+            stickyTriggered = true;
+            stickyBuffer = true; // 設置緩衝
+            filterNav.classList.remove('hidden'); // 確保顯示
+            lastScrollTop = scrollTop; // 重置滾動位置
+        } else if (!currentlySticky && stickyTriggered) {
+            // 離開sticky狀態
+            stickyTriggered = false;
+            stickyBuffer = false;
+            filterNav.classList.remove('hidden'); // 確保顯示
+            lastScrollTop = scrollTop; // 重置滾動位置
+        }
+
+        // 在sticky狀態下的滾動控制
+        if (stickyTriggered && scrollDiff > 150) { // 降低閾值提高靈敏度
+            if (stickyBuffer) {
+                // 緩衝期內不執行隱藏邏輯
+                if (scrollDiff > 30) { // 需要更大的滾動距離才結束緩衝
+                    stickyBuffer = false;
+                }
             } else {
-                // 向上滾動 - 顯示
-                navbar.classList.remove('hidden');
+                // 正常的滾動控制
+                if (scrollTop > lastScrollTop) {
+                    filterNav.classList.add('hidden');
+                } else {
+                    filterNav.classList.remove('hidden');
+                }
             }
             lastScrollTop = scrollTop;
         }
-        
+
         ticking = false;
     }
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', () => {
         if (!ticking) {
             requestAnimationFrame(updateNavbar);
             ticking = true;

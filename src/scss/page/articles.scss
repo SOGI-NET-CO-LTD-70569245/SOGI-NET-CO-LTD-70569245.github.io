@@ -191,3 +191,30 @@
         min-height: 300px;
     }
 }
+
+.collapsing {
+  transition: none !important;
+}
+
+.faq-toggle {
+  position: relative;
+
+  .faq-question {
+    padding-right: 20px; // Make space for the arrow
+  }
+
+  &::after {
+    content: '\f078'; // FontAwesome chevron-down icon
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &[aria-expanded="true"]::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}

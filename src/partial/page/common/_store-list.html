@@ -32,7 +32,7 @@
 
     <div class="container-fluid pt-5 px-0 border-top @@if(context.fpBgClass){@@fpBgClass}">
         
-        <div class="sticky-top">
+        <div class="sticky-top header-middle">
             <div class="bg-white border shadow-sm mb-3 p-2">
                 @@if(context.searchFunc=='true'){
                     @@include('../products/_price-search-func.html',{
@@ -45,7 +45,7 @@
                 
                 @@if(context.filter=='true'){
                 <div class="container filterNav" id="filterNav">
-                    <div class="row align-items-center justify-content-between">
+                    <div class="row align-items-center justify-content-between pt-2">
                         <div class="col col-lg">
                             @@if(context.navActive!='repair'){
                             <span class="mr-1 d-none d-lg-inline font-small">快速篩選</span>
