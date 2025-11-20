@@ -212,6 +212,7 @@
     top: 50%;
     transform: translateY(-50%);
     transition: transform 0.2s ease-in-out;
+    color: $secondary;
   }
 
   &[aria-expanded="true"]::after {
