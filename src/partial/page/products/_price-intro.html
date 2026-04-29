@@ -58,51 +58,8 @@
                     </div>
                 </div>
 
-                @@if(context.group=='new'){
-                <div class="row row-hs no-gutters mb-5">
-                    <div class="col-auto px-1">
-                        <a class="btn btn-outline-secondary btn-hover-ol-primary text-left" href="javascript:void();">
-                            <div class="lead font-weight-bold">128GB</div>
-                            最低 $26,900
-                        </a>
-                    </div>
-                    <div class="col-auto px-1">
-                        <!-- <div class="rounded py-1 px-2 border border-primary text-primary text-left"> -->
-                        <a class="btn btn-outline-primary btn-hover-ol-primary text-left" href="javascript:void();">
-                            <div class="lead font-weight-bold">256GB</div>
-                            最低 $26,900
-                        </a>
-                    </div>
-                    <div class="col-auto px-1">
-                        <a class="btn btn-outline-secondary btn-hover-ol-primary text-left" href="javascript:void();">
-                            <div class="lead font-weight-bold">512GB</div>
-                            最低 $26,900
-                        </a>
-                    </div>
-                    <div class="col-auto px-1">
-                        <a class="btn btn-outline-secondary btn-hover-ol-primary text-left" href="javascript:void();">
-                            <div class="lead font-weight-bold">終極特別版</div>
-                            最低 $26,900
-                        </a>
-                    </div>
-                </div>
-                }
-
-                @@if(context.group=='repair-store'){
-                <div class="row">
-                    @@loop('unit/_price-intro-repair-item.html', [
-                        {label:'換螢幕(顯示觸控正常)', price:'1,000', btnColor:'primary',},
-                        {label:'換螢幕(顯示觸控異常)', price:'300', btnColor:'primary',},
-                        {label:'換電池', price:'23,300', btnColor:'primary',},
-                        {label:'前相機', price:'15,200', btnColor:'primary',},
-                        {label:'後相機', price:'8,150', btnColor:'primary',},
-                        {label:'現場檢測', price:'1,500', btnColor:'primary',},
-                        {label:'充電線插孔問題', price:'800', btnColor:'primary',},
-                    ])
-                </div>
-                }
                 @@if(context.group!='repair-store'){
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-5 col-md-auto ml-3 ml-md-0">
                         <div class="row align-items-center">
                             <div class="col col-md-auto mb-3 mb-md-0">
@@ -175,6 +132,50 @@
                     </div>
                     }
                     
+                </div>
+                }
+
+                @@if(context.group!='repair-store'){
+                <div class="row row-hs no-gutters">
+                    <div class="col-auto px-1">
+                        <a class="btn btn-outline-secondary btn-hover-ol-primary text-left" href="javascript:void();">
+                            <div class="lead font-weight-bold">128GB</div>
+                            最低 $26,900
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <!-- <div class="rounded py-1 px-2 border border-primary text-primary text-left"> -->
+                        <a class="btn btn-outline-primary btn-hover-ol-primary text-left" href="javascript:void();">
+                            <div class="lead font-weight-bold">256GB</div>
+                            最低 $26,900
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <a class="btn btn-outline-secondary btn-hover-ol-primary text-left" href="javascript:void();">
+                            <div class="lead font-weight-bold">512GB</div>
+                            最低 $26,900
+                        </a>
+                    </div>
+                    <div class="col-auto px-1">
+                        <a class="btn btn-outline-secondary btn-hover-ol-primary text-left" href="javascript:void();">
+                            <div class="lead font-weight-bold">終極特別版</div>
+                            最低 $26,900
+                        </a>
+                    </div>
+                </div>
+                }
+
+                @@if(context.group=='repair-store'){
+                <div class="row">
+                    @@loop('unit/_price-intro-repair-item.html', [
+                        {label:'換螢幕(顯示觸控正常)', price:'1,000', btnColor:'primary',},
+                        {label:'換螢幕(顯示觸控異常)', price:'300', btnColor:'primary',},
+                        {label:'換電池', price:'23,300', btnColor:'primary',},
+                        {label:'前相機', price:'15,200', btnColor:'primary',},
+                        {label:'後相機', price:'8,150', btnColor:'primary',},
+                        {label:'現場檢測', price:'1,500', btnColor:'primary',},
+                        {label:'充電線插孔問題', price:'800', btnColor:'primary',},
+                    ])
                 </div>
                 }
             </div>
