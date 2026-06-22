@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/layouts/_head.html',{title:'搜尋結果'})
+    </head>
+
+    <body>
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
+
+        <div id="main" class="push">
+            <div class="container">
+                @@include('../../partial/shared/components/_ad-970.html')
+                @@include('../../partial/shared/components/_breadcrumb.html')
+
+                <h1>手機搜尋結果: 雙卡雙待手機</h1>
+                <div class="row my-2">
+                    <div class="col-lg-3 offset-lg-9 col-12 justify-content-end my-1">
+                        <select id="SortSelect-1" class="form-control">
+                            <option>排序方式</option>
+                            <optgroup label="依空機價">
+                                <option value="sort-price:desc">由高至低</option>
+                                <option value="sort-price:asc">由低至高</option>
+                            </optgroup>
+                            <optgroup label="依上市日">
+                                <option value="sort-date:desc">由新至舊</option>
+                                <option value="sort-date:asc">由舊至新</option>
+                            </optgroup>
+                            <optgroup label="依熱門度">
+                                <option value="sort-hot:desc">由高至低</option>
+                                <option value="sort-hot:asc">由低至高</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" id="mixitup-1">
+                    <div class="mix-item col-6 col-lg-3 cat2 price4 fmobile" data-sort-price="29000" data-sort-date="20150501" data-sort-hot="1000">
+                                <div class="box my-2 p-2">
+                                    <span class="badge badge-warning pos-a-lt ml-2 mt-2">NEW</span>
+                                    <a href="">
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/OPPO_oppo_r11_0808132908355_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <div class="text-row-1 my-2">
+                                        <span class="badge badge-outline">標籤二</span>
+                                    </div>
+                                    <a href="" class="text-row-2">Zenfone</a>
+                                    <hr>
+                                    <div class="d-block">
+                                        <small>
+                                            空機價：<a class="text-price h6" href="">$29,000</a><br>
+                                            二手價：<a class="text-price h6" href="">$12,999</a><br>
+                                            上市日：2015/05
+                                        </small>
+                                    </div>
+                                    <div class="btn-group btn-group-justified btn-group-sm mt-1">
+                                        <a class="btn btn-outline-secondary" href="">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                        <a class="btn btn-outline-secondary" href="">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="mix-item col-6 col-lg-3 cat2 price4 fmobile" data-sort-price="29000" data-sort-date="20150501" data-sort-hot="1000">
+                                <div class="box my-2 p-2">
+                                    <span class="badge badge-warning pos-a-lt ml-2 mt-2">NEW</span>
+                                    <a href="">
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/OPPO_oppo_r11_0808132908355_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <div class="text-row-1 my-2">
+                                        <span class="badge badge-outline">標籤二</span>
+                                    </div>
+                                    <a href="" class="text-row-2">Zenfone</a>
+                                    <hr>
+                                    <div class="d-block">
+                                        <small>
+                                            空機價：<a class="text-price h6" href="">$29,000</a><br>
+                                            二手價：<a class="text-price h6" href="">$12,999</a><br>
+                                            上市日：2015/05
+                                        </small>
+                                    </div>
+                                    <div class="btn-group btn-group-justified btn-group-sm mt-1">
+                                        <a class="btn btn-outline-secondary" href="">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                        <a class="btn btn-outline-secondary" href="">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+
+            </div>
+
+        </div>
+
+        @@include('../../partial/layouts/_footer.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+
+        @@include('../../partial/layouts/_js.html')
+        <script src="/assets/javascripts/vendor/jquery.mixitup.min.js"></script>
+        <script src="/assets/javascripts/function/mixitup.js"></script>
+
+    </body>
+</html>

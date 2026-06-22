@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/layouts/_head.html',{title:'進階搜尋'})
+    </head>
+
+    <body>
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
+
+        <div id="main" class="push">
+            <div class="container">
+                @@include('../../partial/shared/components/_ad-970.html')
+                @@include('../../partial/shared/components/_breadcrumb.html')
+
+                <h1 class="section-title">產品搜尋</h1>
+
+                <div class="row my-2">
+                    <div class="col-12 mb-2">
+                        <div class="nav-responsive">
+                            <ul class="nav nav-pills nav-justified nav-styled">
+                                <li class="nav-item"><a class="nav-link active" href="">手機</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">平板電腦</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">穿戴裝置</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="card border-0">
+                                <div class="card-header border" role="tab" id="heading-spec">
+                                    <a class="d-block text-black" role="button" data-toggle="collapse" href="#collapse-spec" aria-expanded="true" aria-controls="collapse-spec">規格
+                                        <div class="float-right"><i class="fas fa-caret-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="collapse-spec" class="collapse show" role="tabpanel" aria-labelledby="heading-spec">
+                                    <div class="card-block py-2">
+                                        <div class="form-group">
+                                            <label>
+                                                螢幕尺寸從<span class="example-val" id="lower-value"></span>
+			到<span class="example-val" id="upper-value"></span>寸
+                                            </label>
+<!--                                            <div id="nonlinear" class="m-3"></div>-->
+                                            <input type="range" class="custom-range">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>
+                                                價格<span class="example-val" id="huge-value"></span>
+                                            </label>
+                                            <div id="slider-huge" class="m-3"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="checkOption"><input id="nano_sim" type="checkbox" value="1" />nano SIM</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="checkOption"><input id="dual_sim" type="checkbox" value="1" />Dual Sim</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header border" role="tab" id="heading-brand">
+                                    <a class="d-block text-black collapsed" role="button" data-toggle="collapse" href="#collapse-brand" aria-expanded="false" aria-controls="collapse-brand">
+                                        品牌
+                                        <div class="float-right"><i class="fas fa-caret-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="collapse-brand" class="collapse" role="tabpanel" aria-labelledby="heading-brand">
+                                    <div class="card-block py-2">
+                                        <div class="form-group">
+                                            <label class="checkOption"><input id="nano_sim" type="checkbox" value="1" />nano SIM</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="checkOption"><input id="dual_sim" type="checkbox" value="1" />Dual Sim</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header border" role="tab" id="heading-modal">
+                                    <a class="d-block text-black collapsed" role="button" data-toggle="collapse" href="#collapse-modal" aria-expanded="false" aria-controls="collapse-modal">
+                                        型號
+                                        <div class="float-right"><i class="fas fa-caret-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="collapse-modal" class="collapse" role="tabpanel" aria-labelledby="heading-modal">
+                                    <div class="card-block py-2">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="搜尋">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" type="button">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-4 col-6">
+                                <div class="box my-2 p-2">
+                                    <a href="">
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_5_mark_two_0917074117675_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <a href="" class="text-row-2">Apple iPhone 7 Plus 128GB</a>
+                                    <hr>
+                                    <div class="d-block">
+                                        <small>
+                                            空機價：<a class="text-price h6" href="">$12,999</a>
+                                        </small>
+                                    </div>
+                                    <div class="btn-group btn-group-justified btn-group-sm mt-1">
+                                        <a class="btn btn-outline-secondary" href="">
+                                            <i class="fa fa-plus"></i> 比較
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="box my-2 p-2">
+                                    <a href="">
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_5_mark_two_0917074117675_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <a href="" class="text-row-2">Apple iPhone 7 Plus 128GB</a>
+                                    <hr>
+                                    <div class="d-block">
+                                        <small>
+                                            空機價：<a class="text-price h6" href="">$12,999</a>
+                                        </small>
+                                    </div>
+                                    <div class="btn-group btn-group-justified btn-group-sm mt-1">
+                                        <a class="btn btn-outline-secondary" href="">
+                                            <i class="fa fa-plus"></i> 比較
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="box my-2 p-2">
+                                    <a href="">
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_5_mark_two_0917074117675_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <a href="" class="text-row-2">Apple iPhone 7 Plus 128GB</a>
+                                    <hr>
+                                    <div class="d-block">
+                                        <small>
+                                            空機價：<a class="text-price h6" href="">$12,999</a>
+                                        </small>
+                                    </div>
+                                    <div class="btn-group btn-group-justified btn-group-sm mt-1">
+                                        <a class="btn btn-outline-secondary" href="">
+                                            <i class="fa fa-plus"></i> 比較
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="box my-2 p-2">
+                                    <a href="">
+                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_5_mark_two_0917074117675_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
+                                    </a>
+                                    <a href="" class="text-row-2">Apple iPhone 7 Plus 128GB</a>
+                                    <hr>
+                                    <div class="d-block">
+                                        <small>
+                                            空機價：<a class="text-price h6" href="">$12,999</a>
+                                        </small>
+                                    </div>
+                                    <div class="btn-group btn-group-justified btn-group-sm mt-1">
+                                        <a class="btn btn-outline-secondary" href="">
+                                            <i class="fa fa-plus"></i> 比較
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        @@include('../../partial/layouts/_footer.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+
+        @@include('../../partial/layouts/_js.html')
+  </body>
+</html>
