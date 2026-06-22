@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'重設密碼',cssFile:'member'})
+        @@include('../../partial/layouts/_head.html',{title:'重設密碼',cssFile:'member'})
     </head>
 
 	<body class="member">
 
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
-            @@include('../../partial/comp/_breadcrumb.html',{
+            @@include('../../partial/shared/components/_breadcrumb.html',{
                 lv1Label:'登入/註冊',
                 lv1Url:'#',
             })
@@ -18,11 +18,11 @@
                 <div class="container">
                     <div class="modal-dialog shadow rounded-lg">
                         <div class="modal-content border-0">
-                            @@include('../../partial/page/member/unit/_modal-header.html',{
+                            @@include('../../partial/features/member/unit/_modal-header.html',{
                                 title:'重設密碼'
                             })
                             <div class="modal-body p-4 p-lg-6">
-                                @@include('../../partial/page/member/_form-pw.html',{
+                                @@include('../../partial/features/member/_form-pw.html',{
                                     href:'#',
                                     btnLabel:'確認修改'
                                 })
@@ -33,12 +33,12 @@
             </div>
         </div>
 
-        @@include('../../partial/global/_footer.html')
-        @@include('../../partial/modal/_quickview.html')
-        @@include('../../partial/modal/_toast.html')
+        @@include('../../partial/layouts/_footer.html')
+        @@include('../../partial/shared/modals/_quickview.html')
+        @@include('../../partial/shared/modals/_toast.html')
         
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
 
     </body>
 </html>

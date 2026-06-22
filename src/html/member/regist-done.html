@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'註冊完成-會員註冊',cssFile:'member'})
+        @@include('../../partial/layouts/_head.html',{title:'註冊完成-會員註冊',cssFile:'member'})
     </head>
 
 	<body class="member">
 
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
-            @@include('../../partial/comp/_breadcrumb.html',{
+            @@include('../../partial/shared/components/_breadcrumb.html',{
                 lv1Label:'登入/註冊',
                 lv1Url:'#',
             })
             <div class="py-10">
                 <div class="container overflow-hidden">
-                    @@include('../../partial/page/member/_step.html',{
+                    @@include('../../partial/features/member/_step.html',{
                         group: {
                             item: [
                                 {no:'1', label:'驗證手機號碼', state:'done'},
@@ -29,12 +29,12 @@
                 <div class="container">
                     <div class="modal-dialog shadow rounded-lg">
                         <div class="modal-content border-0">
-                            @@include('../../partial/page/member/unit/_modal-header.html',{
+                            @@include('../../partial/features/member/unit/_modal-header.html',{
                                 title:'註冊完成'
                             })
                             <div class="modal-body p-4 p-lg-6">
                                 <form>
-                                    @@include('../../partial/page/member/unit/_form-group-sucess.html',{
+                                    @@include('../../partial/features/member/unit/_form-group-sucess.html',{
                                         title:'您已成功加入會員<br>3 秒後將為您跳轉回註冊前頁面'
                                     })
                                     <div class="form-group text-center">
@@ -57,12 +57,12 @@
             </div>
         </div>
 
-        @@include('../../partial/global/_footer.html')
-        @@include('../../partial/modal/_quickview.html')
-        @@include('../../partial/modal/_toast.html')
+        @@include('../../partial/layouts/_footer.html')
+        @@include('../../partial/shared/modals/_quickview.html')
+        @@include('../../partial/shared/modals/_toast.html')
 
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
         
     </body>
 </html>

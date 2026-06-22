@@ -4,6 +4,11 @@
 *.sass.map
 *.scss.map
 
+### codex ###
+.agents
+.codex
+.html-build-check
+
 # Dependency directories
 node_modules
 

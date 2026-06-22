@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'會員註冊'})
+        @@include('../../partial/layouts/_head.html',{title:'會員註冊'})
     </head>
 
 	<body class="member">
 
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
-            @@include('../../partial/comp/_ad-970.html')
-            @@include('../../partial/comp/_breadcrumb.html')
+            @@include('../../partial/shared/components/_ad-970.html')
+            @@include('../../partial/shared/components/_breadcrumb.html')
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-12">
@@ -140,8 +140,8 @@
 
         </div>
 
-        @@include('../../partial/global/_footer.html')
-        @@include('../../partial/modal/_quickview.html')
+        @@include('../../partial/layouts/_footer.html')
+        @@include('../../partial/shared/modals/_quickview.html')
         <!-- modal -->
         <div class="modal fade" id="modal-rule" tabindex="-1" role="dialog" aria-labelledby="modal-rule">
             <div class="modal-dialog" role="document">
@@ -214,7 +214,7 @@
             </div>
     </div>
         
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
     </body>
 </html>

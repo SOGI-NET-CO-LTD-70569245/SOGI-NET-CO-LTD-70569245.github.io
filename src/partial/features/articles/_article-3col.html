@@ -1,0 +1,130 @@
+<div class="container my-2">
+    @@include('../../shared/ui/_section-title-h2.html',{
+        hr:'@@hr',
+        title:'@@title'
+    })
+    <div class="row align-items-center">
+        @@if(context.col1=='card'){
+            @@include('../../shared/ui/_article-card-item.html',{
+                col:'12', colMd:'12', colLg:'4',
+                href:'#',
+                img:'//d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/24114/extra_large/12.jpg',
+                badgeLabel:'評測文章',
+                tag1:'#評測', tag2:'#蘋果', tag3:'#銷售排行',
+                title:'三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen',
+                date:'2022/1/10',
+            })
+        }
+        @@if(context.col1=='row'){
+            <div class="col-12 col-lg-4">
+                @@loop('../../shared/ui/_article-row-item.html', [
+                    {
+                        paddingY:'2',
+                        shadow:true,
+                        href:'#',
+                        img:'//d2lfcsub12kx0l.cloudfront.net/tw/article/img/202204/2022040709310726623_ExtraLargeSize-640x640.jpg',
+                        tag1:'#評測', tag2:'#SAMSUNG',
+                        title:'三星S21系列手機開放One UI 4.1系統更新',
+                        date:'2022/2/11'
+                    },
+                    {
+                        paddingY:'2',
+                        shadow:true,
+                        href:'#',
+                        img:'//d2lfcsub12kx0l.cloudfront.net/tw/article/img/202204/2022040709310726623_ExtraLargeSize-640x640.jpg',
+                        tag1:'#評測', tag2:'#SAMSUNG',
+                        title:'三星S21系列手機開放One UI 4.1系統更新',
+                        date:'2022/2/11'
+                    },
+                ])
+            </div>
+        }
+        @@if(context.col1=='ad'){
+            <div class="col-12 col-lg-4">
+                @@include('../../shared/components/_ad-336-280.html')
+            </div>
+        }
+        
+        @@if(context.col2=='card'){
+            @@include('../../shared/ui/_article-card-item.html',{
+                col:'12', colMd:'12', colLg:'4',
+                href:'#',
+                img:'//d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/24114/extra_large/12.jpg',
+                badgeLabel:'評測文章',
+                tag1:'#評測', tag2:'#蘋果', tag3:'#銷售排行',
+                title:'三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen',
+                date:'2022/1/10',
+            })
+        }
+        @@if(context.col2=='row'){
+            <div class="col-12 col-lg-4">
+                @@loop('../../shared/ui/_article-row-item.html', [
+                    {
+                        paddingY:'2',
+                        shadow:true,
+                        href:'#',
+                        img:'//d2lfcsub12kx0l.cloudfront.net/tw/article/img/202204/2022040709310726623_ExtraLargeSize-640x640.jpg',
+                        tag1:'#評測', tag2:'#SAMSUNG',
+                        title:'三星S21系列手機開放One UI 4.1系統更新',
+                        date:'2022/2/11'
+                    },
+                    {
+                        paddingY:'2',
+                        shadow:true,
+                        href:'#',
+                        img:'//d2lfcsub12kx0l.cloudfront.net/tw/article/img/202204/2022040709310726623_ExtraLargeSize-640x640.jpg',
+                        tag1:'#評測', tag2:'#SAMSUNG',
+                        title:'三星S21系列手機開放One UI 4.1系統更新',
+                        date:'2022/2/11'
+                    },
+                ])
+            </div>
+        }
+        @@if(context.col2=='ad'){
+            <div class="col-12 col-lg-4">
+                @@include('../../shared/components/_ad-336-280.html')
+            </div>
+        }
+
+        @@if(context.col3=='card'){
+            @@include('../../shared/ui/_article-card-item.html',{
+                col:'12', colMd:'12', colLg:'4',
+                href:'#',
+                img:'//d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/24114/extra_large/12.jpg',
+                badgeLabel:'評測文章',
+                tag1:'#評測', tag2:'#蘋果', tag3:'#銷售排行',
+                title:'三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen',
+                date:'2022/1/10',
+            })
+        }
+        @@if(context.col3=='row'){
+            <div class="col-12 col-lg-4">
+                @@loop('../../shared/ui/_article-row-item.html', [
+                    {
+                        paddingY:'2',
+                        shadow:true,
+                        href:'#',
+                        img:'//d2lfcsub12kx0l.cloudfront.net/tw/article/img/202204/2022040709310726623_ExtraLargeSize-640x640.jpg',
+                        tag1:'#評測', tag2:'#SAMSUNG',
+                        title:'三星S21系列手機開放One UI 4.1系統更新',
+                        date:'2022/2/11'
+                    },
+                    {
+                        paddingY:'2',
+                        shadow:true,
+                        href:'#',
+                        img:'//d2lfcsub12kx0l.cloudfront.net/tw/article/img/202204/2022040709310726623_ExtraLargeSize-640x640.jpg',
+                        tag1:'#評測', tag2:'#SAMSUNG',
+                        title:'三星S21系列手機開放One UI 4.1系統更新',
+                        date:'2022/2/11'
+                    },
+                ])
+            </div>
+        }
+        @@if(context.col3=='ad'){
+            <div class="col-12 col-lg-4">
+                @@include('../../shared/components/_ad-336-280.html')
+            </div>
+        }
+    </div>
+</div>

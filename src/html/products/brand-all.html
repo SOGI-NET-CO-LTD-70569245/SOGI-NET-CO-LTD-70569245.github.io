@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'品牌總覽',cssFile:'products'})
+        @@include('../../partial/layouts/_head.html',{title:'品牌總覽',cssFile:'products'})
     </head>
 
 	<body class="products">
 
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
-            @@include('../../partial/comp/_ad-970.html')
-            @@include('../../partial/comp/_breadcrumb.html')
+            @@include('../../partial/shared/components/_ad-970.html')
+            @@include('../../partial/shared/components/_breadcrumb.html')
             <div class="container">
                 <h1 class="">品牌總覽</h1>
                 <ul class="pagination pagination-sm d-none d-lg-flex">
@@ -49,14 +49,14 @@
             </div>
 
             <div class="container">
-                @@include('../../partial/unit/_section-title-h3.html',{
+                @@include('../../partial/shared/ui/_section-title-h3.html',{
                     title:"A"
                 })
 
                 <div class="row align-items-center mb-20">
                     <div class="col-lg-8 col-12">
                         <div class="row">
-                            @@loop('../../partial/page/products/unit/_brand-item.html', [
+                            @@loop('../../partial/features/products/unit/_brand-item.html', [
                                 {
                                     colLg:'3', colMd:'3', col:'6',
                                     img:'/assets/images/brands/asus.jpg',
@@ -102,12 +102,12 @@
                     </div>
                     <div class="col-lg-4 col-12 my-4 my-lg-1 p-0">
                         <div class="text-center">
-                            @@include('../../partial/unit/_ad-336-280-item.html',{padding:true})
+                            @@include('../../partial/shared/ui/_ad-336-280-item.html',{padding:true})
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="row">
-                            @@loop('../../partial/page/products/unit/_brand-item.html', [
+                            @@loop('../../partial/features/products/unit/_brand-item.html', [
                                 {
                                     colLg:'2', colMd:'3', col:'6',
                                     img:'/assets/images/brands/asus.jpg',
@@ -155,10 +155,10 @@
             </div>
         </div>
 
-        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/layouts/_footer.html')
 
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
 
         <!-- Single -->
         <script src="/assets/javascripts/vendor/jquery.responsiveImg.min.js"></script>

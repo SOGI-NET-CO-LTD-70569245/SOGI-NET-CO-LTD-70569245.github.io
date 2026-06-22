@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'報價管理系統-二手-商品列表',cssFile:'store-admin'})
+        @@include('../../partial/layouts/_head.html',{title:'報價管理系統-二手-商品列表',cssFile:'store-admin'})
     </head>
 
 	<body class="store">
-        @@include('../../partial/page/store-admin/_nav-mobile.html')
-        @@include('../../partial/page/store-admin/_header.html')
+        @@include('../../partial/features/store-admin/_nav-mobile.html')
+        @@include('../../partial/features/store-admin/_header.html')
 
         <div id="main" class="py-10 push">
-            @@include('../../partial/page/store-admin/_nav-main.html',{
+            @@include('../../partial/features/store-admin/_nav-main.html',{
                 lv1Nav:'second',
                 lv2Nav:'second-list'
             })
-            @@include('../../partial/unit/_section-title-h3.html',{
+            @@include('../../partial/shared/ui/_section-title-h3.html',{
                 title:'二手商品列表 (每頁100筆)',
                 href:'#',
                 modal:'.modal-refresh',
             })
-            @@include('../../partial/page/store-admin/_product-search.html',{
+            @@include('../../partial/features/store-admin/_product-search.html',{
                 type:'second',
                 colWidth:'4',
                 col1Label:'商品分類',
@@ -33,7 +33,7 @@
                 col5Input:'不可輸入符號',
                 checkbox1Name:'只顯示關閉資料',
             })
-            @@include('../../partial/page/store-admin/_table.html',{
+            @@include('../../partial/features/store-admin/_table.html',{
                 funcBtnName:'關閉產品',
                 tBodyRow:'2',
                 theadClass:'table-primary',
@@ -165,14 +165,14 @@
             })
         </div>
 
-        @@include('../../partial/global/_footer.html',{
+        @@include('../../partial/layouts/_footer.html',{
             page:'store-admin',
         })
 
-        @@include('../../partial/modal/_refresh.html')
+        @@include('../../partial/shared/modals/_refresh.html')
 
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
 
         <!-- Single -->
         <script src="/assets/javascripts/vendor/bootstrap.editable.min.js"></script>

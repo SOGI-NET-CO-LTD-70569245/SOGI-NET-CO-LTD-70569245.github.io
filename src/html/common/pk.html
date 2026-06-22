@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'車拼',cssFile:'pk'})
+        @@include('../../partial/layouts/_head.html',{title:'車拼',cssFile:'pk'})
     </head>
 
 	<body>
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
-            @@include('../../partial/comp/_ad-970.html')
+            @@include('../../partial/shared/components/_ad-970.html')
             <div class="container mb-10">
                 <h1 class="d-flex flex-row align-items-center justify-content-between mt-2">
                     <div>
@@ -30,7 +30,7 @@
                 </ul>
                 <div class="table-overflow">
                     <table class="table table-bordered table-condensed table-hover table-pk" aria-multiselectable="true">
-                        @@include('../../partial/page/pk/_thead.html',{                                
+                        @@include('../../partial/features/pk/_thead.html',{                                
                             bgColor:'primary',
                             group: {
                                 th: [
@@ -43,7 +43,7 @@
                                 ]
                             },
                         })
-                        @@include('../../partial/page/pk/_thead.html',{                                
+                        @@include('../../partial/features/pk/_thead.html',{                                
                             group: {
                                 th: [
                                     {img:'/assets/images/ui/logo.png', alt:'Sogi!手機王'},
@@ -56,7 +56,7 @@
                             },
                         })
                         <tbody>
-                            @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                                 align:'center',
                                 label:'門市空機價',
                                 group: {
@@ -69,7 +69,7 @@
                                     ]
                                 },
                             })
-                            @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                                 align:'center',
                                 label:'門市二手價',
                                 group: {
@@ -82,7 +82,7 @@
                                     ]
                                 },
                             })
-                            @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                                 align:'center',
                                 label:'上市日期',
                                 group: {
@@ -95,7 +95,7 @@
                                     ]
                                 },
                             })
-                            @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                            @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                                 align:'center',
                                 label:'評價',
                                 group: {
@@ -113,20 +113,20 @@
                             <tr>
                                 <td class="px-1" colspan="6">
                                     <div class="text-md-center">
-                                        @@include('../../partial/unit/_ad-336-280-item.html',{marginY:true,padding:true})
+                                        @@include('../../partial/shared/ui/_ad-336-280-item.html',{marginY:true,padding:true})
                                     </div>
-                                    <!-- @@include('../../partial/page/pk/unit/_btn-remove.html',{direction:'row', textColor:'muted'})
+                                    <!-- @@include('../../partial/features/pk/unit/_btn-remove.html',{direction:'row', textColor:'muted'})
                                     <div id="chart_price"></div> -->
                                 </td>
                             </tr>
                         </thead>
-                        @@include('../../partial/page/pk/_tbody-collapse.html',{
+                        @@include('../../partial/features/pk/_tbody-collapse.html',{
                             bgColor:'info',
                             colspan:'6',
                             id:'collapse-1',
                             label:'手機分類',
                         })
-                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                        @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                             align:'left',
                             label:'手機分類',
                             group: {
@@ -139,7 +139,7 @@
                                 ]
                             },
                         })
-                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                        @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                             align:'left',
                             label:'頻率系統',
                             group: {
@@ -152,7 +152,7 @@
                                 ]
                             },
                         })
-                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                        @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                             align:'left',
                             label:'作業系統',
                             group: {
@@ -165,7 +165,7 @@
                                 ]
                             },
                         })
-                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                        @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                             align:'left',
                             label:'處理器',
                             group: {
@@ -178,7 +178,7 @@
                                 ]
                             },
                         })
-                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                        @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                             align:'left',
                             label:'處理器分類',
                             group: {
@@ -192,13 +192,13 @@
                             },
                         })
                         </tbody>
-                        @@include('../../partial/page/pk/_tbody-collapse.html',{
+                        @@include('../../partial/features/pk/_tbody-collapse.html',{
                             bgColor:'info',
                             colspan:'6',
                             id:'collapse-2',
                             label:'尺寸',
                         })
-                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                        @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                             align:'left',
                             label:'重量',
                             group: {
@@ -211,7 +211,7 @@
                                 ]
                             },
                         })
-                        @@include('../../partial/page/pk/unit/_tbody-tr.html',{
+                        @@include('../../partial/features/pk/unit/_tbody-tr.html',{
                             align:'left',
                             label:'長寬高',
                             group: {
@@ -240,10 +240,10 @@
 		  -webkit-user-drag: element;
 		}
         </style>
-        @@include('../../partial/global/_footer.html')
-        @@include('../../partial/modal/_pk-type.html')
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
-        @@include('../../partial/page/pk/_js-single.html')
+        @@include('../../partial/layouts/_footer.html')
+        @@include('../../partial/shared/modals/_pk-type.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
+        @@include('../../partial/features/pk/_js-single.html')
     </body>
 </html>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'產品總覽',cssFile:'products'})
+        @@include('../../partial/layouts/_head.html',{title:'產品總覽',cssFile:'products'})
     </head>
 
 	<body class="products">
 
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
-            @@include('../../partial/comp/_ad-970.html')
-            @@include('../../partial/comp/_breadcrumb.html')
+            @@include('../../partial/shared/components/_ad-970.html')
+            @@include('../../partial/shared/components/_breadcrumb.html')
             <div class="container">
 
                 <div class="row align-items-center no-gutters fixed-header bg-blue p-2">
@@ -32,25 +32,25 @@
                     </div>
                 </div>
 
-                @@include('../../partial/comp/_ad-sponsor.html')
-                @@include('../../partial/page/products/_product-overview.html')
+                @@include('../../partial/shared/components/_ad-sponsor.html')
+                @@include('../../partial/features/products/_product-overview.html')
                 <div class="row my-2">
-                    @@include('../../partial/page/products/_product-intro.html',{id:'intro', icon:'fas fa-info-circle', title:'產品介紹'})
+                    @@include('../../partial/features/products/_product-intro.html',{id:'intro', icon:'fas fa-info-circle', title:'產品介紹'})
 
-                    @@include('../../partial/page/products/_product-spec.html',{id:'spec', icon:'fas fa-list-ul', title:'產品規格'})
+                    @@include('../../partial/features/products/_product-spec.html',{id:'spec', icon:'fas fa-list-ul', title:'產品規格'})
 
-                    @@include('../../partial/page/products/_article-list.html',{id:'articles', icon:'fas fa-clipboard-check', title:'評測與新聞'})
+                    @@include('../../partial/features/products/_article-list.html',{id:'articles', icon:'fas fa-clipboard-check', title:'評測與新聞'})
 
-                    @@include('../../partial/page/products/_previous.html',{id:'previous', icon:'fas fa-th-large', title:'上一代產品'})
+                    @@include('../../partial/features/products/_previous.html',{id:'previous', icon:'fas fa-th-large', title:'上一代產品'})
 
-                    @@include('../../partial/page/products/_compare-most-viewed.html',{id:'compare', icon:'fas fa-th-large', btnLabel:'對決', title:'網友最常比較'})
+                    @@include('../../partial/features/products/_compare-most-viewed.html',{id:'compare', icon:'fas fa-th-large', btnLabel:'對決', title:'網友最常比較'})
 
-                    @@include('../../partial/page/products/_price-trend.html',{id:'trend', icon:'fas fa-chart-line', title:'價格走勢'})
+                    @@include('../../partial/features/products/_price-trend.html',{id:'trend', icon:'fas fa-chart-line', title:'價格走勢'})
 
-                    @@include('../../partial/page/products/_products-similar-list.html',{id:'similar', icon:'fas fa-th', title:'同級產品'})
+                    @@include('../../partial/features/products/_products-similar-list.html',{id:'similar', icon:'fas fa-th', title:'同級產品'})
 
                     <div class="col-12 my-2">
-                        @@include('../../partial/comp/_ad-300-250-double.html')
+                        @@include('../../partial/shared/components/_ad-300-250-double.html')
                     </div>
 
                 </div>
@@ -59,17 +59,17 @@
 
         </div>
 
-        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/layouts/_footer.html')
 
-        @@include('../../partial/modal/_login.html')
-        @@include('../../partial/modal/_track.html')
-        @@include('../../partial/modal/_pk.html')
+        @@include('../../partial/shared/modals/_login.html')
+        @@include('../../partial/shared/modals/_track.html')
+        @@include('../../partial/shared/modals/_pk.html')
 
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
 
         <!-- Single -->
-        @@include('../../partial/comp/_fb-sdk.html')
+        @@include('../../partial/shared/components/_fb-sdk.html')
         <script src="/assets/javascripts/vendor/bootstrap.star-rating.min.js"></script>
         <script src="/assets/javascripts/vendor/jquery.hc-sticky.min.js"></script>
         <script src="/assets/javascripts/vendor/fresco.v225.js"></script>

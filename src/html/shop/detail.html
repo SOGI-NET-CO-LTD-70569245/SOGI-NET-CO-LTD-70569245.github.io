@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'商圈',cssFile:'shop'})
+        @@include('../../partial/layouts/_head.html',{title:'商圈',cssFile:'shop'})
     </head>
 
 	<body class="products">
 
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
-            @@include('../../partial/comp/_ad-970.html',{textAd:'true'})
-            @@include('../../partial/comp/_breadcrumb.html')
+            @@include('../../partial/shared/components/_ad-970.html',{textAd:'true'})
+            @@include('../../partial/shared/components/_breadcrumb.html')
             
-            @@include('../../partial/page/shop/_form.html')
-            @@include('../../partial/page/common/_store-list.html',{
+            @@include('../../partial/features/shop/_form.html')
+            @@include('../../partial/shared/sections/_store-list.html',{
                 id:'section-store-list',
                 
                 fpBgClass:'bg-light',
@@ -28,10 +28,10 @@
             })
         </div>
 
-        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/layouts/_footer.html')
 
-        @@include('../../partial/modal/_refresh.html')
-        @@include('../../partial/modal/_price-search.html',{
+        @@include('../../partial/shared/modals/_refresh.html')
+        @@include('../../partial/shared/modals/_price-search.html',{
             navActive: 'shop',
         })
         <div class="modal fade modal-msg" tabindex="-1" role="dialog" aria-labelledby="modal-login" data-backdrop="static" data-keyboard="false">
@@ -50,8 +50,8 @@
             </div>
           </div>
 
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
         <script>
             $('.modal-msg').modal('show')
         </script>

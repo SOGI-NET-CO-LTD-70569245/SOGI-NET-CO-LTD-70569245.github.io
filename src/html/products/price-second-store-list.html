@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'找二手',cssFile:'products'})
+        @@include('../../partial/layouts/_head.html',{title:'找二手',cssFile:'products'})
     </head>
 
 	<body class="products">
 
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
-            @@include('../../partial/comp/_ad-970.html',{textAd:'true'})
-            @@include('../../partial/comp/_breadcrumb.html',{
+            @@include('../../partial/shared/components/_ad-970.html',{textAd:'true'})
+            @@include('../../partial/shared/components/_breadcrumb.html',{
                 lv1Label:'SAMSUNG',
                 lv1Url:'index.html',
                 lv2Label:'SAMSUNG Galaxy S22 Ultra 256GB',
                 lv2Url:'detail.html',
             })
 
-            @@include('../../partial/page/products/_price-intro.html',{
+            @@include('../../partial/features/products/_price-intro.html',{
                 title1:'SAMSUNG Galaxy S22 Ultra 256GB',
                 title2:'二手價格查詢',
                 group:'second',
                 priceNew:'29,000',
             })
 
-            @@include('../../partial/page/common/_store-list.html',{
+            @@include('../../partial/shared/sections/_store-list.html',{
                 id:'section-store-list',
                 fpBgClass:'bg-light',
                 nav:'true',
@@ -44,12 +44,12 @@
                 btnDangerName:'不滿包退',
             })
 
-            @@include('../../partial/comp/_ad-300-250-double.html',{
+            @@include('../../partial/shared/components/_ad-300-250-double.html',{
                 
                 fpBgClass:'bg-light'
             })
             
-            @@include('../../partial/page/products/_products-similar-list-new.html',{
+            @@include('../../partial/features/products/_products-similar-list-new.html',{
                 id:'section-similar',
                 
                 fpBgClass:'bg-light',
@@ -58,18 +58,18 @@
             })
         </div>
 
-        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/layouts/_footer.html')
 
-        @@include('../../partial/modal/_quickview.html')
-        @@include('../../partial/modal/_price-search.html',{
+        @@include('../../partial/shared/modals/_quickview.html')
+        @@include('../../partial/shared/modals/_price-search.html',{
             navActive:'second',
             purchaseName:'商品狀態',
         })
-        @@include('../../partial/modal/_price-tip.html')
-        @@include('../../partial/modal/_refresh.html')
+        @@include('../../partial/shared/modals/_price-tip.html')
+        @@include('../../partial/shared/modals/_refresh.html')
 
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
 
         <!-- Single -->
         <!-- <script src="/assets/javascripts/vendor/jquery.mixitup.min.js"></script>

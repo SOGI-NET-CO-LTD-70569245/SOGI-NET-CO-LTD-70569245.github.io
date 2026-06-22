@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'討論區',cssFile:'forum'})
+        @@include('../../partial/layouts/_head.html',{title:'討論區',cssFile:'forum'})
     </head>
 
 	<body class="forum">
 
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
             <div class="container">
@@ -232,21 +232,21 @@
             <!-- module: ./popup-message -->
         </div>
 
-        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/layouts/_footer.html')
 
         <!-- module: popover-share -->
         <div id="popover-share"></div>
         <!-- module: ./common-footer -->
 
-        @@include('../../partial/modal/_mge-public.html')
-        @@include('../../partial/modal/_mge-tag.html')
-        @@include('../../partial/modal/_mge-best.html')
+        @@include('../../partial/shared/modals/_mge-public.html')
+        @@include('../../partial/shared/modals/_mge-tag.html')
+        @@include('../../partial/shared/modals/_mge-best.html')
 
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
 
         <!-- Single -->
-        @@include('../../partial/comp/_fb-sdk.html')
+        @@include('../../partial/shared/components/_fb-sdk.html')
         <script src="/assets/javascripts/vendor/jquery.hc-sticky.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap.fileinput.min.js"></script>
         <script src="/assets/javascripts/locales/bootstrap.fileinput_locale_zh-TW.js"></script>

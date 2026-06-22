@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'新聞總覽',cssFile:'articles'})
+        @@include('../../partial/layouts/_head.html',{title:'新聞總覽',cssFile:'articles'})
     </head>
 
 	<body class="news">
 
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
-            @@include('../../partial/comp/_ad-970.html')
-            @@include('../../partial/comp/_breadcrumb.html')
+            @@include('../../partial/shared/components/_ad-970.html')
+            @@include('../../partial/shared/components/_breadcrumb.html')
             <div class="container">
                 <div class="row my-2">
                     <div class="col-lg-8 col-12">
-                        @@include('../../partial/page/articles/_detail-header.html')
-                        @@include('../../partial/page/articles/_detail-editable.html')
+                        @@include('../../partial/features/articles/_detail-header.html')
+                        @@include('../../partial/features/articles/_detail-editable.html')
                         
                         <div class="faq-container" id="fqaAll">
                             <div class="faq-item lead">
@@ -38,11 +38,11 @@
                             </div>
                         </div>
 
-                        @@include('../../partial/page/articles/_article-price-list.html')
-                        @@include('../../partial/page/articles/_img-compare.html')
-                        @@include('../../partial/page/articles/_quiz.html')
+                        @@include('../../partial/features/articles/_article-price-list.html')
+                        @@include('../../partial/features/articles/_img-compare.html')
+                        @@include('../../partial/features/articles/_quiz.html')
                         <script src="/assets/javascripts/function/vote.js"></script>
-                        @@include('../../partial/page/articles/_pros-cons.html')
+                        @@include('../../partial/features/articles/_pros-cons.html')
                         <div class="bg-light my-2 p-1">
                             <div class="row">
                                 <div class="col-8 text-ad">
@@ -53,59 +53,59 @@
                                 </div>
                             </div>
                         </div>
-                        @@include('../../partial/page/articles/_author-info.html')
+                        @@include('../../partial/features/articles/_author-info.html')
 
                     </div>
                     <div class="col-lg-4 col-12 d-none d-lg-block">
-                        @@include('../../partial/comp/_ad-300-600.html')
+                        @@include('../../partial/shared/components/_ad-300-600.html')
                     </div>
                 </div>
             </div>
-            @@include('../../partial/comp/_ad-970-90.html')
-            @@include('../../partial/page/articles/_related-products.html',{
+            @@include('../../partial/shared/components/_ad-970-90.html')
+            @@include('../../partial/features/articles/_related-products.html',{
                 hr:'true',
                 title:'本文相關商品',
             })
-            @@include('../../partial/page/articles/_article-3col.html',{
+            @@include('../../partial/features/articles/_article-3col.html',{
                 hr:'true',
                 title:'相關新聞',
                 col1:'card',
                 col2:'row',
                 col3:'ad',
             })
-            @@include('../../partial/page/articles/_article-3col.html',{
+            @@include('../../partial/features/articles/_article-3col.html',{
                 hr:'true',
                 title:'特別推薦',
                 col1:'card',
                 col2:'card',
                 col3:'card',
             })
-            @@include('../../partial/page/articles/_article-3col.html',{
+            @@include('../../partial/features/articles/_article-3col.html',{
                 hr:'true',
                 title:'最新消息',
                 col1:'card',
                 col2:'row',
                 col3:'ad',
             })
-            @@include('../../partial/page/articles/_article-3col.html',{
+            @@include('../../partial/features/articles/_article-3col.html',{
                 hr:'true',
                 title:'熱門新聞',
                 col1:'card',
                 col2:'row',
                 col3:'ad',
             })
-            @@include('../../partial/comp/_popup-message.html')
+            @@include('../../partial/shared/components/_popup-message.html')
         </div>
 
-        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/layouts/_footer.html')
 
-        @@include('../../partial/comp/_popover-share.html')
-        @@include('../../partial/modal/_login.html')
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_popover-share.html')
+        @@include('../../partial/shared/modals/_login.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
 
         <!-- Single -->
-        @@include('../../partial/comp/_fb-sdk.html')
+        @@include('../../partial/shared/components/_fb-sdk.html')
         <!-- <script src="/assets/javascripts/vendor/jquery.prognroll.min.js"></script> -->
         <script src="/assets/javascripts/vendor/jquery.responsiveImg.min.js"></script>
         <script src="/assets/javascripts/vendor/jquery.hc-sticky.min.js"></script>

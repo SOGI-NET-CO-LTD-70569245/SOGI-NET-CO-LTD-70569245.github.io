@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'商店介紹',cssFile:'store'})
+        @@include('../../partial/layouts/_head.html',{title:'商店介紹',cssFile:'store'})
     </head>
 
 	<body class="store">
 
-        @@include('../../partial/global/_header.html')
-        @@include('../../partial/comp/_nav-main.html')
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
 
         <div id="main" class="push">
-            @@include('../../partial/comp/_ad-970.html',{textAd:'true'})
-            @@include('../../partial/page/store/_store-intro.html')
+            @@include('../../partial/shared/components/_ad-970.html',{textAd:'true'})
+            @@include('../../partial/features/store/_store-intro.html')
             
-            @@include('../../partial/unit/_section-title-h3.html',{
+            @@include('../../partial/shared/ui/_section-title-h3.html',{
                 id: 'section-information',
                 title:'門市資訊'
             })
-            @@include('../../partial/page/store/_store-list.html',{
+            @@include('../../partial/features/store/_store-list.html',{
                 title:'咕咕手機通訊大安店',
                 img:'//d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/24138/big/2020092320532305749o.jpg',
                 group: {
@@ -35,7 +35,7 @@
                     ],
                 },
             })
-            @@include('../../partial/page/store/_store-list.html',{
+            @@include('../../partial/features/store/_store-list.html',{
                 title:'傑昇通信-竹北中正東店',
                 img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/2141/big/_____-220609-fin-01.jpg',
                 group: {
@@ -55,15 +55,15 @@
             })
             
 
-            @@include('../../partial/comp/_popup-message.html')
+            @@include('../../partial/shared/components/_popup-message.html')
         </div>
 
-        @@include('../../partial/global/_footer.html')
+        @@include('../../partial/layouts/_footer.html')
 
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
         
-        @@include('../../partial/comp/_fb-sdk.html')
-        @@include('../../partial/page/store/_js-readmore.html')
+        @@include('../../partial/shared/components/_fb-sdk.html')
+        @@include('../../partial/features/store/_js-readmore.html')
     </body>
 </html>

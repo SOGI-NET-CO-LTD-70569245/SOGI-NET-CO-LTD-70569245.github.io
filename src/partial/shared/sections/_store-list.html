@@ -1,0 +1,203 @@
+<!--
+    id:'string',
+    hr:'true',
+    title:'string',
+    fpBgClass:'string',
+    nav:'true',
+    navActive: 'new | second | repair',
+    searchArea2:'true',
+    searchPurchase:'true',
+    filter:'true',
+    searchResult:'true',
+    itemBtnNumber:'number (2,3)',
+    itemPrice:'true',
+    mixitupId:'number',
+-->
+<div @@if(context.id){id="@@id">
+    <div class="container-fluid px-0"}>
+        <div class="container">
+            @@if(context.title){
+                @@include('../ui/_section-title-h2.html',{
+                    hr:'@@hr',
+                    title:'@@title',
+                })
+            }
+            @@if(context.nav=='true'){
+                @@include('../ui/_store-list-nav.html',{
+                    navActive:'@@navActive',
+                })
+            }
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5 px-0 border-top @@if(context.fpBgClass){@@fpBgClass}">
+        
+        <div class="sticky-top header-middle">
+            <div class="bg-white border shadow-sm mb-3 p-2">
+                @@if(context.searchFunc=='true'){
+                    @@include('../../features/products/_price-search-func.html',{
+                        navActive: '@@navActive',
+                        searchArea2: '@@searchArea2',
+                        searchPurchase: '@@searchPurchase',
+                        btnName:'@@btnName',
+                    })
+                }
+                
+                @@if(context.filter=='true'){
+                <div class="container filterNav" id="filterNav">
+                    <div class="row align-items-center justify-content-between pt-2">
+                        <div class="col col-lg">
+                            @@if(context.navActive!='repair'){
+                            <span class="mr-1 d-none d-lg-inline font-small">快速篩選</span>
+                            <a class="btn btn-sm btn-warning font-small" href="#">
+                                無卡分期
+                            </a>
+                            <a class="btn btn-sm btn-outline-dark font-small" href="#">
+                                LINEPay
+                            </a>
+                            <a class="btn btn-sm btn-outline-dark font-small" href="#">
+                                信用卡
+                            </a>
+                            <a class="btn btn-sm btn-outline-dark font-small" href="#">
+                                街口支付
+                            </a>
+                            }
+                        </div>
+                        
+                        <div class="col-auto text-right">
+                            <div class="dropdown dropdown-select">
+                                <a class="btn btn-outline-dark bg-white text-dark border dropdown-toggle font-small" href="#" role="button" data-toggle="dropdown" data-display="static">
+                                    <i class="fa-fw fas fa-sort-amount-down"></i> <span class="d-none d-md-inline">價格</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-select" id="SortSelect-@@mixitupId">
+                                    <div class="dropdown-header">依門市最低</div>
+                                    <a class="dropdown-item sort" href="javascript:void();">由高至低</a>
+                                    <a class="dropdown-item sort" href="javascript:void();">由低至高</a>
+                                    <div class="dropdown-header">依上市日</div>
+                                    <a class="dropdown-item sort" href="javascript:void();">由新至舊</a>
+                                    <a class="dropdown-item sort" href="javascript:void();">由舊至新</a>
+                                    <div class="dropdown-header">依熱門度</div>
+                                    <a class="dropdown-item sort" href="javascript:void();">由高至低</a>
+                                    <a class="dropdown-item sort" href="javascript:void();">由低至高</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+
+        <div class="container pb-5">
+            @@if(context.searchResult=='true'){
+            <div class="text-right">
+                <div class="font-small">108 個結果符合要求。</div>
+            </div>
+            }
+            <div class="row @@if(context.mixitupId){mixitup}" @@if(context.mixitupId){id="mixitup-@@mixitupId"}>
+                @@loop('../ui/_store-list-item.html', [
+                {
+                    borderColor:'white',
+                    badgeSP1Bg:'danger', badgeSP2Bg:'warning', badgeSP1Title:'快速到貨', badgeSP2Title:'獨家贈好禮',
+                    img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/841/extra_large/0610__.jpg',
+                    title:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十',
+                    rateScore:'4.3', rateCount:'1200',
+                    address:'台北市大安區中山南路599巷599號',
+                    @@if(context.itemPrice=='true'){
+                        price:'9,700', priceLogin:'',
+                        update:'2019/12/31',
+                    }
+                    @@if(context.itemBtnNumber=='3'){
+                        btn:'primary',
+                        btnPrimaryName:'@@btnPrimaryName',
+                    }
+                    @@if(context.itemBtnNumber=='2'){
+                        btn:'',
+                    }
+                    desc:'外觀機況：S級<br>門市保固：1個月<br>電池健康度：良好',
+                },
+                {
+                    borderColor:'white',
+                    badgeSP1Bg:'danger', badgeSP1Title:'快速到貨',
+                    img:'//d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/2146/medium/_____-220609-fin-01.jpg',
+                    title:'鋐聖通信',
+                    rateScore:'5.0', rateCount:'138',
+                    address:'新北市五股區工商路42號',
+                    @@if(context.itemPrice=='true'){
+                        price:'18,000 - $19,000', priceLogin:'',
+                        update:'2022/01/05',
+                    }
+                    @@if(context.itemBtnNumber=='3'){
+                        btn:'danger',
+                        btnDangerName:'@@btnDangerName',
+                    }
+                    @@if(context.itemBtnNumber=='2'){
+                        btn:'',
+                    }
+                    desc:'[新機／二手機買賣]、[門號申裝]、[無卡分期］、[小米家電]、[手機包膜、維修]',
+                },
+                {
+                    borderColor:'warning',
+                    badgeFlagTitle:'一二三', 
+                    img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/1850/medium/_______7_.jpg',
+                    title:'林口指標通訊林口指標通訊林口指標通訊',
+                    rateCount:'&nbsp;',
+                    address:'新北市林口區仁愛路二段514號',
+                    @@if(context.itemPrice=='true'){
+                        priceTitleType:'text', priceTitle:'超低價！', price:'7,000', priceLogin:'',
+                        update:'2021/05/20',
+                    }
+                    @@if(context.itemBtnNumber=='3'){
+                        btn:'warning',
+                        btnPrimaryName:'@@btnPrimaryName',
+                    }
+                    @@if(context.itemBtnNumber=='2'){
+                        btn:'',
+                    }
+                    desc:'A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務',
+                },
+                {
+                    borderColor:'white',
+                    img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ShopInfo/2344/medium/_______1_.jpg',
+                    title:'金馬講數位通訊',
+                    rateScore:'3.5', rateCount:'50',
+                    address:'桃園市蘆竹區南崁路190號',
+                    @@if(context.itemPrice=='true'){
+                        priceTitleType:'text', priceTitle:'會員獨享', price:'6,500', priceLogin:'true',
+                        update:'2022/03/01',
+                    }
+                    @@if(context.itemBtnNumber=='3'){
+                        btn:'primary',
+                        btnPrimaryName:'@@btnPrimaryName',
+                    }
+                    @@if(context.itemBtnNumber=='2'){
+                        btn:'',
+                    }
+                    desc:'A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務',
+                },
+                {
+                    borderColor:'white',
+                    img:'https://d3c6c8kv4if4l0.cloudfront.net/www/Shop/870/medium/55999.jpg',
+                    title:'中華行動屋-龍東店',
+                    rateScore:'3.5', rateCount:'50',
+                    address:'桃園市中壢區龍東路317號',
+                    @@if(context.itemPrice=='true'){
+                        priceTitleType:'badge', priceTitle:'星際黑', price:'8,200', priceLogin:'',
+                        update:'2022/03/11',
+                    }
+                    @@if(context.itemBtnNumber=='3'){
+                        btn:'primary',
+                        btnPrimaryName:'@@btnPrimaryName',
+                    }
+                    @@if(context.itemBtnNumber=='2'){
+                        btn:'',
+                    }
+                    desc:'A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務',
+                },
+                ])
+            </div>
+        </div>
+        
+        
+    </div>
+</div>

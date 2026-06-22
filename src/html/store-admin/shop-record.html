@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../../partial/global/_head.html',{title:'報價管理系統-商圈訂購-訂購紀錄',cssFile:'store-admin'})
+        @@include('../../partial/layouts/_head.html',{title:'報價管理系統-商圈訂購-訂購紀錄',cssFile:'store-admin'})
     </head>
 
 	<body class="store">
-        @@include('../../partial/page/store-admin/_nav-mobile.html')
-        @@include('../../partial/page/store-admin/_header.html')
+        @@include('../../partial/features/store-admin/_nav-mobile.html')
+        @@include('../../partial/features/store-admin/_header.html')
 
         <div id="main" class="py-10 push">
-            @@include('../../partial/page/store-admin/_nav-main.html',{
+            @@include('../../partial/features/store-admin/_nav-main.html',{
                 lv1Nav:'shop',
                 lv2Nav:'shop-record'
             })
-            @@include('../../partial/unit/_section-title-h3.html',{
+            @@include('../../partial/shared/ui/_section-title-h3.html',{
                 title:'訂購紀錄（每頁100筆）',
             })
-            @@include('../../partial/page/store-admin/_table.html',{
+            @@include('../../partial/features/store-admin/_table.html',{
                 tBodyRow:'2',
                 theadClass:'table-primary',
                 thead: {
@@ -100,17 +100,17 @@
                     ]
                 },
             })
-            @@include('../../partial/comp/_pagination.html')
+            @@include('../../partial/shared/components/_pagination.html')
         </div>
 
-        @@include('../../partial/global/_footer.html',{
+        @@include('../../partial/layouts/_footer.html',{
             page:'store-admin',
         })
 
-        @@include('../../partial/modal/_refresh.html')
+        @@include('../../partial/shared/modals/_refresh.html')
 
-        @@include('../../partial/comp/_nav-top.html')
-        @@include('../../partial/global/_js.html')
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
 
         <!-- Single -->
         <script src="/assets/javascripts/vendor/bootstrap.editable.min.js"></script>
