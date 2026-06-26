@@ -423,7 +423,7 @@
                         <div class="col-12 my-2">
                             <div class="row no-gutters">
                                 <div class="col-12">
-                                    <h1 class="h5 text-row-12 mb-3">
+                                    <h1 class="h4 text-row-12 mb-3">
                                         標題標題標題標題標題標題標題標題標題標題
                                     </h1>
                                     <textarea class="form-control" rows="10"></textarea>
@@ -457,7 +457,10 @@
                                             <div class="col">
                                                 
                                                 
-                                                <div class="text-primary">台北市</div>
+                                                <div class="text-primary text-row-1">手機王會員限定！OPPO Find N6 超值驚喜價</div>
+                                                
+                                                <div class="text-muted font-small text-row-1">台北市｜大安區</div>
+                                                
                                                 
                                             </div>
                                             <div class="col-auto">
@@ -467,6 +470,7 @@
                                             </div>
                                         </a>
                                 </div>
+
                             
                 
                             
@@ -1084,6 +1088,12 @@
                                         </select>
                                     </div>
                                     
+                                    <div class="col">
+                                        <select class="form-control text-primary">
+                                            <option>全區域</option>
+                                        </select>
+                                    </div>
+                                    
                                 </div>
                             </div>
                             
@@ -1092,12 +1102,14 @@
                     <div class="modal-footer justify-content-center">
                         <a class="btn btn-primary btn-block rounded-pill py-0" href="#">
                             <i class="fa-fw fas fa-search"></i>
-                            搜尋價格
+                            搜尋門市
+                            
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="modal fade modal-msg" tabindex="-1" role="dialog" aria-labelledby="modal-login" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -1132,7 +1144,9 @@
         <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap-select.min.js"></script>
         <script src="/assets/javascripts/common.js"></script>
-        
+        <script>
+            $('.modal-msg').modal('show')
+        </script>
 
     </body>
 </html>
