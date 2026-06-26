@@ -1,3 +1,9 @@
+<!--
+@partial layouts/_footer
+@optional page
+@variants page: store-admin hides the public footer content.
+@note Shared footer included by most pages.
+-->
 <div id="footer" class="bg-dark push">
     @@if(context.page!='store-admin'){
     <div class="container py-5">

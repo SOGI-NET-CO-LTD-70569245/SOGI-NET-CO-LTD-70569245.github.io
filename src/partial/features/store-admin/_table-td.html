@@ -1,3 +1,10 @@
+<!--
+@partial features/store-admin/_table-td
+@required tdType
+@optional tdClass, tdLabel, tdBadgeColor, tdBadgeLabel, tdHref, tdImg, editableClass, editableTip, btnChk, btnHref, btnModal, tdInputName, tdInputTooltip, tdInputMinWidth, tdInputDisabled
+@variants tdType: text | link | img-text | editable | btn | select | input; editableClass: price | chk-on | chk-fast | select-warranty | select-storage | select-time | select-low
+@note Table cell renderer used by features/store-admin/_table.
+-->
 <td class="align-middle @@tdClass">
     @@if(context.tdType=='text'){
         @@tdLabel @@if(context.tdBadgeLabel){<span class="badge badge-@@tdBadgeColor">@@tdBadgeLabel</span>}

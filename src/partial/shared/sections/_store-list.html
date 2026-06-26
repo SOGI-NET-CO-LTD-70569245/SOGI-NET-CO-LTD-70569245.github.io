@@ -1,17 +1,9 @@
 <!--
-    id:'string',
-    hr:'true',
-    title:'string',
-    fpBgClass:'string',
-    nav:'true',
-    navActive: 'new | second | repair',
-    searchArea2:'true',
-    searchPurchase:'true',
-    filter:'true',
-    searchResult:'true',
-    itemBtnNumber:'number (2,3)',
-    itemPrice:'true',
-    mixitupId:'number',
+@partial shared/sections/_store-list
+@required mixitupId
+@optional id, hr, title, fpBgClass, nav, navActive, searchFunc, searchTitle, searchArea, searchArea2, searchPurchase, btnName, filter, searchResult, itemBtnNumber, itemPrice, btnPrimaryName, btnDangerName
+@variants navActive: new | second | repair; itemBtnNumber: 2 | 3
+@note Store listing section with optional search/filter UI and repeated store cards.
 -->
 <div @@if(context.id){id="@@id">
     <div class="container-fluid px-0"}>
@@ -39,6 +31,8 @@
                         navActive: '@@navActive',
                         searchArea2: '@@searchArea2',
                         searchPurchase: '@@searchPurchase',
+                        searchTitle: '@@searchTitle',
+                        searchArea: '@@searchArea',
                         btnName:'@@btnName',
                     })
                 }

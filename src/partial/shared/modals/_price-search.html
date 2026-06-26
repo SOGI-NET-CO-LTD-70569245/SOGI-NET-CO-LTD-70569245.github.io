@@ -24,7 +24,7 @@
                                     <option>所有縣市</option>
                                 </select>
                             </div>
-                            @@if(context.navActive!='shop'){
+                            @@if(context.navActive!='shop' || context.searchArea2=='true'){
                             <div class="col">
                                 <select class="form-control text-primary">
                                     <option>全區域</option>
@@ -92,7 +92,8 @@
             <div class="modal-footer justify-content-center">
                 <a class="btn btn-primary btn-block rounded-pill py-0" href="#">
                     <i class="fa-fw fas fa-search"></i>
-                    搜尋價格
+                    @@if(context.btnName){@@btnName}
+                    @@if(!context.btnName){搜尋價格}
                 </a>
             </div>
         </div>

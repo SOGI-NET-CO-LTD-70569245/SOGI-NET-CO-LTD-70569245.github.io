@@ -6,7 +6,10 @@
                 <div class="text-muted font-small text-row-1">台北市,大安區｜不搭專案（買空機）｜遠傳電信｜5G - 心5G方案1399(24)</div>
                 }
                 @@if(context.searchPurchase==''){
-                <div class="text-primary">台北市</div>
+                <div class="text-primary text-row-1">@@if(context.searchTitle){@@searchTitle}@@if(!context.searchTitle){台北市}</div>
+                @@if(context.searchArea){
+                <div class="text-muted font-small text-row-1">@@searchArea</div>
+                }
                 }
             </div>
             <div class="col-auto">

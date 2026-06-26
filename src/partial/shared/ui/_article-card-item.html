@@ -1,3 +1,9 @@
+<!--
+@partial shared/ui/_article-card-item
+@required href, img, title
+@optional col, colMd, colLg, marginY, cardSize, badgeLabel, tag1, tag2, tag3, tag4, date
+@note Image card with overlay text; col enables responsive grid classes.
+-->
 <div class="@@if(context.col){col-lg-@@colLg col-md-@@colMd col-@@col} @@if(context.marginY!='0'){my-2}">
     <div class="card mx-auto text-white shadow h-100 @@if(context.cardSize){@@cardSize}">
         @@if(context.badgeLabel){

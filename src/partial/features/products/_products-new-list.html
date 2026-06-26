@@ -1,3 +1,10 @@
+<!--
+@partial features/products/_products-new-list
+@required title, rowStyle, item
+@optional id, hr, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom
+@variants rowStyle: grid | hs | filter; item: 1..8
+@note New-product section with one rich item, ad slot, and product list.
+-->
 <div class="@@if(context.paddingX){py-@@paddingX} @@if(context.paddingY){py-@@paddingY} @@if(context.paddingTop){pt-@@paddingTop} @@if(context.paddingBottom){pb-@@paddingBottom} @@if(context.fpBgClass){@@fpBgClass}" @@if(context.id){id="@@id"}>
     <div class="container">
         @@include('../../shared/ui/_section-title-h2.html',{

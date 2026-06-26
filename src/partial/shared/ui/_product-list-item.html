@@ -1,3 +1,10 @@
+<!--
+@partial shared/ui/_product-list-item
+@required col, img, title
+@optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
+@variants cat: adds mix-item and mixitup sort attributes
+@note Used by product grid, horizontal scroll, and filter sections.
+-->
 <div class="my-2 col-@@col @@if(context.colLg){col-lg-@@colLg} @@if(context.colMd){col-md-@@colMd} @@if(context.cat){mix-item @@cat}" @@if(context.cat){data-sort-price="@@sortPrice" data-sort-date="@@sortDate" data-sort-hot="@@sortHot"}>
     <div class="card shadow text-center p-2">
         @@if(context.badgeRank){

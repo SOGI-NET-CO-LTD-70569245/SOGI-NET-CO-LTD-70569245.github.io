@@ -33,70 +33,20 @@
                         </select>
                     </div>
                 </div>
-                <div class="row" id="mixitup-1">
-                    <div class="mix-item col-6 col-lg-3 cat2 price4 fmobile" data-sort-price="29000" data-sort-date="20150501" data-sort-hot="1000">
-                                <div class="box my-2 p-2">
-                                    <span class="badge badge-warning pos-a-lt ml-2 mt-2">NEW</span>
-                                    <a href="">
-                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/OPPO_oppo_r11_0808132908355_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
-                                    </a>
-                                    <div class="text-row-1 my-2">
-                                        <span class="badge badge-outline">標籤二</span>
-                                    </div>
-                                    <a href="" class="text-row-2">Zenfone</a>
-                                    <hr>
-                                    <div class="d-block">
-                                        <small>
-                                            空機價：<a class="text-price h6" href="">$29,000</a><br>
-                                            二手價：<a class="text-price h6" href="">$12,999</a><br>
-                                            上市日：2015/05
-                                        </small>
-                                    </div>
-                                    <div class="btn-group btn-group-justified btn-group-sm mt-1">
-                                        <a class="btn btn-outline-secondary" href="">
-                                            <i class="fas fa-plus"></i>
-                                        </a>
-                                        <a class="btn btn-outline-secondary" href="">
-                                            <i class="fas fa-heart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                    <div class="mix-item col-6 col-lg-3 cat2 price4 fmobile" data-sort-price="29000" data-sort-date="20150501" data-sort-hot="1000">
-                                <div class="box my-2 p-2">
-                                    <span class="badge badge-warning pos-a-lt ml-2 mt-2">NEW</span>
-                                    <a href="">
-                                        <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/OPPO_oppo_r11_0808132908355_160x120.jpg" class="img-fluid mx-auto d-block" alt="">
-                                    </a>
-                                    <div class="text-row-1 my-2">
-                                        <span class="badge badge-outline">標籤二</span>
-                                    </div>
-                                    <a href="" class="text-row-2">Zenfone</a>
-                                    <hr>
-                                    <div class="d-block">
-                                        <small>
-                                            空機價：<a class="text-price h6" href="">$29,000</a><br>
-                                            二手價：<a class="text-price h6" href="">$12,999</a><br>
-                                            上市日：2015/05
-                                        </small>
-                                    </div>
-                                    <div class="btn-group btn-group-justified btn-group-sm mt-1">
-                                        <a class="btn btn-outline-secondary" href="">
-                                            <i class="fas fa-plus"></i>
-                                        </a>
-                                        <a class="btn btn-outline-secondary" href="">
-                                            <i class="fas fa-heart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-            </div>
+                @@include('../../partial/shared/sections/_products-list.html',{
+                    rowStyle:'filter',
+                    item:'8',
+                    mixitupId:'1',
+                    colLg:'3',
+                    badge1Title:true,
+                })
 
             </div>
 
         </div>
 
         @@include('../../partial/layouts/_footer.html')
+        @@include('../../partial/shared/modals/_quickview.html')
         @@include('../../partial/shared/components/_nav-top.html')
 
         @@include('../../partial/layouts/_js.html')

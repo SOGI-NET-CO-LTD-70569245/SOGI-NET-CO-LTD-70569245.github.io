@@ -1,22 +1,9 @@
-<!-- 
-    id:'string',
-    title:'string',
-    tabId1:'string',
-    tabId2:'string',
-    tabId3:'string',
-    tabTitle1:'string',
-    tabTitle2:'string',
-    tabTitle3:'string',
-    dataParent:'string',
-    seriesId1:'string',
-    seriesId2:'string',
-    seriesId3:'string',
-    seriesTitle1:'string',
-    seriesTitle2:'string',
-    seriesTitle3:'string',
-    mixitupId:'number',
-    rowStyle:'filter',
-    item:'number (1~8)'
+<!--
+@partial features/products/_products-filter
+@required title, tabId1, tabId2, tabId3, tabTitle1, tabTitle2, tabTitle3, dataParent, seriesId1, seriesId2, seriesId3, seriesTitle1, seriesTitle2, seriesTitle3, mixitupId, rowStyle, item
+@optional id, hr, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom
+@variants rowStyle: filter; item: 1..8
+@note Product filter section; IDs must be unique when used more than once on the same page.
 -->
 <div class="@@if(context.paddingX){py-@@paddingX} @@if(context.paddingY){py-@@paddingY} @@if(context.paddingTop){pt-@@paddingTop} @@if(context.paddingBottom){pb-@@paddingBottom} @@if(context.fpBgClass){@@fpBgClass}" @@if(context.id){id="@@id"}>
     <div class="container">

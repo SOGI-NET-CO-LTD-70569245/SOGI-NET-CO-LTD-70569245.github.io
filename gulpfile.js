@@ -15,6 +15,7 @@ const uglify = require('gulp-uglify');
 const rename = require("gulp-rename");
 const ghPages = require('gulp-gh-pages');
 const merge = require('merge-stream');
+const childProcess = require('child_process');
 const browserSync = require('browser-sync').create();
 
 const CONFIGS = [
@@ -45,11 +46,22 @@ const paths = {
   assets: {
     src: 'src/assets/**/*.{jpg,png,svg}',
     dest: 'dist/assets'
+  },
+  data: {
+    src: 'src/data/**/*.json'
   }
 };
 
 
 function clean(cb) {
+  cb();
+}
+
+function productData(cb) {
+  childProcess.execFileSync(process.execPath, ['scripts/generate-product-list-data.js'], {
+    cwd: __dirname,
+    stdio: 'inherit'
+  });
   cb();
 }
 
@@ -144,6 +156,7 @@ function watchFiles() {
   }); 
   watch(paths.html.src, html).on('change', browserSync.reload);
   watch(paths.partial_html.src, html).on('change', browserSync.reload);
+  watch(paths.data.src, series(productData, html)).on('change', browserSync.reload);
   watch(paths.css.src, css).on('change', browserSync.reload);
   watch(paths.js.src, js).on('change', browserSync.reload);
   watch(paths.media.src, media).on('change', browserSync.reload);
@@ -154,8 +167,8 @@ function watchFiles() {
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-const default_build = series(clean,parallel(html, css, js, media, assets), watchFiles);
-const build = series(clean,parallel(html, css, js, media, assets));
+const default_build = series(clean, productData, parallel(html, css, js, media, assets), watchFiles);
+const build = series(clean, productData, parallel(html, css, js, media, assets));
 // parallel(html, css, scripts, images), watchFiles
 
 /*
@@ -164,6 +177,7 @@ const build = series(clean,parallel(html, css, js, media, assets));
 exports.css = css;
 exports.js = js;
 exports.media = media;
+exports.productData = productData;
 exports.watch = watchFiles;
 exports.output = series(parallel(media,css,js));
 exports.build = build;

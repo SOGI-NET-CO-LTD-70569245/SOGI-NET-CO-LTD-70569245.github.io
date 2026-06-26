@@ -1,3 +1,10 @@
+<!--
+@partial features/store-admin/_table
+@required thead
+@optional title, funcBtnName, alertColor, alertDesc, theadClass, tBodyRow, tr1, tr2, tr3, pagination
+@variants tBodyRow: 1 | 2 | 3; pagination: true
+@note Table wrapper expects thead.th and trN.td data roots passed by the caller.
+-->
 <div>
     <div class="container px-lg-0 pb-10">
         @@if(context.funcBtnName){
@@ -16,6 +23,9 @@
                 alertDesc:'@@alertDesc',
             })
         }
+        <div class="text-right">
+            共 365 筆
+        </div>
         <div class="table-responsive mt-2">
             <table class="table table-bordered table-striped">
                 <thead>

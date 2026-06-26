@@ -22,6 +22,8 @@
                 bgClass:'bg-light',
                 searchFunc:'true',
                 searchPurchase:'',
+                searchTitle:'手機王會員限定！OPPO Find N6 超值驚喜價',
+                searchArea:'台北市｜大安區',
                 btnName:'搜尋門市',
                 itemBtnNumber:'2',
                 badge1:'無卡分期', badge2:'LINEPay', badge3:'信用卡', badge4:'街口支付',
@@ -33,6 +35,8 @@
         @@include('../../partial/shared/modals/_refresh.html')
         @@include('../../partial/shared/modals/_price-search.html',{
             navActive: 'shop',
+            searchArea2: 'true',
+            btnName: '搜尋門市',
         })
         <div class="modal fade modal-msg" tabindex="-1" role="dialog" aria-labelledby="modal-login" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog" role="document">
@@ -52,9 +56,9 @@
 
         @@include('../../partial/shared/components/_nav-top.html')
         @@include('../../partial/layouts/_js.html')
-        <!-- <script>
+        <script>
             $('.modal-msg').modal('show')
-        </script> -->
+        </script>
 
     </body>
 </html>
