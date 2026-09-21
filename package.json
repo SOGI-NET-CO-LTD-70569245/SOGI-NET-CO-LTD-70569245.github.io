@@ -41,7 +41,6 @@
     "sass": "^1.66.1"
   },
   "dependencies": {
-    "gsap": "npm:@gsap/business@^3.11.1",
     "swiper": "^10.2.0"
   }
 }

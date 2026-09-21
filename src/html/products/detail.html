@@ -45,7 +45,7 @@
 
                     @@include('../../partial/features/products/_compare-most-viewed.html',{id:'compare', icon:'fas fa-th-large', btnLabel:'對決', title:'網友最常比較'})
 
-                    @@include('../../partial/features/products/_price-trend.html',{id:'trend', icon:'fas fa-chart-line', title:'價格走勢'})
+                    @@include('../../partial/features/products/_price-trend.html',{id:'trend', icon:'fas fa-chart-line', title:'歷史價格事件'})
 
                     @@include('../../partial/features/products/_products-similar-list.html',{id:'similar', icon:'fas fa-th', title:'同級產品'})
 
@@ -61,8 +61,11 @@
 
         @@include('../../partial/layouts/_footer.html')
 
+        @@include('../../partial/shared/modals/_price-info.html')
         @@include('../../partial/shared/modals/_login.html')
         @@include('../../partial/shared/modals/_track.html')
+        @@include('../../partial/shared/modals/_subscribe.html')
+        @@include('../../partial/shared/modals/_subscribe-done.html')
         @@include('../../partial/shared/modals/_pk.html')
 
         @@include('../../partial/shared/components/_nav-top.html')
@@ -235,6 +238,15 @@ jQuery(document).ready(function($){
                 });
             });
 
+            $('#subscribeForm').on('submit', function (e) {
+                e.preventDefault();
+                if (!this.checkValidity()) {
+                    $(this).addClass('was-validated');
+                    return;
+                }
+                $('.modal-subscribe').modal('hide');
+                $('.modal-subscribe-done').modal('show');
+            });
         </script>
     </body>
 </html>
