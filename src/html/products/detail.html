@@ -45,7 +45,7 @@
 
                     @@include('../../partial/features/products/_compare-most-viewed.html',{id:'compare', icon:'fas fa-th-large', btnLabel:'對決', title:'網友最常比較'})
 
-                    @@include('../../partial/features/products/_price-trend.html',{id:'trend', icon:'fas fa-chart-line', title:'歷史價格事件'})
+                    @@include('../../partial/features/products/_price-trend.html',{id:'trend', icon:'fas fa-chart-line', title:'價格歷史事件'})
 
                     @@include('../../partial/features/products/_products-similar-list.html',{id:'similar', icon:'fas fa-th', title:'同級產品'})
 
@@ -82,26 +82,72 @@
         <script src="/assets/javascripts/vendor/exporting.js"></script>
         <script src="/assets/javascripts/function/star-rating.js"></script>
         <script>
-
-jQuery(document).ready(function($){
-//                $('.progress').hcSticky({
-////                    followScroll: false,
-//                    top:10,
-//                });
+            jQuery(document).ready(function ($) {
+                // Sticky 導覽設定
                 $('#dropdown-category').hcSticky({
-//                    innerSticker: '.ad',
                     followScroll: false,
-                    top:10,
+                    top: 10
                 });
                 $('.sidebar').hcSticky({
                     innerSticker: '.ad',
                     followScroll: false,
-                    top:10,
+                    top: 10
+                });
+
+                // 展開更多內容插件
+                $('.js-readmore').expandable({
+                    height: 250
+                });
+
+                // 顏色按鈕切換
+                $('.section-color .btn').on('click', function () {
+                    $('.section-color .btn.active').not(this).removeClass('active');
+                    $(this).toggleClass('active');
+                });
+
+                // 看更多圖片 (Fresco)
+                $('.btn-color-all').on('click', function (event) {
+                    event.preventDefault();
+                    Fresco.show([
+                        'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_p40_pro_plus_0326173026609_640x480.jpg',
+                        'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020211_640x480.jpg',
+                        'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020714_640x480.jpg',
+                        'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020005_640x480.jpg',
+                        'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_10_plus_0814032614442_640x480.jpg',
+                        'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_10_plus_0813060113639_640x480.jpg',
+                        'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020714_640x480.jpg',
+                        'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020005_640x480.jpg'
+                    ], {
+                        thumbnails: 'true',
+                        onClick: 'close'
+                    });
+                });
+
+                // 訂閱表單驗證與切換 Modal
+                $('#subscribeForm').on('submit', function (e) {
+                    e.preventDefault();
+                    if (!this.checkValidity()) {
+                        $(this).addClass('was-validated');
+                        return;
+                    }
+                    $('.modal-subscribe').modal('hide');
+                    $('.modal-subscribe-done').modal('show');
+                });
+
+                // 價格事件 Modal 完成後平滑捲動至 #trend
+                $(document).on('click', '.js-scroll-trend', function () {
+                    $('.modal-price-info').one('hidden.bs.modal', function () {
+                        const $target = $('#trend');
+                        if ($target.length) {
+                            $('html, body').animate({
+                                scrollTop: $target.offset().top
+                            }, 500);
+                        }
+                    });
                 });
             });
 
-//            $('#main-nav').hcSticky('destroy');
-
+            // Highcharts 全域主題與走勢圖初始化
             Highcharts.theme = {
                 exporting: {
                     buttons: {
@@ -116,17 +162,16 @@ jQuery(document).ready(function($){
                     enabled: false
                 },
                 lang: {
-                  thousandsSep: ','
+                    thousandsSep: ','
                 }
             };
-
             Highcharts.setOptions(Highcharts.theme);
 
             $(function () {
                 $('#chart_price').highcharts({
                     title: {
                         text: '',
-                        x: -20 //center
+                        x: -20
                     },
                     xAxis: {
                         categories: ['11-06', '11-07', '11-08', '11-09', '11-10', '11-11', '11-12']
@@ -159,93 +204,25 @@ jQuery(document).ready(function($){
                     plotOptions: {
                         line: {
                             dataLabels: {
-                                enabled: false, // 顯示數值
+                                enabled: false,
                                 format: '{y}'
                             },
                             enableMouseTracking: true
                         }
                     },
                     series: [
-                        {
-                            name: 'Apple iPhone 15',
-                            data: [25000, 24000, 24000, 23500, 23400, 23200, 19000]
-                        },
-                        {
-                            name: 'Apple iPhone 16',
-                            data: [22000, 22500, 23000, 22500, 22000, 21000, 20000]
-                        },
-                        {
-                            name: 'Apple iPhone 15',
-                            data: [25000, 24000, 24000, 23500, 23400, 23200, 19000]
-                        },
-                        {
-                            name: 'Apple iPhone 16',
-                            data: [22000, 22500, 23000, 22500, 22000, 21000, 20000]
-                        },
-                        {
-                            name: 'Apple iPhone 15',
-                            data: [25000, 24000, 24000, 23500, 23400, 23200, 19000]
-                        },
-                        {
-                            name: 'Apple iPhone 16',
-                            data: [12000, 14300, 21300, 20500, 12000, 11000, 10000]
-                        },
-                        {
-                            name: 'Apple iPhone 15',
-                            data: [25000, 24000, 24000, 23500, 23400, 23200, 19000]
-                        },
-                        {
-                            name: 'Apple iPhone 16',
-                            data: [22000, 22500, 23000, 22500, 22000, 21000, 20000]
-                        },
-                        {
-                            name: 'Apple iPhone 15',
-                            data: [8000, 7000, 7500, 6500, 6400, 6200, 5900]
-                        },
-                        {
-                            name: 'Apple iPhone 16',
-                            data: [22000, 22500, 23000, 22500, 22000, 21000, 20000]
-                        },
+                        { name: 'Apple iPhone 15', data: [25000, 24000, 24000, 23500, 23400, 23200, 19000] },
+                        { name: 'Apple iPhone 16', data: [22000, 22500, 23000, 22500, 22000, 21000, 20000] },
+                        { name: 'Apple iPhone 15', data: [25000, 24000, 24000, 23500, 23400, 23200, 19000] },
+                        { name: 'Apple iPhone 16', data: [22000, 22500, 23000, 22500, 22000, 21000, 20000] },
+                        { name: 'Apple iPhone 15', data: [25000, 24000, 24000, 23500, 23400, 23200, 19000] },
+                        { name: 'Apple iPhone 16', data: [12000, 14300, 21300, 20500, 12000, 11000, 10000] },
+                        { name: 'Apple iPhone 15', data: [25000, 24000, 24000, 23500, 23400, 23200, 19000] },
+                        { name: 'Apple iPhone 16', data: [22000, 22500, 23000, 22500, 22000, 21000, 20000] },
+                        { name: 'Apple iPhone 15', data: [8000, 7000, 7500, 6500, 6400, 6200, 5900] },
+                        { name: 'Apple iPhone 16', data: [22000, 22500, 23000, 22500, 22000, 21000, 20000] }
                     ]
                 });
-            });
-
-
-            jQuery(document).ready(function() {
-                $('.js-readmore').expandable({
-                    height: 250
-                });
-            });
-            $('.section-color .btn').on('click', function() {
-                $('.section-color .btn.active').not(this).removeClass('active');
-                $(this).toggleClass('active');
-            });
-
-            $('.btn-color-all').on('click', function(event) {
-                event.preventDefault();
-                Fresco.show([
-'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/HUAWEI_huawei_p40_pro_plus_0326173026609_640x480.jpg',
-'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020211_640x480.jpg',
-'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020714_640x480.jpg',
-'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020005_640x480.jpg',
-'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_10_plus_0814032614442_640x480.jpg',
-'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_10_plus_0813060113639_640x480.jpg',
-'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020714_640x480.jpg',
-'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_0220090020005_640x480.jpg',
-                            ], {
-                    thumbnails: 'true',
-                    onClick: 'close'
-                });
-            });
-
-            $('#subscribeForm').on('submit', function (e) {
-                e.preventDefault();
-                if (!this.checkValidity()) {
-                    $(this).addClass('was-validated');
-                    return;
-                }
-                $('.modal-subscribe').modal('hide');
-                $('.modal-subscribe-done').modal('show');
             });
         </script>
     </body>

@@ -64,3 +64,53 @@
         opacity: 0;
     }
 }
+
+.price-history-more {
+  summary {
+    list-style: none;
+    outline: none;
+    cursor: pointer;
+    align-self: flex-start;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    .text-expanded {
+      display: none;
+    }
+
+    &::after {
+      margin-left: 5px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: '\f0d7';
+    }
+  }
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+
+    .table-responsive {
+      order: 1;
+    }
+
+    summary {
+      order: 2;
+      margin-top: 0.5rem;
+
+      .text-collapsed {
+        display: none;
+      }
+
+      .text-expanded {
+        display: inline;
+      }
+
+      &::after {
+        content: '\f0d8';
+      }
+    }
+  }
+}
