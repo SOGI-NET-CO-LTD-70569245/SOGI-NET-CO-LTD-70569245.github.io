@@ -75,18 +75,30 @@
         <!-- Single -->
         <!-- <script src="/assets/javascripts/vendor/jquery.mixitup.min.js"></script>
         <script src="/assets/javascripts/function/mixitup.js"></script> -->
-
-        
-
-        <!-- <script>
+        <script>
             $(document).ready(function() {
-                $('.modal-price-tip').modal('show');
                 $("[data-toggle=popover]").popover();
+
+                var isTriggered = false;
+                $(window).on('scroll', function() {
+                    if (isTriggered) return;
+
+                    var $target = $('#section-store-list');
+                    if ($target.length) {
+                        // 當視窗捲動頂部達到或超過該區塊頂部時才觸發
+                        // 若想提早一點點（例如距離上方 100px），可寫：$target.offset().top - 100
+                        if ($(window).scrollTop() >= $target.offset().top) {
+                            $('.modal-price-tip').modal('show');
+                            isTriggered = true;
+                        }
+                    }
+                });
             });
+
             function planSelect(e) {
-                document.getElementById("planDetail").value = e.target.value
+                document.getElementById("planDetail").value = e.target.value;
             }
-        </script> -->
+        </script>
 
         
     </body>

@@ -6,70 +6,65 @@
     <div class="row">
         <div class="col-lg-8 my-2">
             <section class="price-events">
-            <!-- 預設顯示的最新資料 -->
-            <div class="table-responsive">
-                <table class="table table-hover align-middle mb-0">
-                <caption class="sr-only">歷史價格事件</caption>
-                <thead class="thead-light">
-                    <tr>
-                    <th scope="col" style="width: 20%;">日期</th>
-                    <th scope="col" style="width: 50%;">事件</th>
-                    <th scope="col" style="width: 30%; text-align: right;">價格</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td><time datetime="2026-09-15">2026/9/15</time></td>
-                    <td class="text-break">256GB 價格下跌 10%</td>
-                    <td class="text-right">
-                        <span class="font-weight-bold">$36,990</span>
-                        <span class="badge badge-success ml-1">-10%</span>
-                        <small class="d-block text-muted">先前 <del>$37,990</del></small>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td><time datetime="2026-09-01">2026/9/1</time></td>
-                    <td class="text-break">512GB 原廠價格調漲 $3,000</td>
-                    <td class="text-right">
-                        <span class="font-weight-bold">$39,990</span>
-                        <span class="badge badge-danger ml-1">+5%</span>
-                        <small class="d-block text-muted">先前 <del>$36,990</del></small>
-                    </td>
-                    </tr>
-                </tbody>
-                </table>
-            </div>
-
-            <!-- 折疊歷史區塊 -->
-            <details class="price-history-more">
-                <summary class="btn btn-outline-primary mt-2">
-                <span class="text-collapsed">展開</span>
-                <span class="text-expanded">收合</span>
-                </summary>
                 <div class="table-responsive">
-                <table class="table table-hover align-middle mb-0">
+                    <table class="table table-hover align-middle mb-0">
+                    <caption class="sr-only">歷史價格事件</caption>
+                    <thead class="thead-light">
+                        <tr>
+                        <th scope="col" style="width: 20%;">日期</th>
+                        <th scope="col" style="width: 50%;">事件</th>
+                        <th scope="col" style="width: 30%; text-align: right;">價格</th>
+                        </tr>
+                    </thead>
+                    <!-- 預設顯示 -->
                     <tbody>
-                    <tr>
-                        <td style="width: 20%;"><time datetime="2026-08-10">2026/8/10</time></td>
-                        <td style="width: 50%;" class="text-break">父親節檔期降價促銷</td>
-                        <td style="width: 30%;" class="text-right">
-                        <span class="font-weight-bold">$35,990</span>
-                        <span class="badge badge-success ml-1">-5%</span>
-                        <small class="d-block text-muted">先前 <del>$37,990</del></small>
+                        <tr>
+                        <td><time datetime="2026-09-15">2026/9/15</time></td>
+                        <td class="text-break">256GB 價格下跌 10%</td>
+                        <td class="text-right">
+                            <span class="font-weight-bold">$36,990</span>
+                            <span class="badge badge-success ml-1">-10%</span>
+                            <small class="d-block text-muted">先前 <del>$37,990</del></small>
                         </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 20%;"><time datetime="2026-07-01">2026/7/1</time></td>
-                        <td style="width: 50%;" class="text-break">新機上市原廠建議售價</td>
-                        <td style="width: 30%;" class="text-right">
-                        <span class="font-weight-bold">$37,990</span>
-                        <small class="d-block text-muted">上市定價</small>
+                        </tr>
+                        <tr>
+                        <td><time datetime="2026-09-01">2026/9/1</time></td>
+                        <td class="text-break">512GB 原廠價格調漲 $3,000</td>
+                        <td class="text-right">
+                            <span class="font-weight-bold">$39,990</span>
+                            <span class="badge badge-danger ml-1">+5%</span>
+                            <small class="d-block text-muted">先前 <del>$36,990</del></small>
                         </td>
-                    </tr>
+                        </tr>
                     </tbody>
-                </table>
+                    <!-- 折疊歷史資料（共用同一表格） -->
+                    <tbody class="collapse" id="morePriceEvents">
+                        <tr>
+                        <td><time datetime="2026-08-10">2026/8/10</time></td>
+                        <td class="text-break">父親節檔期降價促銷</td>
+                        <td class="text-right">
+                            <span class="font-weight-bold">$35,990</span>
+                            <span class="badge badge-success ml-1">-5%</span>
+                            <small class="d-block text-muted">先前 <del>$37,990</del></small>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td><time datetime="2026-07-01">2026/7/1</time></td>
+                        <td class="text-break">新機上市原廠建議售價</td>
+                        <td class="text-right">
+                            <span class="font-weight-bold">$37,990</span>
+                            <small class="d-block text-muted">上市定價</small>
+                        </td>
+                        </tr>
+                    </tbody>
+                    </table>
                 </div>
-            </details>
+
+                <!-- 切換按鈕 -->
+                <button type="button" class="btn btn-outline-primary mt-2 btn-price-toggle collapsed" data-toggle="collapse" data-target="#morePriceEvents" aria-expanded="false" aria-controls="morePriceEvents">
+                    <span class="text-collapsed">展開</span>
+                    <span class="text-expanded">收合</span>
+                </button>
             </section>
         </div>
         <div class="col-lg-4 my-2">
