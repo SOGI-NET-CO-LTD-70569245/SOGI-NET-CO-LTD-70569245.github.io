@@ -1,0 +1,139 @@
+
+<style>
+.sogi-ph-export{max-width:1160px;width:100%;margin:20px auto;padding:0 8px;box-sizing:border-box;font-family:Arial,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:#27313a}
+.sogi-ph-export *{box-sizing:border-box}
+.sogi-ph-export-legend{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin:0 0 14px;font-size:18px;line-height:1.5}
+.sogi-ph-export-legend-item{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.sogi-ph-export-legend-line{display:inline-block;flex:0 0 30px;height:0;border-top:5px solid currentColor}
+.sogi-ph-export-plot-frame{width:100%;overflow-x:auto;overflow-y:hidden;border:1px solid #e6eaed;border-radius:12px;background:#fff;-webkit-overflow-scrolling:touch}
+.sogi-ph-export-svg{display:block;width:100%;min-width:760px;height:auto}
+.sogi-ph-export-point{cursor:pointer;outline:none}
+.sogi-ph-export-point:hover .sogi-ph-export-point-dot,.sogi-ph-export-point:focus-visible .sogi-ph-export-point-dot{stroke:#20262b;stroke-width:4}
+.sogi-ph-export-reading-note{margin:10px 0 0;color:#68737c;font-size:16px;line-height:1.75}
+.sogi-ph-export-event-panel{display:none;margin-top:14px;padding:16px 18px;border:1px solid #e3e7ea;border-radius:12px;background:#f7f9fa;scroll-margin-top:20px}
+.sogi-ph-export-event-panel:target{display:block}
+.sogi-ph-export-event-panel--default{display:block}
+.sogi-ph-export-event-panel:target~.sogi-ph-export-event-panel--default{display:none}
+.sogi-ph-export-event-title{margin:0 0 6px;font-size:18px;line-height:1.5;font-weight:700;color:#111}
+.sogi-ph-export-event-text{margin:0;font-size:16px;line-height:1.7}
+.sogi-ph-export-event-price-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-top:8px}
+.sogi-ph-export-price{font-size:20px;line-height:1.4;font-weight:800}
+.sogi-ph-export-previous{font-size:16px;color:#8a9299}
+.sogi-ph-export-badge{display:inline-block;padding:3px 8px;border-radius:6px;color:#fff;font-size:16px;font-weight:700;white-space:nowrap}
+.sogi-ph-export-badge--up{background:#bd271d}
+.sogi-ph-export-badge--down{background:#7aa943}
+.sogi-ph-export-close{display:inline-block;margin-top:10px;color:#52606b;font-size:16px;text-decoration:underline}
+.sogi-ph-export-table-wrap{width:100%;margin-top:22px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.sogi-ph-export-table{width:100%;min-width:760px;table-layout:fixed;border-collapse:collapse;font-size:16px;line-height:1.6;color:#27313a}
+.sogi-ph-export-table caption{caption-side:top;padding:0 0 10px;text-align:left;font-size:18px;font-weight:700;color:#111}
+.sogi-ph-export-table th,.sogi-ph-export-table td{padding:12px 10px;border-bottom:1px solid #dce2e6;text-align:left;vertical-align:top;font-size:16px;color:#27313a;overflow-wrap:anywhere}
+.sogi-ph-export-table th{background:#eef1f3;color:#424b53;font-weight:700;white-space:nowrap}
+.sogi-ph-export-table small{display:block;margin-top:2px;color:#8a9299;font-size:16px;line-height:1.5}
+.sogi-ph-export-price-now{font-weight:700;white-space:nowrap}
+.sogi-ph-export-table .sogi-ph-export-badge{color:#fff}
+.sogi-ph-export-table-details{margin-top:12px;display:flex;flex-direction:column}
+.sogi-ph-export-table-details>summary{display:inline-flex;align-items:center;gap:8px;list-style:none;cursor:pointer;padding:8px 12px;border:1px solid #337fbd;border-radius:6px;background:#fff;color:#337fbd;font-size:16px;font-weight:400;line-height:1.4;user-select:none;transition:background-color .15s ease,color .15s ease,border-color .15s ease}
+.sogi-ph-export-table-details>summary::-webkit-details-marker{display:none}
+.sogi-ph-export-table-details>summary:hover{background:#337fbd;border-color:#337fbd;color:#fff}
+.sogi-ph-export-table-details>summary:focus-visible{outline:2px solid #337fbd;outline-offset:2px}
+.sogi-ph-export-show-less{display:none}
+.sogi-ph-export-table-details[open] .sogi-ph-export-show-more{display:none}
+.sogi-ph-export-table-details[open] .sogi-ph-export-show-less{display:inline}
+.sogi-ph-export-table-details[open] .sogi-ph-export-arrow{transform:rotate(180deg)}
+.sogi-ph-export-arrow{display:inline-block;font-size:12px;transition:transform .15s ease}
+.sogi-ph-export-extra-wrap{order:1;margin-top:8px}
+.sogi-ph-export-table-details>summary{order:2;align-self:flex-start}
+.sogi-ph-export-table-details[open]>summary{margin-top:12px}
+@media(max-width:600px){.sogi-ph-export{margin:16px auto;padding:0 4px}.sogi-ph-export-legend{gap:8px 14px;font-size:18px}.sogi-ph-export-svg{min-width:760px}.sogi-ph-export-table{min-width:760px}}
+</style>
+<div id="iphone-17-price-history-demo" class="sogi-ph-export">
+<div class="sogi-ph-export-legend" aria-label="圖表版本圖例"><span class="sogi-ph-export-legend-item" style="color:#3478c9"><span class="sogi-ph-export-legend-line"></span>128GB 市場售價</span>
+<span class="sogi-ph-export-legend-item" style="color:#7c5bbf"><span class="sogi-ph-export-legend-line"></span>256GB 市場售價</span>
+<span class="sogi-ph-export-legend-item" style="color:#d47b25"><span class="sogi-ph-export-legend-line"></span>512GB 市場售價</span>
+<span class="sogi-ph-export-legend-item" style="color:#168777"><span class="sogi-ph-export-legend-line"></span>1TB 市場售價</span></div>
+<figure style="margin:0">
+<div class="sogi-ph-export-plot-frame"><svg class="sogi-ph-export-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" role="img" aria-labelledby="iphone-17-price-history-demo-svg-title iphone-17-price-history-demo-svg-desc">
+<title id="iphone-17-price-history-demo-svg-title">iPhone 17 多版本市場價格歷史階梯圖</title>
+<desc id="iphone-17-price-history-demo-svg-desc">X 軸為日期，Y 軸為價格動態；不同顏色的階梯線代表不同版本的市場售價。水平線段表示該期間市場價格維持不變；垂直線段表示價格於該日期發生變動。</desc>
+<rect x="0" y="0" width="1000" height="650" fill="#fff"/>
+<line x1="120" y1="520.00" x2="950" y2="520.00" stroke="#e7ebee" stroke-width="1"/>
+<text x="106" y="526.00" text-anchor="end" fill="#68737c" font-size="18">35,000</text>
+<line x1="120" y1="432.00" x2="950" y2="432.00" stroke="#e7ebee" stroke-width="1"/>
+<text x="106" y="438.00" text-anchor="end" fill="#68737c" font-size="18">40,000</text>
+<line x1="120" y1="344.00" x2="950" y2="344.00" stroke="#e7ebee" stroke-width="1"/>
+<text x="106" y="350.00" text-anchor="end" fill="#68737c" font-size="18">45,000</text>
+<line x1="120" y1="256.00" x2="950" y2="256.00" stroke="#e7ebee" stroke-width="1"/>
+<text x="106" y="262.00" text-anchor="end" fill="#68737c" font-size="18">50,000</text>
+<line x1="120" y1="168.00" x2="950" y2="168.00" stroke="#e7ebee" stroke-width="1"/>
+<text x="106" y="174.00" text-anchor="end" fill="#68737c" font-size="18">55,000</text>
+<line x1="120" y1="80.00" x2="950" y2="80.00" stroke="#e7ebee" stroke-width="1"/>
+<text x="106" y="86.00" text-anchor="end" fill="#68737c" font-size="18">60,000</text>
+<line x1="120" y1="80" x2="120" y2="520" stroke="#78838d" stroke-width="2"/>
+<line x1="120" y1="520" x2="950" y2="520" stroke="#78838d" stroke-width="2"/>
+<text x="120" y="42" fill="#4d5862" font-size="20" font-weight="700">價格動態（NT$）</text>
+<text x="950" y="610" text-anchor="end" fill="#4d5862" font-size="20" font-weight="700">日期</text>
+<line x1="120.00" y1="80" x2="120.00" y2="520" stroke="#eef1f3" stroke-width="1"/>
+<text x="120.00" y="552" text-anchor="start" fill="#35404a" font-size="18" font-weight="700">7/1</text>
+<line x1="554.30" y1="80" x2="554.30" y2="520" stroke="#eef1f3" stroke-width="1"/>
+<text x="554.30" y="552" text-anchor="middle" fill="#35404a" font-size="18" font-weight="700">8/15</text>
+<line x1="805.23" y1="80" x2="805.23" y2="520" stroke="#eef1f3" stroke-width="1"/>
+<text x="805.23" y="552" text-anchor="middle" fill="#35404a" font-size="18" font-weight="700">9/10</text>
+<line x1="950.00" y1="80" x2="950.00" y2="520" stroke="#eef1f3" stroke-width="1"/>
+<text x="950.00" y="552" text-anchor="end" fill="#35404a" font-size="18" font-weight="700">9/25</text>
+<path d="M 120.00 432.18 H 554.30 V 449.78 H 950" fill="none" stroke="#3478c9" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+<a class="sogi-ph-export-point" href="#iphone-17-price-history-demo-event-128gb-20260701-0" aria-label="128GB 市場售價，2026/7/1，上市市場售價，價格 NT$39,990">
+<circle cx="120.00" cy="432.18" r="23" fill="transparent"/>
+<circle class="sogi-ph-export-point-dot" cx="120.00" cy="432.18" r="8" fill="#fff" stroke="#3478c9" stroke-width="4"/>
+</a>
+<text x="132.00" y="419.18" text-anchor="start" fill="#3478c9" font-size="18" font-weight="700">$39,990</text>
+<a class="sogi-ph-export-point" href="#iphone-17-price-history-demo-event-128gb-20260815-1" aria-label="128GB 市場售價，2026/8/15，市場售價調降 1,000 元，價格 NT$38,990">
+<circle cx="554.30" cy="449.78" r="23" fill="transparent"/>
+<circle class="sogi-ph-export-point-dot" cx="554.30" cy="449.78" r="8" fill="#fff" stroke="#3478c9" stroke-width="4"/>
+</a>
+<text x="566.30" y="436.78" text-anchor="start" fill="#3478c9" font-size="18" font-weight="700">$38,990</text>
+<path d="M 120.00 361.78 H 805.23 V 344.18 H 950" fill="none" stroke="#7c5bbf" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+<a class="sogi-ph-export-point" href="#iphone-17-price-history-demo-event-256gb-20260701-0" aria-label="256GB 市場售價，2026/7/1，上市市場售價，價格 NT$43,990">
+<circle cx="120.00" cy="361.78" r="23" fill="transparent"/>
+<circle class="sogi-ph-export-point-dot" cx="120.00" cy="361.78" r="8" fill="#fff" stroke="#7c5bbf" stroke-width="4"/>
+</a>
+<text x="132.00" y="348.78" text-anchor="start" fill="#7c5bbf" font-size="18" font-weight="700">$43,990</text>
+<a class="sogi-ph-export-point" href="#iphone-17-price-history-demo-event-256gb-20260910-1" aria-label="256GB 市場售價，2026/9/10，市場售價調漲 1,000 元，價格 NT$44,990">
+<circle cx="805.23" cy="344.18" r="23" fill="transparent"/>
+<circle class="sogi-ph-export-point-dot" cx="805.23" cy="344.18" r="8" fill="#fff" stroke="#7c5bbf" stroke-width="4"/>
+</a>
+<text x="817.23" y="331.18" text-anchor="start" fill="#7c5bbf" font-size="18" font-weight="700">$44,990</text>
+<path d="M 120.00 220.98 H 950.00 V 238.58 H 950" fill="none" stroke="#d47b25" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+<a class="sogi-ph-export-point" href="#iphone-17-price-history-demo-event-512gb-20260701-0" aria-label="512GB 市場售價，2026/7/1，上市市場售價，價格 NT$51,990">
+<circle cx="120.00" cy="220.98" r="23" fill="transparent"/>
+<circle class="sogi-ph-export-point-dot" cx="120.00" cy="220.98" r="8" fill="#fff" stroke="#d47b25" stroke-width="4"/>
+</a>
+<text x="132.00" y="207.98" text-anchor="start" fill="#d47b25" font-size="18" font-weight="700">$51,990</text>
+<a class="sogi-ph-export-point" href="#iphone-17-price-history-demo-event-512gb-20260925-1" aria-label="512GB 市場售價，2026/9/25，市場售價調降 1,000 元，價格 NT$50,990">
+<circle cx="950.00" cy="238.58" r="23" fill="transparent"/>
+<circle class="sogi-ph-export-point-dot" cx="950.00" cy="238.58" r="8" fill="#fff" stroke="#d47b25" stroke-width="4"/>
+</a>
+<text x="938.00" y="225.58" text-anchor="end" fill="#d47b25" font-size="18" font-weight="700">$50,990</text>
+<path d="M 120.00 115.38 H 950.00 V 132.98 H 950" fill="none" stroke="#168777" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+<a class="sogi-ph-export-point" href="#iphone-17-price-history-demo-event-1tb-20260925-0" aria-label="1TB 市場售價，2026/9/25，市場售價調降 1,000 元，價格 NT$56,990">
+<circle cx="950.00" cy="132.98" r="23" fill="transparent"/>
+<circle class="sogi-ph-export-point-dot" cx="950.00" cy="132.98" r="8" fill="#fff" stroke="#168777" stroke-width="4"/>
+</a>
+<text x="938.00" y="119.98" text-anchor="end" fill="#168777" font-size="18" font-weight="700">$56,990</text>
+</svg></div>
+<figcaption class="sogi-ph-export-reading-note">圖表閱讀方式：水平線段表示該期間市場價格維持不變；垂直線段表示價格於該日期發生變動。點擊圓點可查看該版本的價格動態。</figcaption>
+</figure>
+<section id="iphone-17-price-history-demo-event-128gb-20260701-0" class="sogi-ph-export-event-panel" aria-labelledby="iphone-17-price-history-demo-event-128gb-20260701-0-title"><h3 id="iphone-17-price-history-demo-event-128gb-20260701-0-title" class="sogi-ph-export-event-title">128GB 市場售價｜2026/7/1｜上市市場售價</h3><p class="sogi-ph-export-event-text">目前為上市或首筆紀錄，無前一筆價格。</p><div class="sogi-ph-export-event-price-row"><span class="sogi-ph-export-price">NT$39,990</span></div><a class="sogi-ph-export-close" href="#iphone-17-price-history-demo">關閉事件資訊</a></section>
+<section id="iphone-17-price-history-demo-event-128gb-20260815-1" class="sogi-ph-export-event-panel" aria-labelledby="iphone-17-price-history-demo-event-128gb-20260815-1-title"><h3 id="iphone-17-price-history-demo-event-128gb-20260815-1-title" class="sogi-ph-export-event-title">128GB 市場售價｜2026/8/15｜市場售價調降 1,000 元</h3><p class="sogi-ph-export-event-text">市場售價由 NT$39,990 變動至 NT$38,990。</p><div class="sogi-ph-export-event-price-row"><span class="sogi-ph-export-price">NT$38,990</span><span class="sogi-ph-export-previous">先前 NT$39,990</span><span class="sogi-ph-export-badge sogi-ph-export-badge--down">-2.5%</span></div><a class="sogi-ph-export-close" href="#iphone-17-price-history-demo">關閉事件資訊</a></section>
+<section id="iphone-17-price-history-demo-event-256gb-20260701-0" class="sogi-ph-export-event-panel" aria-labelledby="iphone-17-price-history-demo-event-256gb-20260701-0-title"><h3 id="iphone-17-price-history-demo-event-256gb-20260701-0-title" class="sogi-ph-export-event-title">256GB 市場售價｜2026/7/1｜上市市場售價</h3><p class="sogi-ph-export-event-text">目前為上市或首筆紀錄，無前一筆價格。</p><div class="sogi-ph-export-event-price-row"><span class="sogi-ph-export-price">NT$43,990</span></div><a class="sogi-ph-export-close" href="#iphone-17-price-history-demo">關閉事件資訊</a></section>
+<section id="iphone-17-price-history-demo-event-256gb-20260910-1" class="sogi-ph-export-event-panel" aria-labelledby="iphone-17-price-history-demo-event-256gb-20260910-1-title"><h3 id="iphone-17-price-history-demo-event-256gb-20260910-1-title" class="sogi-ph-export-event-title">256GB 市場售價｜2026/9/10｜市場售價調漲 1,000 元</h3><p class="sogi-ph-export-event-text">市場售價由 NT$43,990 變動至 NT$44,990。</p><div class="sogi-ph-export-event-price-row"><span class="sogi-ph-export-price">NT$44,990</span><span class="sogi-ph-export-previous">先前 NT$43,990</span><span class="sogi-ph-export-badge sogi-ph-export-badge--up">+2.3%</span></div><a class="sogi-ph-export-close" href="#iphone-17-price-history-demo">關閉事件資訊</a></section>
+<section id="iphone-17-price-history-demo-event-512gb-20260701-0" class="sogi-ph-export-event-panel" aria-labelledby="iphone-17-price-history-demo-event-512gb-20260701-0-title"><h3 id="iphone-17-price-history-demo-event-512gb-20260701-0-title" class="sogi-ph-export-event-title">512GB 市場售價｜2026/7/1｜上市市場售價</h3><p class="sogi-ph-export-event-text">目前為上市或首筆紀錄，無前一筆價格。</p><div class="sogi-ph-export-event-price-row"><span class="sogi-ph-export-price">NT$51,990</span></div><a class="sogi-ph-export-close" href="#iphone-17-price-history-demo">關閉事件資訊</a></section>
+<section id="iphone-17-price-history-demo-event-512gb-20260925-1" class="sogi-ph-export-event-panel" aria-labelledby="iphone-17-price-history-demo-event-512gb-20260925-1-title"><h3 id="iphone-17-price-history-demo-event-512gb-20260925-1-title" class="sogi-ph-export-event-title">512GB 市場售價｜2026/9/25｜市場售價調降 1,000 元</h3><p class="sogi-ph-export-event-text">市場售價由 NT$51,990 變動至 NT$50,990。</p><div class="sogi-ph-export-event-price-row"><span class="sogi-ph-export-price">NT$50,990</span><span class="sogi-ph-export-previous">先前 NT$51,990</span><span class="sogi-ph-export-badge sogi-ph-export-badge--down">-1.9%</span></div><a class="sogi-ph-export-close" href="#iphone-17-price-history-demo">關閉事件資訊</a></section>
+<section id="iphone-17-price-history-demo-event-1tb-20260925-0" class="sogi-ph-export-event-panel" aria-labelledby="iphone-17-price-history-demo-event-1tb-20260925-0-title"><h3 id="iphone-17-price-history-demo-event-1tb-20260925-0-title" class="sogi-ph-export-event-title">1TB 市場售價｜2026/9/25｜市場售價調降 1,000 元</h3><p class="sogi-ph-export-event-text">市場售價由 NT$57,990 變動至 NT$56,990。</p><div class="sogi-ph-export-event-price-row"><span class="sogi-ph-export-price">NT$56,990</span><span class="sogi-ph-export-previous">先前 NT$57,990</span><span class="sogi-ph-export-badge sogi-ph-export-badge--down">-1.7%</span></div><a class="sogi-ph-export-close" href="#iphone-17-price-history-demo">關閉事件資訊</a></section>
+<div class="sogi-ph-export-event-panel sogi-ph-export-event-panel--default"><p class="sogi-ph-export-event-title">價格動態</p><p class="sogi-ph-export-event-text">請點擊圖中的任一圓點，查看該版本於該日期的市場價格及異動前價格。</p></div>
+<div class="sogi-ph-export-table-wrap"><table class="sogi-ph-export-table"><colgroup><col style="width:17%"><col style="width:49%"><col style="width:22%"><col style="width:12%"></colgroup><caption>iPhone 17 近期價格動態</caption><thead><tr><th scope="col">日期</th><th scope="col">動態</th><th scope="col">價格</th><th scope="col">變化</th></tr></thead><tbody><tr><td><time datetime="2026-09-25">2026/9/25</time></td><td>1TB 市場售價 市場售價調降 1,000 元</td><td><span class="sogi-ph-export-price-now">NT$56,990</span><small>先前 NT$57,990</small></td><td><span class="sogi-ph-export-badge sogi-ph-export-badge--down">-1.7%</span></td></tr>
+<tr><td><time datetime="2026-09-25">2026/9/25</time></td><td>512GB 市場售價 市場售價調降 1,000 元</td><td><span class="sogi-ph-export-price-now">NT$50,990</span><small>先前 NT$51,990</small></td><td><span class="sogi-ph-export-badge sogi-ph-export-badge--down">-1.9%</span></td></tr>
+<tr><td><time datetime="2026-09-10">2026/9/10</time></td><td>256GB 市場售價 市場售價調漲 1,000 元</td><td><span class="sogi-ph-export-price-now">NT$44,990</span><small>先前 NT$43,990</small></td><td><span class="sogi-ph-export-badge sogi-ph-export-badge--up">+2.3%</span></td></tr>
+<tr><td><time datetime="2026-08-15">2026/8/15</time></td><td>128GB 市場售價 市場售價調降 1,000 元</td><td><span class="sogi-ph-export-price-now">NT$38,990</span><small>先前 NT$39,990</small></td><td><span class="sogi-ph-export-badge sogi-ph-export-badge--down">-2.5%</span></td></tr>
+<tr><td><time datetime="2026-07-01">2026/7/1</time></td><td>128GB 市場售價 上市市場售價</td><td><span class="sogi-ph-export-price-now">NT$39,990</span><small>先前 —</small></td><td>—</td></tr></tbody></table><details class="sogi-ph-export-table-details"><summary><span class="sogi-ph-export-show-more">展開</span><span class="sogi-ph-export-show-less">收合</span><span class="sogi-ph-export-arrow" aria-hidden="true">▼</span></summary><div class="sogi-ph-export-extra-wrap"><table class="sogi-ph-export-table" aria-label="更多近期價格動態"><colgroup><col style="width:17%"><col style="width:49%"><col style="width:22%"><col style="width:12%"></colgroup><tbody><tr><td><time datetime="2026-07-01">2026/7/1</time></td><td>256GB 市場售價 上市市場售價</td><td><span class="sogi-ph-export-price-now">NT$43,990</span><small>先前 —</small></td><td>—</td></tr>
+<tr><td><time datetime="2026-07-01">2026/7/1</time></td><td>512GB 市場售價 上市市場售價</td><td><span class="sogi-ph-export-price-now">NT$51,990</span><small>先前 —</small></td><td>—</td></tr></tbody></table></div></details></div>
+</div>
