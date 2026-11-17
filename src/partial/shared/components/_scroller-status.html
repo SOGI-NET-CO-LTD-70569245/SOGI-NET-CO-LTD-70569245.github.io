@@ -1,0 +1,20 @@
+<!--
+@partial shared/components/_scroller-status
+@optional wrapperClass
+@note Status block for infinite-scroll (status: ".scroller-status"); the plugin hides all three states and shows one only when the user scrolls to the end. Style follows BS rule: bg #F8F8F8 (bg-light), text #263238. wrapperClass defaults to container; pass col-12 when placed inside a .row.
+-->
+<div class="@@if(context.wrapperClass){@@wrapperClass}@@if(!context.wrapperClass){container}">
+    <div class="scroller-status text-center">
+        <div class="infinite-scroll-request p-3 bg-light">
+            <div class="lead font-weight-bold">
+                <i class="fas fa-spinner fa-pulse"></i> 載入中
+            </div>
+        </div>
+        <div class="infinite-scroll-last p-3 bg-light">
+            <div class="lead font-weight-bold">沒有更多內容了</div>
+        </div>
+        <div class="infinite-scroll-error p-3 bg-light">
+            <div class="lead font-weight-bold">載入失敗，請稍後再試</div>
+        </div>
+    </div>
+</div>
