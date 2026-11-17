@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/layouts/_head.html',{title:'討論區列表',cssFile:'forum'})
+    </head>
+
+	<body class="forum">
+
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
+
+        <div id="main" class="push">
+            <div class="container">
+                @@include('../../partial/shared/components/_ad-970.html')
+
+                @@include('../../partial/shared/components/_breadcrumb.html',{lv1Label:'討論區',lv1Url:'/forum/index.html',lv2Label:'台灣大哥大 TWM 討論',lv2Url:'/forum/list.html'})
+
+                <div class="row">
+                    <h1 class="col-12">
+                        台灣大哥大 TWM 討論
+                        <a class="btn btn-sm btn-outline-secondary align-top mr-2" data-toggle="modal" data-target=".modal-public" href="javascript:void();">公告</a><a class="btn btn-sm btn-outline-secondary align-top" data-toggle="modal" data-target=".modal-admin" href="javascript:void();">版主</a>
+                    </h1>
+                    <div class="col-12 col-lg-10">
+
+                        @@include('../../partial/shared/components/_pagination.html')
+
+                @@include('../../partial/features/forum/_functions.html')
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="nav-responsive">
+                            <ul class="nav nav-pills nav-fill nav-styled">
+                                <li class="nav-item"><a class="nav-link active" href="">全部</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">一二三四一二三四</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">一二三四</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">一二三四</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">一二三四</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">一二三四</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">分享</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">問題</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">評測</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">一二三四</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">一二三四</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">分享</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">問題</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">評測</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                @@include('../../partial/features/forum/_topic-table.html',{
+                    group: {
+                        item: [
+                            {title:'2015年12月新機月報 輕旗艦OPPO R7s與金屬機LG Zero齊登台', warning:true, top:true, official:true, best:true, hot:true, reply:'99', view:'99999', author:'李白白李白白李白白', authorMax5:true, lastDate:'2015/12/11', lastUser:'張三蜂一二三四五', lastUserMax5:true},
+                            {title:'台哥大推雙飛方案 買手機送平板再抽馬爾地夫雙人行', warning:true, best:true, reply:'99', view:'99999', author:'一二三四五', authorMax5:true, lastDate:'2015/12/11', lastUser:'張三蜂'},
+                            {title:'原生廣告', href:'#', ad:true, reply:'99', view:'99999', author:'李白白', authorMax5:true, lastDate:'2015/12/11', lastUser:'張三蜂'},
+                            {title:'台哥大推雙飛方案 買手機送平板再抽馬爾地夫雙人行', best:true, reply:'99', view:'99999', author:'李白白', lastDate:'2015/12/11', lastUser:'張三蜂'},
+                            {title:'台哥大推雙飛方案 買手機送平板再抽馬爾地夫雙人行', best:true, reply:'99', view:'99999', author:'李白白', lastDate:'2015/12/11', lastUser:'張三蜂'},
+                            {title:'台哥大推雙飛方案 買手機送平板再抽馬爾地夫雙人行', reply:'99', view:'99999', author:'李白白', lastDate:'2015/12/11', lastUser:'張三蜂'},
+                            {title:'台哥大推雙飛方案 買手機送平板再抽馬爾地夫雙人行', reply:'99', view:'99999', author:'李白白', lastDate:'2015/12/11', lastUser:'張三蜂'},
+                            {title:'台哥大推雙飛方案 買手機送平板再抽馬爾地夫雙人行', reply:'99', view:'99999', author:'李白白', lastDate:'2015/12/11', lastUser:'張三蜂'},
+                            {title:'台哥大推雙飛方案 買手機送平板再抽馬爾地夫雙人行', reply:'99', view:'99999', author:'李白白', lastDate:'2015/12/11', lastUser:'張三蜂'},
+                            {title:'台哥大推雙飛方案 買手機送平板再抽馬爾地夫雙人行', reply:'99', view:'99999', author:'李白白', lastDate:'2015/12/11', lastUser:'張三蜂'},
+                        ],
+                    },
+                })
+
+                @@include('../../partial/shared/components/_ad-300-250-double.html')
+
+                @@include('../../partial/features/forum/_functions.html')
+
+                @@include('../../partial/shared/components/_pagination.html')
+
+                    </div>
+                    <div class="col-12 col-lg-2 d-none d-lg-block">
+                        <div class="sidebar">
+                            <div class="text-center ad">
+                                <a class="" href="#" target="_blank">
+                                    <img class="img-fluid" src="/assets/images/ad/ad_160x600.gif" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @@include('../../partial/layouts/_footer.html')
+        @@include('../../partial/shared/modals/_mge-public.html')
+        @@include('../../partial/shared/modals/_mge-tag.html')
+        @@include('../../partial/features/forum/_modal-public.html')
+        @@include('../../partial/features/forum/_modal-admin.html')
+
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
+
+        <!-- Single -->
+        <script src="/assets/javascripts/vendor/jquery.hc-sticky.min.js"></script>
+        <script>
+            jQuery(document).ready(function($){
+                $('.sidebar').hcSticky({
+                    innerSticker: '.ad',
+                    followScroll: false,
+                    top:50,
+                });
+            });
+            $("#check-all").change(function () {
+                $("input:checkbox").prop('checked', $(this).prop("checked"));
+            });
+        </script>
+    </body>
+</html>

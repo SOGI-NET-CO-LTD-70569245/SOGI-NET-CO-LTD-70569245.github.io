@@ -1,0 +1,15 @@
+<!--
+@partial features/repair/unit/_check-item
+@required id, name, label
+@optional col
+@note Checkbox tile used in steps 2 and 3; checkboxes sharing a name behave like a radio group.
+-->
+<div class="@@if(context.col){@@col}@@if(!context.col){col-lg-2 col-md-4 col-12} my-1">
+    <input class="chk" type="checkbox" id="@@id" name="@@name">
+    <label for="@@id">
+        <span class="label-name">
+            <span class="align-middle">@@label</span>
+        </span>
+        <div class="checkmark"></div>
+    </label>
+</div>

@@ -1,0 +1,108 @@
+<!--
+@partial features/forum/_post-form
+@note Forum post / reply form. Upload thumbnails use unit/_upload-thumb; the YouTube button opens features/forum/_modal-video.
+-->
+<form class="">
+    <div class="form-group row">
+        <label for="inputTitle" class="col-sm-2 col-form-label">討論主題</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputTitle" placeholder="必填">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputCategory" class="col-sm-2 col-form-label">選擇分類</label>
+        <div class="col-sm-10">
+            <select class="form-control" id="inputCategory">
+                <option>綜合</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">討論主題</label>
+        <div class="col-sm-10">
+            <p class="form-control-plaintext">回覆頁面才有此行</p>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">綜合分類</label>
+        <div class="col-sm-10">
+            <p class="form-control-plaintext">回覆頁面才有此行</p>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">內容</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="15">CKeditor</textarea>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">使用圖片和影片</label>
+        <div class="col-sm-10">
+            <ul class="nav nav-tabs my-2" role="tablist">
+                <li class="nav-item"><a class="nav-link active" href="#pic-all" role="tab" data-toggle="tab">一般上傳</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pic-upload" role="tab" data-toggle="tab">原圖上傳</a></li>
+                <li class="nav-item"><a class="nav-link" href="#video-upload" role="tab" data-toggle="tab">影片</a></li>
+            </ul>
+            <div class="tab-content py-2">
+                <div role="tabpanel" class="tab-pane active" id="pic-all">
+                    <div class="row my-2">
+                        @@include('unit/_upload-thumb.html')
+                        @@include('unit/_upload-thumb.html')
+                        @@include('unit/_upload-thumb.html')
+                        @@include('unit/_upload-thumb.html')
+                        @@include('unit/_upload-thumb.html')
+                    </div>
+                    <div class="btn-group" role="group" aria-label="">
+                        <button type="button" class="btn btn-outline-secondary btn-sm">全部插入</button>
+                    </div>
+                    <hr>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 無
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 加入浮水印 暱稱@SOGI.com.tw
+                    <a href="" class="btn btn-outline-secondary btn-sm">上傳圖片</a>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="pic-upload">
+                    <div class="row my-2">
+                        @@include('unit/_upload-thumb.html')
+                        @@include('unit/_upload-thumb.html')
+                    </div>
+                    <div class="btn-group btn-group-sm" role="group" aria-label="">
+                        <button type="button" class="btn btn-outline-secondary">全部插入</button>
+                    </div>
+                    <hr>
+                    <a href="" class="btn btn-outline-secondary btn-sm">上傳圖片</a>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="video-upload">
+                    <a class="btn btn-primary" href="" data-toggle="modal" data-target=".modal-video">插入YouTube</a>
+                </div>
+            </div>
+            <div class="alert alert-warning" role="alert">
+                <small>
+                    使用方法:
+                    <ol class="pl-3 m-0">
+                        <li>直接點選圖片單張插入，或使用全部插入放入所有圖片，目前開放 jpg、png、gif 等檔案。</li>
+                        <li>原圖上傳的檔案，圖片可點擊後以原檔瀏覽。</li>
+                        <li>影片僅可使用 Youtube 連結。</li>
+                    </ol>
+                    <span class="text-danger">※每張檔案最大上限為 6MB。</span>
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 我已閱讀，並且同意遵守手機王討論區規範。
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> 送出</button>
+            <a href="post-preview.html" class="btn btn-info"><i class="fas fa-file-alt"></i> 預覽文章</a>
+            <button type="submit" class="btn btn-info"><i class="fas fa-file"></i> 存為草稿</button>
+            <button type="button" class="btn btn-outline-secondary"><i class="fas fa-times"></i> 取消</button>
+        </div>
+    </div>
+</form>

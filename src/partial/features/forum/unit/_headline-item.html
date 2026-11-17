@@ -1,0 +1,20 @@
+<!--
+@partial features/forum/unit/_headline-item
+@required title, img
+@optional desc, href
+-->
+<div class="col-12 col-sm-6 my-2">
+    <div class="card card-focus article-headlines mx-auto text-white shadow">
+        <a class="d-block w-100 h-100 position-absolute" style="background-image: url(@@img);" href="@@if(context.href){@@href}@@if(!context.href){#}"></a>
+        <div class="card-img-overlay">
+            <a href="@@if(context.href){@@href}@@if(!context.href){#}" class="card-title m-0 text-row-1 text-white">
+                @@title
+            </a>
+            @@if(context.desc){
+            <p class="card-text text-row-2">
+                <small>@@desc</small>
+            </p>
+            }
+        </div>
+    </div>
+</div>

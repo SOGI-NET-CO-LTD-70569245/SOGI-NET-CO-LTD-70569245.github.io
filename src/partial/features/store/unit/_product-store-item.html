@@ -1,0 +1,41 @@
+<!--
+@partial features/store/unit/_product-store-item
+@required title, img
+@optional href, priceLabel, price, priceLink, status, date, sortPrice, sortDate
+-->
+<div class="col-md-3 col-6 mix-item cat1" data-sort-price="@@if(context.sortPrice){@@sortPrice}" data-sort-date="@@if(context.sortDate){@@sortDate}">
+    <div class="box my-2">
+        <figure class="mb-0 py-2">
+            <a class="d-block text-center" href="@@if(context.href){@@href}">
+                <img class="" height="120" src="@@img" alt="@@title">
+            </a>
+        </figure>
+        <div class="clearfix">
+            <a class="d-block px-2 py-1 bg-light" href="@@if(context.href){@@href}@@if(!context.href){#}">
+                <div class="text-row-2 text-black" data-toggle="tooltip" data-placement="top" title="@@title">
+                    @@title
+                </div>
+            </a>
+            <ul class="list-group">
+                @@if(context.price){
+                <li class="list-group-item">
+                    <span class="list-title">@@priceLabel</span>
+                    @@if(context.priceLink){<a class="text-price h6" href="">@@price</a>}@@if(!context.priceLink){<strong class="text-price h6">@@price</strong>}
+                </li>
+                }
+                @@if(context.status){
+                <li class="list-group-item">
+                    <span class="list-title">狀態</span>
+                    <strong>@@status</strong>
+                </li>
+                }
+                @@if(context.date){
+                <li class="list-group-item">
+                    <span class="list-title">更新日期</span>
+                    <strong>@@date</strong>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

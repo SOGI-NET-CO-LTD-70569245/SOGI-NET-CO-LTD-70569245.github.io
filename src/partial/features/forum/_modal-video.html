@@ -1,0 +1,25 @@
+<!--
+@partial features/forum/_modal-video
+@note Insert-YouTube modal for the post form, opened by data-target=".modal-video".
+-->
+<div class="modal fade modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">插入影片</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="">請輸入 YouTube 影片網址</label>
+                        <input type="url" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">確認</button>
+            </div>
+        </div>
+    </div>
+</div>

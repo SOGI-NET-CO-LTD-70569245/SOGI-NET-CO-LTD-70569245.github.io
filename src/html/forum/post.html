@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/layouts/_head.html',{title:'發表文章',cssFile:'forum'})
+    </head>
+
+	<body class="forum">
+
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
+
+        <div id="main" class="push">
+            <div class="container">
+                @@include('../../partial/shared/components/_ad-970.html')
+
+                @@include('../../partial/shared/components/_breadcrumb.html',{lv1Label:'討論區',lv1Url:'/forum/index.html',lv2Label:'台灣大哥大 TWM 討論',lv2Url:'/forum/list.html',lv3Label:'發表文章',lv3Url:'/forum/post.html'})
+
+                @@include('../../partial/features/forum/_post-form.html')
+
+            </div>
+
+        </div>
+
+        @@include('../../partial/layouts/_footer.html')
+
+        @@include('../../partial/features/forum/_modal-video.html')
+
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
+    </body>
+</html>

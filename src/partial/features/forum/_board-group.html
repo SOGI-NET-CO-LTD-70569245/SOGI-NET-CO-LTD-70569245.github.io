@@ -1,0 +1,19 @@
+<!--
+@partial features/forum/_board-group
+@required id, title, group.item[] { title, desc, img, href }
+@note Collapsible board category card on the forum home; id must be unique on the page.
+-->
+<div class="card my-2 border-0">
+    <div class="card-header border" role="tab" id="heading-@@id">
+        <a class="d-block text-black" role="button" data-toggle="collapse" href="#collapse-@@id" aria-expanded="true" aria-controls="collapse-@@id">@@title
+            <div class="float-right"><i class="fa fa-caret-down"></i></div>
+        </a>
+    </div>
+    <div id="collapse-@@id" class="collapse show" role="tabpanel" aria-labelledby="heading-@@id">
+        <div class="row my-2">
+            @@for (var i = 0; i < group.item.length; i++) {
+                @@include('unit/_board-item.html', `+(JSON.stringify(group.item[i]))+`)
+            }
+        </div>
+    </div>
+</div>

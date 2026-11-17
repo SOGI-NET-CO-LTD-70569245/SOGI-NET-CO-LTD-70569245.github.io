@@ -4,6 +4,11 @@
   "description": "Gulp Project",
   "main": "gulpfile.js",
   "scripts": {
+    "gulp": "node scripts/gulp16.js",
+    "dev": "node scripts/gulp16.js",
+    "build": "node scripts/gulp16.js build",
+    "watch": "node scripts/gulp16.js watch",
+    "deploy": "node scripts/gulp16.js deploy",
     "audit:partials": "node scripts/audit-partials.js",
     "generate:products": "node scripts/generate-product-list-data.js",
     "test": "echo \"Error: no test specified\" && exit 1"

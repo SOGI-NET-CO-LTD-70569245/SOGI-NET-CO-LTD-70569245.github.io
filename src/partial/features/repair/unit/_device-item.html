@@ -1,0 +1,21 @@
+<!--
+@partial features/repair/unit/_device-item
+@required brand, model
+@optional desc
+@note Step 1 brand card; choosing a model reveals #section2 (see repair/index.html script).
+-->
+<div class="col-lg-3 col-md-6 col-12 my-1">
+    <div class="box">
+        <div class="checkmark"></div>
+        <div class="h5 text-center p-2">@@brand</div>
+        <div class="px-2">
+            <div class="text-row-3">
+                <small>@@if(context.desc){@@desc}</small>
+            </div>
+            <select class="form-control custom-select my-2 select-s1">
+                <option>請選擇型號</option>
+                <option value="section2">@@model</option>
+            </select>
+        </div>
+    </div>
+</div>

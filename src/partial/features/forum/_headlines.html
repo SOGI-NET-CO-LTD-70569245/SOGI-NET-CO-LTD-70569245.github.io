@@ -1,0 +1,10 @@
+<!--
+@partial features/forum/_headlines
+@note Two featured article cards on the forum home. Items are passed in group.item.
+@required group.item[] { title, desc, img, href }
+-->
+<div class="row my-2">
+    @@for (var i = 0; i < group.item.length; i++) {
+        @@include('unit/_headline-item.html', `+(JSON.stringify(group.item[i]))+`)
+    }
+</div>

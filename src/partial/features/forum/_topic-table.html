@@ -1,0 +1,26 @@
+<!--
+@partial features/forum/_topic-table
+@required group.item[] { title }
+@optional group.item[].href, reply, view, author, authorMax5, lastDate, lastUser, lastUserMax5, warning, ad, top, official, best, hot
+@note Forum topic list table. ad:true hides the checkbox (native ad row); warning:true highlights a pinned row;
+      top / official / best / hot render the matching badges.
+-->
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead class="thead-inverse">
+            <tr>
+                <th class="text-center"><input type="checkbox" id="check-all"></th>
+                <th>標題</th>
+                <th>回應</th>
+                <th>人氣</th>
+                <th>作者</th>
+                <th>最新回覆</th>
+            </tr>
+        </thead>
+        <tbody>
+            @@for (var i = 0; i < group.item.length; i++) {
+                @@include('unit/_topic-row.html', `+(JSON.stringify(group.item[i]))+`)
+            }
+        </tbody>
+    </table>
+</div>

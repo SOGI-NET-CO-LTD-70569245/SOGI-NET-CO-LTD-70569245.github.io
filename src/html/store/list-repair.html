@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/layouts/_head.html',{title:'維修列表',cssFile:'store'})
+    </head>
+
+	<body class="store">
+
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
+
+        <div id="main" class="push">
+            <div class="container">
+                @@include('../../partial/shared/components/_ad-970.html')
+
+                @@include('../../partial/features/store/_store-title.html')
+
+                <div class="row">
+                    <div class="col-lg-9 push-lg-3 col-12">
+
+                        @@include('../../partial/features/store/_section-text.html',{
+                            readmore:true,
+                            title:'優惠活動',
+                            desc:'購買的手機為內建電池，需搭配行動電源或手機包膜<br> 有預訂手機卻又取消時，需付物流費200元<br> 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br> 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br> 購買的手機為內建電池，需搭配行動電源或手機包膜<br> 有預訂手機卻又取消時，需付物流費200元<br> 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br> 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br> 購買的手機為內建電池，需搭配行動電源或手機包膜<br> 有預訂手機卻又取消時，需付物流費200元<br> 本賣場比客服、特約門市更便宜，加量的優質服務，低價的商品優惠<br> 本店專營各家業者申辦門號、續約及空機買賣，已有20餘年專業服務<br> '
+                        })
+
+                        @@include('../../partial/features/store/_products-store.html',{
+                            title:'Apple 產品維修',
+                            group: {
+                                item: [
+                                    {title:'SAMSUNG Gear S SAMSUNG Gear S', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/hTC_null_0112073412035_160x120.jpg', sortPrice:'20000', date:'2015-06-14', sortDate:'20140501'},
+                                    {title:'SAMSUNG Gear S SAMSUNG Gear S', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/hTC_null_0112073412035_160x120.jpg', sortPrice:'20000', date:'2015-06-14', sortDate:'20140501'},
+                                    {title:'SAMSUNG Gear S SAMSUNG Gear S', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/hTC_null_0112073412035_160x120.jpg', sortPrice:'20000', date:'2015-06-14', sortDate:'20140501'},
+                                    {title:'SAMSUNG Gear S SAMSUNG Gear S', img:'https://d2lfcsub12kx0l.cloudfront.net/tw/product/img/hTC_null_0112073412035_160x120.jpg', sortPrice:'20000', date:'2015-06-14', sortDate:'20140501'},
+                                ],
+                            },
+                        })
+
+                    </div>
+                    <div class="col-lg-3 pull-lg-9 col-12">
+
+                        @@include('../../partial/features/store/_sidebar-list-collapse.html')
+
+                    </div>
+                </div>
+
+            </div>
+            @@include('../../partial/shared/components/_popup-message.html')
+        </div>
+
+        @@include('../../partial/layouts/_footer.html')
+
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
+
+        @@include('../../partial/features/store/_js-readmore.html')
+    </body>
+</html>

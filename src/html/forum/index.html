@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/layouts/_head.html',{title:'討論區',cssFile:'forum'})
+    </head>
+
+	<body class="forum">
+
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
+
+        <div id="main" class="push">
+            <div class="container">
+                @@include('../../partial/shared/components/_ad-970.html')
+
+                @@include('../../partial/shared/components/_breadcrumb.html',{lv1Label:'討論區',lv1Url:'/forum/index.html'})
+
+                @@include('../../partial/features/forum/_headlines.html',{
+                    group: {
+                        item: [
+                            {title:'三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板', desc:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十', img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/24188/extra_large/1.jpg', href:'#'},
+                            {title:'三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板', desc:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十', img:'https://d3c6c8kv4if4l0.cloudfront.net/www/ProductionArticleCoverImage/24188/extra_large/1.jpg', href:'#'},
+                        ],
+                    },
+                })
+
+                @@include('../../partial/shared/components/_ad-300-250-double.html')
+
+                @@include('../../partial/features/forum/_board-group.html',{
+                    id:'1',
+                    title:'電信主題討論',
+                    group: {
+                        item: [
+                            {title:'遠傳電信 FarEastone 討論', desc:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十', img:'http://sogi-image.sogi.com.tw/www/Forum/6307/small/20150429190335uid9526.jpg', href:'list.html'},
+                            {title:'遠傳電信 FarEastone 討論', desc:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十', img:'http://sogi-image.sogi.com.tw/www/Forum/6307/small/20150429190335uid9526.jpg', href:'list.html'},
+                            {title:'遠傳電信 FarEastone 討論', desc:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十', img:'http://sogi-image.sogi.com.tw/www/Forum/6307/small/20150429190335uid9526.jpg', href:'list.html'},
+                            {title:'遠傳電信 FarEastone 討論', desc:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十', img:'http://sogi-image.sogi.com.tw/www/Forum/6307/small/20150429190335uid9526.jpg', href:'list.html'},
+                        ],
+                    },
+                })
+                @@include('../../partial/features/forum/_board-group.html',{
+                    id:'2',
+                    title:'熱門主題討論',
+                    group: {
+                        item: [
+                            {title:'遠傳電信 FarEastone 討論', desc:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十', img:'http://sogi-image.sogi.com.tw/www/Domain/1/default_images/small/default-20140227191937uid6595.png', href:'list.html'},
+                            {title:'遠傳電信 FarEastone 討論', desc:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十', img:'http://sogi-image.sogi.com.tw/www/Domain/1/default_images/small/default-20140227191937uid6595.png', href:'list.html'},
+                            {title:'遠傳電信 FarEastone 討論', desc:'一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十', img:'http://sogi-image.sogi.com.tw/www/Domain/1/default_images/small/default-20140227191937uid6595.png', href:'list.html'},
+                        ],
+                    },
+                })
+
+            </div>
+
+        </div>
+
+        @@include('../../partial/layouts/_footer.html')
+
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
+    </body>
+</html>

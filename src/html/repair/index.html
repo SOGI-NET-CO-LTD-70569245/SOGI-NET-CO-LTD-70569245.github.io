@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../partial/layouts/_head.html',{title:'維修估價',cssFile:'repair'})
+    </head>
+
+	<body class="repair">
+
+        @@include('../../partial/layouts/_header.html')
+        @@include('../../partial/shared/components/_nav-main.html')
+
+        <div id="main" class="push">
+            <div class="container">
+                @@include('../../partial/shared/components/_ad-970.html')
+
+                @@include('../../partial/shared/components/_breadcrumb.html',{lv1Label:'維修估價',lv1Url:'/repair/index.html'})
+            </div>
+
+                <div class="container my-2 py-6 bg-primary-lt" id="section1">
+                    <div class="h5">請先選擇您的裝置</div>
+                    <div class="row">
+                        @@loop('../../partial/features/repair/unit/_device-item.html', [
+                            {brand:'Apple', model:'iPhone 6', desc:'三星推出全新智慧手機'},
+                            {brand:'Samsung', model:'Note 7', desc:'三星推出全新智慧手機 SAMSUNG GALAXY S6，以精緻工藝融合金屬與玻璃材質三星推出全新智慧手機'},
+                        ])
+                    </div>
+                </div>
+
+                <div class="container my-2 py-6 step" id="section2" style="display:none;">
+                    <div class="h5">您的裝置目前遇到什麼問題?</div>
+                    <div class="row">
+                        @@loop('../../partial/features/repair/unit/_check-item.html', [
+                            {id:'checkbox21', name:'chk2', label:'螢幕問題'},
+                            {id:'checkbox22', name:'chk2', label:'按鍵問題'},
+                            {id:'checkbox23', name:'chk2', label:'螢幕問題'},
+                            {id:'checkbox24', name:'chk2', label:'按鍵問題'},
+                            {id:'checkbox25', name:'chk2', label:'螢幕問題'},
+                            {id:'checkbox26', name:'chk2', label:'按鍵問題'},
+                            {id:'checkbox27', name:'chk2', label:'螢幕問題'},
+                        ])
+                    </div>
+                </div>
+
+                <div class="container my-2 py-6 step bg-primary-lt" id="section3" style="display:none;">
+                    <div class="h5">請選擇您的狀況 <small>(最多三項)</small></div>
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="row">
+                                @@loop('../../partial/features/repair/unit/_check-item.html', [
+                                    {id:'checkbox31', name:'checkbox31', label:'螢幕破裂，但可顯示', col:'col-md-6 col-sm-12'},
+                                    {id:'checkbox32', name:'checkbox32', label:'螢幕破裂，但可顯示', col:'col-md-6 col-sm-12'},
+                                    {id:'checkbox33', name:'checkbox33', label:'螢幕破裂，但可顯示', col:'col-md-6 col-sm-12'},
+                                    {id:'checkbox34', name:'checkbox34', label:'螢幕破裂，但可顯示', col:'col-md-6 col-sm-12'},
+                                ])
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <a href="/articles/detail.html" class="card card-inverse mx-auto">
+                                <img src="/assets/images/ui/pic-default-640x480.png" class="img-fluid" alt="">
+                                <div class="card-img-overlay">
+                                    <div class="card-title text-row-1 m-0">三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板三星GALAXY Tab A實測 入門級S Pen平板</div>
+                                    <p class="card-text text-row-2">
+                                        <small>三星推出全新智慧手機 SAMSUNG GALAXY S6，以精緻工藝融合金屬與玻璃材質三星推出全新智慧手機 SAMSUNG GALAXY S6，以精緻工藝融合金屬與玻璃材質三星推出全新智慧手機 SAMSUNG GALAXY S6，以精緻工藝融合金屬與</small>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container my-2 py-6 step" id="section4" style="display:none;">
+                    <div class="bg-warning-lt mb-8 p-2">
+                        <strong>選擇的問題與狀況</strong>
+                        <ul>
+                            <li>螢幕問題：螢幕破裂，但可顯示</li>
+                            <li>按鍵問題：無法關機</li>
+                            <li>電源問題：續航力不足</li>
+                        </ul>
+                    </div>
+                    <div class="form-inline my-2">
+                        <label class="h5">您目前的位置為：</label>
+                        <select class="form-control custom-select" style="width:10rem;">
+                            <option>台北市</option>
+                        </select>
+                    </div>
+                    <hr class="my-4">
+                    <div class="text-center">
+                        <a class="btn btn-warning btn-l" href="detail.html">
+                            <span>維修詢價</span>
+                        </a>
+                    </div>
+                </div>
+
+        </div>
+
+        @@include('../../partial/layouts/_footer.html')
+
+        @@include('../../partial/shared/components/_nav-top.html')
+        @@include('../../partial/layouts/_js.html')
+
+        <!-- Single -->
+        <script>
+
+            $('.box').click(function() {
+                var index = $(this).index();
+                if($(this).hasClass('active')) {
+//     $(this).removeClass('active');
+//     $('.checkmark').eq(index).addClass('fadeOutDown')
+                } else {
+                    $('.box').removeClass('active');
+                    $(this).addClass('active')
+//     $('.checkmark').hide().eq(index).show().removeClass('fadeOutDown')
+                }
+            });
+
+            $("input:checkbox").on('click', function() {
+              var $box = $(this);
+              if ($box.is(":checked")) {
+                var group = "input:checkbox[name='" + $box.attr("name") + "']";
+                $(group).prop("checked", false);
+                $box.prop("checked", true);
+              } else {
+                $box.prop("checked", false);
+              }
+            });
+
+            $("#section1 input:checkbox").click(function() {
+                if($(this).is(":checked")) {
+                    //$("#section2").fadeIn();
+                } else {
+                    $("#section2, #section3, #section4").fadeOut();
+                }
+            });
+
+            $('.select-s1').change(function(){
+                $('#' + $(this).val()).fadeIn();
+            });
+
+            $("#section2 input:checkbox").click(function() {
+                if($(this).is(":checked")) {
+                    $("#section3").fadeIn();
+                } else {
+                    $("#section3, #section4").fadeOut();
+                }
+            });
+            $("#section3 input:checkbox").click(function() {
+                if($(this).is(":checked")) {
+                    $("#section4").fadeIn();
+                } else {
+                    $("#section4").fadeOut();
+                }
+            });
+        </script>
+    </body>
+</html>

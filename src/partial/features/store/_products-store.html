@@ -1,0 +1,18 @@
+<!--
+@partial features/store/_products-store
+@required group.item[] { title, img }
+@optional title, id, group.item[] { href, priceLabel, price, priceLink, status, date, sortPrice, sortDate }
+@note Store product grid (new / second-hand / repair). Pass id (e.g. mixitup-1) to enable sorting.
+      priceLabel+price render the price row (priceLink:true renders it as a link); status renders 狀態; date renders 更新日期.
+      title renders a bar-title above the grid.
+-->
+@@if(context.title){
+@@include('unit/_bar-title.html',{
+    title:'@@title'
+})
+}
+<div class="row my-2"@@if(context.id){ id="@@id"}>
+    @@for (var i = 0; i < group.item.length; i++) {
+        @@include('unit/_product-store-item.html', `+(JSON.stringify(group.item[i]))+`)
+    }
+</div>
