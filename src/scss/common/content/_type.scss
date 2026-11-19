@@ -91,6 +91,13 @@ small {
         height: 2.5rem;
     }
 }
+
+// BS主規則 #25 新聞日期-暗底：疊在暗底圖片上的新聞日期
+.news-date-dark {
+    font-size: .75rem;   // 12px
+    font-weight: 400;
+    color: #F8F8F8;
+}
 .text-underline {
     text-decoration: underline;
 }
