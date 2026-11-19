@@ -1,14 +1,13 @@
 <!--
 @partial shared/ui/_section-title-h2
 @required title
-@optional hr
-@note Major section heading; hr true adds the warning divider above the title.
+@optional hr, href
+@note Major section heading; hr true adds the warning divider above the title. href (BS主規則 #4): pass when the section has a 查看更多-type button at the bottom; the title links there with a trailing arrow.
 -->
 @@if(context.hr=='true'){
-<div class="py-10">
-    <hr class="border-warning">
-</div>
+<hr class="border-warning my-10">
 }
-<div class="h2 mb-7 text-dark">
-    @@title
+<div class="h2 h2-section mb-7 text-dark">
+    @@if(context.href){<a class="text-dark" href="@@href">@@title <i class="fas fa-chevron-right"></i></a>}
+    @@if(!context.href){@@title}
 </div>

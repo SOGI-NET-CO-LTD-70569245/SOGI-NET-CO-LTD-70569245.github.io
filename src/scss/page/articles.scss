@@ -10,13 +10,8 @@
 
 .editable {
     h2 {
-        border-left: 3px solid $warning;
+        // 樣式改由 common 的 .h2-subtitle（BS主規則 #3）提供
         margin: 2rem 0 !important;
-        padding-left: 30px;
-        font-size: 2rem !important;
-        @include media-breakpoint-down(md) {
-            font-size: 1.75rem !important;
-        }
     }
     .btn {
         text-decoration: none !important;

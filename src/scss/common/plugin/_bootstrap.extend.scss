@@ -115,17 +115,19 @@
     }
 }
 
-// BS主規則 #23 產品特色標籤
-// 外層用 font-size: 0 消除標籤間的空白字元，間距只由 margin 決定
-.product-feature-tags {
+// 標籤群組：外層用 font-size: 0 消除標籤間的空白字元，間距只由 margin 決定（同 .btn-group 的命名方式）
+.badge-group {
     font-size: 0;
     .badge {
-        font-size: .9375rem;   // 15px
         margin: 0 10px 0 0;    // 標籤間距 10px（覆蓋 .badge 預設左右 2px）
         &:last-child {
             margin-right: 0;
         }
     }
+}
+// BS主規則 #23 產品特色標籤：.badge.badge-pill.badge-outline.badge-feature，放在 .badge-group 內
+.badge-feature {
+    font-size: .9375rem;   // 15px
 }
 
 
@@ -168,6 +170,21 @@
 .pos-a-lt {
     .badge {
         border-radius: 0;
+    }
+}
+
+// BS主規則 #10 新聞分類標籤：.badge.badge-category，圖片左上角、上方貼齊；左距 Mobile（含 768px）10px、PC 20px
+.badge-category {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 5;
+    margin: 0;
+    border-radius: 0;
+    color: #263238;
+    background-color: #F5FDFF;
+    @include media-breakpoint-up(lg) {
+        left: 20px;
     }
 }
 

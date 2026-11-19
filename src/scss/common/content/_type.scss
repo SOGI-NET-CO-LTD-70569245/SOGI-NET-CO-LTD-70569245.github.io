@@ -2,7 +2,7 @@ h1 {font-size: 1.6em;}
 h2 {
     //font-size: 16px !important;
     font-weight: bold;
-    color: #FF8C00;
+    // color: #FF8C00; // BS主規則 #3：移除橘色全域覆寫（不在 CIS 色盤）
 }
 .h6 {
     line-height: 1.5;
@@ -107,18 +107,21 @@ small {
 .text-underline {
     text-decoration: underline;
 }
+// BS主規則 #8 Hashtag-白底：$primary（#337AB7）
+// BS主規則 #9 Hashtag-暗底：.hashtags-dark 或放在 .card-img-overlay 內，#F8CD46（$warning）
 .hashtags {
     .hashtag {
         margin-left: 15px;
-        font-size: .93rem;
-        font-weight: bold;
+        font-size: .9375rem;   // 15px
+        font-weight: 700;
+        color: $primary;
         &:only-child,
         &:first-child {
             margin-left: 0;
         }
-//        @include media-breakpoint-down(md) {
-//            font-size: .75rem;
-//        }
+    }
+    &.hashtags-dark .hashtag {
+        color: $warning;
     }
 }
 .card-img-overlay {
@@ -193,5 +196,24 @@ ol.parentheses {
         content: "(" counter(list) ") ";
         counter-increment: list;
         margin-right: 5px;
+    }
+}
+// BS主規則 #4 Section title：30px／700／#263238，下方間距 35px 用 mb-7
+.h2-section {
+    font-size: 1.875rem; // 30px
+    font-weight: $font-weight-bold;
+    color: $gray-900;
+}
+
+// BS主規則 #3 Subtitle：#263238／黃色左線 #F8CD46／padding-left 30px
+// PC 32px、Mobile（含 768px）28px，字重 700；CMS 內文 .editable h2 也套用（_editable.scss）
+.h2-subtitle {
+    color: $gray-900;
+    font-size: 2rem;     // 32px
+    font-weight: $font-weight-bold;
+    padding-left: 30px;
+    border-left: 3px solid $warning;
+    @include media-breakpoint-down(md) {
+        font-size: 1.75rem; // 28px
     }
 }
