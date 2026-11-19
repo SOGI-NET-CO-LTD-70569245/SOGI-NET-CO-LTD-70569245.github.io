@@ -1,9 +1,10 @@
 <!--
 @partial shared/components/_scroller-status
-@optional wrapperClass
-@note Status block for infinite-scroll (status: ".scroller-status"); the plugin hides all three states and shows one only when the user scrolls to the end. Style follows BS rule: bg #F8F8F8 (bg-light), text #263238. wrapperClass defaults to container; pass col-12 when placed inside a .row.
+@optional wrapperClass, nextUrl
+@note Status block for infinite-scroll (status: ".scroller-status"); the plugin hides all three states and shows one only when the user scrolls to the end. Style follows BS rule: bg #F8F8F8 (bg-light), text #263238. wrapperClass defaults to container; pass col-12 when placed inside a .row. nextUrl renders a hidden .js-infinite-next link that infinite-scroll follows (path); leave it out on the last page so the plugin stops and shows the "last" state instead of a 404 error.
 -->
 <div class="@@if(context.wrapperClass){@@wrapperClass}@@if(!context.wrapperClass){container}">
+    @@if(context.nextUrl){<a class="js-infinite-next d-none" href="@@nextUrl">下一頁</a>}
     <div class="scroller-status text-center">
         <div class="infinite-scroll-request p-3 bg-light">
             <div class="lead font-weight-bold">

@@ -81,7 +81,7 @@
                     ],
                 },
             })
-            @@include('../../partial/shared/components/_scroller-status.html')
+            @@include('../../partial/shared/components/_scroller-status.html', {"nextUrl":"index2.html"})
         </div>
 
         @@include('../../partial/layouts/_footer.html')
@@ -93,13 +93,9 @@
         <script src="/assets/javascripts/vendor/jquery.countdown.min.js"></script>
         <script src="/assets/javascripts/function/countdown.js"></script>
         <script src="/assets/javascripts/vendor/infinite-scroll.pkgd.min.js"></script>
+        <script src="/assets/javascripts/function/infinite-scroll-init.js"></script>
         <script>
-            $('.article').infiniteScroll({
-                path: 'index{{#}}.html',
-                append: '.post',
-//                button: '.view-more-button',
-                status: ".scroller-status",
-            });
+            initInfiniteScroll('.article', '.post');
         </script>
 
     </body>
