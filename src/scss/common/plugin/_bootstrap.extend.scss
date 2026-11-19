@@ -115,6 +115,19 @@
     }
 }
 
+// BS主規則 #23 產品特色標籤
+// 外層用 font-size: 0 消除標籤間的空白字元，間距只由 margin 決定
+.product-feature-tags {
+    font-size: 0;
+    .badge {
+        font-size: .9375rem;   // 15px
+        margin: 0 10px 0 0;    // 標籤間距 10px（覆蓋 .badge 預設左右 2px）
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
 
 // Tooltip
 .tooltip-inner {

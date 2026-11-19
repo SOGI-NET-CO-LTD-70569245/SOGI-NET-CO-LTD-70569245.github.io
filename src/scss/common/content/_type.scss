@@ -92,6 +92,12 @@ small {
     }
 }
 
+// BS主規則 #24 新聞日期-白底：白底區塊上的新聞日期
+.news-date-light {
+    font-size: .75rem;   // 12px
+    font-weight: 400;
+    color: #9DA2A7;
+}
 // BS主規則 #25 新聞日期-暗底：疊在暗底圖片上的新聞日期
 .news-date-dark {
     font-size: .75rem;   // 12px
