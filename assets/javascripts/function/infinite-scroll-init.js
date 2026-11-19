@@ -1,0 +1,1 @@
+function initInfiniteScroll(i,t){i=$(i);i.length&&($(".js-infinite-next").length?i.infiniteScroll({path:".js-infinite-next",append:t,status:".scroller-status"}):$(".scroller-status").children().hide().filter(".infinite-scroll-last").show())}

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <!--
+        @partial layouts/_head
+        @optional title, cssFile
+        @note Shared document head; cssFile selects the page stylesheet bundle.
+        -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-Language" content="zh-TW">
@@ -19,11 +23,11 @@
         <title>報價管理系統-商店-資料檢視 - SOGI 手機王</title>
         
         
-        
+        <!-- Global -->
         <link rel="stylesheet" href="/assets/stylesheets/common.css">
         <link rel="stylesheet" href="https://d11l21ofu1mzsa.cloudfront.net/assets/manual_file/css/all.min.css">
         
-        
+        <!-- Single -->
         <link rel="stylesheet" href="/assets/stylesheets/page/store-admin.css">
         
 
@@ -160,7 +164,12 @@
                     </div>
                 </div>
             </div>
-            
+            <!--
+            @partial shared/ui/_section-title-h3
+            @required title
+            @optional id, icon, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom, btnName, btnIcon, href, modal
+            @note Compact section heading; can render an action button when btnName is set.
+            -->
 
             <div class="    " >
                 <div class="container">
@@ -188,7 +197,13 @@
                         </div>
                         <div class="col-12 col-md-9">
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         門市名稱
@@ -208,7 +223,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         商店負責人
@@ -228,7 +249,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         商店聯絡人
@@ -248,7 +275,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         商店聯絡電話
@@ -268,7 +301,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         手機號碼
@@ -288,7 +327,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         營業地址
@@ -308,7 +353,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         合約到期日
@@ -328,7 +379,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         新機報價功能
@@ -348,7 +405,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         二手報價功能
@@ -368,7 +431,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         維修報價功能
@@ -388,7 +457,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         開店日期
@@ -408,7 +483,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         昨日瀏覽數
@@ -428,7 +509,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         前月瀏覽數
@@ -448,7 +535,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         粉絲專頁網址
@@ -473,7 +566,13 @@
                                 </div>
 
                             
-                                
+                                <!--
+                                @partial features/store-admin/_form-2col-row
+                                @required label, inputType
+                                @optional inputLabel, inputLabelColor, inputTip, chk1Label, chk2Label, chk3Label, chk4Label, radio1Label, radio2Label, input1Label, input2Label, input3Label
+                                @variants inputType: plaintext | text | textarea | checkbox | radio | input-group
+                                @note Two-column label/control row for store-admin forms.
+                                -->
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-lg-2 col-form-label">
                                         商店介紹
@@ -494,13 +593,25 @@
 
                             
                             <div class="form-group">
-                                
+                                <!--
+                                @partial shared/ui/_btn
+                                @required href, btnColor
+                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
+                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
+                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
+                                -->
                                 <a class="btn btn-primary    py-1 py-0" href="#"  >
                                     <i class="fa-fw fas fa-check"></i>
                                     更新
                                 </a>
 
-                                
+                                <!--
+                                @partial shared/ui/_btn
+                                @required href, btnColor
+                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
+                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
+                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
+                                -->
                                 <a class="btn btn-outline-secondary    py-1 py-0" href="#"  >
                                     <i class="fa-fw fas fa-times"></i>
                                     取消
@@ -513,7 +624,12 @@
             </div>
         </div>
 
-        
+        <!--
+        @partial layouts/_footer
+        @optional page
+        @variants page: store-admin hides the public footer content.
+        @note Shared footer included by most pages.
+        -->
         <div id="footer" class="bg-dark push">
             
             <div class="container-fluid bg-black">
@@ -526,7 +642,10 @@
         </div>
 
 
-        
+        <!--
+        @partial shared/modals/_refresh
+        @note Small loading modal.
+        -->
         <div class="modal fade modal-refresh" tabindex="-1" role="dialog" aria-labelledby="">
 
                 <div class="modal-dialog modal-sm" role="document">
@@ -542,7 +661,10 @@
         </div>
 
 
-        
+        <!--
+        @partial shared/components/_nav-top
+        @note Floating bottom menu with function modal trigger and back-to-top button.
+        -->
         <div id="menu-bottom">
             <div class="my-2">
                 <a class="btn btn-light shadow" href="#" data-toggle="modal" data-target=".modal-func">
@@ -556,16 +678,19 @@
             </div>
         </div>
 
-        
-        
-        
+        <!--
+        @partial layouts/_js
+        @note Shared global JavaScript includes; page-specific scripts are included after this partial.
+        -->
+        <!-- Global -->
+        <!-- <script src="https://kit.fontawesome.com/5ab387053e.js" crossorigin="anonymous"></script> -->
         <script src="/assets/javascripts/vendor/jquery.min.js?v=3.1.1"></script>
         <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap-select.min.js"></script>
         <script src="/assets/javascripts/common.js"></script>
 
 
-        
+        <!-- Single -->
         <script src="/assets/javascripts/vendor/bootstrap.fileinput.min.js"></script>
         <script src="/assets/javascripts/locales/bootstrap.fileinput_locale_zh-TW.js"></script>
         <script>

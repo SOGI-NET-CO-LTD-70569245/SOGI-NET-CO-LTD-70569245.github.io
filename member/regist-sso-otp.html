@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <!--
+        @partial layouts/_head
+        @optional title, cssFile
+        @note Shared document head; cssFile selects the page stylesheet bundle.
+        -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-Language" content="zh-TW">
@@ -19,11 +23,11 @@
         <title>手機驗證-會員註冊 - SOGI 手機王</title>
         
         
-        
+        <!-- Global -->
         <link rel="stylesheet" href="/assets/stylesheets/common.css">
         <link rel="stylesheet" href="https://d11l21ofu1mzsa.cloudfront.net/assets/manual_file/css/all.min.css">
         
-        
+        <!-- Single -->
         <link rel="stylesheet" href="/assets/stylesheets/page/member.css">
         
 
@@ -31,7 +35,10 @@
 
 	<body class="member">
 
-        
+        <!--
+        @partial layouts/_header
+        @note Public site header. Store-admin uses features/store-admin/_header instead.
+        -->
         <header id="header" class="push sticky-top">
             <div class="shadow">
             <div class="container">
@@ -208,7 +215,10 @@
             </div>
         </header>
 
-        
+        <!--
+        @partial shared/components/_nav-main
+        @note Public mobile/main navigation markup.
+        -->
         <nav class="mobile-menu">
             <div class="list-group">
                 <a class="list-group-item list-group-item-action d-flex align-items-center" href="#">
@@ -379,7 +389,11 @@
 
 
         <div id="main" class="push">
-            
+            <!--
+            @partial shared/components/_breadcrumb
+            @optional lv1Label, lv1Url, lv2Label, lv2Url, lv3Label, lv3Url
+            @note Breadcrumb renders each level only when its label exists.
+            -->
             <div class="container">
                 <ol class="breadcrumb mb-2 border-bottom rounded-0">
                     <li class="breadcrumb-item"><a href="/index.html"><i class="fas fa-home"></i> 首頁</a></li>
@@ -487,7 +501,12 @@
             </div>
         </div>
 
-        
+        <!--
+        @partial layouts/_footer
+        @optional page
+        @variants page: store-admin hides the public footer content.
+        @note Shared footer included by most pages.
+        -->
         <div id="footer" class="bg-dark push">
             
             <div class="container py-5">
@@ -693,7 +712,10 @@
             </div>
         </div>
 
-        
+        <!--
+        @partial shared/modals/_quickview
+        @note Product quickview modal with static demo content.
+        -->
         <div class="modal modal-quickview fade" id="" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content">
@@ -703,7 +725,11 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        
+                        <!-- <div class="position-absolute" style="right: 1rem; z-index: 10;">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div> -->
                         <div class="row align-items-center justify-content-center">
                             <div class="col-12 text-center">
                                 <a href="#">
@@ -839,13 +865,13 @@
                             <div class="col">
                                 <a class="btn btn-secondary btn-sm btn-block rounded-pill px-0" href="#">
                                     <i class="fas fa-fw fa-plus"></i>
-                                    
+                                    <!-- <span class="d-none d-lg-inline">加入比較</span> -->
                                 </a>
                             </div>
                             <div class="col">
                                 <a class="btn btn-secondary btn-sm btn-block rounded-pill px-0" href="#">
                                     <i class="far fa-fw fa-heart"></i>
-                                    
+                                    <!-- <span class="d-none d-lg-inline">加入最愛</span> -->
                                 </a>
                             </div>
                         </div>
@@ -854,7 +880,12 @@
             </div>
         </div>
 
-        
+        <!--
+        @partial shared/modals/_toast
+        @optional type, title, desc
+        @variants type: success renders the green check style; anything else (default) renders the red alert style.
+        @note Without title/desc it shows the default member "門號已鎖定" message, so existing member pages are unchanged.
+        -->
         <div class="modal fade modal-toast" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content toast mx-auto show rounded-0 border-danger" role="alert" aria-live="assertive" aria-atomic="true">
@@ -885,7 +916,10 @@
         </div>
 
         
-        
+        <!--
+        @partial shared/components/_nav-top
+        @note Floating bottom menu with function modal trigger and back-to-top button.
+        -->
         <div id="menu-bottom">
             <div class="my-2">
                 <a class="btn btn-light shadow" href="#" data-toggle="modal" data-target=".modal-func">
@@ -899,9 +933,12 @@
             </div>
         </div>
 
-        
-        
-        
+        <!--
+        @partial layouts/_js
+        @note Shared global JavaScript includes; page-specific scripts are included after this partial.
+        -->
+        <!-- Global -->
+        <!-- <script src="https://kit.fontawesome.com/5ab387053e.js" crossorigin="anonymous"></script> -->
         <script src="/assets/javascripts/vendor/jquery.min.js?v=3.1.1"></script>
         <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap-select.min.js"></script>
