@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--
-        @partial layouts/_head
-        @optional title, cssFile
-        @note Shared document head; cssFile selects the page stylesheet bundle.
-        -->
+        
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-Language" content="zh-TW">
@@ -23,11 +19,11 @@
         <title>新聞總覽 - SOGI 手機王</title>
         
         
-        <!-- Global -->
+        
         <link rel="stylesheet" href="/assets/stylesheets/common.css">
         <link rel="stylesheet" href="https://d11l21ofu1mzsa.cloudfront.net/assets/manual_file/css/all.min.css">
         
-        <!-- Single -->
+        
         <link rel="stylesheet" href="/assets/stylesheets/page/articles.css">
         
 
@@ -35,10 +31,7 @@
 
 	<body class="news">
 
-        <!--
-        @partial layouts/_header
-        @note Public site header. Store-admin uses features/store-admin/_header instead.
-        -->
+        
         <header id="header" class="push sticky-top">
             <div class="shadow">
             <div class="container">
@@ -215,10 +208,7 @@
             </div>
         </header>
 
-        <!--
-        @partial shared/components/_nav-main
-        @note Public mobile/main navigation markup.
-        -->
+        
         <nav class="mobile-menu">
             <div class="list-group">
                 <a class="list-group-item list-group-item-action d-flex align-items-center" href="#">
@@ -389,12 +379,7 @@
 
 
         <div id="main" class="push">
-            <!--
-            @partial shared/components/_ad-970
-            @optional textAd
-            @variants textAd: true renders text ads below the image slot.
-            @note Responsive 970/336 ad placeholder block.
-            -->
+            
             <div class="container">
                 <div class="row my-5 ad-slot-970">
                     <div class="col-12 d-none d-lg-block">
@@ -411,11 +396,7 @@
                 
             </div>
 
-            <!--
-            @partial shared/components/_breadcrumb
-            @optional lv1Label, lv1Url, lv2Label, lv2Url, lv3Label, lv3Url
-            @note Breadcrumb renders each level only when its label exists.
-            -->
+            
             <div class="container">
                 <ol class="breadcrumb mb-2 border-bottom rounded-0">
                     <li class="breadcrumb-item"><a href="/index.html"><i class="fas fa-home"></i> 首頁</a></li>
@@ -483,11 +464,7 @@
                         </div>
                     </div>
 
-                    <!--
-                    @partial shared/components/_scroller-status
-                    @optional wrapperClass, nextUrl
-                    @note Status block for infinite-scroll (status: ".scroller-status"); the plugin hides all three states and shows one only when the user scrolls to the end. Style follows BS rule: bg #F8F8F8 (bg-light), text #263238. wrapperClass defaults to container; pass col-12 when placed inside a .row. nextUrl renders a hidden .js-infinite-next link that infinite-scroll follows (path); leave it out on the last page so the plugin stops and shows the "last" state instead of a 404 error.
-                    -->
+                    
                     <div class="col-12">
                         
                         <div class="scroller-status text-center">
@@ -510,12 +487,7 @@
 
         </div>
 
-        <!--
-        @partial layouts/_footer
-        @optional page
-        @variants page: store-admin hides the public footer content.
-        @note Shared footer included by most pages.
-        -->
+        
         <div id="footer" class="bg-dark push">
             
             <div class="container py-5">
@@ -722,10 +694,7 @@
         </div>
 
 
-        <!--
-        @partial shared/components/_nav-top
-        @note Floating bottom menu with function modal trigger and back-to-top button.
-        -->
+        
         <div id="menu-bottom">
             <div class="my-2">
                 <a class="btn btn-light shadow" href="#" data-toggle="modal" data-target=".modal-func">
@@ -739,21 +708,18 @@
             </div>
         </div>
 
-        <!--
-        @partial layouts/_js
-        @note Shared global JavaScript includes; page-specific scripts are included after this partial.
-        -->
-        <!-- Global -->
-        <!-- <script src="https://kit.fontawesome.com/5ab387053e.js" crossorigin="anonymous"></script> -->
+        
+        
+        
         <script src="/assets/javascripts/vendor/jquery.min.js?v=3.1.1"></script>
         <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap-select.min.js"></script>
         <script src="/assets/javascripts/common.js"></script>
 
 
-        <!-- Single -->
+        
         <script src="/assets/javascripts/vendor/jquery.hc-sticky.min.js"></script>
-        <!-- Single -->
+        
         <script src="/assets/javascripts/vendor/infinite-scroll.pkgd.min.js"></script>
         <script src="/assets/javascripts/function/infinite-scroll-init.js"></script>
         <script>

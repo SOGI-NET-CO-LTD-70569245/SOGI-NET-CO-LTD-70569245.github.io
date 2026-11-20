@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--
-        @partial layouts/_head
-        @optional title, cssFile
-        @note Shared document head; cssFile selects the page stylesheet bundle.
-        -->
+        
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-Language" content="zh-TW">
@@ -23,11 +19,11 @@
         <title>找新機 - SOGI 手機王</title>
         
         
-        <!-- Global -->
+        
         <link rel="stylesheet" href="/assets/stylesheets/common.css">
         <link rel="stylesheet" href="https://d11l21ofu1mzsa.cloudfront.net/assets/manual_file/css/all.min.css">
         
-        <!-- Single -->
+        
         <link rel="stylesheet" href="/assets/stylesheets/page/products.css">
         
 
@@ -35,10 +31,7 @@
 
 	<body class="products">
 
-        <!--
-        @partial layouts/_header
-        @note Public site header. Store-admin uses features/store-admin/_header instead.
-        -->
+        
         <header id="header" class="push sticky-top">
             <div class="shadow">
             <div class="container">
@@ -215,10 +208,7 @@
             </div>
         </header>
 
-        <!--
-        @partial shared/components/_nav-main
-        @note Public mobile/main navigation markup.
-        -->
+        
         <nav class="mobile-menu">
             <div class="list-group">
                 <a class="list-group-item list-group-item-action d-flex align-items-center" href="#">
@@ -389,12 +379,7 @@
 
 
         <div id="main" class="push">
-            <!--
-            @partial shared/components/_ad-970
-            @optional textAd
-            @variants textAd: true renders text ads below the image slot.
-            @note Responsive 970/336 ad placeholder block.
-            -->
+            
             <div class="container">
                 <div class="row my-5 ad-slot-970">
                     <div class="col-12 d-none d-lg-block">
@@ -429,11 +414,7 @@
                 
             </div>
 
-            <!--
-            @partial shared/components/_breadcrumb
-            @optional lv1Label, lv1Url, lv2Label, lv2Url, lv3Label, lv3Url
-            @note Breadcrumb renders each level only when its label exists.
-            -->
+            
             <div class="container">
                 <ol class="breadcrumb mb-2 border-bottom rounded-0">
                     <li class="breadcrumb-item"><a href="/index.html"><i class="fas fa-home"></i> 首頁</a></li>
@@ -448,12 +429,7 @@
             </div>
 
 
-            <!--
-            @partial features/products/_price-intro
-            @required title1, title2
-            @optional id, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom, group, discount, priceNew, priceSecond
-            @note Product price intro header with optional action groups and price summary flags.
-            -->
+            
             <div class="    " >
                 <div class="container py-10">
 
@@ -476,13 +452,7 @@
                                     <div class="row">
                                         
                                         <div class="col-6 col-md-4 col-lg-3 pr-1">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-primary btn-block rounded-pill   py-0" href="detail.html"  >
                                                 <i class="fa-fw fas fa-chevron-left"></i>
                                                 回規格介紹
@@ -491,13 +461,7 @@
                                         </div>
                                         
                                         <div class="col-3 col-md-3 col-lg-2 px-1">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block rounded-pill   py-0" href="#"  >
                                                 <i class="fa-fw fas fa-bell"></i>
                                                 <span class="d-none d-md-inline">價格追蹤</span>
@@ -506,13 +470,7 @@
                                         </div>
                                         
                                         <div class="col-3 col-md-3 col-lg-2 pl-1">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block rounded-pill   py-0" href="#"  id="btn-share">
                                                 <i class="fa-fw fas fa-share"></i>
                                                 <span class="d-none d-md-inline">分享</span>
@@ -610,7 +568,7 @@
                                     </a>
                                 </div>
                                 <div class="col-auto px-1">
-                                    <!-- <div class="rounded py-1 px-2 border border-primary text-primary text-left"> -->
+                                    
                                     <a class="btn btn-outline-primary btn-hover-ol-primary text-left" href="javascript:void();">
                                         <div class="lead font-weight-bold">256GB</div>
                                         最低 $26,900
@@ -649,13 +607,7 @@
             </div>
 
 
-            <!--
-            @partial shared/sections/_store-list
-            @required mixitupId
-            @optional id, hr, title, fpBgClass, nav, navActive, searchFunc, searchTitle, searchArea, searchArea2, searchPurchase, btnName, filter, searchResult, itemBtnNumber, itemPrice, btnPrimaryName, btnDangerName
-            @variants navActive: new | second | repair; itemBtnNumber: 2 | 3
-            @note Store listing section with optional search/filter UI and repeated store cards.
-            -->
+            
             <div id="section-store-list">
                 <div class="container-fluid px-0">
                     <div class="container">
@@ -758,13 +710,7 @@
                         </div>
                         
                         <div class="row mixitup" id="mixitup-1">
-                            <!--
-                            @partial shared/ui/_store-list-item
-                            @required img, title, address, price
-                            @optional cat, sortPrice, sortDate, sortHot, borderColor, badgeFlagTitle, badgeSP1Bg, badgeSP1Title, badgeSP2Bg, badgeSP2Title, rateScore, rateCount, priceTitle, priceTitleType, priceLogin, update, btn, btnPrimaryName, btnDangerName, tag1, tag2, tag3, desc
-                            @variants btn: warning | primary; priceLogin: true | empty string; cat: adds mix-item and mixitup sort attributes
-                            @note High-variable store card used by store list sections; keep new display flags explicit.
-                            -->
+                            
                             <div class="col-12 col-md-6 col-lg-3 my-2 " >
                                 <div class="h-100 p-0 p-lg-2 bg-white shadow border bd-3 border-white mixitup-item">
                                     
@@ -816,21 +762,13 @@
                                                     
                                                 </div>
                                                 
-                                                <!-- <div class="font-small text-muted mb-4">
-                                                    更新時間：2019/12/31
-                                                </div> -->
+                                                
                                                 
                                                 
                                                 <div class="mt-2">
                                                     
                                                     
-                                                        <!--
-                                                        @partial shared/ui/_btn
-                                                        @required href, btnColor
-                                                        @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                        @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                        @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                        -->
+                                                        
                                                         <a class="btn btn-primary btn-block rounded-pill px-1  py-0" href="#"  >
                                                             
                                                             預約訂購
@@ -840,7 +778,7 @@
                                                     
                                                 </div>
                                                 
-                                                <!-- BS主規則 #17 CTA BTN-次要呼籲：圓形外框圖示按鈕，均分排列 -->
+                                                
                                                 <div class="d-flex justify-content-around mt-2">
                                                     <a class="btn btn-outline-cta btn-icon rounded-circle" href="tel:0910123456" aria-label="打電話給門市"><i class="fas fa-fw fa-phone"></i></a>
                                                     <a class="btn btn-outline-cta btn-icon rounded-circle" href="#" aria-label="用 LINE 聯絡門市"><i class="fab fa-fw fa-line"></i></a>
@@ -849,24 +787,13 @@
                                                 <div class="text-row-3 font-small mb-2">
                                                     外觀機況：S級<br>門市保固：1個月<br>電池健康度：良好
                                                 </div>
-                                                <!-- <div class="text-row-2 font-small">
-                                                    
-                                                    
-                                                    
-                                                    &nbsp;
-                                                </div> -->
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-<!--
-                            @partial shared/ui/_store-list-item
-                            @required img, title, address, price
-                            @optional cat, sortPrice, sortDate, sortHot, borderColor, badgeFlagTitle, badgeSP1Bg, badgeSP1Title, badgeSP2Bg, badgeSP2Title, rateScore, rateCount, priceTitle, priceTitleType, priceLogin, update, btn, btnPrimaryName, btnDangerName, tag1, tag2, tag3, desc
-                            @variants btn: warning | primary; priceLogin: true | empty string; cat: adds mix-item and mixitup sort attributes
-                            @note High-variable store card used by store list sections; keep new display flags explicit.
-                            -->
+
                             <div class="col-12 col-md-6 col-lg-3 my-2 " >
                                 <div class="h-100 p-0 p-lg-2 bg-white shadow border bd-3 border-white mixitup-item">
                                     
@@ -916,22 +843,14 @@
                                                     
                                                 </div>
                                                 
-                                                <!-- <div class="font-small text-muted mb-4">
-                                                    更新時間：2022/01/05
-                                                </div> -->
+                                                
                                                 
                                                 
                                                 <div class="mt-2">
                                                     
                                                     
                                                     
-                                                        <!--
-                                                        @partial shared/ui/_btn
-                                                        @required href, btnColor
-                                                        @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                        @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                        @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                        -->
+                                                        
                                                         <a class="btn btn-danger btn-block rounded-pill px-1  py-0" href="#"  >
                                                             
                                                             現貨搶購
@@ -940,7 +859,7 @@
                                                     
                                                 </div>
                                                 
-                                                <!-- BS主規則 #17 CTA BTN-次要呼籲：圓形外框圖示按鈕，均分排列 -->
+                                                
                                                 <div class="d-flex justify-content-around mt-2">
                                                     <a class="btn btn-outline-cta btn-icon rounded-circle" href="tel:0910123456" aria-label="打電話給門市"><i class="fas fa-fw fa-phone"></i></a>
                                                     <a class="btn btn-outline-cta btn-icon rounded-circle" href="#" aria-label="用 LINE 聯絡門市"><i class="fab fa-fw fa-line"></i></a>
@@ -949,24 +868,13 @@
                                                 <div class="text-row-3 font-small mb-2">
                                                     [新機／二手機買賣]、[門號申裝]、[無卡分期］、[小米家電]、[手機包膜、維修]
                                                 </div>
-                                                <!-- <div class="text-row-2 font-small">
-                                                    
-                                                    
-                                                    
-                                                    &nbsp;
-                                                </div> -->
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-<!--
-                            @partial shared/ui/_store-list-item
-                            @required img, title, address, price
-                            @optional cat, sortPrice, sortDate, sortHot, borderColor, badgeFlagTitle, badgeSP1Bg, badgeSP1Title, badgeSP2Bg, badgeSP2Title, rateScore, rateCount, priceTitle, priceTitleType, priceLogin, update, btn, btnPrimaryName, btnDangerName, tag1, tag2, tag3, desc
-                            @variants btn: warning | primary; priceLogin: true | empty string; cat: adds mix-item and mixitup sort attributes
-                            @note High-variable store card used by store list sections; keep new display flags explicit.
-                            -->
+
                             <div class="col-12 col-md-6 col-lg-3 my-2 " >
                                 <div class="h-100 p-0 p-lg-2 bg-white shadow border bd-3 border-warning mixitup-item">
                                     
@@ -1014,20 +922,12 @@
                                                     
                                                 </div>
                                                 
-                                                <!-- <div class="font-small text-muted mb-4">
-                                                    更新時間：2021/05/20
-                                                </div> -->
+                                                
                                                 
                                                 
                                                 <div class="mt-2">
                                                     
-                                                        <!--
-                                                        @partial shared/ui/_btn
-                                                        @required href, btnColor
-                                                        @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                        @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                        @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                        -->
+                                                        
                                                         <a class="btn btn-warning btn-block rounded-pill px-1  py-0" href="#"  >
                                                             
                                                             預約訂購
@@ -1038,7 +938,7 @@
                                                     
                                                 </div>
                                                 
-                                                <!-- BS主規則 #17 CTA BTN-次要呼籲：圓形外框圖示按鈕，均分排列 -->
+                                                
                                                 <div class="d-flex justify-content-around mt-2">
                                                     <a class="btn btn-outline-cta btn-icon rounded-circle" href="tel:0910123456" aria-label="打電話給門市"><i class="fas fa-fw fa-phone"></i></a>
                                                     <a class="btn btn-outline-cta btn-icon rounded-circle" href="#" aria-label="用 LINE 聯絡門市"><i class="fab fa-fw fa-line"></i></a>
@@ -1047,24 +947,13 @@
                                                 <div class="text-row-3 font-small mb-2">
                                                     A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務
                                                 </div>
-                                                <!-- <div class="text-row-2 font-small">
-                                                    
-                                                    
-                                                    
-                                                    &nbsp;
-                                                </div> -->
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-<!--
-                            @partial shared/ui/_store-list-item
-                            @required img, title, address, price
-                            @optional cat, sortPrice, sortDate, sortHot, borderColor, badgeFlagTitle, badgeSP1Bg, badgeSP1Title, badgeSP2Bg, badgeSP2Title, rateScore, rateCount, priceTitle, priceTitleType, priceLogin, update, btn, btnPrimaryName, btnDangerName, tag1, tag2, tag3, desc
-                            @variants btn: warning | primary; priceLogin: true | empty string; cat: adds mix-item and mixitup sort attributes
-                            @note High-variable store card used by store list sections; keep new display flags explicit.
-                            -->
+
                             <div class="col-12 col-md-6 col-lg-3 my-2 " >
                                 <div class="h-100 p-0 p-lg-2 bg-white shadow border bd-3 border-white mixitup-item">
                                     
@@ -1107,21 +996,13 @@
                                                     
                                                 </div>
                                                 
-                                                <!-- <div class="font-small text-muted mb-4">
-                                                    更新時間：2022/03/01
-                                                </div> -->
+                                                
                                                 
                                                 
                                                 <div class="mt-2">
                                                     
                                                     
-                                                        <!--
-                                                        @partial shared/ui/_btn
-                                                        @required href, btnColor
-                                                        @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                        @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                        @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                        -->
+                                                        
                                                         <a class="btn btn-primary btn-block rounded-pill px-1  py-0" href="#"  >
                                                             
                                                             預約訂購
@@ -1131,7 +1012,7 @@
                                                     
                                                 </div>
                                                 
-                                                <!-- BS主規則 #17 CTA BTN-次要呼籲：圓形外框圖示按鈕，均分排列 -->
+                                                
                                                 <div class="d-flex justify-content-around mt-2">
                                                     <a class="btn btn-outline-cta btn-icon rounded-circle" href="tel:0910123456" aria-label="打電話給門市"><i class="fas fa-fw fa-phone"></i></a>
                                                     <a class="btn btn-outline-cta btn-icon rounded-circle" href="#" aria-label="用 LINE 聯絡門市"><i class="fab fa-fw fa-line"></i></a>
@@ -1140,24 +1021,13 @@
                                                 <div class="text-row-3 font-small mb-2">
                                                     A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務
                                                 </div>
-                                                <!-- <div class="text-row-2 font-small">
-                                                    
-                                                    
-                                                    
-                                                    &nbsp;
-                                                </div> -->
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-<!--
-                            @partial shared/ui/_store-list-item
-                            @required img, title, address, price
-                            @optional cat, sortPrice, sortDate, sortHot, borderColor, badgeFlagTitle, badgeSP1Bg, badgeSP1Title, badgeSP2Bg, badgeSP2Title, rateScore, rateCount, priceTitle, priceTitleType, priceLogin, update, btn, btnPrimaryName, btnDangerName, tag1, tag2, tag3, desc
-                            @variants btn: warning | primary; priceLogin: true | empty string; cat: adds mix-item and mixitup sort attributes
-                            @note High-variable store card used by store list sections; keep new display flags explicit.
-                            -->
+
                             <div class="col-12 col-md-6 col-lg-3 my-2 " >
                                 <div class="h-100 p-0 p-lg-2 bg-white shadow border bd-3 border-white mixitup-item">
                                     
@@ -1200,21 +1070,13 @@
                                                     
                                                 </div>
                                                 
-                                                <!-- <div class="font-small text-muted mb-4">
-                                                    更新時間：2022/03/11
-                                                </div> -->
+                                                
                                                 
                                                 
                                                 <div class="mt-2">
                                                     
                                                     
-                                                        <!--
-                                                        @partial shared/ui/_btn
-                                                        @required href, btnColor
-                                                        @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                        @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                        @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                        -->
+                                                        
                                                         <a class="btn btn-primary btn-block rounded-pill px-1  py-0" href="#"  >
                                                             
                                                             預約訂購
@@ -1224,7 +1086,7 @@
                                                     
                                                 </div>
                                                 
-                                                <!-- BS主規則 #17 CTA BTN-次要呼籲：圓形外框圖示按鈕，均分排列 -->
+                                                
                                                 <div class="d-flex justify-content-around mt-2">
                                                     <a class="btn btn-outline-cta btn-icon rounded-circle" href="tel:0910123456" aria-label="打電話給門市"><i class="fas fa-fw fa-phone"></i></a>
                                                     <a class="btn btn-outline-cta btn-icon rounded-circle" href="#" aria-label="用 LINE 聯絡門市"><i class="fab fa-fw fa-line"></i></a>
@@ -1233,12 +1095,7 @@
                                                 <div class="text-row-3 font-small mb-2">
                                                     A52S 限時特價9390安卓/哀鳳 雙向LINE聊天紀錄轉移服務
                                                 </div>
-                                                <!-- <div class="text-row-2 font-small">
-                                                    
-                                                    
-                                                    
-                                                    &nbsp;
-                                                </div> -->
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -1270,20 +1127,10 @@
                 </div>
             </div>
             
-            <!-- 
-                fpBgColor:'string',
-                id:'text',
-                hr:'true',
-                title:'string'
-            -->
+            
             <div class="    bg-light" id="section-similar">
                 <div class="container pb-10">
-                    <!--
-                    @partial shared/ui/_section-title-h2
-                    @required title
-                    @optional hr, href
-                    @note Major section heading; hr true adds the warning divider above the title. href (BS主規則 #4): pass when the section has a 查看更多-type button at the bottom; the title links there with a trailing arrow.
-                    -->
+                    
                     
                     <hr class="border-warning my-10">
                     
@@ -1292,28 +1139,11 @@
                         SAMSUNG 其他產品
                     </div>
 
-                    <!--
-                    @partial shared/sections/_products-list
-                    @required rowStyle, item
-                    @optional mixitupId, colMd, colLg, badgeRank, badge1Title
-                    @variants rowStyle: grid | hs | hs-4 | hs-6 | rwd | filter; item: 1..10
-                    @note Product list wrapper. Demo item data is generated from src/data/products/demo-products.json.
-                    -->
+                    
                     <div class="row row-hs row-hs-bar align-items-center " >
-                        <!--
-                        @partial shared/sections/_products-list.data
-                        @generated scripts/generate-product-list-data.js
-                        @source src/data/products/demo-products.json
-                        @note Generated demo product data for shared/sections/_products-list. Do not edit by hand.
-                        -->
                         
-                            <!--
-                            @partial shared/ui/_product-list-item
-                            @required col, img, title
-                            @optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
-                            @variants cat: adds mix-item and mixitup sort attributes
-                            @note Used by product grid, horizontal scroll, and filter sections.
-                            -->
+                        
+                            
                             <div class="my-2 col-8 col-lg-3 col-md-5 mix-item cat-galaxy-s" data-sort-price="0" data-sort-date="20210220" data-sort-hot="8000">
                                 <div class="card shadow text-center p-2">
                                     
@@ -1354,13 +1184,7 @@
                                             </a>
                                         </div>
                                         <div class="col-8 col-md-9 mt-2">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
                                                 <i class="fa-fw fas fa-eye"></i>
                                                 快速檢視
@@ -1368,13 +1192,7 @@
 
                                         </div>
                                         <div class="col-4 col-md-3 mt-2 pl-1">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
                                                 <i class="fa-fw fas fa-plus"></i>
                                                 
@@ -1386,13 +1204,7 @@
                             </div>
 
                         
-                            <!--
-                            @partial shared/ui/_product-list-item
-                            @required col, img, title
-                            @optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
-                            @variants cat: adds mix-item and mixitup sort attributes
-                            @note Used by product grid, horizontal scroll, and filter sections.
-                            -->
+                            
                             <div class="my-2 col-8 col-lg-3 col-md-5 mix-item cat-galaxy-s" data-sort-price="16800" data-sort-date="20200601" data-sort-hot="2500">
                                 <div class="card shadow text-center p-2">
                                     
@@ -1431,13 +1243,7 @@
                                             </a>
                                         </div>
                                         <div class="col-8 col-md-9 mt-2">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
                                                 <i class="fa-fw fas fa-eye"></i>
                                                 快速檢視
@@ -1445,13 +1251,7 @@
 
                                         </div>
                                         <div class="col-4 col-md-3 mt-2 pl-1">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
                                                 <i class="fa-fw fas fa-plus"></i>
                                                 
@@ -1463,13 +1263,7 @@
                             </div>
 
                         
-                            <!--
-                            @partial shared/ui/_product-list-item
-                            @required col, img, title
-                            @optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
-                            @variants cat: adds mix-item and mixitup sort attributes
-                            @note Used by product grid, horizontal scroll, and filter sections.
-                            -->
+                            
                             <div class="my-2 col-8 col-lg-3 col-md-5 mix-item cat-galaxy-a" data-sort-price="7600" data-sort-date="20201001" data-sort-hot="3000">
                                 <div class="card shadow text-center p-2">
                                     
@@ -1508,13 +1302,7 @@
                                             </a>
                                         </div>
                                         <div class="col-8 col-md-9 mt-2">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
                                                 <i class="fa-fw fas fa-eye"></i>
                                                 快速檢視
@@ -1522,13 +1310,7 @@
 
                                         </div>
                                         <div class="col-4 col-md-3 mt-2 pl-1">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
                                                 <i class="fa-fw fas fa-plus"></i>
                                                 
@@ -1540,13 +1322,7 @@
                             </div>
 
                         
-                            <!--
-                            @partial shared/ui/_product-list-item
-                            @required col, img, title
-                            @optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
-                            @variants cat: adds mix-item and mixitup sort attributes
-                            @note Used by product grid, horizontal scroll, and filter sections.
-                            -->
+                            
                             <div class="my-2 col-8 col-lg-3 col-md-5 mix-item cat-galaxy-note" data-sort-price="24600" data-sort-date="20201231" data-sort-hot="10000">
                                 <div class="card shadow text-center p-2">
                                     
@@ -1585,13 +1361,7 @@
                                             </a>
                                         </div>
                                         <div class="col-8 col-md-9 mt-2">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
                                                 <i class="fa-fw fas fa-eye"></i>
                                                 快速檢視
@@ -1599,13 +1369,7 @@
 
                                         </div>
                                         <div class="col-4 col-md-3 mt-2 pl-1">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
                                                 <i class="fa-fw fas fa-plus"></i>
                                                 
@@ -1617,13 +1381,7 @@
                             </div>
 
                         
-                            <!--
-                            @partial shared/ui/_product-list-item
-                            @required col, img, title
-                            @optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
-                            @variants cat: adds mix-item and mixitup sort attributes
-                            @note Used by product grid, horizontal scroll, and filter sections.
-                            -->
+                            
                             <div class="my-2 col-8 col-lg-3 col-md-5 mix-item cat-galaxy-m" data-sort-price="3700" data-sort-date="20201205" data-sort-hot="3000">
                                 <div class="card shadow text-center p-2">
                                     
@@ -1662,13 +1420,7 @@
                                             </a>
                                         </div>
                                         <div class="col-8 col-md-9 mt-2">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
                                                 <i class="fa-fw fas fa-eye"></i>
                                                 快速檢視
@@ -1676,13 +1428,7 @@
 
                                         </div>
                                         <div class="col-4 col-md-3 mt-2 pl-1">
-                                            <!--
-                                            @partial shared/ui/_btn
-                                            @required href, btnColor
-                                            @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                            @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                            @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                            -->
+                                            
                                             <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
                                                 <i class="fa-fw fas fa-plus"></i>
                                                 
@@ -1701,12 +1447,7 @@
             </div>
         </div>
 
-        <!--
-        @partial layouts/_footer
-        @optional page
-        @variants page: store-admin hides the public footer content.
-        @note Shared footer included by most pages.
-        -->
+        
         <div id="footer" class="bg-dark push">
             
             <div class="container py-5">
@@ -1913,10 +1654,7 @@
         </div>
 
 
-        <!--
-        @partial shared/modals/_quickview
-        @note Product quickview modal with static demo content.
-        -->
+        
         <div class="modal modal-quickview fade" id="" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content">
@@ -1926,11 +1664,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!-- <div class="position-absolute" style="right: 1rem; z-index: 10;">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div> -->
+                        
                         <div class="row align-items-center justify-content-center">
                             <div class="col-12 text-center">
                                 <a href="#">
@@ -2066,13 +1800,13 @@
                             <div class="col">
                                 <a class="btn btn-secondary btn-sm btn-block rounded-pill px-0" href="#">
                                     <i class="fas fa-fw fa-plus"></i>
-                                    <!-- <span class="d-none d-lg-inline">加入比較</span> -->
+                                    
                                 </a>
                             </div>
                             <div class="col">
                                 <a class="btn btn-secondary btn-sm btn-block rounded-pill px-0" href="#">
                                     <i class="far fa-fw fa-heart"></i>
-                                    <!-- <span class="d-none d-lg-inline">加入最愛</span> -->
+                                    
                                 </a>
                             </div>
                         </div>
@@ -2081,7 +1815,7 @@
             </div>
         </div>
 
-        <!-- <div class="modal fade modal-fullpage modal-price-search" tabindex="-1" role="dialog"> -->
+        
         <div class="modal fade modal-fullpage modal-price-search" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content">
@@ -2179,10 +1913,7 @@
                 </div>
             </div>
         </div>
-        <!--
-        @partial shared/modals/_refresh
-        @note Small loading modal.
-        -->
+        
         <div class="modal fade modal-refresh" tabindex="-1" role="dialog" aria-labelledby="">
 
                 <div class="modal-dialog modal-sm" role="document">
@@ -2198,10 +1929,7 @@
         </div>
 
 
-        <!--
-        @partial shared/components/_nav-top
-        @note Floating bottom menu with function modal trigger and back-to-top button.
-        -->
+        
         <div id="menu-bottom">
             <div class="my-2">
                 <a class="btn btn-light shadow" href="#" data-toggle="modal" data-target=".modal-func">
@@ -2215,21 +1943,17 @@
             </div>
         </div>
 
-        <!--
-        @partial layouts/_js
-        @note Shared global JavaScript includes; page-specific scripts are included after this partial.
-        -->
-        <!-- Global -->
-        <!-- <script src="https://kit.fontawesome.com/5ab387053e.js" crossorigin="anonymous"></script> -->
+        
+        
+        
         <script src="/assets/javascripts/vendor/jquery.min.js?v=3.1.1"></script>
         <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap-select.min.js"></script>
         <script src="/assets/javascripts/common.js"></script>
 
 
-        <!-- Single -->
-        <!-- <script src="/assets/javascripts/vendor/jquery.mixitup.min.js"></script>
-        <script src="/assets/javascripts/function/mixitup.js"></script> -->
+        
+        
         <script>
             $(document).ready(function() {
                 $("[data-toggle=popover]").popover();
