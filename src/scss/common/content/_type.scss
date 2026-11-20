@@ -1,4 +1,12 @@
-h1 {font-size: 1.6em;}
+// BS主規則 #1 Title：#263238、PC 32px (2rem) / Mobile（含 768px）28px (1.75rem)、字重 700
+h1, .h1 {
+    color: $gray-900;
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-down(md) {
+        font-size: 1.75rem;
+    }
+}
 h2 {
     //font-size: 16px !important;
     font-weight: bold;
@@ -153,11 +161,6 @@ small {
     }
 }
 
-.h1 {
-    @include media-breakpoint-down(md) {
-        font-size: 1.75rem;
-    }
-}
 .bg-text-color {
     position: relative;
     display: inline-block;

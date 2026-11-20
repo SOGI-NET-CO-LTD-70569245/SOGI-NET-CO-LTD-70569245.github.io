@@ -68,83 +68,44 @@
                         更新時間：@@update
                     </div> -->
                     }
-                    <div class="row mt-2">
-                        @@if(context.btn!=''){
-                        <div class="col-6 pr-1">
-                            @@if(context.btn=='warning'){
-                                @@include('_btn.html',{
-                                    btnBlock:'true',
-                                    btnRounded:'pill',
-                                    btnPaddingX:'1',
-                                    btnColor:'warning',
-                                    href:'#',
-                                    btnName:'@@btnPrimaryName',
-                                })
-                            }
-                            @@if(context.btn=='primary'){
-                                @@include('_btn.html',{
-                                    btnBlock:'true',
-                                    btnRounded:'pill',
-                                    btnPaddingX:'1',
-                                    btnColor:'primary',
-                                    href:'#',
-                                    btnName:'@@btnPrimaryName',
-                                })
-                            }
-                            @@if(context.btn=='danger'){
-                                @@include('_btn.html',{
-                                    btnBlock:'true',
-                                    btnRounded:'pill',
-                                    btnPaddingX:'1',
-                                    btnColor:'danger',
-                                    href:'#',
-                                    btnName:'@@btnDangerName',
-                                })
-                            }
-                        </div>
-                        <div class="col-3 px-1">
+                    @@if(context.btn!=''){
+                    <div class="mt-2">
+                        @@if(context.btn=='warning'){
                             @@include('_btn.html',{
                                 btnBlock:'true',
                                 btnRounded:'pill',
                                 btnPaddingX:'1',
-                                btnColor:'secondary',
-                                href:'tel:0910123456',
-                                btnIcon:'fas fa-phone',
-                            })
-                        </div>
-                        <div class="col-3 pl-1">
-                            @@include('_btn.html',{
-                                btnBlock:'true',
-                                btnRounded:'pill',
-                                btnColor:'secondary',
-                                btnPaddingX:'1',
+                                btnColor:'warning',
                                 href:'#',
-                                btnIcon:'fab fa-line',
+                                btnName:'@@btnPrimaryName',
                             })
-                        </div>
                         }
-                        @@if(context.btn==''){
-                        <div class="col-6 pr-1">
-                            @@include('_btn.html',{
-                                btnBlock:'true',
-                                btnRounded:'pill',
-                                btnPaddingX:'1',
-                                btnColor:'primary',
-                                href:'tel:0910123456',
-                                btnIcon:'fas fa-phone',
-                            })
-                        </div>
-                        <div class="col-6 pl-1">
+                        @@if(context.btn=='primary'){
                             @@include('_btn.html',{
                                 btnBlock:'true',
                                 btnRounded:'pill',
                                 btnPaddingX:'1',
                                 btnColor:'primary',
                                 href:'#',
-                                btnIcon:'fab fa-line',
+                                btnName:'@@btnPrimaryName',
                             })
-                        </div>
                         }
+                        @@if(context.btn=='danger'){
+                            @@include('_btn.html',{
+                                btnBlock:'true',
+                                btnRounded:'pill',
+                                btnPaddingX:'1',
+                                btnColor:'danger',
+                                href:'#',
+                                btnName:'@@btnDangerName',
+                            })
+                        }
+                    </div>
+                    }
+                    <!-- BS主規則 #17 CTA BTN-次要呼籲：圓形外框圖示按鈕，均分排列 -->
+                    <div class="d-flex justify-content-around mt-2">
+                        <a class="btn btn-outline-cta btn-icon rounded-circle" href="tel:0910123456" aria-label="打電話給門市"><i class="fas fa-fw fa-phone"></i></a>
+                        <a class="btn btn-outline-cta btn-icon rounded-circle" href="#" aria-label="用 LINE 聯絡門市"><i class="fab fa-fw fa-line"></i></a>
                     </div>
                     <hr class="my-4">
                     <div class="text-row-3 font-small mb-2">

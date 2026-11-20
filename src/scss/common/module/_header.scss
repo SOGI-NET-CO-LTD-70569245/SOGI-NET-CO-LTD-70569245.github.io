@@ -1,5 +1,9 @@
 #header {
     z-index: 1030;
+    // Logo 外層的 h1 不套 BS主規則 #1 Title 字級，維持原本 header 高度
+    .navbar > h1 {
+        font-size: 1rem;
+    }
     background: $white;
     @include transition(all 0.2s ease);
 //    box-shadow: $box-shadow;

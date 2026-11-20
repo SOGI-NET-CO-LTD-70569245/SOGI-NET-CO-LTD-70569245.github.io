@@ -254,7 +254,7 @@ $border-radius-sm:            .2rem !default;
 $rounded-pill:                50rem !default;
 
 $box-shadow-sm:               0 0 .25rem rgba($black, .2) !default;
-$box-shadow:                  0 0 .5rem rgba($black, .3) !default;
+$box-shadow:                  0 0 3px rgba($black, .5) !default; // BS主規則 #9 區塊陰影（原 0 0 .5rem rgba($black, .3)）
 $box-shadow-lg:               0 0 3rem rgba($black, .4) !default;
 
 $component-active-color:      $white !default;

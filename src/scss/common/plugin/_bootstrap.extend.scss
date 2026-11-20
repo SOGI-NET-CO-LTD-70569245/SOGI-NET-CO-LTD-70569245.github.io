@@ -131,6 +131,27 @@
 }
 
 
+// BS主規則 #17 CTA BTN-次要呼籲：.btn.btn-outline-cta（外框、mouseover 才填滿），純圖示圓形按鈕再加 .btn-icon.rounded-circle
+.btn-outline-cta {
+    @include button-outline-variant($gray-500, $gray-900, #EFEFEF, $gray-500);    // 框線 #9DA2A7（SK 2026-11-20），hover 填滿 #EFEFEF
+    color: $gray-900;
+    background-color: $white;
+    &.disabled,
+    &:disabled {
+        color: $gray-900;
+    }
+}
+// 純圖示按鈕：寬高相等（同按鈕預設高度 38px），圖示置中
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.375rem;     // 38px
+    height: 2.375rem;    // 38px
+    padding: 0;
+    line-height: 1;
+}
+
 // Tooltip
 .tooltip-inner {
     white-space:pre-wrap;
