@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--
-        @partial layouts/_head
-        @optional title, cssFile
-        @note Shared document head; cssFile selects the page stylesheet bundle.
-        -->
+        
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-Language" content="zh-TW">
@@ -23,11 +19,11 @@
         <title>產品總覽 - SOGI 手機王</title>
         
         
-        <!-- Global -->
+        
         <link rel="stylesheet" href="/assets/stylesheets/common.css">
         <link rel="stylesheet" href="https://d11l21ofu1mzsa.cloudfront.net/assets/manual_file/css/all.min.css">
         
-        <!-- Single -->
+        
         <link rel="stylesheet" href="/assets/stylesheets/page/products.css">
         
 
@@ -35,10 +31,7 @@
 
 	<body class="products">
 
-        <!--
-        @partial layouts/_header
-        @note Public site header. Store-admin uses features/store-admin/_header instead.
-        -->
+        
         <header id="header" class="push sticky-top">
             <div class="shadow">
             <div class="container">
@@ -215,10 +208,7 @@
             </div>
         </header>
 
-        <!--
-        @partial shared/components/_nav-main
-        @note Public mobile/main navigation markup.
-        -->
+        
         <nav class="mobile-menu">
             <div class="list-group">
                 <a class="list-group-item list-group-item-action d-flex align-items-center" href="#">
@@ -389,12 +379,7 @@
 
 
         <div id="main" class="push">
-            <!--
-            @partial shared/components/_ad-970
-            @optional textAd
-            @variants textAd: true renders text ads below the image slot.
-            @note Responsive 970/336 ad placeholder block.
-            -->
+            
             <div class="container">
                 <div class="row my-5 ad-slot-970">
                     <div class="col-12 d-none d-lg-block">
@@ -411,11 +396,7 @@
                 
             </div>
 
-            <!--
-            @partial shared/components/_breadcrumb
-            @optional lv1Label, lv1Url, lv2Label, lv2Url, lv3Label, lv3Url
-            @note Breadcrumb renders each level only when its label exists.
-            -->
+            
             <div class="container">
                 <ol class="breadcrumb mb-2 border-bottom rounded-0">
                     <li class="breadcrumb-item"><a href="/index.html"><i class="fas fa-home"></i> 首頁</a></li>
@@ -478,7 +459,7 @@
                     <div class="col-lg-8">
                         <div class="row align-items-center">
                             <div class="col-12 col-md-7 my-1 pt-1 my-md-0 text-center text-md-left">
-                <!--                                        <input type="text" class="kv-fa rating-loading" value="2" data-size="xs" title="">-->
+                
                                 <div class="btn-group btn-group">
                                     <a href="#" class="btn btn-outline-secondary">
                                         <i class="fas fa-fw fa-plus"></i> 比較
@@ -560,13 +541,7 @@
 
                                                         <a href="#" class="stretched-link"></a>
                                                     </div>
-                                                    <!-- <a class="d-block h-100 btn-price rounded border p-2" href="#">
-                                                        <div>128GB</div>
-                                                        <div class="lead text-primary font-weight-bold m-0">$29,000</div>
-                                                        <small class="d-block text-muted">
-                                                            原廠售價：<del>$39,990</del>
-                                                        </small>
-                                                    </a> -->
+                                                    
                                                 </div>
                                                 <div class="col-auto px-1">
                                                     <a class="d-block h-100 btn-price rounded border p-2 text-center" href="#">
@@ -612,24 +587,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="col-6 col-sm-3 my-1 px-1">
-                                        <a class="bg-light d-block p-2 text-center text-sm-left" href="#">
-                                            <small class="text-muted">
-                                                換螢幕
-                                            </small>
-                                            <div class="h3 text-price font-weight-bold my-1">$29,000</div>
-                                            <div class="btn btn-sm btn-outline-primary">立即查詢</div>
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-sm-3 my-1 px-1">
-                                        <a class="bg-light d-block p-2 text-center text-sm-left" href="#">
-                                            <small class="text-muted">
-                                                換電池
-                                            </small>
-                                            <div class="h3 text-price font-weight-bold my-1">$29,000</div>
-                                            <div class="btn btn-sm btn-outline-primary">立即查詢</div>
-                                        </a>
-                                    </div> -->
+                                    
                                 </div>
                                 </div>
                             </div>
@@ -679,12 +637,7 @@
 
                 <div class="row my-2">
                     <div class="col-12 my-2" id="intro">
-                        <!--
-                        @partial shared/ui/_section-title-h3
-                        @required title
-                        @optional id, icon, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom, btnName, btnIcon, href, modal
-                        @note Compact section heading; can render an action button when btnName is set.
-                        -->
+                        
 
                         <div class="    " >
                             <div class="container">
@@ -738,24 +691,13 @@
                                 <div class="text-center">
                                     <a href="#"><img src="https://via.placeholder.com/300x250" class="img-fluid" alt=""></a>
                                 </div>
-                                <!-- <div class="sidebar">
-                                    <div class="text-center ad">
-                                        <a class="" href="#">
-                                            <img class="img-fluid" src="https://via.placeholder.com/300x600" alt="">
-                                        </a>
-                                    </div>
-                                </div> -->
+                                
                             </div>
                         </div>
                     </div>
 
                     <div class="col-12 my-2" id="spec">
-                        <!--
-                        @partial shared/ui/_section-title-h3
-                        @required title
-                        @optional id, icon, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom, btnName, btnIcon, href, modal
-                        @note Compact section heading; can render an action button when btnName is set.
-                        -->
+                        
 
                         <div class="    " >
                             <div class="container">
@@ -849,12 +791,7 @@
                     </div>
 
                     <div class="col-12 my-2" id="articles">
-                        <!--
-                        @partial shared/ui/_section-title-h3
-                        @required title
-                        @optional id, icon, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom, btnName, btnIcon, href, modal
-                        @note Compact section heading; can render an action button when btnName is set.
-                        -->
+                        
 
                         <div class="    " >
                             <div class="container">
@@ -899,12 +836,7 @@
                     </div>
 
                     <div class="col-12 my-2" id="previous">
-                        <!--
-                        @partial shared/ui/_section-title-h3
-                        @required title
-                        @optional id, icon, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom, btnName, btnIcon, href, modal
-                        @note Compact section heading; can render an action button when btnName is set.
-                        -->
+                        
 
                         <div class="    " >
                             <div class="container">
@@ -965,12 +897,7 @@
                     </div>
 
                     <div class="col-12 my-2" id="compare">
-                        <!--
-                        @partial shared/ui/_section-title-h3
-                        @required title
-                        @optional id, icon, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom, btnName, btnIcon, href, modal
-                        @note Compact section heading; can render an action button when btnName is set.
-                        -->
+                        
 
                         <div class="    " >
                             <div class="container">
@@ -1063,12 +990,7 @@
                     </div>
 
                     <div class="col-12 my-2" id="trend">
-                        <!--
-                        @partial shared/ui/_section-title-h3
-                        @required title
-                        @optional id, icon, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom, btnName, btnIcon, href, modal
-                        @note Compact section heading; can render an action button when btnName is set.
-                        -->
+                        
 
                         <div class="    " >
                             <div class="container">
@@ -1094,7 +1016,7 @@
                                             <th scope="col" style="width: 30%; text-align: right;">價格</th>
                                             </tr>
                                         </thead>
-                                        <!-- 預設顯示 -->
+                                        
                                         <tbody>
                                             <tr>
                                             <td><time datetime="2026-09-15">2026/9/15</time></td>
@@ -1115,7 +1037,7 @@
                                             </td>
                                             </tr>
                                         </tbody>
-                                        <!-- 折疊歷史資料（共用同一表格） -->
+                                        
                                         <tbody class="collapse" id="morePriceEvents">
                                             <tr>
                                             <td><time datetime="2026-08-10">2026/8/10</time></td>
@@ -1138,7 +1060,7 @@
                                         </table>
                                     </div>
 
-                                    <!-- 切換按鈕 -->
+                                    
                                     <button type="button" class="btn btn-outline-primary mt-2 btn-price-toggle collapsed" data-toggle="collapse" data-target="#morePriceEvents" aria-expanded="false" aria-controls="morePriceEvents">
                                         <span class="text-collapsed">展開</span>
                                         <span class="text-expanded">收合</span>
@@ -1157,12 +1079,7 @@
                     </div>
 
                     <div class="col-12 my-2" id="similar">
-                        <!--
-                        @partial shared/ui/_section-title-h3
-                        @required title
-                        @optional id, icon, fpBgClass, paddingX, paddingY, paddingTop, paddingBottom, btnName, btnIcon, href, modal
-                        @note Compact section heading; can render an action button when btnName is set.
-                        -->
+                        
 
                         <div class="    " >
                             <div class="container">
@@ -1176,28 +1093,11 @@
                         </div>
 
 
-                        <!--
-                        @partial shared/sections/_products-list
-                        @required rowStyle, item
-                        @optional mixitupId, colMd, colLg, badgeRank, badge1Title
-                        @variants rowStyle: grid | hs | hs-4 | hs-6 | rwd | filter; item: 1..10
-                        @note Product list wrapper. Demo item data is generated from src/data/products/demo-products.json.
-                        -->
+                        
                         <div class="row row-hs row-hs-bar align-items-center " >
-                            <!--
-                            @partial shared/sections/_products-list.data
-                            @generated scripts/generate-product-list-data.js
-                            @source src/data/products/demo-products.json
-                            @note Generated demo product data for shared/sections/_products-list. Do not edit by hand.
-                            -->
                             
-                                <!--
-                                @partial shared/ui/_product-list-item
-                                @required col, img, title
-                                @optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
-                                @variants cat: adds mix-item and mixitup sort attributes
-                                @note Used by product grid, horizontal scroll, and filter sections.
-                                -->
+                            
+                                
                                 <div class="my-2 col-8 col-lg-3 col-md-5 mix-item cat-galaxy-s" data-sort-price="0" data-sort-date="20210220" data-sort-hot="8000">
                                     <div class="card shadow text-center p-2">
                                         
@@ -1238,13 +1138,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-8 col-md-9 mt-2">
-                                                <!--
-                                                @partial shared/ui/_btn
-                                                @required href, btnColor
-                                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                -->
+                                                
                                                 <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
                                                     <i class="fa-fw fas fa-eye"></i>
                                                     快速檢視
@@ -1252,13 +1146,7 @@
 
                                             </div>
                                             <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <!--
-                                                @partial shared/ui/_btn
-                                                @required href, btnColor
-                                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                -->
+                                                
                                                 <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
                                                     <i class="fa-fw fas fa-plus"></i>
                                                     
@@ -1270,13 +1158,7 @@
                                 </div>
 
                             
-                                <!--
-                                @partial shared/ui/_product-list-item
-                                @required col, img, title
-                                @optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
-                                @variants cat: adds mix-item and mixitup sort attributes
-                                @note Used by product grid, horizontal scroll, and filter sections.
-                                -->
+                                
                                 <div class="my-2 col-8 col-lg-3 col-md-5 mix-item cat-galaxy-s" data-sort-price="16800" data-sort-date="20200601" data-sort-hot="2500">
                                     <div class="card shadow text-center p-2">
                                         
@@ -1315,13 +1197,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-8 col-md-9 mt-2">
-                                                <!--
-                                                @partial shared/ui/_btn
-                                                @required href, btnColor
-                                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                -->
+                                                
                                                 <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
                                                     <i class="fa-fw fas fa-eye"></i>
                                                     快速檢視
@@ -1329,13 +1205,7 @@
 
                                             </div>
                                             <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <!--
-                                                @partial shared/ui/_btn
-                                                @required href, btnColor
-                                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                -->
+                                                
                                                 <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
                                                     <i class="fa-fw fas fa-plus"></i>
                                                     
@@ -1347,13 +1217,7 @@
                                 </div>
 
                             
-                                <!--
-                                @partial shared/ui/_product-list-item
-                                @required col, img, title
-                                @optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
-                                @variants cat: adds mix-item and mixitup sort attributes
-                                @note Used by product grid, horizontal scroll, and filter sections.
-                                -->
+                                
                                 <div class="my-2 col-8 col-lg-3 col-md-5 mix-item cat-galaxy-a" data-sort-price="7600" data-sort-date="20201001" data-sort-hot="3000">
                                     <div class="card shadow text-center p-2">
                                         
@@ -1392,13 +1256,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-8 col-md-9 mt-2">
-                                                <!--
-                                                @partial shared/ui/_btn
-                                                @required href, btnColor
-                                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                -->
+                                                
                                                 <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
                                                     <i class="fa-fw fas fa-eye"></i>
                                                     快速檢視
@@ -1406,13 +1264,7 @@
 
                                             </div>
                                             <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <!--
-                                                @partial shared/ui/_btn
-                                                @required href, btnColor
-                                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                -->
+                                                
                                                 <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
                                                     <i class="fa-fw fas fa-plus"></i>
                                                     
@@ -1424,13 +1276,7 @@
                                 </div>
 
                             
-                                <!--
-                                @partial shared/ui/_product-list-item
-                                @required col, img, title
-                                @optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
-                                @variants cat: adds mix-item and mixitup sort attributes
-                                @note Used by product grid, horizontal scroll, and filter sections.
-                                -->
+                                
                                 <div class="my-2 col-8 col-lg-3 col-md-5 mix-item cat-galaxy-note" data-sort-price="24600" data-sort-date="20201231" data-sort-hot="10000">
                                     <div class="card shadow text-center p-2">
                                         
@@ -1469,13 +1315,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-8 col-md-9 mt-2">
-                                                <!--
-                                                @partial shared/ui/_btn
-                                                @required href, btnColor
-                                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                -->
+                                                
                                                 <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
                                                     <i class="fa-fw fas fa-eye"></i>
                                                     快速檢視
@@ -1483,13 +1323,7 @@
 
                                             </div>
                                             <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <!--
-                                                @partial shared/ui/_btn
-                                                @required href, btnColor
-                                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                -->
+                                                
                                                 <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
                                                     <i class="fa-fw fas fa-plus"></i>
                                                     
@@ -1501,13 +1335,7 @@
                                 </div>
 
                             
-                                <!--
-                                @partial shared/ui/_product-list-item
-                                @required col, img, title
-                                @optional colMd, colLg, cat, sortPrice, sortDate, sortHot, badgeRank, badge1Color, badge1Title, badge2bColor, badge2fColor, badge2Title, tag1, tag2, tag3, priceSogi, priceLow
-                                @variants cat: adds mix-item and mixitup sort attributes
-                                @note Used by product grid, horizontal scroll, and filter sections.
-                                -->
+                                
                                 <div class="my-2 col-8 col-lg-3 col-md-5 mix-item cat-galaxy-m" data-sort-price="3700" data-sort-date="20201205" data-sort-hot="3000">
                                     <div class="card shadow text-center p-2">
                                         
@@ -1546,13 +1374,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-8 col-md-9 mt-2">
-                                                <!--
-                                                @partial shared/ui/_btn
-                                                @required href, btnColor
-                                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                -->
+                                                
                                                 <a class="btn btn-secondary btn-block    py-0" href="javascript:void();" data-toggle="modal" data-target=".modal-quickview" >
                                                     <i class="fa-fw fas fa-eye"></i>
                                                     快速檢視
@@ -1560,13 +1382,7 @@
 
                                             </div>
                                             <div class="col-4 col-md-3 mt-2 pl-1">
-                                                <!--
-                                                @partial shared/ui/_btn
-                                                @required href, btnColor
-                                                @optional btnName, btnIcon, btnBlock, btnRounded, btnPaddingX, btnPaddingY, modal, btnRWD
-                                                @variants btnRounded: pill; btnBlock: true; btnRWD: true
-                                                @note Adds modal attributes when modal is set; adds btn-share id when btnName is share text.
-                                                -->
+                                                
                                                 <a class="btn btn-secondary btn-block    py-0" href="javascript:void();"  >
                                                     <i class="fa-fw fas fa-plus"></i>
                                                     
@@ -1608,12 +1424,7 @@
 
         </div>
 
-        <!--
-        @partial layouts/_footer
-        @optional page
-        @variants page: store-admin hides the public footer content.
-        @note Shared footer included by most pages.
-        -->
+        
         <div id="footer" class="bg-dark push">
             
             <div class="container py-5">
@@ -2114,10 +1925,7 @@
         </div>
 
 
-        <!--
-        @partial shared/components/_nav-top
-        @note Floating bottom menu with function modal trigger and back-to-top button.
-        -->
+        
         <div id="menu-bottom">
             <div class="my-2">
                 <a class="btn btn-light shadow" href="#" data-toggle="modal" data-target=".modal-func">
@@ -2131,19 +1939,16 @@
             </div>
         </div>
 
-        <!--
-        @partial layouts/_js
-        @note Shared global JavaScript includes; page-specific scripts are included after this partial.
-        -->
-        <!-- Global -->
-        <!-- <script src="https://kit.fontawesome.com/5ab387053e.js" crossorigin="anonymous"></script> -->
+        
+        
+        
         <script src="/assets/javascripts/vendor/jquery.min.js?v=3.1.1"></script>
         <script src="/assets/javascripts/vendor/bootstrap.bundle.min.js"></script>
         <script src="/assets/javascripts/vendor/bootstrap-select.min.js"></script>
         <script src="/assets/javascripts/common.js"></script>
 
 
-        <!-- Single -->
+        
         <div id="fb-root"></div>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v20.0&appId=520219574737590" nonce="WyIPVVIl"></script>
         <script src="/assets/javascripts/vendor/bootstrap.star-rating.min.js"></script>
