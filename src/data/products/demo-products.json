@@ -1,7 +1,7 @@
 [
   {
     "title": "SAMSUNG Galaxy S20 5G",
-    "img": "//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s20_0212063512931_160x120.jpg",
+    "img": "/assets/images/placeholder/product-160x120.svg",
     "tag1": "5G",
     "tag2": "Android",
     "tag3": "AMOLED",
@@ -19,7 +19,7 @@
   },
   {
     "title": "SAMSUNG Galaxy S10+",
-    "img": "//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_s10_plus_0220113220241_160x120.jpg",
+    "img": "/assets/images/placeholder/product-160x120.svg",
     "tag1": "4G",
     "tag2": "Android",
     "tag3": "AMOLED",
@@ -34,7 +34,7 @@
   },
   {
     "title": "SAMSUNG Galaxy A21",
-    "img": "//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_a51_1213055013699_160x120.jpg",
+    "img": "/assets/images/placeholder/product-160x120.svg",
     "tag1": "4G",
     "tag2": "Android",
     "tag3": "LCD",
@@ -49,7 +49,7 @@
   },
   {
     "title": "SAMSUNG Galaxy Note 20",
-    "img": "//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_note_20_0805144705667_160x120.jpg",
+    "img": "/assets/images/placeholder/product-160x120.svg",
     "tag1": "5G",
     "tag2": "Android",
     "tag3": "S Pen",
@@ -64,7 +64,7 @@
   },
   {
     "title": "SAMSUNG Galaxy M11",
-    "img": "//d2lfcsub12kx0l.cloudfront.net/tw/product/img/SAMSUNG_samsung_galaxy_m11_0427033427620_160x120.jpg",
+    "img": "/assets/images/placeholder/product-160x120.svg",
     "tag1": "4G",
     "tag2": "Android",
     "tag3": "Budget",
@@ -78,7 +78,7 @@
   },
   {
     "title": "Apple iPhone 12 Pro",
-    "img": "//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_12_pro_1013212413139_160x120.jpg",
+    "img": "/assets/images/placeholder/product-160x120.svg",
     "tag1": "5G",
     "tag2": "iOS",
     "tag3": "OLED",
@@ -92,7 +92,7 @@
   },
   {
     "title": "vivo Y55 5G",
-    "img": "//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Vivo_vivo_y55_5g_0114073014722_160x120.jpg",
+    "img": "/assets/images/placeholder/product-160x120.svg",
     "tag1": "5G",
     "tag2": "Android",
     "tag3": "Dual SIM",
@@ -106,7 +106,7 @@
   },
   {
     "title": "Nokia G21",
-    "img": "//d2lfcsub12kx0l.cloudfront.net/tw/product/img/NOKIA_nokia_g21_0303064003006_160x120.jpg",
+    "img": "/assets/images/placeholder/product-160x120.svg",
     "tag1": "4G",
     "tag2": "Android",
     "tag3": "Battery",
@@ -120,7 +120,7 @@
   },
   {
     "title": "Sony Xperia 1 II",
-    "img": "//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Sony_sony_xperia_1_2_0224083724232_160x120.jpg",
+    "img": "/assets/images/placeholder/product-160x120.svg",
     "tag1": "5G",
     "tag2": "Android",
     "tag3": "Cinema",
@@ -134,7 +134,7 @@
   },
   {
     "title": "Apple iPhone 7 Plus 128GB",
-    "img": "//d2lfcsub12kx0l.cloudfront.net/tw/product/img/Apple_apple_iphone_12_pro_1013212413139_160x120.jpg",
+    "img": "/assets/images/placeholder/product-160x120.svg",
     "tag1": "4G",
     "tag2": "iOS",
     "tag3": "Classic",

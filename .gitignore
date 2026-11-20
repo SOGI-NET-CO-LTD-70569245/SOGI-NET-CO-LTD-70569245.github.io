@@ -28,6 +28,7 @@ logs
 
 docs
 dist
+scripts
 __*
 src/html/articles/index.html
 src/html/articles/list.html

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        @@include('../partial/layouts/_head.html',{title:'共用元件測試 (cookie & popout)',cssFile:'index'})
+        @@include('../partial/layouts/_head.html',{title:'共用元件測試 (BS主規則 & cookie & popout)',cssFile:'articles'})
     </head>
 
 	<body>
@@ -12,59 +12,1004 @@
         <div id="main" class="push">
             <div class="container">
 
-                @@include('../partial/shared/components/_ad-970.html')
-
-                <!-- PC:970x90-MB:300x250 -->
-                <div class="row mb-5 ad-slot-970">
-                    <div class="col-12 d-none d-lg-block">
-                        <div class="text-center">
-                            <a href="#"><img src="/assets/images/ad/ad_970x90.gif" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-12 d-lg-none">
-                        <div class="text-center">
-                            <a href="#"><img class="img-fluid" src="/assets/images/ad/ad_300x255.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-
                 <button id="reload-cookies" type="button" class="btn btn-danger ml-auto mr-1"><i class="fas fa-sync-alt"></i> Reload page cookies</button>
-                <a class="btn btn-primary" href="javascript:void();" data-toggle="modal" data-target=".modal-toast">popup通知視窗效果</a>
 
 
-                <div class="row my-2">
-                    <section class="col-lg-8 col-12">
+                <!-- ===== BS主規則元件範本（來源：【SOGI】專案網頁維護 › BS主規則，依 A 欄編號、B 欄類別） ===== -->
+                <div class="row my-2" id="bs-rules">
+                    <section class="col-12">
+                        <h1>共用元件範本</h1>
+                        <p class="lead">上半部依試算表「BS主規則」整理，每條規則附 CSS class、範例網頁與 HTML 用法，可直接複製使用；最後是廣告版位、各種 Modal，以及 Compare、Gallery 等互動元件。</p>
+                        <nav class="mb-5">
+                            <a class="btn btn-outline-secondary btn-sm mb-2 mr-1" href="#bs-cat-1">標題與文字（#1–#6）</a>
+                            <a class="btn btn-outline-secondary btn-sm mb-2 mr-1" href="#bs-cat-2">分隔線與區塊（#7–#9）</a>
+                            <a class="btn btn-outline-secondary btn-sm mb-2 mr-1" href="#bs-cat-3">標籤（#10–#13）</a>
+                            <a class="btn btn-outline-secondary btn-sm mb-2 mr-1" href="#bs-cat-4">按鈕（#14–#18）</a>
+                            <a class="btn btn-outline-secondary btn-sm mb-2 mr-1" href="#bs-cat-5">卡片（#19–#19）</a>
+                            <a class="btn btn-outline-secondary btn-sm mb-2 mr-1" href="#bs-cat-6">狀態與資料呈現（#20–#21）</a>
+                            <a class="btn btn-outline-secondary btn-sm mb-2 mr-1" href="#ads">廣告</a>
+                            <a class="btn btn-outline-secondary btn-sm mb-2 mr-1" href="#modals">Modal</a>
+                            <a class="btn btn-outline-secondary btn-sm mb-2 mr-1" href="#components">元件（Compare、Gallery）</a>
+                        </nav>
+
+                        <h2 class="h2-subtitle mt-10 mb-4" id="bs-cat-1">標題與文字</h2>
+
+                            <!-- #1 Title -->
+                            <div class="border-bottom py-5" id="bs-rule-1">
+                                <div class="h4 font-weight-bold mb-1">#1 Title</div>
+                                <p class="small text-muted mb-2">CSS class：<code>h1（全站預設；非 h1 標籤用 .h1）</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<span class="">符合：</span><a href="/common/about.html" target="_blank">common/about</a>、<span class="">符合：</span><a href="/articles/list.html" target="_blank">articles/list</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="h1 mb-0">頁面標題</div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;h1&gt;頁面標題&lt;/h1&gt;
+
+&lt;!-- 非 h1 標籤 --&gt;
+&lt;div class=&quot;h1&quot;&gt;頁面標題&lt;/div&gt;</code></pre>
+                            </div>
+
+                            <!-- #2 Description -->
+                            <div class="border-bottom py-5" id="bs-rule-2">
+                                <div class="h4 font-weight-bold mb-1">#2 Description</div>
+                                <p class="small text-muted mb-2">CSS class：<code>lead</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/articles/list.html" target="_blank">articles/list</a></p>
+                                <div class="border p-3 mb-2">
+                                    <p class="lead mb-0">說明文字</p>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;p class=&quot;lead&quot;&gt;說明文字&lt;/p&gt;</code></pre>
+                            </div>
+
+                            <!-- #3 Subtitle -->
+                            <div class="border-bottom py-5" id="bs-rule-3">
+                                <div class="h4 font-weight-bold mb-1">#3 Subtitle</div>
+                                <p class="small text-muted mb-2">CSS class：<code>h2-subtitle（CMS .editable 內的 h2 自動套用）</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<span class="text-danger">不符：</span><a href="/index.html" target="_blank">index</a>、<span class="">符合：</span><a href="/articles/detail.html" target="_blank">articles/detail</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="h2-subtitle mb-0">副標題</div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;h2 class=&quot;h2-subtitle&quot;&gt;副標題&lt;/h2&gt;
+
+&lt;!-- 文章／商品內文（CMS） --&gt;
+&lt;div class=&quot;editable&quot;&gt;
+    &lt;h2&gt;副標題&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                            <!-- #4 Section title -->
+                            <div class="border-bottom py-5" id="bs-rule-4">
+                                <div class="h4 font-weight-bold mb-1">#4 Section title</div>
+                                <p class="small text-muted mb-2">CSS class：<code>h2 h2-section mb-7（有查看更多加 a.text-dark + fa-chevron-right）</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="h2 h2-section mb-7 text-dark">區塊標題</div>
+                                    <div class="h2 h2-section mb-0 text-dark">
+                                        <a class="text-dark" href="#">區塊標題 <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;h2 h2-section mb-7 text-dark&quot;&gt;區塊標題&lt;/div&gt;
+
+&lt;!-- 有「查看更多」的區塊 --&gt;
+&lt;div class=&quot;h2 h2-section mb-7 text-dark&quot;&gt;
+    &lt;a class=&quot;text-dark&quot; href=&quot;#&quot;&gt;區塊標題 &lt;i class=&quot;fas fa-chevron-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                            <!-- #5 新聞日期-白底 -->
+                            <div class="border-bottom py-5" id="bs-rule-5">
+                                <div class="h4 font-weight-bold mb-1">#5 新聞日期-白底</div>
+                                <p class="small text-muted mb-2">CSS class：<code>news-date-light</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/index.html" target="_blank">articles/index</a>、<a href="/articles/list.html" target="_blank">articles/list</a>、<a href="/articles/tags.html" target="_blank">articles/tags</a>、<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/products/index.html" target="_blank">products/index</a>、<a href="/products/review-list.html" target="_blank">products/review-list</a></p>
+                                <div class="border p-3 mb-2">
+                                    <span class="news-date-light">2019/12/12</span>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;span class=&quot;news-date-light&quot;&gt;2019/12/12&lt;/span&gt;</code></pre>
+                            </div>
+
+                            <!-- #6 新聞日期-暗底 -->
+                            <div class="border-bottom py-5" id="bs-rule-6">
+                                <div class="h4 font-weight-bold mb-1">#6 新聞日期-暗底</div>
+                                <p class="small text-muted mb-2">CSS class：<code>news-date-dark</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/index.html" target="_blank">articles/index</a>、<a href="/articles/detail.html" target="_blank">articles/detail</a></p>
+                                <div class="border p-3 mb-2 bg-dark">
+                                    <div class="news-date-dark">2019/12/12</div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;news-date-dark&quot;&gt;2019/12/12&lt;/div&gt;</code></pre>
+                            </div>
+
+                        <h2 class="h2-subtitle mt-10 mb-4" id="bs-cat-2">分隔線與區塊</h2>
+
+                            <!-- #7 內文分隔線 -->
+                            <div class="border-bottom py-5" id="bs-rule-7">
+                                <div class="h4 font-weight-bold mb-1">#7 內文分隔線</div>
+                                <p class="small text-muted mb-2">CSS class：<code>my-4</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/forum/detail.html" target="_blank">forum/detail</a>、<a href="/forum/post.html" target="_blank">forum/post</a>、<a href="/products/price-new-store-list.html" target="_blank">products/price-new-store-list</a>、<a href="/products/price-repair-store-list.html" target="_blank">products/price-repair-store-list</a>、<a href="/products/price-second-store-list.html" target="_blank">products/price-second-store-list</a>、<a href="/shop/detail.html" target="_blank">shop/detail</a>、<a href="/member-old/message.html" target="_blank">member-old/message</a>、<a href="/member-old/record.html" target="_blank">member-old/record</a>、<a href="/store-admin/product-add-price.html" target="_blank">store-admin/product-add-price</a></p>
+                                <div class="border p-3 mb-2">
+                                    <p class="mb-0">上方內容</p>
+                                    <hr class="my-4">
+                                    <p class="mb-0">下方內容</p>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;hr class=&quot;my-4&quot;&gt;</code></pre>
+                            </div>
+
+                            <!-- #8 頁面分隔線 -->
+                            <div class="border-bottom py-5" id="bs-rule-8">
+                                <div class="h4 font-weight-bold mb-1">#8 頁面分隔線</div>
+                                <p class="small text-muted mb-2">CSS class：<code>border-warning my-10</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/index.html" target="_blank">articles/index</a>、<a href="/articles/list.html" target="_blank">articles/list</a>、<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/products/index.html" target="_blank">products/index</a>、<a href="/products/price-new-store-list.html" target="_blank">products/price-new-store-list</a>、<a href="/products/price-repair-store-list.html" target="_blank">products/price-repair-store-list</a>、<a href="/products/price-second-store-list.html" target="_blank">products/price-second-store-list</a></p>
+                                <div class="border p-3 mb-2">
+                                    <p class="mb-0">上一個區塊</p>
+                                    <hr class="border-warning my-10">
+                                    <p class="mb-0">下一個區塊</p>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;hr class=&quot;border-warning my-10&quot;&gt;</code></pre>
+                            </div>
+
+                            <!-- #9 區塊陰影 -->
+                            <div class="border-bottom py-5" id="bs-rule-9">
+                                <div class="h4 font-weight-bold mb-1">#9 區塊陰影</div>
+                                <p class="small text-muted mb-2">CSS class：<code>shadow（Bootstrap 內建；.card 預設無框線）</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/index.html" target="_blank">articles/index</a>、<a href="/articles/list.html" target="_blank">articles/list</a>、<a href="/products/index.html" target="_blank">products/index</a>、<a href="/products/price-repair-cat-list.html" target="_blank">products/price-repair-cat-list</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="card shadow p-2 mb-3">卡片內容</div>
+                                    <div class="bg-white shadow p-2">非卡片區塊</div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;card shadow&quot;&gt;
+    …
+&lt;/div&gt;
+
+&lt;!-- 非卡片區塊 --&gt;
+&lt;div class=&quot;bg-white shadow p-2&quot;&gt;
+    …
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                        <h2 class="h2-subtitle mt-10 mb-4" id="bs-cat-3">標籤</h2>
+
+                            <!-- #10 Hashtag-白底 -->
+                            <div class="border-bottom py-5" id="bs-rule-10">
+                                <div class="h4 font-weight-bold mb-1">#10 Hashtag-白底</div>
+                                <p class="small text-muted mb-2">CSS class：<code>hashtags（外層）＋ hashtag</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/index.html" target="_blank">articles/index</a>、<a href="/articles/list.html" target="_blank">articles/list</a>、<a href="/articles/tags.html" target="_blank">articles/tags</a>、<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/products/index.html" target="_blank">products/index</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="hashtags">
+                                        <a class="hashtag" href="#">#評測</a>
+                                        <a class="hashtag" href="#">#蘋果</a>
+                                        <a class="hashtag" href="#">#銷售排行</a>
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;hashtags&quot;&gt;
+    &lt;a class=&quot;hashtag&quot; href=&quot;#&quot;&gt;#評測&lt;/a&gt;
+    &lt;a class=&quot;hashtag&quot; href=&quot;#&quot;&gt;#蘋果&lt;/a&gt;
+    &lt;a class=&quot;hashtag&quot; href=&quot;#&quot;&gt;#銷售排行&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                            <!-- #11 Hashtag-暗底 -->
+                            <div class="border-bottom py-5" id="bs-rule-11">
+                                <div class="h4 font-weight-bold mb-1">#11 Hashtag-暗底</div>
+                                <p class="small text-muted mb-2">CSS class：<code>hashtags hashtags-dark（外層）＋ hashtag</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/index.html" target="_blank">articles/index</a>、<a href="/articles/detail.html" target="_blank">articles/detail</a></p>
+                                <div class="border p-3 mb-2 bg-dark">
+                                    <div class="hashtags hashtags-dark">
+                                        <a class="hashtag" href="#">#評測</a>
+                                        <a class="hashtag" href="#">#蘋果</a>
+                                        <a class="hashtag" href="#">#銷售排行</a>
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;card-img-overlay&quot;&gt;
+    &lt;div class=&quot;hashtags hashtags-dark&quot;&gt;
+        &lt;a class=&quot;hashtag&quot; href=&quot;#&quot;&gt;#評測&lt;/a&gt;
+        &lt;a class=&quot;hashtag&quot; href=&quot;#&quot;&gt;#蘋果&lt;/a&gt;
+        &lt;a class=&quot;hashtag&quot; href=&quot;#&quot;&gt;#銷售排行&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                            <!-- #12 新聞分類標籤 -->
+                            <div class="border-bottom py-5" id="bs-rule-12">
+                                <div class="h4 font-weight-bold mb-1">#12 新聞分類標籤</div>
+                                <p class="small text-muted mb-2">CSS class：<code>badge badge-category</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/index.html" target="_blank">articles/index</a>、<a href="/articles/list.html" target="_blank">articles/list</a>、<a href="/articles/tags.html" target="_blank">articles/tags</a>、<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/products/index.html" target="_blank">products/index</a>、<a href="/products/review-list.html" target="_blank">products/review-list</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="card" style="max-width: 320px;">
+                                        <span class="badge badge-category">評測文章</span>
+                                        <img src="/assets/images/placeholder/news-640x480-1.svg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;card&quot;&gt;
+    &lt;span class=&quot;badge badge-category&quot;&gt;評測文章&lt;/span&gt;
+    &lt;img src=&quot;…&quot; class=&quot;img-fluid&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                            <!-- #13 產品特色標籤 -->
+                            <div class="border-bottom py-5" id="bs-rule-13">
+                                <div class="h4 font-weight-bold mb-1">#13 產品特色標籤</div>
+                                <p class="small text-muted mb-2">CSS class：<code>badge-group（外層）＋ badge badge-pill badge-outline badge-feature</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/products/index.html" target="_blank">products/index</a>、<a href="/products/detail.html" target="_blank">products/detail</a>、<a href="/products/review-list.html" target="_blank">products/review-list</a>、<a href="/products/price-new-store-list.html" target="_blank">products/price-new-store-list</a>、<a href="/products/price-second-store-list.html" target="_blank">products/price-second-store-list</a>、<a href="/products/price-repair-store-list.html" target="_blank">products/price-repair-store-list</a>、<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/common/search-result.html" target="_blank">common/search-result</a>、<a href="/common/search-advanced.html" target="_blank">common/search-advanced</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="badge-group badge-group-nowrap">
+                                        <span class="badge badge-pill badge-outline badge-feature">大螢幕</span>
+                                        <span class="badge badge-pill badge-outline badge-feature">高效能</span>
+                                        <span class="badge badge-pill badge-outline badge-feature">iOS</span>
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;badge-group badge-group-nowrap&quot;&gt;
+    &lt;span class=&quot;badge badge-pill badge-outline badge-feature&quot;&gt;大螢幕&lt;/span&gt;
+    &lt;span class=&quot;badge badge-pill badge-outline badge-feature&quot;&gt;高效能&lt;/span&gt;
+    &lt;span class=&quot;badge badge-pill badge-outline badge-feature&quot;&gt;iOS&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                        <h2 class="h2-subtitle mt-10 mb-4" id="bs-cat-4">按鈕</h2>
+
+                            <!-- #14 社交BTN -->
+                            <div class="border-bottom py-5" id="bs-rule-14">
+                                <div class="h4 font-weight-bold mb-1">#14 社交BTN</div>
+                                <p class="small text-muted mb-2">CSS class：<code>btn btn-outline-secondary btn-social btn-social-line / btn-social-facebook</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/common/pk.html" target="_blank">common/pk</a>、<a href="/common/pk-seo.html" target="_blank">common/pk-seo</a>、<a href="/forum/detail.html" target="_blank">forum/detail</a>、<a href="/products/detail.html" target="_blank">products/detail</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="d-flex">
+                                        <a class="btn btn-outline-secondary btn-social btn-social-facebook mr-2" href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-secondary btn-social btn-social-line" href="#"><i class="fab fa-fw fa-line"></i></a>
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;d-flex&quot;&gt;
+    &lt;a class=&quot;btn btn-outline-secondary btn-social btn-social-facebook mr-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fab fa-fw fa-facebook-f&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-outline-secondary btn-social btn-social-line&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fab fa-fw fa-line&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                            <!-- #15 CTA BTN-重要呼籲 -->
+                            <div class="border-bottom py-5" id="bs-rule-15">
+                                <div class="h4 font-weight-bold mb-1">#15 CTA BTN-重要呼籲</div>
+                                <p class="small text-muted mb-2">CSS class：<code>btn btn-danger（全站預設膠囊圓角）</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/shop/index.html" target="_blank">shop/index</a>、<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/products/price-new-store-list.html" target="_blank">products/price-new-store-list</a>、<a href="/forum/detail.html" target="_blank">forum/detail</a></p>
+                                <div class="border p-3 mb-2">
+                                    <a class="btn btn-danger" href="#">立即搶購</a>
+                                    <a class="btn btn-danger btn-lg btn-block mt-3" href="#">搶購</a>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;a class=&quot;btn btn-danger&quot; href=&quot;#&quot;&gt;立即搶購&lt;/a&gt;
+
+&lt;!-- 大按鈕 --&gt;
+&lt;a class=&quot;btn btn-danger btn-lg btn-block&quot; href=&quot;#&quot;&gt;搶購&lt;/a&gt;</code></pre>
+                            </div>
+
+                            <!-- #16 CTA BTN-一般呼籲 -->
+                            <div class="border-bottom py-5" id="bs-rule-16">
+                                <div class="h4 font-weight-bold mb-1">#16 CTA BTN-一般呼籲</div>
+                                <p class="small text-muted mb-2">CSS class：<code>btn btn-primary（全站預設膠囊圓角）</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/forum/detail.html" target="_blank">forum/detail</a>、<a href="/products/detail.html" target="_blank">products/detail</a>、<a href="/member-old/profiles.html" target="_blank">member-old/profiles</a></p>
+                                <p class="small text-danger mb-2">按鈕藍色 #337AB7（$primary）或 CIS #457AB2 尚待決定。</p>
+                                <div class="border p-3 mb-2">
+                                    <a class="btn btn-primary" href="#">查看完整規格</a>
+                                    <a class="btn btn-primary btn-sm ml-2" href="#">立即查詢</a>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;a class=&quot;btn btn-primary&quot; href=&quot;#&quot;&gt;查看完整規格&lt;/a&gt;
+
+&lt;!-- 小按鈕 --&gt;
+&lt;a class=&quot;btn btn-primary btn-sm&quot; href=&quot;#&quot;&gt;立即查詢&lt;/a&gt;</code></pre>
+                            </div>
+
+                            <!-- #17 CTA BTN-次要呼籲 -->
+                            <div class="border-bottom py-5" id="bs-rule-17">
+                                <div class="h4 font-weight-bold mb-1">#17 CTA BTN-次要呼籲</div>
+                                <p class="small text-muted mb-2">CSS class：<code>btn btn-outline-cta btn-icon rounded-circle（外層 d-flex justify-content-around）</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/products/price-new-store-list.html" target="_blank">products/price-new-store-list</a>、<a href="/products/price-second-store-list.html" target="_blank">products/price-second-store-list</a>、<a href="/products/price-repair-store-list.html" target="_blank">products/price-repair-store-list</a>、<a href="/shop/detail.html" target="_blank">shop/detail</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="d-flex justify-content-around" style="max-width: 320px;">
+                                        <a class="btn btn-outline-cta btn-icon rounded-circle" href="#" aria-label="打電話給門市"><i class="fas fa-fw fa-phone"></i></a>
+                                        <a class="btn btn-outline-cta btn-icon rounded-circle" href="#" aria-label="用 LINE 聯絡門市"><i class="fab fa-fw fa-line"></i></a>
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;d-flex justify-content-around&quot;&gt;
+    &lt;a class=&quot;btn btn-outline-cta btn-icon rounded-circle&quot; href=&quot;tel:0910123456&quot; aria-label=&quot;打電話給門市&quot;&gt;&lt;i class=&quot;fas fa-fw fa-phone&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-outline-cta btn-icon rounded-circle&quot; href=&quot;#&quot; aria-label=&quot;用 LINE 聯絡門市&quot;&gt;&lt;i class=&quot;fab fa-fw fa-line&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                            <!-- #18 查看更多BTN -->
+                            <div class="border-bottom py-5" id="bs-rule-18">
+                                <div class="h4 font-weight-bold mb-1">#18 查看更多BTN</div>
+                                <p class="small text-muted mb-2">CSS class：<code>btn btn-warning rounded-pill px-10</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/index.html" target="_blank">articles/index</a>、<a href="/articles/list.html" target="_blank">articles/list</a>、<a href="/products/index.html" target="_blank">products/index</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="text-center">
+                                        <a class="btn btn-warning rounded-pill px-10" href="#">查看更多</a>
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;text-center mt-4&quot;&gt;
+    &lt;a class=&quot;btn btn-warning rounded-pill px-10&quot; href=&quot;#&quot;&gt;查看更多&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                        <h2 class="h2-subtitle mt-10 mb-4" id="bs-cat-5">卡片</h2>
+
+                            <!-- #19 新聞Box & Card文字空間 -->
+                            <div class="border-bottom py-5" id="bs-rule-19">
+                                <div class="h4 font-weight-bold mb-1">#19 新聞Box & Card文字空間</div>
+                                <p class="small text-muted mb-2">CSS class：<code>不需自訂 class：row no-gutters align-items-center、card-body p-2、文字間距只用 mt-*</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/index.html" target="_blank">articles/index</a>、<a href="/articles/list.html" target="_blank">articles/list</a>、<a href="/articles/tags.html" target="_blank">articles/tags</a>、<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/products/index.html" target="_blank">products/index</a>、<a href="/products/review-list.html" target="_blank">products/review-list</a></p>
+                                <div class="border p-3 mb-2">
+                                    <div class="card shadow my-2">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col-12 col-md-5">
+                                                <a href="#"><img class="card-img" src="/assets/images/placeholder/news-640x480-2.svg" alt=""></a>
+                                                <span class="badge badge-category">評測文章</span>
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <div class="card-body p-2">
+                                                    <div class="hashtags card-text text-row-1"><a class="hashtag" href="#">#評測</a> <a class="hashtag" href="#">#蘋果</a></div>
+                                                    <div class="card-title mb-0"><a class="text-black font-weight-bold text-row-2" href="#">新聞標題示範，最多顯示兩行文字</a></div>
+                                                    <p class="card-text text-row-3 text-dark font-small mt-2 mb-0">摘要文字示範，最多顯示三行。所有新聞版位的文字空間都要上下置中，文字靠左。</p>
+                                                    <p class="card-text mt-2"><span class="news-date-light">2019/12/12</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card shadow my-4" style="max-width: 320px;">
+                                        <img class="card-img" src="/assets/images/placeholder/news-640x480-3.svg" alt="">
+                                        <span class="badge badge-category">評測文章</span>
+                                        <div class="card-img-overlay py-1 d-flex flex-column justify-content-end">
+                                            <div class="hashtags hashtags-dark text-row-1"><a class="hashtag" href="#">#評測</a> <a class="hashtag" href="#">#蘋果</a></div>
+                                            <a class="text-row-12 font-weight-bold mt-1 text-white" href="#">文字疊圖標題示範</a>
+                                            <div class="d-none d-lg-block mt-1"><div class="news-date-dark">2019/12/12</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;card shadow my-2&quot;&gt;
+    &lt;div class=&quot;row no-gutters align-items-center&quot;&gt;
+        &lt;div class=&quot;col-12 col-md-5&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;card-img&quot; src=&quot;…&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+            &lt;span class=&quot;badge badge-category&quot;&gt;評測文章&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-12 col-md-7&quot;&gt;
+            &lt;div class=&quot;card-body p-2&quot;&gt;
+                &lt;div class=&quot;hashtags card-text text-row-1&quot;&gt;…&lt;/div&gt;
+                &lt;div class=&quot;card-title mb-0&quot;&gt;&lt;a class=&quot;text-black font-weight-bold text-row-2&quot; href=&quot;#&quot;&gt;標題&lt;/a&gt;&lt;/div&gt;
+                &lt;p class=&quot;card-text text-row-3 text-dark font-small mt-2 mb-0&quot;&gt;摘要&lt;/p&gt;
+                &lt;p class=&quot;card-text mt-2&quot;&gt;&lt;span class=&quot;news-date-light&quot;&gt;2019/12/12&lt;/span&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 文字疊圖 --&gt;
+&lt;div class=&quot;card-img-overlay py-1&quot;&gt;
+    &lt;div class=&quot;hashtags hashtags-dark text-row-1&quot;&gt;…&lt;/div&gt;
+    &lt;a class=&quot;text-row-12 font-weight-bold mt-1 text-white&quot; href=&quot;#&quot;&gt;標題&lt;/a&gt;
+    &lt;div class=&quot;d-none d-lg-block mt-1&quot;&gt;&lt;div class=&quot;news-date-dark&quot;&gt;2019/12/12&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                        <h2 class="h2-subtitle mt-10 mb-4" id="bs-cat-6">狀態與資料呈現</h2>
+
+                            <!-- #20 載入更多提示 no more & loading -->
+                            <div class="border-bottom py-5" id="bs-rule-20">
+                                <div class="h4 font-weight-bold mb-1">#20 載入更多提示 no more & loading</div>
+                                <p class="small text-muted mb-2">CSS class：<code>bg-light（#F8F8F8）＋ shared/components/_scroller-status</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/articles/list.html" target="_blank">articles/list</a>、<a href="/shop/index.html" target="_blank">shop/index</a></p>
+                                <p class="small text-danger mb-2">試算表 CSS class 欄還沒填；示範用的是 _scroller-status partial 目前的寫法。</p>
+                                <div class="border p-3 mb-2">
+                                    <div class="text-center">
+                                        <div class="p-3 bg-light mb-2"><div class="lead font-weight-bold"><i class="fas fa-spinner fa-pulse"></i> 載入中</div></div>
+                                        <div class="p-3 bg-light mb-2"><div class="lead font-weight-bold">沒有更多內容了</div></div>
+                                        <div class="p-3 bg-light"><div class="lead font-weight-bold">載入失敗，請稍後再試</div></div>
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;scroller-status text-center&quot;&gt;
+    &lt;div class=&quot;infinite-scroll-request p-3 bg-light&quot;&gt;
+        &lt;div class=&quot;lead font-weight-bold&quot;&gt;&lt;i class=&quot;fas fa-spinner fa-pulse&quot;&gt;&lt;/i&gt; 載入中&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;infinite-scroll-last p-3 bg-light&quot;&gt;
+        &lt;div class=&quot;lead font-weight-bold&quot;&gt;沒有更多內容了&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;infinite-scroll-error p-3 bg-light&quot;&gt;
+        &lt;div class=&quot;lead font-weight-bold&quot;&gt;載入失敗，請稍後再試&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 實際頁面用 partial --&gt;
+&#64;&#64;include(&#x27;../partial/shared/components/_scroller-status.html&#x27;)</code></pre>
+                            </div>
+
+                            <!-- #21 產品評分Progress Bar -->
+                            <div class="border-bottom py-5" id="bs-rule-21">
+                                <div class="h4 font-weight-bold mb-1">#21 產品評分Progress Bar</div>
+                                <p class="small text-muted mb-2">CSS class：<code>progress ＋ progress-bar bg-success / bg-dark（尚未定案）</code></p>
+                                <p class="small text-muted mb-2">範例網頁：<a href="/articles/detail.html" target="_blank">articles/detail</a></p>
+                                <p class="small text-danger mb-2">試算表 CSS class 欄還沒填；示範用的是 _pros-cons 目前的寫法，顏色尚未依設計需求（#8CBA51／#263238／底色 #9DA2A7）核對。</p>
+                                <div class="border p-3 mb-2">
+                                    <!-- 高於五分 -->
+                                    <div class="progress position-relative mb-2" style="max-width: 320px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <small class="justify-content-center d-flex position-absolute w-100"><span class="text-white">9.2</span></small>
+                                    </div>
+
+                                    <!-- 低於五分 -->
+                                    <div class="progress position-relative mb-2" style="max-width: 320px;">
+                                        <div class="progress-bar bg-dark" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <small class="justify-content-center d-flex position-absolute w-100"><span class="text-white">4.5</span></small>
+                                    </div>
+                                </div>
+                                <pre class="bg-light border p-2 small mb-0"><code>&lt;!-- 高於五分 --&gt;
+&lt;div class=&quot;progress position-relative&quot;&gt;
+    &lt;div class=&quot;progress-bar bg-success&quot; role=&quot;progressbar&quot; style=&quot;width: 92%&quot; aria-valuenow=&quot;92&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+    &lt;small class=&quot;justify-content-center d-flex position-absolute w-100&quot;&gt;&lt;span class=&quot;text-white&quot;&gt;9.2&lt;/span&gt;&lt;/small&gt;
+&lt;/div&gt;
+
+&lt;!-- 低於五分 --&gt;
+&lt;div class=&quot;progress position-relative&quot;&gt;
+    &lt;div class=&quot;progress-bar bg-dark&quot; role=&quot;progressbar&quot; style=&quot;width: 45%&quot; aria-valuenow=&quot;45&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+    &lt;small class=&quot;justify-content-center d-flex position-absolute w-100&quot;&gt;&lt;span class=&quot;text-white&quot;&gt;4.5&lt;/span&gt;&lt;/small&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                    </section>
+                </div>
+                <!-- ===== /BS主規則元件範本 ===== -->
+
+                <!-- ===== 廣告 ===== -->
+                <div class="row my-2" id="ads">
+                    <section class="col-12">
+                        <h2 class="h2-subtitle mt-10 mb-4">廣告</h2>
+                        <p class="small text-muted">廣告版位都用 partial 引入，圖片為佔位圖；下方程式碼是頁面上的 include 寫法（路徑以 src/html 下第一層頁面為準，子資料夾頁面多一層 ../）。</p>
+
+                        <!-- 970×250／手機 336×280（含文字廣告） -->
+                        <div class="py-5 border-bottom" id="ad-970">
+                            <div class="h4 font-weight-bold mb-1">970×250／手機 336×280（含文字廣告）</div>
+                            <p class="small text-muted mb-2">Partial：<code>shared/components/_ad-970.html</code></p>
+                            <p class="small text-muted mb-2">PC 970×250，手機 336×280；textAd:&#x27;true&#x27; 會在 PC 下方多一列三則文字廣告（.text-ad）。外層自帶 .container，直接放在頁面區塊之間。</p>
+                            <p class="small text-muted mb-2">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/articles/list.html" target="_blank">articles/list</a>、<a href="/products/index.html" target="_blank">products/index</a>、<a href="/shop/index.html" target="_blank">shop/index</a></p>
+                            <div class="border p-3 mb-2">
+                                @@include('../partial/shared/components/_ad-970.html',{textAd:'true'})
+                            </div>
+                            <pre class="bg-light border p-2 small mb-0"><code>&#64;&#64;include('../partial/shared/components/_ad-970.html',{textAd:'true'})</code></pre>
+                        </div>
+
+                        <!-- 970×90／手機 336×280 -->
+                        <div class="py-5 border-bottom" id="ad-970-90">
+                            <div class="h4 font-weight-bold mb-1">970×90／手機 336×280</div>
+                            <p class="small text-muted mb-2">Partial：<code>shared/components/_ad-970-90.html</code></p>
+                            <p class="small text-muted mb-2">PC 970×90，手機 336×280；外層自帶 .container。</p>
+                            <p class="small text-muted mb-2">範例網頁：<a href="/articles/detail.html" target="_blank">articles/detail</a></p>
+                            <div class="border p-3 mb-2">
+                                @@include('../partial/shared/components/_ad-970-90.html')
+                            </div>
+                            <pre class="bg-light border p-2 small mb-0"><code>&#64;&#64;include('../partial/shared/components/_ad-970-90.html')</code></pre>
+                        </div>
+
+                        <!-- 970×90／手機 300×250（ad-slot-970，本機圖片） -->
+                        <div class="py-5 border-bottom" id="ad-970-90-local">
+                            <div class="h4 font-weight-bold mb-1">970×90／手機 300×250（ad-slot-970，本機圖片）</div>
+                            <p class="small text-muted mb-2">原本放在 tmpl 頂端的寫法，圖片用 /assets/images/ad/ 本機檔。</p>
+                            <div class="border p-3 mb-2">
+                                <div class="row mb-5 ad-slot-970">
+                                    <div class="col-12 d-none d-lg-block">
+                                        <div class="text-center">
+                                            <a href="#"><img src="/assets/images/placeholder/ad-970x90.svg" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-lg-none">
+                                        <div class="text-center">
+                                            <a href="#"><img class="img-fluid" src="/assets/images/placeholder/ad-300x255.svg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <pre class="bg-light border p-2 small mb-0"><code>&lt;div class=&quot;row mb-5 ad-slot-970&quot;&gt;
+    &lt;div class=&quot;col-12 d-none d-lg-block&quot;&gt;
+        &lt;div class=&quot;text-center&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/assets/images/placeholder/ad-970x90.svg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-12 d-lg-none&quot;&gt;
+        &lt;div class=&quot;text-center&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;/assets/images/placeholder/ad-300x255.svg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <!-- 300×250 雙欄 -->
+                        <div class="py-5 border-bottom" id="ad-300-250-double">
+                            <div class="h4 font-weight-bold mb-1">300×250 雙欄</div>
+                            <p class="small text-muted mb-2">Partial：<code>shared/components/_ad-300-250-double.html</code></p>
+                            <p class="small text-muted mb-2">兩個 300×250 並排（md 以上兩欄，手機上下排）；外層自帶 .container。</p>
+                            <p class="small text-muted mb-2">範例網頁：<a href="/products/detail.html" target="_blank">products/detail</a>、<a href="/products/price-new-store-list.html" target="_blank">products/price-new-store-list</a>、<a href="/forum/index.html" target="_blank">forum/index</a></p>
+                            <div class="border p-3 mb-2">
+                                @@include('../partial/shared/components/_ad-300-250-double.html')
+                            </div>
+                            <pre class="bg-light border p-2 small mb-0"><code>&#64;&#64;include('../partial/shared/components/_ad-300-250-double.html')</code></pre>
+                        </div>
+
+                        <!-- 300×250 單個 -->
+                        <div class="py-5 border-bottom" id="ad-300-250-item">
+                            <div class="h4 font-weight-bold mb-1">300×250 單個</div>
+                            <p class="small text-muted mb-2">Partial：<code>shared/ui/_ad-300-250-item.html</code></p>
+                            <p class="small text-muted mb-2">單一 300×250，置中、img-fluid；放進任一欄位使用。</p>
+                            <p class="small text-muted mb-2">範例網頁：<a href="/products/detail.html" target="_blank">products/detail</a></p>
+                            <div class="border p-3 mb-2">
+                                <div class="row"><div class="col-12 col-md-6">
+                                    @@include('../partial/shared/ui/_ad-300-250-item.html')
+                                </div></div>
+                            </div>
+                            <pre class="bg-light border p-2 small mb-0"><code>&#64;&#64;include('../partial/shared/ui/_ad-300-250-item.html')</code></pre>
+                        </div>
+
+                        <!-- 336×280 區塊 -->
+                        <div class="py-5 border-bottom" id="ad-336-280">
+                            <div class="h4 font-weight-bold mb-1">336×280 區塊</div>
+                            <p class="small text-muted mb-2">Partial：<code>shared/components/_ad-336-280.html</code></p>
+                            <p class="small text-muted mb-2">單一 336×280，置中、上下 my-2。</p>
+                            <p class="small text-muted mb-2">範例網頁：<a href="/articles/index.html" target="_blank">articles/index</a>、<a href="/products/index.html" target="_blank">products/index</a></p>
+                            <div class="border p-3 mb-2">
+                                @@include('../partial/shared/components/_ad-336-280.html')
+                            </div>
+                            <pre class="bg-light border p-2 small mb-0"><code>&#64;&#64;include('../partial/shared/components/_ad-336-280.html')</code></pre>
+                        </div>
+
+                        <!-- 336×280 單個（可加灰底框） -->
+                        <div class="py-5 border-bottom" id="ad-336-280-item">
+                            <div class="h4 font-weight-bold mb-1">336×280 單個（可加灰底框）</div>
+                            <p class="small text-muted mb-2">Partial：<code>shared/ui/_ad-336-280-item.html</code></p>
+                            <p class="small text-muted mb-2">marginY:true 加上下 my-4；padding:true 加 p-3 bg-secondary 灰底框。</p>
+                            <p class="small text-muted mb-2">範例網頁：<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/common/pk.html" target="_blank">common/pk</a>、<a href="/products/brand-all.html" target="_blank">products/brand-all</a></p>
+                            <div class="border p-3 mb-2">
+                                @@include('../partial/shared/ui/_ad-336-280-item.html',{marginY:true,padding:true})
+                            </div>
+                            <pre class="bg-light border p-2 small mb-0"><code>&#64;&#64;include('../partial/shared/ui/_ad-336-280-item.html',{marginY:true,padding:true})</code></pre>
+                        </div>
+
+                        <!-- 300×600 側欄 -->
+                        <div class="py-5 border-bottom" id="ad-300-600">
+                            <div class="h4 font-weight-bold mb-1">300×600 側欄</div>
+                            <p class="small text-muted mb-2">Partial：<code>shared/components/_ad-300-600.html</code></p>
+                            <p class="small text-muted mb-2">右側欄 300×600（.sidebar），通常放在 col-lg-4 側欄。</p>
+                            <p class="small text-muted mb-2">範例網頁：<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/articles/list.html" target="_blank">articles/list</a>、<a href="/articles/tags.html" target="_blank">articles/tags</a></p>
+                            <div class="border p-3 mb-2">
+                                <div class="row"><div class="col-12 col-lg-4">
+                                    @@include('../partial/shared/components/_ad-300-600.html')
+                                </div></div>
+                            </div>
+                            <pre class="bg-light border p-2 small mb-0"><code>&#64;&#64;include('../partial/shared/components/_ad-300-600.html')</code></pre>
+                        </div>
+
+                        <!-- Sponsor 文字廣告（手機） -->
+                        <div class="py-5" id="ad-sponsor">
+                            <div class="h4 font-weight-bold mb-1">Sponsor 文字廣告（手機）</div>
+                            <p class="small text-muted mb-2">Partial：<code>shared/components/_ad-sponsor.html</code></p>
+                            <p class="small text-muted mb-2">只在手機顯示（d-lg-none）的一行贊助文字廣告；要看效果請把視窗縮到 lg 以下。</p>
+                            <p class="small text-muted mb-2">範例網頁：<a href="/products/index.html" target="_blank">products/index</a>、<a href="/products/detail.html" target="_blank">products/detail</a></p>
+                            <div class="border p-3 mb-2">
+                                @@include('../partial/shared/components/_ad-sponsor.html')
+                            </div>
+                            <pre class="bg-light border p-2 small mb-0"><code>&#64;&#64;include('../partial/shared/components/_ad-sponsor.html')</code></pre>
+                        </div>
+
+                    </section>
+                </div>
+                <!-- ===== /廣告 ===== -->
+
+                <!-- ===== Modal ===== -->
+                <div class="row my-2" id="modals">
+                    <section class="col-12">
+                        <h2 class="h2-subtitle mt-10 mb-4">Modal</h2>
+                        <p class="small text-muted">按「開啟」看效果。Modal partial 一律放在頁面底部（footer 之後），用 data-toggle="modal" data-target 開啟；本頁的 modal 都已引入在底部。站內另有 member-old/profiles 的頭像 modal（#modal-avatar）是寫在頁面內，不是 partial，未收錄。</p>
+                        <!-- Toast 通知（成功） -->
+                        <div class="py-4 border-bottom" id="modal-demo-toast">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">Toast 通知（成功）</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_toast.html</code>　開啟：<code>data-target=".modal-toast"</code></p>
+                                    <p class="small text-muted mb-1">type:&#x27;success&#x27; 為綠色勾勾樣式，不帶 type 為紅框警示；不帶 title/desc 時顯示會員預設訊息「門號已鎖定」。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/member/login.html" target="_blank">member/login</a>、<a href="/member/pw-reset.html" target="_blank">member/pw-reset</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-toast">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-toast&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_toast.html&#x27;,{
+    type:&#x27;success&#x27;,
+    title:&#x27;成功！&#x27;,
+    desc:&#x27;產品已成功加入至&lt;a href=&quot;#&quot;&gt;產品追蹤清單&lt;/a&gt;&#x27;
+})</code></pre>
+                            </details>
+                        </div>
+                        <!-- 功能選單（比較／追蹤） -->
+                        <div class="py-4 border-bottom" id="modal-demo-func">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">功能選單（比較／追蹤）</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_func.html</code>　開啟：<code>data-target=".modal-func"</code></p>
+                                    <p class="small text-muted mb-1">首頁功能選單。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/index.html" target="_blank">index</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-func">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-func&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_func.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 登入 -->
+                        <div class="py-4 border-bottom" id="modal-demo-login">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">登入</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_login.html</code>　開啟：<code>data-target=".modal-login"</code></p>
+                                    <p class="small text-muted mb-1">會員登入表單。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/articles/detail.html" target="_blank">articles/detail</a>、<a href="/products/detail.html" target="_blank">products/detail</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-login">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-login&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_login.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 商品快速檢視 -->
+                        <div class="py-4 border-bottom" id="modal-demo-quickview">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">商品快速檢視</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_quickview.html</code>　開啟：<code>data-target=".modal-quickview"</code></p>
+                                    <p class="small text-muted mb-1">商品卡片的快速檢視（靜態示範內容），modal-dialog-scrollable。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/index.html" target="_blank">index</a>、<a href="/common/search-result.html" target="_blank">common/search-result</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-quickview">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-quickview&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_quickview.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 車拚 -->
+                        <div class="py-4 border-bottom" id="modal-demo-pk">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">車拚</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_pk.html</code>　開啟：<code>data-target=".modal-pk"</code></p>
+                                    <p class="small text-muted mb-1">選擇機型加入車拚；主選單的「車拚」也是開這個。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/products/detail.html" target="_blank">products/detail</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-pk">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-pk&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_pk.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 加入車拚（選類型） -->
+                        <div class="py-4 border-bottom" id="modal-demo-pk-type">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">加入車拚（選類型）</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_pk-type.html</code>　開啟：<code>data-target="#modal-type"</code></p>
+                                    <p class="small text-muted mb-1">modal-sm；用 id 開啟（#modal-type）。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/common/pk.html" target="_blank">common/pk</a>、<a href="/common/pk-seo.html" target="_blank">common/pk-seo</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target="#modal-type">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-type&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_pk-type.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 追蹤商品 -->
+                        <div class="py-4 border-bottom" id="modal-demo-track">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">追蹤商品</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_track.html</code>　開啟：<code>data-target=".modal-track"</code></p>
+                                    <p class="small text-muted mb-1">modal-sm。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/products/detail.html" target="_blank">products/detail</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-track">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-track&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_track.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 訂閱降價通知 -->
+                        <div class="py-4 border-bottom" id="modal-demo-subscribe">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">訂閱降價通知</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_subscribe.html</code>　開啟：<code>data-target=".modal-subscribe"</code></p>
+                                    <p class="small text-muted mb-1">訂閱表單（#subscribeForm）。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/products/detail.html" target="_blank">products/detail</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-subscribe">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-subscribe&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_subscribe.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 訂閱完成 -->
+                        <div class="py-4 border-bottom" id="modal-demo-subscribe-done">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">訂閱完成</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_subscribe-done.html</code>　開啟：<code>data-target=".modal-subscribe-done"</code></p>
+                                    <p class="small text-muted mb-1">送出訂閱後以 JS 開啟：$(&#x27;.modal-subscribe-done&#x27;).modal(&#x27;show&#x27;)。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/products/detail.html" target="_blank">products/detail</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-subscribe-done">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-subscribe-done&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_subscribe-done.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 價格說明 -->
+                        <div class="py-4 border-bottom" id="modal-demo-price-info">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">價格說明</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_price-info.html</code>　開啟：<code>data-target=".modal-price-info"</code></p>
+                                    
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/products/detail.html" target="_blank">products/detail</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-price-info">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-price-info&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_price-info.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 價格搜尋（全頁） -->
+                        <div class="py-4 border-bottom" id="modal-demo-price-search">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">價格搜尋（全頁）</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_price-search.html</code>　開啟：<code>data-target=".modal-price-search"</code></p>
+                                    <p class="small text-muted mb-1">modal-fullpage；navActive 可為 new／second／repair，purchaseName 為第二個欄位標題（購買方式／商品狀態／維修方案內容）。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/products/price-new-store-list.html" target="_blank">products/price-new-store-list</a>、<a href="/shop/detail.html" target="_blank">shop/detail</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-price-search">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-price-search&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_price-search.html&#x27;,{
+    navActive:&#x27;new&#x27;,
+    purchaseName:&#x27;購買方式&#x27;,
+})</code></pre>
+                            </details>
+                        </div>
+                        <!-- 價格提示 -->
+                        <div class="py-4 border-bottom" id="modal-demo-price-tip">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">價格提示</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_price-tip.html</code>　開啟：<code>data-target=".modal-price-tip"</code></p>
+                                    <p class="small text-muted mb-1">頁面載入後以 JS 開啟：$(&#x27;.modal-price-tip&#x27;).modal(&#x27;show&#x27;)。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/products/price-new-store-list.html" target="_blank">products/price-new-store-list</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-price-tip">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-price-tip&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_price-tip.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 載入中 -->
+                        <div class="py-4 border-bottom" id="modal-demo-refresh">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">載入中</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_refresh.html</code>　開啟：<code>data-target=".modal-refresh"</code></p>
+                                    <p class="small text-muted mb-1">modal-sm 的讀取中提示。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/products/price-new-store-list.html" target="_blank">products/price-new-store-list</a>、<a href="/shop/detail.html" target="_blank">shop/detail</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-refresh">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-refresh&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_refresh.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 店家詳細（後台） -->
+                        <div class="py-4 border-bottom" id="modal-demo-store-detail">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">店家詳細（後台）</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_store-detail.html</code>　開啟：<code>data-target=".modal-detail"</code></p>
+                                    <p class="small text-muted mb-1">商店後台店家列表用。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/store-admin/shop-list.html" target="_blank">store-admin/shop-list</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-detail">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-detail&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_store-detail.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 討論區：設為精華 -->
+                        <div class="py-4 border-bottom" id="modal-demo-mge-best">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">討論區：設為精華</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_mge-best.html</code>　開啟：<code>data-target=".modal-mge-best"</code></p>
+                                    <p class="small text-muted mb-1">modal-lg。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/forum/detail.html" target="_blank">forum/detail</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-mge-best">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-mge-best&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_mge-best.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 討論區：設為公告 -->
+                        <div class="py-4 border-bottom" id="modal-demo-mge-public">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">討論區：設為公告</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_mge-public.html</code>　開啟：<code>data-target=".modal-mge-public"</code></p>
+                                    
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/forum/detail.html" target="_blank">forum/detail</a>、<a href="/forum/list.html" target="_blank">forum/list</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-mge-public">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-mge-public&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_mge-public.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 討論區：設定標籤 -->
+                        <div class="py-4 border-bottom" id="modal-demo-mge-tag">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">討論區：設定標籤</div>
+                                    <p class="small text-muted mb-1">Partial：<code>shared/modals/_mge-tag.html</code>　開啟：<code>data-target=".modal-mge-tag"</code></p>
+                                    
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/forum/detail.html" target="_blank">forum/detail</a>、<a href="/forum/list.html" target="_blank">forum/list</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-mge-tag">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-mge-tag&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/shared/modals/_mge-tag.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 討論區：版主 -->
+                        <div class="py-4 border-bottom" id="modal-demo-forum-admin">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">討論區：版主</div>
+                                    <p class="small text-muted mb-1">Partial：<code>features/forum/_modal-admin.html</code>　開啟：<code>data-target=".modal-admin"</code></p>
+                                    
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/forum/list.html" target="_blank">forum/list</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-admin">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-admin&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/features/forum/_modal-admin.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 討論區：看板公告 -->
+                        <div class="py-4 border-bottom" id="modal-demo-forum-public">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">討論區：看板公告</div>
+                                    <p class="small text-muted mb-1">Partial：<code>features/forum/_modal-public.html</code>　開啟：<code>data-target=".modal-public"</code></p>
+                                    
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/forum/list.html" target="_blank">forum/list</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-public">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-public&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/features/forum/_modal-public.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                        <!-- 討論區：插入 YouTube -->
+                        <div class="py-4 border-bottom" id="modal-demo-forum-video">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="h5 font-weight-bold mb-1">討論區：插入 YouTube</div>
+                                    <p class="small text-muted mb-1">Partial：<code>features/forum/_modal-video.html</code>　開啟：<code>data-target=".modal-video"</code></p>
+                                    <p class="small text-muted mb-1">modal-sm；發文表單用。</p>
+                                    <p class="small text-muted mb-0">範例網頁：<a href="/forum/post.html" target="_blank">forum/post</a></p>
+                                </div>
+                                <div class="col-12 col-md-auto mt-2 mt-md-0"><a class="btn btn-outline-secondary btn-sm" href="#" data-toggle="modal" data-target=".modal-video">開啟</a></div>
+                            </div>
+                            <details class="mt-2"><summary class="small text-muted">HTML 用法</summary>
+                                <pre class="bg-light border p-2 small mb-0 mt-2"><code>&lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;.modal-video&quot;&gt;開啟&lt;/a&gt;
+
+&lt;!-- 頁面底部 --&gt;
+&#64;&#64;include(&#x27;../partial/features/forum/_modal-video.html&#x27;)</code></pre>
+                            </details>
+                        </div>
+                    </section>
+                </div>
+                <!-- ===== /Modal ===== -->
+
+                <!-- ===== 元件 ===== -->
+                <div class="row my-2" id="components">
+                    <section class="col-12">
+                        <h2 class="h2-subtitle mt-10 mb-4">元件</h2>
 
                         <!-- Compare -->
-                        <div class="h4">Compare</div>
+                        <div class="py-5 border-bottom" id="component-compare">
+                        <div class="h4 font-weight-bold mb-1">Compare 圖片比較</div>
+                        <p class="small text-muted mb-2">CSS class：<code>b-dics dics-h3</code>（水平 3 張）／<code>b-dics dics-v2</code>（垂直 2 張）；需載入 dics.min.js 與 articles.css（utils/_dics.scss）</p>
+                        <p class="small text-muted mb-2">範例網頁：<a href="/articles/detail.html" target="_blank">articles/detail</a></p>
                         <div class="my-5">
                             <div class="b-dics dics-h3" style="max-width: 640px; width:100%;">
-                                <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112206342279045_ExtraLargeSize-640x640.jpg" alt="test1">
-                                <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112209152249233_ExtraLargeSize-640x640.jpg" alt="test2">
-                                <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112208372240339_ExtraLargeSize-640x640.jpg" alt="test3">
+                                <img class="img-fluid" src="/assets/images/placeholder/news-640x480-4.svg" alt="test1">
+                                <img class="img-fluid" src="/assets/images/placeholder/news-640x480-5.svg" alt="test2">
+                                <img class="img-fluid" src="/assets/images/placeholder/news-640x480-6.svg" alt="test3">
                             </div>
                         </div>
                         <div class="my-5">
                             <div class="b-dics dics-v2" style="max-width: 640px; width:100%;">
-                                <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112206342279045_ExtraLargeSize-640x640.jpg" alt="test1">
-                                <img class="img-fluid" src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112209152249233_ExtraLargeSize-640x640.jpg" alt="test2">
+                                <img class="img-fluid" src="/assets/images/placeholder/news-640x480-7.svg" alt="test1">
+                                <img class="img-fluid" src="/assets/images/placeholder/news-640x480-8.svg" alt="test2">
                             </div>
                         </div>
 
 
+                        </div>
+
                         <!-- Gallery -->
-                        <div class="h4">Gallery</div>
+                        <div class="py-5" id="component-gallery">
+                        <div class="h4 font-weight-bold mb-1">Gallery 輪播圖</div>
+                        <p class="small text-muted mb-2">CSS class：<code>carousel slide</code>＋下方按鈕列 <code>row no-gutters carousel-indicators justify-content-start</code>；需載入 bootstrap-swipe-carousel.min.js</p>
+                        <p class="small text-muted mb-2">範例網頁：<a href="/articles/detail.html" target="_blank">articles/detail</a></p>
 
                         <div id="carousel-single1" class="carousel slide my-5" data-ride="carousel" style="max-width: 640px; width:100%;">
                             <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112206342279045_ExtraLargeSize-640x640.jpg" class="d-block w-100" alt="...">
+      <img src="/assets/images/placeholder/news-640x480-1.svg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112209152249233_ExtraLargeSize-640x640.jpg" class="d-block w-100" alt="...">
+      <img src="/assets/images/placeholder/news-640x480-2.svg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112208372240339_ExtraLargeSize-640x640.jpg" class="d-block w-100" alt="...">
+      <img src="/assets/images/placeholder/news-640x480-3.svg" class="d-block w-100" alt="...">
     </div>
   </div>
                             <a class="carousel-control-prev" href="#carousel-single1" role="button" data-slide="prev">
@@ -73,7 +1018,7 @@
                             <a class="carousel-control-next" href="#carousel-single1" role="button" data-slide="next">
                                 <i class="fas fa-chevron-right"></i>
                             </a>
-                            <div class="row mt-1 mx-0 carousel-indicators">
+                            <div class="row mt-1 mx-0 carousel-indicators justify-content-start">
                                 <a class="col-auto btn btn-outline-secondary rounded-0" href="#" data-target="#carousel-single1" data-slide-to="0">
                                     第一張
                                 </a>
@@ -93,7 +1038,7 @@
                                     ss
                                 </a>
                             </div>
-                            <div class="row no-gutters mt-1 carousel-indicators">
+                            <div class="row no-gutters mt-1 carousel-indicators justify-content-start">
                                 <a class="col-4 col-lg-3 btn btn-outline-secondary rounded-0" href="#" data-target="#carousel-single1" data-slide-to="0">
                                     第一張
                                 </a>
@@ -119,11 +1064,11 @@
                         <div id="carousel-single2" class="carousel slide my-5" data-ride="carousel" style="max-width: 640px; width:100%;" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112206342279045_ExtraLargeSize-640x640.jpg" class="d-block w-100" alt="...">
+                                    <img src="/assets/images/placeholder/news-640x480-4.svg" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="carousel-item">
                                     <a href="http://www.google.com.tw" target="_blank">
-                                    <img src="https://d2lfcsub12kx0l.cloudfront.net/tw/article/img/201911/2019112209152249233_ExtraLargeSize-640x640.jpg" class="d-block w-100" alt="...">
+                                    <img src="/assets/images/placeholder/news-640x480-5.svg" class="d-block w-100" alt="...">
                                     </a>
                                 </div>
                             </div>
@@ -137,6 +1082,8 @@
                                 <a class="btn btn-outline-secondary active" href="#" data-target="#carousel-single2" data-slide-to="0">第一張(不自動)</a>
                                 <a class="btn btn-outline-secondary" href="#" data-target="#carousel-single2" data-slide-to="1">第二張(照片連結)</a>
                             </div>
+                        </div>
+
                         </div>
 
                     </section>
@@ -155,6 +1102,29 @@
             title:'成功！',
             desc:'產品已成功加入至<a href="#">產品追蹤清單</a>'
         })
+
+        <!-- tmpl Modal 群組用 -->
+        @@include('../partial/shared/modals/_login.html')
+        @@include('../partial/shared/modals/_quickview.html')
+        @@include('../partial/shared/modals/_pk.html')
+        @@include('../partial/shared/modals/_pk-type.html')
+        @@include('../partial/shared/modals/_track.html')
+        @@include('../partial/shared/modals/_subscribe.html')
+        @@include('../partial/shared/modals/_subscribe-done.html')
+        @@include('../partial/shared/modals/_price-info.html')
+        @@include('../partial/shared/modals/_price-search.html',{
+            navActive:'new',
+            purchaseName:'購買方式',
+        })
+        @@include('../partial/shared/modals/_price-tip.html')
+        @@include('../partial/shared/modals/_refresh.html')
+        @@include('../partial/shared/modals/_store-detail.html')
+        @@include('../partial/shared/modals/_mge-best.html')
+        @@include('../partial/shared/modals/_mge-public.html')
+        @@include('../partial/shared/modals/_mge-tag.html')
+        @@include('../partial/features/forum/_modal-admin.html')
+        @@include('../partial/features/forum/_modal-public.html')
+        @@include('../partial/features/forum/_modal-video.html')
 
         @@include('../partial/shared/components/_nav-top.html')
         @@include('../partial/layouts/_js.html')
