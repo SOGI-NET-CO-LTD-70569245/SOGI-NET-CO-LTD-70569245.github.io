@@ -131,6 +131,14 @@
 }
 
 
+// BS主規則 #15 CTA BTN-重要呼籲（.btn-danger，#B82519）、#16 CTA BTN-一般呼籲（.btn-primary）：填滿＋大圓角（膠囊，同 .rounded-pill）
+// 全站預設，不用另加 class；放在 Bootstrap 之後，蓋過 .btn-lg / .btn-sm 的圓角
+.btn-primary,
+.btn-danger {
+    border-radius: $rounded-pill;
+}
+
+
 // BS主規則 #17 CTA BTN-次要呼籲：.btn.btn-outline-cta（外框、mouseover 才填滿），純圖示圓形按鈕再加 .btn-icon.rounded-circle
 .btn-outline-cta {
     @include button-outline-variant($gray-500, $gray-900, #EFEFEF, $gray-500);    // 框線 #9DA2A7（SK 2026-11-20），hover 填滿 #EFEFEF
